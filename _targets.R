@@ -6,7 +6,8 @@ source("scripts/Functions_FVO.R")
 
 # Set target-specific options (optional)
 tar_option_set(
-  packages = c("tidyverse", "scales","ggVennDiagram", "ggpubr", "vegan"),
+  packages = c("ggpubr", "ggVennDiagram", "multcompView", "pairwiseAdonis",
+               "rcompanion", "scales", "tidyverse", "vegan"),
   format = "qs"
 )
 
@@ -49,8 +50,12 @@ list(
     read_and_merge_tsvs("data/ViralContigs", "_renamed_contigs_virus_summary.tsv")
   ),
   tar_target(
+    SingleMData,
+    import_singlem("data/MicrobialProfiling", metadata)
+  ),
+  tar_target(
     BacPhlipData,
-    import_bacphlip("data/ViralContigs/combined_Genomad_vOTUs.fna.bacphlip")
+    import_bacphlip("data/Lifestyle")
   ),
   tar_target(
     DefenseFinderData,
@@ -59,6 +64,10 @@ list(
   tar_target(
     iPhopData,
     import_iphop_data("data/HostPrediction/Host_prediction_to_genus_m90.csv")
+  ),
+  tar_target(
+    PharokkaData,
+    import_pharokka(filepath)
   ),
   # 2 - Data Processing----
   tar_target(
@@ -70,7 +79,7 @@ list(
     merge_read_counts(viral_read_counts, human_read_counts, raw_multiqc)
   ),
   tar_target(
-    vira_contig_data,
+    viral_contig_data,
     merge_viral_contig_data(GenomadData, ClusteringData, metadata)
   ),
   tar_target(
@@ -83,32 +92,24 @@ list(
   ),
   # 3 - Data Visualisation ----
   tar_target(
-    plt_raw_reads,
-    plot_raw_reads(raw_multiqc)
-  ),
-  tar_target(
     plt_kmers,
     plot_Kmers(processed_kmers)
-  ),
-  tar_target(
-    plt_read_percentages,
-    plot_read_percentages(all_read_counts)
-  ),
-  tar_target(
-    plt_length,
-    plot_contig_length(vira_contig_data)
-  ),
-  tar_target(
-    plt_alpha_diversity,
-    plot_alpha_diversity(alpha_diversity)
   ),
   tar_target(
     plt_Venns,
     plot_venn_diagrams(PA_table)
   ),
   tar_target(
+    plt_pcoas,
+    produce_pcoas(vOTU_tpm, plt_stacked, GenomadData, metadata, Description_palette = Description_palette)
+  ),
+  tar_target(
     plt_stacked,
     plot_vOTU_stacked_barplot(vOTU_tpm, metadata, GenomadData)
+  ),
+  tar_target(
+    plt_SingleM,
+    plot_singlem(SingleMData)
   )
 )
 

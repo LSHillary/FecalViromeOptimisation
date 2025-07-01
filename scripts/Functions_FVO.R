@@ -1,3 +1,15 @@
+# 0 Setting parameters ----
+
+# Changes Short Sample names to be more readable
+DescriptionModifiers <- c("UTV" = "Untreated\nVirome",
+                          "DTV" = "DNase\nTreated\nVirome",
+                          "MDA" = "MDA\nVirome",
+                          "MtG" = "Meta\ngenome")
+
+# Sets the order of the Description levels
+DescriptionLevels <- c("Untreated\nVirome","DNase\nTreated\nVirome", "MDA\nVirome", "Meta\ngenome")
+
+
 # 1 - Importing data ----
 # Import Metadata
 import_metadata <- function(filepath){
@@ -76,17 +88,55 @@ import_vOTU_clusters <- function(filename){
   return(df)
 }
 
+# Import SingleM data
+import_singlem <- function(filename, metadata = metadata){
+  df <- read_and_merge_tsvs(filename, "_tax_profile.tsv") %>%
+    # Split taxonomy
+    separate(taxonomy, into = c("Root","Domain", "Phylum", "Class", "Order", "Family", "Genus", "Species"), sep = ";", fill = "right") %>%
+    # If Phylum = NA, then take value from Domain and fill as paste("Unclassified", Domain)
+    mutate(Phylum = ifelse(is.na(Phylum), paste("Unclassified", Domain), Phylum)) %>%
+    # Remove "d_" and "p_" from Phylum
+    mutate(Phylum = gsub("d__", "", Phylum)) %>%
+    mutate(Phylum = gsub("p__", "", Phylum)) %>%
+    mutate(Phylum = gsub(" ","", Phylum)) %>%
+    mutate(Phylum = ifelse(grepl("Unclassified", Phylum), "Unclassified", Phylum)) %>%
+    # Rename all Phyla containing text "Bacillota" to Bacillota
+    mutate(Phylum = ifelse(grepl("Bacillota", Phylum), "Bacillota", Phylum)) %>%
+    select(c(sample, Phylum, coverage)) %>%
+    group_by(sample, Phylum) %>%
+    summarise(coverage = sum(coverage)) %>%
+    group_by(sample) %>%
+    mutate(RelAbund = coverage/sum(coverage) *100,
+           Phylum = factor(Phylum, levels = c("Actinomycetota","Bacillota", "Bacteroidota",
+                                              "Desulfobacterota", "Pseudomonadota", "Verrucomicrobiota",
+                                              "Unclassified"))) %>%
+    rename(Sample = sample) %>%
+    # Merge with metadata
+    merge(metadata, by = "Sample")
+  return(df)}
+
 # Import Lifestyle data
-import_bacphlip <- function(filepath){df <- read.csv(filepath, sep = "\t") %>%
-  # Create column status with Temperate, Virulent or Unknown
-  # Temperate = Temperate < 0.05, Virulent. = Virulent < 0.05, Unknown = other
-  mutate(status = ifelse(Temperate >= 0.95, "Temperate", ifelse(Virulent >= 0.95, "Virulent", "Unknown"))) %>%
-  rename(vOTU = X)
-return(df)
+import_bacphlip <- function(filepath){
+  df <- read_and_merge_tsvs(filepath, "_FilteredContigs.fna.bacphlip") %>%
+    rename(vOTU = `...1`) %>%
+    # Create column status with Temperate, Virulent or Unknown
+    # Temperate = Temperate < 0.05, Virulent. = Virulent < 0.05, Unknown = other
+    mutate(status = ifelse(Temperate >= 0.95, "Temperate", ifelse(Virulent >= 0.95, "Virulent", "Unclassified"))) %>%
+    # Create column Provirus if Provirus is in the vOTU name
+    mutate(Provirus = ifelse(grepl("provirus", vOTU), "Provirus", "Virus")) %>%
+    rename(Sample = sample)
+  return(df)
+}
+
+# Import Pharokka data
+import_pharokka <- function(filepath){
+  df <- read_and_merge_tsvs(filepath, "_pharokka_proteins_full_merged_output.tsv") %>%
+    mutate(Contig = gsub("_[0-9]*$", "", ID))
+  return(df)
 }
 
 # Import Defense genes data
-import_defensefinder <- function(filepath){read.csv(filepath, sep = "\t") %>%
+import_defensefinder <- function(filepath){df <- read.csv(filepath, sep = "\t") %>%
     #Create vOTU from "sys_beg" and remove the last underscore and the text after
     mutate(vOTU = gsub("_[0-9]*$", "", sys_beg))
   return(df)
@@ -164,11 +214,7 @@ merge_read_counts <- function(viral_read_counts, human_read_counts, raw_multiqc)
       Type == "rRNApercentage" ~ "rRNA",
       Type == "ViralPercent" ~ "Viral"
     )) %>%
-    filter(Description != "Soil Virome") %>%
-    mutate(Description = factor(Description, levels = c("Untreated Virome",
-                                                        "DNase Treated Virome",
-                                                        "MDA Amplified Virome",
-                                                        "Metagenome")))
+    filter(Description != "Soil Virome")
   return(df_all)
 }
 
@@ -187,24 +233,21 @@ merge_viral_contig_data <- function(GenomadData, ClusteringData, metadata){
            Sample = sample) %>%
     filter(Contig %in% viral_contigs) %>%
     merge(metadata, by = "Sample", all.x = TRUE) %>%
-    mutate(Description = factor(Description, levels = c("DNase Treated Virome", "Untreated Virome", "MDA Amplified Virome", "Metagenome"))) %>%
+    mutate(DescriptionLong = DescriptionModifiers[Description]) %>%
+    mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels)) %>%
     # Split taxonomy into individual columns
     separate(col = "taxonomy", into = c("Viruses", "Realm", "Kingdom", "Phylum", "Class", "Order", "Family"), sep = ";", fill = "right") %>%
     filter(Contig %in% viral_contigs)
   return(df)
 }
 
-#df_mapping <- tar_read(vOTU_tpm)
-#df_Genomad <- tar_read(GenomadData)
-#df_BacPhlip <- tar_read(BacPhlipData)
-#df_DefenseFinder <- tar_read(DefenseFinderData)
 # Merge vOTU data
 merge_vOTU_data <- function(df_mapping, df_Genomad, df_BacPhlip,
                             df_DefenseFinder, metadata){
   df <- df_mapping %>%
     merge(df_Genomad, by = "Contig", all.x = TRUE) %>%
     merge(metadata, by = "Sample", all.x = TRUE) %>%
-    mutate(Description = factor(Description, levels = c("DNase Treated Virome", "Untreated Virome", "MDA Amplified Virome", "Metagenome"))) %>%
+    mutate(Description = factor(Description, levels = DescriptionLevels)) %>%
     rename(vOTU = Contig) %>%
     merge(df_BacPhlip, by = "vOTU", all.x = TRUE) %>%
     merge(df_DefenseFinder, by = "vOTU", all.x = TRUE)
@@ -258,42 +301,57 @@ calculate_beta_diversity <- function(df){
 }
 
 # 3 - Data Visualisation ----
-# Palettes
-Replicates_palette <- c("#0077BB","#0077BB","#0077BB",
-                        "#33BBEE", "#33BBEE", "#33BBEE",
-                        "#009988", "#009988", "#009988",
-                        "#CC3311", "#CC3311", "#CC3311")
 
-Description_palette <- c("#0077BB", "#33BBEE", "#009988", "#CC3311")
+# Palettes
+Replicates_palette <- c(
+  "-DV1" = "#56B4E9", "-DV2" = "#56B4E9", "-DV3" = "#56B4E9",
+  "+DV1" = "#0072B2", "+DV2" = "#0072B2", "+DV3" = "#0072B2",
+  "MDA1" = "#009E73", "MDA2" = "#009E73", "MDA3" = "#009E73",
+  "MtG1" = "#FF7F0E", "MtG2" = "#FF7F0E", "MtG3" = "#FF7F0E")
+
+Description_palette <- c("UTV" = "#56B4E9",
+                         "DTV" = "#0072B2",
+                         "MDA" = "#009E73",
+                         "MtG" = "#FF7F0E")
+
+Stacked_palette <- c("dsDNA" = "#0072B2", "ssDNA" = "#56B4E9",
+                     "Unassigned" = "#808080",
+                     "Other Caudoviricetes" = "#56B4E9",
+                     "Crassvirales" = "#0072B2",
+                     "Microviridae" = "#D55E00",
+                     "Other Monodnaviria" = "#E69F00",
+                     "Herpesviridae" = "#009E73",
+                     "Temperate" = "#56B4E9",
+                     "Virulent" = "#0072B2",
+                     "Provirus" = "#56B4E9",
+                     "Virus" = "#0072B2",
+                     "Unclassified" = "#808080")
+
+
+
+Phyla_palette <- c(
+  "Actinomycetota"    = "#E69F00", 
+  "Bacillota"         = "#56B4E9",
+  "Bacteroidota"      = "#009E73",
+  "Desulfobacterota"  = "#F0E442",
+  "Pseudomonadota"    = "#0072B2",
+  "Verrucomicrobiota" = "#D55E00",
+  "Unclassified"      = "#808080"
+)
 
 # Theme for the manuscript
-theme_paper <- function(){
-  theme_bw() +
-    theme(
-      plot.title = element_text(size = 16),
-      axis.title = element_text(size = 14),
-      axis.text = element_text(size = 12),
-      legend.title = element_text(size = 14),
-      legend.text = element_text(size = 12)) +
-    # Remove grid lines
-    theme(panel.grid.major = element_blank(),
-          panel.grid.minor = element_blank())
-}
 
 ## Plot Kmer data
-library(ggplot2)
-library(scales)
-
 plot_Kmers <- function(df){
   plt <- df %>%
     filter(abundance > 0 & count > 0) %>%
-    mutate(ShortSamples = factor(ShortSamples, levels = c("+DNase 1", "+DNase 2", "+DNase 3",
-                                                          "-DNase 1", "-DNase 2", "-DNase 3",
-                                                          "MDA 1", "MDA 2", "MDA 3",
-                                                          "MetaG 1", "MetaG 2", "MetaG 3"))) %>%
+    mutate(ShortSamples = factor(ShortSamples, levels = c("+DV1", "+DV2", "+DV3",
+                                                          "-DV1", "-DV2", "-DV3",
+                                                          "MDA1", "MDA2", "MDA3",
+                                                          "MtG1", "MtG2", "MtG3"))) %>%
     ggplot(aes(x = abundance, y = count)) +
-    geom_line(aes(colour = ShortSamples), alpha = 0.5, linewidth = 1) +
-    labs(x = "Kmer Abundance", y = "Number of Kmers") +
+    geom_line(aes(colour = ShortSamples), alpha = 0.5, linewidth = 0.3) +
+    labs(x = "Kmer Abundance", y = "Kmers") +
     scale_x_log10(
       breaks = trans_breaks("log10", function(x) 10^x),
       labels = trans_format("log10", math_format(10^.x))
@@ -314,119 +372,147 @@ plot_Kmers <- function(df){
   return(plt)
 }
 
-plot_raw_reads <- function(df){
-  plt <- df %>%
-    filter(Description != "Soil Virome") %>%
-    mutate(Description = factor(Description, levels = c("Untreated Virome",
-                                                        "DNase Treated Virome",
-                                                        "MDA Amplified Virome",
-                                                        "Metagenome"))) %>%
-    ggplot(aes(x = ShortSamples, y = total_sequences/1e6, fill = Description)) +
-    geom_bar(stat = "identity") +
-    labs(y = expression("Number of Reads (x"~10^6~")")) +
+# Plots barplots with CLD letter grouping
+plot_means_with_cld <- function(df, value_col, group_col, PALETTE) {
+  # Perform ANOVA
+  aov_model <- aov(as.formula(paste(value_col, group_col, sep = " ~ ")), data = df)
+  
+  # Perform Tukey HSD post hoc test
+  tukey_result <- TukeyHSD(aov_model)
+  
+  # Generate Compact Letter Display
+  cld <- multcompLetters(tukey_result[[group_col]][, "p adj"])$Letters
+  
+  # Summarize data to calculate mean and standard deviation
+  df_summary <- df %>%
+    group_by(.data[[group_col]]) %>%
+    summarise(
+      mean = mean(.data[[value_col]]),
+      sd = sd(.data[[value_col]])
+    )
+  
+  # Add the CLD to the summary dataframe
+  df_summary$cld <- cld[as.character(df_summary[[group_col]])]
+  
+  # Calculate dynamic y-limit for text placement
+  y_min <- max(df_summary$mean + df_summary$sd) # Minimum y-value
+  text_y_position <- y_min + 0.1 * abs(y_min)   # 10% above y-limit
+  
+  # Generate barplot
+  plt <- ggplot(df_summary, aes(x = .data[[group_col]], y = mean, fill = .data[[group_col]])) +
+    geom_bar(stat = "identity", show.legend = TRUE) +
+    geom_errorbar(aes(ymin = mean - sd, ymax = mean + sd), width = 0.2) +
+    geom_text(aes(label = cld, y = text_y_position), vjust = 0, size = 3) + # Position labels
+    labs(x = group_col, y = "Mean ± SD") +
     theme_bw() +
-    # Remove grid lines
-    theme(panel.grid.major = element_blank(),
-          panel.grid.minor = element_blank()) +
-    scale_fill_manual(values = Description_palette)
-  return(plt)
-}
-
-plot_read_percentages <- function(df){plt <-ggplot(df %>% filter(Description != "Soil Virome"), aes(x = ShortSamples, y = ReadPercentage, fill = Description)) +
-    geom_bar(stat = "identity", position = "dodge") +
-    theme_bw() +
-    labs(y = "Percentage (%)",
-         fill = "Type") +
-    scale_fill_manual(values = Description_palette) +
-    theme(legend.position = "bottom",
-          legend.title = element_blank(),
-          panel.grid.major = element_blank(),
-          panel.grid.minor = element_blank(),
-          axis.text.x = element_blank(),
-          axis.ticks.x = element_blank(),
-          axis.title.x = element_blank()) +
-    facet_wrap(~Type, scales = "free_y") +
-    # Make facet label background white
-    theme(strip.background = element_rect(fill = "white"))
-  return(plt)
-}
-
-plot_contig_length <- function(df){
-  plt <- df %>% ggplot(aes(x = ShortSamples, y = length, fill = Description)) +
-    geom_violin() +
-    labs(title = "Contig Length",
-         x = "Sample",
-         y = "Number of contigs") +
-    theme_bw() +
-    theme(legend.position = "none",
-          # remove Grid lines
-          panel.grid.major = element_blank(),
-          panel.grid.minor = element_blank()) +
-    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-    scale_y_log10() +
-    scale_fill_manual(values = Description_palette)
+    labs(x = "Sample Type") +
+    scale_fill_manual(values = PALETTE)
   
   return(plt)
 }
 
-plot_alpha_diversity <- function(df){
-  plt_alpha <- df %>% ggplot(aes(x = ShortSamples, y = Richness, fill = Sample)) +
-    geom_bar(stat = "identity") +
-    labs(x = "Sample",
-         y = "Number of assembled\nviral contigs") +
-    theme_bw() +
-    theme(legend.position = "none",
-          # remove Grid lines
-          panel.grid.major = element_blank(),
-          panel.grid.minor = element_blank()) +
-    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-    scale_fill_manual(values = Replicates_palette)
-  return(plt_alpha)
-}
-
-plot_venn_diagrams <- function(df){
-  df_MappedVenn <- df %>% 
+# Plot vOTU Venn diagrams
+plot_venn_diagrams <- function(df) {
+  library(dplyr)
+  library(tidyr)
+  library(ggVennDiagram)
+  library(ggpubr)
+  
+  DescriptionLevelOrder <- c("UTV", "DTV", "MDA", "MtG")
+  
+  # Mapped vOTUs
+  df_MappedVenn <- df %>%
     filter(PA == 1) %>%
     select(vOTU, Description) %>%
     split(.$Description)
   
-  df_AssembledVenn <- df %>% 
+  Mapped_sets <- lapply(df_MappedVenn, function(x) unique(x$vOTU)) %>%
+    .[DescriptionLevelOrder] %>%
+    setNames(c("DNase\nTreated\nVirome", "Untreated\nVirome", "MDA\nVirome", "Meta\ngenome"))
+  
+  # Assembled vOTUs
+  df_AssembledVenn <- df %>%
     filter(AssembledPresence == 1) %>%
     select(vOTU, Description) %>%
     split(.$Description)
   
-  DescriptionLevelOrder <- c("DNase Treated Virome", "Untreated Virome", "MDA Amplified Virome", "Metagenome")
-  
-  Mapped_sets <- lapply(df_MappedVenn, function(x) unique(x$vOTU)) %>%
-    # Change order of list elements to match DescriptionLevelOrder
-    .[DescriptionLevelOrder] %>%
-    setNames(c("+DNase", "-DNase", "MDA", "MG"))
-  
   Assembled_sets <- lapply(df_AssembledVenn, function(x) unique(x$vOTU)) %>%
-    # Change order of list elements to match DescriptionLevelOrder
     .[DescriptionLevelOrder] %>%
-    setNames(c("+DNase", "-DNase", "MDA", "MG"))
+    setNames(c("DNase\nTreated\nVirome", "Untreated\nVirome", "MDA\nVirome", "Meta\ngenome"))
   
-  Venn_Mapped <- ggVennDiagram(Mapped_sets, label = "count", edge_size = 0) +
-    scale_fill_distiller(palette = "Blues", direction = 1) + 
+  # Correct Mapped-only logic
+  get_mapped_only_votus <- function(df, description_label) {
+    df_group <- df %>% filter(Description == description_label)
+    mapped_any <- df_group %>%
+      filter(PA == 1) %>%
+      pull(vOTU) %>%
+      unique()
+    assembled_any <- df_group %>%
+      filter(AssembledPresence == 1) %>%
+      pull(vOTU) %>%
+      unique()
+    setdiff(mapped_any, assembled_any)
+  }
+  
+  MappedOnly_sets <- setNames(lapply(DescriptionLevelOrder, function(desc) {
+    get_mapped_only_votus(df, desc)
+  }), c("DNase\nTreated\nVirome", "Untreated\nVirome", "MDA\nVirome", "Meta\ngenome"))
+  
+  # Venn Diagrams ------------------------------------------------------------
+  
+  Venn_Mapped <- ggVennDiagram(Mapped_sets, label = "count", edge_size = 0, set_size = 0) +
     theme(legend.position = "bottom") +
-    # Set fill scale to 0-200 and going from white to blue
-    scale_fill_distiller(limits = c(0, 200), palette = "Blues", direction = 1)
+    annotate("text", x = 0.14, y = 0.81, label = "DNase\nTreated\nVirome", size = 2.5) +
+    annotate("text", x = 0.32, y = 0.84, label = "Untreated\nVirome", size = 2.5) +
+    annotate("text", x = 0.65, y = 0.84, label = "MDA\nVirome", size = 2.5) +
+    annotate("text", x = 0.85, y = 0.81, label = "Meta\ngenome", size = 2.5) +
+    scale_fill_distiller(limits = c(0, 200), palette = "Blues", direction = 1) +
+    theme(plot.margin = margin(0.5, 0, 0, 0, "cm")) +
+    labs(title = "Mapped vOTUs", fill = "Count") +
+    theme(plot.title = element_text(hjust = 0.5, margin = margin(0, 0, 0.4, 0, "cm")))
   
-  Venn_Assembled <- ggVennDiagram(Assembled_sets, label = "count", edge_size = 0) +
+  Venn_Assembled <- ggVennDiagram(Assembled_sets, label = "count", edge_size = 0, set_size = 0) +
     scale_fill_distiller(palette = "Blues", direction = 1) + 
+    annotate("text", x = 0.14, y = 0.81, label = "DNase\nTreated\nVirome", size = 2.5) +
+    annotate("text", x = 0.32, y = 0.85, label = "Untreated\nVirome", size = 2.5) +
+    annotate("text", x = 0.65, y = 0.85, label = "MDA\nVirome", size = 2.5) +
+    annotate("text", x = 0.85, y = 0.81, label = "Meta\ngenome", size = 2.5) +
     theme(legend.position = "bottom") +
-    # Set fill scale to 0-200 and going from white to blue
-    scale_fill_distiller(limits = c(0, 200), palette = "Blues", direction = 1)
+    scale_fill_distiller(limits = c(0, 200), palette = "Blues", direction = 1) +
+    theme(plot.margin = margin(0.5, 0, 0, 0, "cm")) +
+    labs(title = "Assembled vOTUs", fill = "Count") +
+    theme(plot.title = element_text(hjust = 0.5, margin = margin(0, 0, 0.4, 0, "cm")))
   
-  plt <- ggarrange(Venn_Mapped, Venn_Assembled, ncol = 2, labels = c("d", "e"),
-            common.legend = TRUE, legend = "bottom")
-  return(plt)
+  Venn_MappedOnly <- ggVennDiagram(MappedOnly_sets, label = "count", edge_size = 0, set_size = 0) +
+    scale_fill_distiller(palette = "Blues", direction = 1) +
+    annotate("text", x = 0.14, y = 0.81, label = "DNase\nTreated\nVirome", size = 2.5) +
+    annotate("text", x = 0.32, y = 0.85, label = "Untreated\nVirome", size = 2.5) +
+    annotate("text", x = 0.65, y = 0.85, label = "MDA\nVirome", size = 2.5) +
+    annotate("text", x = 0.85, y = 0.81, label = "Meta\ngenome", size = 2.5) +
+    theme(legend.position = "bottom") +
+    scale_fill_distiller(limits = c(0, 200), palette = "Blues", direction = 1) +
+    theme(plot.margin = margin(0.5, 0, 0, 0, "cm")) +
+    labs(title = "Mapped-only vOTUs (failed assembly filters)", fill = "Count") +
+    theme(plot.title = element_text(hjust = 0.5, margin = margin(0, 0, 0.4, 0, "cm")))
+  
+  # Combine main two into one panel
+  plt_Venn <- ggarrange(Venn_Assembled, Venn_Mapped, ncol = 2, labels = c("a", "b"),
+                        common.legend = TRUE, legend = "bottom")
+  
+  return(list(
+    Venn_Assembled   = Assembled_sets,
+    Venn_Mapped      = Mapped_sets,
+    Venn_MappedOnly  = MappedOnly_sets,
+    plt_Venn         = plt_Venn,
+    plt_MappedOnly   = Venn_MappedOnly
+  ))
 }
 
 # Plot PCoA
 plot_pcoa <- function(df, metadata, Description_palette = Description_palette) {
-  
+  metadata <- metadata %>% 
+    mutate(DescriptionLong = DescriptionModifiers[Description]) %>%
+    mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels))
   # Step 1: Calculate Bray-Curtis Dissimilarity
   df_beta_diversity <- df %>%
     column_to_rownames(var = "Contig") %>%   # Convert contigs to row names
@@ -445,33 +531,49 @@ plot_pcoa <- function(df, metadata, Description_palette = Description_palette) {
   
   # Step 4: Merge with metadata to add 'Description' column
   pcoa_axes <- merge(pcoa_axes, metadata, by = "Sample") %>%
-    mutate(Description = factor(Description, levels = c("DNase Treated Virome", "Untreated Virome", "MDA Amplified Virome", "Metagenome")))
+    mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels))
   
   # Step 5: Calculate the percentage of variance explained by each axis
   variance_explained <- 100 * pcoa_result$eig[1:2] / sum(pcoa_result$eig)
   
   # Step 6: Plot the PCoA results, colored by 'Description'
-  pcoa_plot <- ggplot(pcoa_axes, aes(x = PCoA1, y = PCoA2, color = Description, shape = Description)) +
+  pcoa_plot <- ggplot(pcoa_axes, aes(x = PCoA1, y = PCoA2, color = DescriptionLong, shape = DescriptionLong)) +
     geom_point(size = 4, alpha = 0.5) +
-    labs(x = paste0("PCoA1\n(", round(variance_explained[1], 1), "% variance)"),
-         y = paste0("PCoA2\n(", round(variance_explained[2], 1), "% variance)"),) +
-    scale_shape_manual(values = c(16, 17, 15, 18)) +  # Assign different shapes
+    labs(x = paste0("PC1 (", round(variance_explained[1], 1), "%)"),
+         y = paste0("PC2 (", round(variance_explained[2], 1), "%)"),
+         fill = "Sample Type") +
+    scale_shape_manual(values = c(16, 17, 15, 18)) +
     theme_bw() +
-    # Remove grid lines
-    theme(panel.grid.major = element_blank(),
-          panel.grid.minor = element_blank()) +
+    theme(
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      legend.position = "right"
+    ) +
     scale_colour_manual(values = Description_palette) +
-    # Fix co-oridnate axis
+    guides(fill = guide_legend(title = "Sample\nType", nrow = 2))  +
+    scale_x_continuous(expand = expansion(mult = 0.05)) +  # Expand x-axis by 5%
+    scale_y_continuous(expand = expansion(mult = 0.05)) +    # Expand y-axis by 5%
     coord_fixed()
-  
-  # Return the plot
-  return(pcoa_plot)
-}
-#df_mapping <- tar_read(vOTU_tpm)
-#GenomadData <- tar_read(GenomadData)
-#metadata <- tar_read(metadata)
+  # Calculate PERMANOVA
+  pcoa_permanova <- adonis2(df_beta_diversity ~ Description, data = pcoa_axes, permutations = 999)
+  pcoa_permanova
 
-produce_pcoas <-  function(df_mapping, GenomadData, metadata,
+  # Pairwise PERMANOVA
+  pairwise_permanova <- pairwise.adonis2(df_beta_diversity ~ Description, data = pcoa_axes, p.adjust.method = "BH", permutations = 999)
+  pairwise_permanova
+  
+  # Create a list of results
+  results_list <- list(
+    pcoa_plot = pcoa_plot,
+    permanova = pcoa_permanova,
+    pairwise_permanova = pairwise_permanova
+  )
+  # Return the plot
+  return(results_list)
+}
+
+# Produces all PCoA plots and permanova results
+produce_pcoas <-  function(df_mapping, stacked, GenomadData, metadata,
                            Description_palette = Description_palette){
   df_beta <- calculate_beta_diversity(df_mapping)
   plt_pcoa <- plot_pcoa(df_beta, metadata, Description_palette)
@@ -480,14 +582,25 @@ produce_pcoas <-  function(df_mapping, GenomadData, metadata,
   df_beta_no_mondna <- df_mapping %>% filter(!Contig %in% monodnaviria$seq_name) %>%
     calculate_beta_diversity()
   
-  plt_pcoa_no_mondna <- plot_pcoa(df_beta_no_mondna, metadata, Description_palette) +
-    lims(x = c(-0.255, 0.69), y = c(-0.1, 0.15))
+  ssDNA <- stacked$df_Baltimore %>%
+    filter(DNA == "ssDNA") %>% pull(Contig)
+  df_beta_no_ssDNA <- df_mapping %>% filter(!Contig %in% ssDNA) %>%
+    calculate_beta_diversity()
+    
+  plt_pcoa_no_ssDNA <- plot_pcoa(df_beta_no_ssDNA, metadata, Description_palette)
   
-  ls_pcoas <- ggarrange(plt_pcoa, plt_pcoa_no_mondna, ncol = 1, labels = c("b", "c"),
-                        common.legend = TRUE, legend = "right", heights = c(2.5,1))
-  return(ls_pcoas)
+  plt_pcoas <- list(
+    pcoa_all = plt_pcoa$pcoa_plot,
+    pcoa_no_ssDNA = plt_pcoa_no_ssDNA$pcoa_plot,
+    permanova_all = plt_pcoa$permanova,
+    permanova_no_ssDNA = plt_pcoa_no_ssDNA$permanova,
+    pairwise_permanova_all = plt_pcoa$pairwise_permanova,
+    pairwise_permanova_no_ssDNA = plt_pcoa_no_ssDNA$pairwise_permanova
+  )
+  return(plt_pcoas)
 }
 
+# Plot stacked barplot for vOTU data
 plot_vOTU_stacked_barplot <- function(df_mapping, metadata, df_Genomad){
   df_tax <- df_Genomad %>%
     rename(Contig = seq_name) %>%
@@ -495,36 +608,105 @@ plot_vOTU_stacked_barplot <- function(df_mapping, metadata, df_Genomad){
     separate(col = "taxonomy", into = c("Viruses", "Realm", "Kingdom", "Phylum", "Class", "Order", "Family"), sep = ";", fill = "right") %>%
     select(Contig, Viruses, Realm, Kingdom, Phylum, Class, Order, Family)
   
+  dsDNA_Monodnaviria <- df_tax %>%
+    filter(Class == "Papovaviricetes") %>%
+    pull(Contig)
+  
+  ssDNA_extra <- df_tax %>%
+    filter(Family %in% c("Alphasatellitidae","Spiraviridae","Anelloviridae","Tolecusatellitidae")) %>%
+    pull(Contig)
+  
+  df_tax <- df_tax %>%
+    mutate(DNA =
+             # If realm == monodnaviria and class != Papovaviricetes, DNA = ssDNA, otherwise dsDNA
+             ifelse(Realm == "Monodnaviria" & !(Contig %in% dsDNA_Monodnaviria), "ssDNA",
+                    ifelse(Realm == "Monodnaviria" & (Contig %in% dsDNA_Monodnaviria), "dsDNA",
+                           ifelse(Realm == "Unassigned","Unassigned",
+                                  ifelse(Realm %in% c("Duplodnaviria", "Adnaviria", "Varidnaviria"), "dsDNA", "Unassigned")))))
+  
   # Stacked barplots
-  df_stacked <- df_mapping %>%
+  df_Baltimore <- df_mapping %>%
     pivot_longer(cols = -c(Contig), names_to = "Sample", values_to = "TPM") %>%
     filter(TPM > 0) %>%
     merge(metadata, by = "Sample", all.x = TRUE) %>%
-    mutate(Description = factor(Description, levels = c("DNase Treated Virome", "Untreated Virome", "MDA Amplified Virome", "Metagenome"))) %>%
+    mutate(DescriptionLong = DescriptionModifiers[Description],
+           rep = substr(ShortSamples, nchar(ShortSamples), nchar(ShortSamples))) %>%
+    mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels)) %>%
     # Merge with df_Genomad
     merge(df_tax, by = "Contig", all.x = TRUE) %>%
     # Modify NA in Realm to "Unassigned"
-    mutate(Realm = ifelse(is.na(Realm), "Unassigned", Realm)) %>%
+    mutate(DNA = ifelse(is.na(DNA), "Unassigned", DNA))
+  
+  df_DNA_stacked <- df_Baltimore %>%
     # Summarise TPM values in each sample to Realm level
-    group_by(Realm, ShortSamples, Description) %>%
+    group_by(DNA, rep, DescriptionLong) %>%
     summarise(TPM = sum(TPM)) %>%
     mutate(RelAbund = TPM / 10000)
   
-  plt_stacked <- df_stacked %>%
-    ggplot(aes(x = ShortSamples, y = RelAbund, fill = Realm)) +
+  plt_DNA_stacked <- df_DNA_stacked %>%
+    ggplot(aes(x = rep, y = RelAbund, fill = DNA)) +
     geom_bar(stat = "identity") +
-    labs(x = "Sample",
+    labs(x = "Sample Type",
          y = "Relative Abundance (%)") +
-    theme_bw() +
+    theme_bw(base_size = 10) +
     theme(legend.position = "bottom",
           # remove Grid lines
           panel.grid.major = element_blank(),
           panel.grid.minor = element_blank()) +
     theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-    scale_fill_manual(values = Description_palette)
+    scale_fill_manual(values = Stacked_palette) +
+    facet_wrap(~DescriptionLong, nrow = 1)
+
+  df_stacked <- df_Baltimore %>%
+    mutate(
+      Family = coalesce(Family, Order, Class, Phylum, Kingdom, Realm, Viruses),
+      Order = coalesce(Order, Class, Phylum, Kingdom, Realm, Viruses)) %>%
+    # Change Family where Class = "Caudoviricetes" and Family != "Crassvirales" to "Other Caudoviricetes"
+    mutate(Family = ifelse(Class == "Caudoviricetes" & Family != "Crassvirales", "Other Caudoviricetes", Family)) %>%
+    # Change Family where Realm = "Monodnaviria" and Family != "Microviridae" to "Other Monodnaviria"
+    mutate(Family = ifelse(Realm == "Monodnaviria" & Family != "Microviridae", "Other Monodnaviria", Family)) %>%
+    # Change Family = NA to Unassigned
+    mutate(Family = ifelse(is.na(Family), "Unassigned", Family)) %>%
+    group_by(Family, ShortSamples, rep, DescriptionLong) %>%
+    summarise(TPM = sum(TPM)) %>%
+    mutate(RelAbund = TPM / 10000) %>%
+    mutate(Family = factor(Family, levels = c("dsDNA", "ssDNA","Crassvirales",
+                                              "Other Caudoviricetes",
+                                              "Herpesviridae",
+                                              "Microviridae", "Other Monodnaviria","Unassigned")))
   
-  return(plt_stacked)
+  df_stacked_summary <- df_stacked %>%
+    group_by(DescriptionLong, Family) %>%
+    summarise(mean_RelAbund = mean(RelAbund),
+              SD_RelAbund = sd(RelAbund))
+  
+  plt_stacked <- df_stacked %>% ggplot(aes(x = rep, y = RelAbund, fill = Family)) +
+    geom_bar(stat = "identity") +
+    labs(x = "Sample Type",
+         y = "Relative\nAbundance (%)") +
+    theme_bw(base_size = 10) +
+    theme(legend.position = "right",
+          # remove Grid lines
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank()) +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+    scale_fill_manual(values = Stacked_palette) +
+    facet_wrap(~DescriptionLong, nrow = 1) +
+    # Remove x axis ticks, axis label and tick labels
+    theme(axis.text.x = element_blank(),
+          axis.ticks.x = element_blank(),
+          axis.title.x = element_blank()) +
+    # Make facet label backgrounds white
+    theme(strip.background = element_rect(fill = "white"),
+          strip.text = element_text(colour = "black")) +
+    guides(fill = guide_legend(title = "Lifestyle", nrow = 3)) +  # Ensure colors are in one row
+    theme(legend.position = "bottom")
+  
+  ls_stacked <- list(plt_stacked = plt_stacked,
+                      plt_DNA_stacked = plt_DNA_stacked,
+                      df_Baltimore = df_Baltimore,
+                      dsDNA_Monodnaviria = dsDNA_Monodnaviria,
+                      ssDNA_extra = ssDNA_extra)
+  
+  return(ls_stacked)
 }
-
-
-
