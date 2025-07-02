@@ -14,32 +14,32 @@ FecalViromeDataProcessingStage3.smk - Snakemake pipeline for running the main da
 BiogeographyMappingFecalUHGV.smk - An additional snakemake pipeline for clustering/ mapping reads to the Unified Human Gut Virome database
 
 # Snakemake Child Scripts
-2-QC.smk - QCs raw reads
-2.2-EC_Dedup.smk - Error corrects and deduplicates QC'ed reads
-2.4-Khmer.smk - Quantifies exact k-mer abundance
-2.4-Sourmash.smk - Quantifies k-mer abundance at 1:1000 downsampling
-2.5-SortMeRna.smk - Quantifies the number of Ribosomal RNA reads in samples
-3-IndividualAssembly.smk - Assembles reads into contigs
-3.2-AssemblyQC.smk - Runs Quast on assembled contigs
-4-VirusIdentificationGenomad.smk - Uses Genomad to identify viral contigs
-5-Dereplication.smk - Dereplicates viral contigs into vOTU clusters
-6-Mapping_vOTUs.smk - Maps reads to dereplicated vOTUs
-7-HostPrediction.smk - Predicts hosts with iPhop
-8-Annotation.smk - Annotates viral proteins/ contigs with Pharokka and Defensefinder
-9-Biogeography.smk - Clusters viral contigs with UHGV vOTUs
-11-SingleM.smk - Characterises microbial reads with SingleM
-12-BacPhlip.smk - Predicts viral lifestyle using BACPHLIP
+- 2-QC.smk - QCs raw reads
+- 2.2-EC_Dedup.smk - Error corrects and deduplicates QC'ed reads
+- 2.4-Khmer.smk - Quantifies exact k-mer abundance
+- 2.4-Sourmash.smk - Quantifies k-mer abundance at 1:1000 downsampling
+- 2.5-SortMeRna.smk - Quantifies the number of Ribosomal RNA reads in samples
+- 3-IndividualAssembly.smk - Assembles reads into contigs
+- 3.2-AssemblyQC.smk - Runs Quast on assembled contigs
+- 4-VirusIdentificationGenomad.smk - Uses Genomad to identify viral contigs
+- 5-Dereplication.smk - Dereplicates viral contigs into vOTU clusters
+- 6-Mapping_vOTUs.smk - Maps reads to dereplicated vOTUs
+- 7-HostPrediction.smk - Predicts hosts with iPhop
+- 8-Annotation.smk - Annotates viral proteins/ contigs with Pharokka and Defensefinder
+- 9-Biogeography.smk - Clusters viral contigs with UHGV vOTUs
+- 11-SingleM.smk - Characterises microbial reads with SingleM
+- 12-BacPhlip.smk - Predicts viral lifestyle using BACPHLIP
 
 ## Miscilaneous scripts for HPC data processing
-subsample_analysis_virus_finding_<X>G.smk - Snakemake pipeline for rerunning the pipeline at a given depth X
-subsample_analysis_assembly.smk - Snakemake pipeline for assembling contigs when subsampled
-subsample_reads.smk - pipeline for subsampling reads
-RunFecalViromeProcessing.sh - commands for running snakemake pipelines
-RunSubsampling.sh - log of commands used to run the subsampling, as this was not fully automated so as to not swamp the cluster.
-vOTU_clustering - folder containing scripts originally taken from Carmago et al 2023 (doi: 10.1093/nar/gkac1037) used in clustering viral contigs into vOTUs
+- subsample_analysis_virus_finding_<X>G.smk - Snakemake pipeline for rerunning the pipeline at a given depth X
+- subsample_analysis_assembly.smk - Snakemake pipeline for assembling contigs when subsampled
+- subsample_reads.smk - pipeline for subsampling reads
+- RunFecalViromeProcessing.sh - commands for running snakemake pipelines
+- RunSubsampling.sh - log of commands used to run the subsampling, as this was not fully automated so as to not swamp the cluster.
+- vOTU_clustering - folder containing scripts originally taken from Carmago et al 2023 (doi: 10.1093/nar/gkac1037) used in clustering viral contigs into vOTUs
 
 ## R scripts
-Scratch_FVO.R - a file used for developing functions/ code before integrating them into the main analysis workflow
-Functions_FVO.R - core functions used in the main analysis workflow
-Run_FVO.R - Parent script for running data analysis in R
+- Scratch_FVO.R - a file used for developing functions/ code before integrating them into the main analysis workflow
+- Functions_FVO.R - core functions used in the main analysis workflow
+- Run_FVO.R - Parent script for running data analysis in R
 
