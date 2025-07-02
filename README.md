@@ -8,10 +8,10 @@ Central repository for all code used in Hillary et al. 2025. This repository is 
 - _targets.R - Targets script that defines the R data analysis workflow
 
 ## Snakemake Pipeline Parent Scripts
-FecalViromeDataProcessingStage1.smk - Snakemake pipeline for running FastQC on raw sequencing data
-FecalViromeDataProcessingStage2.smk - Snakemake pipeline for running read QC on raw sequencing data and FastQC on the processed reads
-FecalViromeDataProcessingStage3.smk - Snakemake pipeline for running the main data processing steps of the processed reads
-BiogeographyMappingFecalUHGV.smk - An additional snakemake pipeline for clustering/ mapping reads to the Unified Human Gut Virome database
+- FecalViromeDataProcessingStage1.smk - Snakemake pipeline for running FastQC on raw sequencing data
+- FecalViromeDataProcessingStage2.smk - Snakemake pipeline for running read QC on raw sequencing data and FastQC on the processed reads
+- FecalViromeDataProcessingStage3.smk - Snakemake pipeline for running the main data processing steps of the processed reads
+- BiogeographyMappingFecalUHGV.smk - An additional snakemake pipeline for clustering/ mapping reads to the Unified Human Gut Virome database
 
 # Snakemake Child Scripts
 - 2-QC.smk - QCs raw reads
