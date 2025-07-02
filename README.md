@@ -7,13 +7,14 @@ Central repository for all code used in Hillary et al. 2025. This repository is 
 - scripts - contains both snakemake and python scripts used to process raw sequencing data, and R scripts used to analyse the processed tsvs and csvs, and to generate the figures for the manuscript
 - _targets.R - Targets script that defines the R data analysis workflow
 
-## Snakemake Pipeline Parent Scripts
+## Scripts
+### Snakemake Pipeline Parent Scripts
 - FecalViromeDataProcessingStage1.smk - Snakemake pipeline for running FastQC on raw sequencing data
 - FecalViromeDataProcessingStage2.smk - Snakemake pipeline for running read QC on raw sequencing data and FastQC on the processed reads
 - FecalViromeDataProcessingStage3.smk - Snakemake pipeline for running the main data processing steps of the processed reads
 - BiogeographyMappingFecalUHGV.smk - An additional snakemake pipeline for clustering/ mapping reads to the Unified Human Gut Virome database
 
-# Snakemake Child Scripts
+### Snakemake Child Scripts
 - 2-QC.smk - QCs raw reads
 - 2.2-EC_Dedup.smk - Error corrects and deduplicates QC'ed reads
 - 2.4-Khmer.smk - Quantifies exact k-mer abundance
@@ -30,7 +31,7 @@ Central repository for all code used in Hillary et al. 2025. This repository is 
 - 11-SingleM.smk - Characterises microbial reads with SingleM
 - 12-BacPhlip.smk - Predicts viral lifestyle using BACPHLIP
 
-## Miscilaneous scripts for HPC data processing
+### Miscilaneous scripts for HPC data processing
 - subsample_analysis_virus_finding_<X>G.smk - Snakemake pipeline for rerunning the pipeline at a given depth X
 - subsample_analysis_assembly.smk - Snakemake pipeline for assembling contigs when subsampled
 - subsample_reads.smk - pipeline for subsampling reads
@@ -38,8 +39,26 @@ Central repository for all code used in Hillary et al. 2025. This repository is 
 - RunSubsampling.sh - log of commands used to run the subsampling, as this was not fully automated so as to not swamp the cluster.
 - vOTU_clustering - folder containing scripts originally taken from Carmago et al 2023 (doi: 10.1093/nar/gkac1037) used in clustering viral contigs into vOTUs
 
-## R scripts
+### R scripts
 - Scratch_FVO.R - a file used for developing functions/ code before integrating them into the main analysis workflow
 - Functions_FVO.R - core functions used in the main analysis workflow
 - Run_FVO.R - Parent script for running data analysis in R
 
+## Data
+- Biogeography - UHGV clustering and mapping analysis
+- DefenseFinder - Defense and antidefense data
+- HostPrediction - iPhop host predictions
+- Kmers - Khmer k-mer count data
+- Lifestyle - BACPHLIP predictions
+- MetaData - Anonymised donor metadata
+- MicrobialProfiling - SingleM microbial read data
+- Pharokka - Pharokka annotations
+- Quast - Quast reports of assembled contigs
+- RawReads - MultiQC report of raw reads
+- ReadMapping - CoverM outputs
+- Sourmash - Sourmash k-mer analysis outputs
+- Subsampling - subsampling analysis outputs
+- ViralContigs - Genomad reports and Quast reports
+
+## Figures
+Figures 1-3 and S1-S7, including Affinity Designer files where text required adjustment. Also included is the DAG of the targets data analysis workflow.
