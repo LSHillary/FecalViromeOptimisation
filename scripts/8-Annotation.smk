@@ -18,27 +18,3 @@ rule Pharokka_all:
         -f && \
         touch {output.CheckPharokkaAll}
     '''
-
-rule DefenseFinder_all:
-    input:
-        ProteinsIn = "5-dereplication/{sample}_FilteredProteins.faa"
-    output:
-        OutDirectory = directory("8-FunctionalAnnotation/DefenseFinder/{sample}"),
-        CheckDefenseFinderAll = "Checks/8.4-DefenseFinder_{sample}.done"
-    params:
-        tag = "{sample}",
-        DF_ModelsDir = "/group/jbemersogrp/databases/defensefinder"
-    threads: 32
-    resources:
-        mem_mb = "64gb",
-        time = "2-4:00:00",
-        partition = "bmm"
-    shell:'''
-        micromamba run -n DEFENSEFINDER_ENV defense-finder run \
-        -o {output.OutDirectory} \
-        --models-dir {params.DF_ModelsDir} \
-        --antidefensefinder \
-        --db-type gembase \
-        {input.ProteinsIn} && \
-        touch {output.CheckDefenseFinderAll}
-        '''
