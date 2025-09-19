@@ -1,10 +1,41 @@
+######################################################################################################
+# HUMAN FECAL VIROME OPTIMISATION PIPELINE (PARENT WORKFLOW)
+# Author: Luke Hillary
+# Date: 2025-09-19
+#
+# Description:
+# This Snakemake pipeline orchestrates a modular, end-to-end analysis of human fecal viromes
+# prepared with different methods. It includes modules for read preprocessing, assembly, 
+# viral contig identification, dereplication, functional annotation, host prediction,
+# and preparation for SRA submission.
+#
+# The pipeline is designed for **flexible activation** of specific workflow modules via
+# commenting/uncommenting the `include:` statements under the "PIPELINE" section.
+#
+# Stage 3 contains all data processing steps after initial read QC
+#
+# Sample metadata (stool_samples) is defined in the script and should be updated as needed.
+#
+# Output:
+#   - Each step writes its own `.done` flag in the `Checks/` directory
+#
+# Requirements:
+#   - Apptainer/Singularity and required containers (e.g., sra-human-scrubber.sif)
+#   - Conda environment or modules providing required tools (e.g., unpigz, sortmerna, genomad, etc.)
+#
+# Notes:
+#   - All steps are sample-parallelized via `stool_samples` defined at the top.
+#   - This PARENT Snakefile assumes modular structure and follows a “comment-to-disable” approach.
+#   - Ensure any required parameters, groupings (e.g. `cluster_groups`, `iphop_groups`) are defined.
+######################################################################################################
+
 import os
 import yaml
 import glob
 
 #### SET UP ####
-
-stool_samples = ['F3_S19','F4_S20', 'F5_S21', 'F6_S22', 'F7_S23', 'F8_S24', 'M1_S25', 'M2_S26', 'M3_S27', 'GP3_S28', 'GP4_S29', 'GP5_S30']
+#'F3_S19',
+stool_samples = ['F4_S20', 'F5_S21', 'F6_S22', 'F7_S23', 'F8_S24', 'M1_S25', 'M2_S26', 'M3_S27', 'GP3_S28', 'GP4_S29', 'GP5_S30']
 
 #### Check Rule ####
 
@@ -41,26 +72,27 @@ rule all:
         # Host Prediction
         #Check_iPhop = expand("Checks/iphop_Genomad.done", group = iphop_groups),
         # Viral Contig Annotation
-        #CheckPharokka = "Checks/8.1-Pharokka_combined_vOTU_proteins.done",
-        #CheckDefenseFinder = "Checks/8.4-DefenseFinder_vOTUs.done",
         #CheckPharokkaAll = expand("Checks/8.1-Pharokka_{sample}_proteins.done", sample = stool_samples),
-        #CheckDefenseFinder = expand("Checks/8.4-DefenseFinder_{sample}.done", sample = stool_samples),
         # Prokaryote read quantification
         #CheckSingleM = expand("Checks/11-SingleM_{sample}.done", sample = stool_samples),
         # Virus lifestyle prediction
-        #CheckBacPhlip = expand("Checks/12-BacPhlip_{sample}.done", sample = stool_samples),
+        #CheckBacPhlipVOTU = "Checks/12-BacPhlip_vOTUs.done",
+        #CheckHumanReadScrubbing = expand("Checks/13.2-HumanScrub_{sample}.done", sample = stool_samples),
+        #CheckCompressedScrubbedReads = expand("Checks/13.3-Compress_{sample}.done", sample = stool_samples),
+        CheckHumanReadScrubbingPipe = expand("Checks/13.2-HumanScrub_Pipe_{sample}.done", sample = stool_samples),
 
 #### PIPELINE ####
-
-#include: "2.2-EC_Dedup.smk"
-#include: "2.4-Khmer.smk"
+# Turn on/off different parts of the pipeline by commenting/uncommenting the relevant include lines
+#include: "2.2-EC_Dedup.smk" # Error correction and PCR duplicate removal
+#include: "2.4-Khmer.smk" # K-mer profiling
 #include: "2.5-SortMeRna.smk" # Indentifies rRNA reads
-#include: "3-IndividualAssembly.smk"
-#include: "4-VirusIdentificationGenomad.smk"
+#include: "3-IndividualAssembly.smk" # Assembles reads into contigs
+#include: "4-VirusIdentificationGenomad.smk" # Identifies viral contigs with Genomad
 #include: "5-DereplicationGenomad.smk" # Dereplicates contigs
 #include: "6-Mapping_vOTUs.smk" # Maps reads back to the assemblies
-#include: "7-HostPrediction.smk"
+#include: "7-HostPrediction.smk" # Predicts hosts for viral contigs using iPhop
 #include: "8-Annotation.smk" # Annotates proteins
 #include: "9-Biogeography.smk" # Clusters vOTUs
-#include: "11-SingleM.smk" # Runs SingleM
-#include: "12-BacPhlip.smk" # Runs BacPhlip
+#include: "11-SingleM.smk" # Runs SingleM to profile prokaryotic communities
+#include: "12-BacPhlip.smk" # Runs BacPhlip for virus lifestyle prediction
+include: "13-NCBI_Submission.smk" # Scrubs human reads and gathers annotations on all viral sequences for NCBI submission

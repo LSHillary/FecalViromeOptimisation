@@ -24,6 +24,9 @@ source ~/.bashrc
 # Move into the directory that you want to run the pipeline from
 cd Virome
 
+# Load apptainer for final scrubbing step
+module load apptainer
+
 # Activate the conda environment
 micromamba activate ViromeDataProcessing
 

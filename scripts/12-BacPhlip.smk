@@ -1,18 +1,18 @@
-rule BacPhlip:
+rule BacPhlip_vOTU:
     input:
-        vOTUs = "12-Lifestyle/{sample}_FilteredContigs.fna"
+        vOTUs = "5-dereplication/combined_Genomad_vOTUs.fna"
     output:
-        CheckBacPhlip = "Checks/12-BacPhlip_{sample}.done"
-    threads: 32
+        CheckBacPhlipVOTU = "Checks/12-BacPhlip_vOTUs.done"
+    threads: 64
     params:
         tag = "BacPhlip",
     resources:
-        mem_mb = "64gb",
-        partition = "high2",
+        mem_mb = "128gb",
+        partition = "med2",
         time = "2-24:00:00"
     shell:'''
-        mkdir -p 12-Lifestyle && \
+        mkdir -p 12-Lifestyle_vOTUs && \
         micromamba run -n BACPHLIP_ENV bacphlip \
         -i {input.vOTUs} --multi_fasta -f && \
-        touch {output.CheckBacPhlip}
+        touch {output.CheckBacPhlipVOTU}
         '''
