@@ -22,16 +22,16 @@ source("scripts/Functions_FVO.R")
 
 # 1 - Run targets pipeline for Fecal Viromes Optimisation Analysis ----
 
-# Set new names for mutated Sample Types
+# Set new names for mutated Processing Methods
 DescriptionModifiers <- c("UTV" = "Untreated\nVirome",
                           "DTV" = "DNase\nTreated\nVirome",
                           "MDA" = "MDA\nVirome",
                           "MtG" = "Meta\ngenome")
 
-# Set levels for mutated Sample Types
+# Set levels for mutated Processing Methods
 DescriptionLevels <- c("Untreated\nVirome","DNase\nTreated\nVirome", "MDA\nVirome", "Meta\ngenome")
 
-# Set color palette for mutated Sample Types
+# Set color palette for mutated Processing Methods
 Description_palette <- c("Untreated\nVirome" = "#56B4E9",
                          "DNase\nTreated\nVirome" = "#0072B2",
                          "MDA\nVirome" = "#009E73",
@@ -42,6 +42,12 @@ tar_visnetwork()
 
 ## Run pipeline
 tar_make()
+
+# Save interactive DAG to HTML
+htmlwidgets::saveWidget(
+  tar_visnetwork(targets_only = TRUE),
+  file = "figures/targets_dag.html"
+)
 
 # 2 - load and wrangle data ----
 ## Load required objects for figure production
@@ -86,10 +92,12 @@ df_quast <- read.csv("data/Quast/Quast_report.tsv", sep = "\t") %>%
   mutate(DescriptionLong = DescriptionModifiers[Description]) %>%
   mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels))
 
+# Load host data
+df_host <- tar_read(iPhopData) # Host prediction data
 
 # Calculate mean reads for in-text summary 
 
-# Calculate mean raw reads for each sample type
+# Calculate mean raw reads for each Processing Method
 df_read_means <- df_reads %>%
   select(Description, Sample, total_sequences) %>%
   unique() %>%
@@ -98,7 +106,7 @@ df_read_means <- df_reads %>%
     SD = sd(total_sequences / 1e6, na.rm = TRUE)
   )
 
-# Calculate mean viral reads and richness for each sample type
+# Calculate mean viral reads and richness for each Processing Method
 df_viral_means <- df_reads %>%
   select(Description, Sample, total_sequences, FilteredViralContigs, ViralReads) %>%
   unique() %>%
@@ -112,7 +120,7 @@ df_viral_means <- df_reads %>%
     SD_total_sequences = sd(total_sequences / 1e6, na.rm = TRUE)
   )
 
-# Calculate mean and SD for read percentages for each sample type
+# Calculate mean and SD for read percentages for each Processing Method
 df_mean_read_types <- df_reads %>%
   select(Description, Sample, total_sequences, Type, ReadPercentage) %>%
   unique() %>%
@@ -198,9 +206,12 @@ df_wide <- df_long %>% filter(Metric %in% c("Viral Richness", "Mapped Viruses") 
   ) %>% 
   mutate(Ratio = `Mapped Viruses`/ `Viral Richness`)
 
+# Generate the mapped vOTU plots
+plt_list_mapped <-plot_means_with_cld(df_mapped_viruses,"Count", "Description", Description_palette)
+
 # Plot the mapped vOTU data
-plt_mapped <- plot_means_with_cld(df_mapped_viruses,"Count", "Description", Description_palette) +
-  labs(y = "Mapped vOTUs", title = "", fill = "Sample Type") +
+plt_mapped <- plt_list_mapped$plot +
+  labs(y = "Mapped vOTUs", title = "", fill = "Processing Method") +
   theme_bw() +
   # Remove major and minor grid lines
   theme(panel.grid.major = element_blank(),
@@ -208,9 +219,12 @@ plt_mapped <- plot_means_with_cld(df_mapped_viruses,"Count", "Description", Desc
   # add y limits 0-550
   lims(y = c(0, 525))
 
+# Generate the assembled vOTU plots
+plt_list_assembled <- plot_means_with_cld(df_assembled_viruses,"FilteredViralContigs", "Description", Description_palette)
+
 # Plot the assembled vOTU data
-plt_assembled <- plot_means_with_cld(df_assembled_viruses,"FilteredViralContigs", "Description", Description_palette) +
-  labs(y = "Assembled vOTUs", title = "", fill = "Sample Type") +
+plt_assembled <- plt_list_assembled$plot +
+  labs(y = "Assembled vOTUs", title = "", fill = "Processing Method") +
   theme_bw() +
   # Remove major and minor grid lines
   theme(panel.grid.major = element_blank(),
@@ -235,6 +249,12 @@ df_bray <- calculate_beta_diversity(df_mapping) %>%
   column_to_rownames(var = "Contig") %>%
   t() %>% vegdist(method = "bray")
 
+groups <- metadata %>%
+  filter(Sample %in% labels(df_bray)) %>%
+  arrange(match(Sample, labels(df_bray))) %>%
+  pull(Description)  # or DescriptionModifiers if you've modified them
+
+
 # Match group labels to samples in distance matrix
 groups <- metadata %>%
   filter(Sample %in% labels(df_bray)) %>%
@@ -251,15 +271,18 @@ TukeyHSD(bd)
 
 # Plot PCoA with group centroids
 pcoa_all <- plt_pcoas$pcoa_all +
-  labs(title = "", colour = "Sample Type", fill = "Sample Type", shape = "Sample Type")+
+  labs(title = "", colour = "Processing Method", fill = "Processing Method", shape = "Processing Method")+
   # make x and y axis 10% bigger
   scale_x_continuous(expand = expansion(mult = c(0.2, 0.2))) +
   scale_y_continuous(expand = expansion(mult = c(0.2, 0.2))) +
   coord_fixed()
 
+# Generate viral reads plots
+plt_list_viral_reads <- plot_means_with_cld(df_reads %>% filter(Type == "Viral"),"ReadPercentage", "DescriptionLong", Description_palette)
+
 # Plot viral reads data
-plt_viral_reads <- plot_means_with_cld(df_reads %>% filter(Type == "Viral"),"ReadPercentage", "DescriptionLong", Description_palette) +
-  labs(y = "Percentage (%)", title = "Viral reads", fill = "Sample Type") +
+plt_viral_reads <- plt_list_viral_reads$plot +
+  labs(y = "Percentage (%)", title = "Viral reads", fill = "Processing Method") +
   scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
   theme_bw() +
   theme(panel.grid.major = element_blank(),
@@ -290,6 +313,20 @@ ggsave("figures/Fig1.svg", plot = Fig1,
 plt_stacked <- tar_read(plt_stacked)$plt_stacked +
   # Remove legend title
   theme(legend.title = element_blank())
+temp <- plt_stacked$data
+
+#df_mapped_Baltimore <- temp %>%
+#  filter(MDA == TRUE,
+#         TPM > 0)
+
+#length(unique(df_mapped_Baltimore$Contig))
+# Count the number of contigs in each sample
+#df_mapped_Baltimore_summary <- df_mapped_Baltimore %>%
+#  group_by(Sample) %>%
+#  summarise(Count = n()) %>%
+#  merge(metadata, by = "Sample") %>%
+#  mutate(Description = DescriptionModifiers[Description]) %>%
+#  mutate(Description = factor(Description, levels = DescriptionLevels))
 
 # Assemble Figure 2 top
 Fig2_top <-plt_stacked + 
@@ -302,6 +339,11 @@ plt_kmers <- tar_read(plt_kmers) +
   theme(legend.position = "none") +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
+
+library(ggrastr)
+
+# Rasterise just the k-mer plot (300 dpi suggested for print)
+plt_kmers_raster <- rasterise(plt_kmers, layers = "all", dpi = 300)
 
 plt_pcoa_ssdna <- plt_pcoas$pcoa_no_ssDNA +
   labs(colour = "Sample\nType", fill = "Sample\nType", shape = "Sample\nType",
@@ -317,7 +359,7 @@ plt_pcoa_ssdna <- plt_pcoas$pcoa_no_ssDNA +
          fill = guide_legend(nrow = 1))
 
 # Assemble Figure 2 bottom
-Fig2_bottom <- ggarrange(plt_kmers, plt_pcoa_ssdna, ncol = 2, nrow = 1,
+Fig2_bottom <- ggarrange(plt_kmers_raster, plt_pcoa_ssdna, ncol = 2, nrow = 1,
                       labels = c("b", "c"),
                       # increase ratio
                       widths = c(1, 2))
@@ -332,24 +374,178 @@ ggsave("figures/Fig2.svg", plot = Fig2,
        width = 170, height = 100, units = "mm", device = "svg")
 
 ## Figure 3 - The metagenomes recover different viral community members ----
+
 # Import BacPhlip data
 df_Bacphlip <- tar_read(BacPhlipData)
 
+# Load Genomad data output
+df_Genomad <- tar_read(GenomadData)
+
+# Import Clustering data
+df_clustering <- tar_read(ClusteringData)
+
+# Get a list of all viral sequences (not just vOTU representative sequences)
+all_filtered_contigs <- df_clustering %>%
+  # Concatenate all Cluster rows with a comma separator
+  summarise(all_clusters = paste(Cluster, collapse = ",")) %>%
+  # Split the concatenated string into a vector
+  pull(all_clusters) %>%
+  strsplit(split = ",") %>%
+  unlist()
+
+# Filter Genomad data for only contigs in all_filtered_contigs
+df_Genomad_filtered <- df_Genomad %>%
+  filter(seq_name %in% all_filtered_contigs) %>%
+  rename(Contig = seq_name, Sample = sample) %>%
+  left_join(metadata, by = "Sample") %>%
+  mutate(DescriptionLong = DescriptionModifiers[Description]) %>%
+  filter(is.na(DescriptionLong) == FALSE) %>%
+  mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels))
+
+df_Genomad_filtered_host <- df_Genomad_filtered %>%
+  # Is "provirus" in Contig
+  mutate(Provirus = ifelse(grepl("provirus", Contig), "Provirus", "Virus")) %>%
+  # Merge with df_host
+  merge(df_host, by.x = "Contig", by.y = "vOTU", all.x = TRUE)
+
+df_Genomad_filtered_host_summary <- df_Genomad_filtered_host %>%
+  select(Contig, Provirus, HostPhylum, Sample) %>%
+  merge(metadata, by = "Sample", all.x = TRUE) %>%
+  filter(HostPhylum %in% c("Bacteroidota", "Bacillota")) %>%
+  rename(vOTU = Contig) %>%
+  group_by(Provirus, HostPhylum, Description) %>%
+  summarise(Count = n()) %>% ungroup() %>%
+  mutate(Description = DescriptionModifiers[Description]) %>%
+  mutate(Description = factor(Description, levels = DescriptionLevels))
+
+# Calculate proportion of proviruses by host
+df_Bacphlip_host <- df_Bacphlip %>%
+  merge(df_host, by = "vOTU", all.x = TRUE)
+
+df_host_provirus_ratio <- df_Bacphlip_host %>%
+  filter(!is.na(HostPhylum)) %>%
+  group_by(HostPhylum) %>%
+  summarise(
+    Total = n(),
+    Provirus = sum(Provirus == "Provirus"),
+    Ratio = Provirus / Total
+  ) %>%
+  arrange(desc(Ratio))
+
 # First merge df_BacPhlip and df_mapping by both "vOTU" and "Sample" (left join to keep all BacPhlip data)
-df_Lifestyle_mapped_summary <- df_Bacphlip %>% 
+df_Lifestyle_mapped <- df_Bacphlip %>% 
   select(-Sample) %>%
   merge(df_mapping_cleaned, by = c("vOTU"), all.y = TRUE) %>%
   merge(metadata, by = "Sample", all.x = TRUE) %>%
   select(vOTU, ShortSamples, RelAbund, status, Provirus, ShortSamples, Description) %>%
-  mutate(RelAbund = ifelse(is.na(RelAbund), 0, RelAbund)) %>%
+  mutate(RelAbund = ifelse(is.na(RelAbund), 0, RelAbund))
+
+df_Lifestyle_mapped_host <- df_Bacphlip_host %>% 
+  select(-Sample) %>%
+  merge(df_mapping_cleaned, by = c("vOTU"), all.y = TRUE) %>%
+  merge(metadata, by = "Sample", all.x = TRUE) %>%
+  select(vOTU, ShortSamples, RelAbund, status, Provirus, ShortSamples, Description, HostPhylum) %>%
+  mutate(RelAbund = ifelse(is.na(RelAbund), 0, RelAbund),
+         DescriptionLong = DescriptionModifiers[Description])
+
+df_Lifestyle_mapped_summary <- df_Lifestyle_mapped %>%
   group_by(status, ShortSamples, Description) %>%
-  summarise(RelAbund = sum(RelAbund)) %>% ungroup() %>%
+  summarise(RelAbund = sum(RelAbund)) %>%
+  ungroup() %>%
   mutate(status = factor(status, levels = c("Temperate", "Virulent", "Unclassified"))) %>%
   rename(Value = RelAbund) %>%
   # Create a column "rep" from last character from ShortSamples
   mutate(rep = substr(ShortSamples, nchar(ShortSamples), nchar(ShortSamples))) %>%
   # Create a new column DescriptionLong using values in Description and DescriptionModifiers
   mutate(DescriptionLong = DescriptionModifiers[Description])
+
+df_Lifestyle_mapped_host_summary <- df_Lifestyle_mapped_host %>%
+  group_by(status, ShortSamples, Description, HostPhylum) %>%
+  summarise(RelAbund = sum(RelAbund),
+            Count = n()) %>% ungroup() %>%
+  mutate(status = factor(status, levels = c("Temperate", "Virulent", "Unclassified"))) %>%
+  rename(Value = RelAbund) %>%
+  # Create a column "rep" from last character from ShortSamples
+  mutate(rep = substr(ShortSamples, nchar(ShortSamples), nchar(ShortSamples))) %>%
+  # Create a new column DescriptionLong using values in Description and DescriptionModifiers
+  mutate(DescriptionLong = DescriptionModifiers[Description])
+
+df_Lifestyle_mapped_host_ratio_summary <- df_Lifestyle_mapped_host %>%
+  filter(HostPhylum %in% c("Bacillota", "Bacteroidota"),
+         status %in% c("Temperate", "Virulent"),
+         RelAbund > 0) %>%
+  group_by(ShortSamples, DescriptionLong, HostPhylum, status) %>%
+  summarise(
+    TotalAbundance = sum(RelAbund, na.rm = TRUE),
+    UniqueVOTUs = n_distinct(vOTU),
+    .groups = "drop"
+  ) %>%
+  pivot_wider(
+    names_from = status,
+    values_from = c(TotalAbundance, UniqueVOTUs),
+    values_fill = 0
+  ) %>%
+  mutate(
+    AbundanceRatio = TotalAbundance_Temperate / (TotalAbundance_Temperate + TotalAbundance_Virulent),
+    CountRatio = UniqueVOTUs_Temperate / (UniqueVOTUs_Temperate + UniqueVOTUs_Virulent)
+  ) %>%
+  group_by(DescriptionLong, HostPhylum) %>%
+  summarise(
+    mean_abundance_ratio = mean(AbundanceRatio, na.rm = TRUE),
+    sd_abundance_ratio = sd(AbundanceRatio, na.rm = TRUE),
+    se_abundance_ratio = sd_abundance_ratio / sqrt(n()),
+    
+    mean_count_ratio = mean(CountRatio, na.rm = TRUE),
+    sd_count_ratio = sd(CountRatio, na.rm = TRUE),
+    se_count_ratio = sd_count_ratio / sqrt(n()),
+    
+    n = n(),
+    .groups = "drop"
+  )
+
+library(tidyverse)
+
+df_ratio_long <- df_Lifestyle_mapped_host_ratio_summary %>%
+  pivot_longer(
+    cols = c(
+      mean_abundance_ratio, se_abundance_ratio,
+      mean_count_ratio, se_count_ratio
+    ),
+    names_to = c("stat", "metric"),
+    names_pattern = "(.+?)_(abundance|count)_ratio",
+    values_to = "value"
+  ) %>%
+  pivot_wider(names_from = stat, values_from = value) %>%
+  mutate(
+    metric = recode(metric,
+                    "abundance" = "Relative\nAbundance",
+                    "count" = "Unique\nvOTUs")) %>%
+  mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels))
+
+plt_temperate_ratio <- ggplot(df_ratio_long, aes(x = DescriptionLong, y = mean, fill = HostPhylum)) +
+  geom_col(position = position_dodge(width = 0.8), width = 0.7) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se),
+                position = position_dodge(width = 0.8), width = 0.2) +
+  facet_wrap(~metric, nrow = 1) +
+  scale_fill_manual(values = c(
+    "Bacillota" = "#56B4E9",
+    "Bacteroidota" = "#009E73"
+  )) +
+  theme_bw(base_size = 10) +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "bottom",
+    # Make facet background white
+    strip.background = element_rect(fill = "white")) +
+  labs(
+    x = "Processing Method",
+    y = "Temperate: Virulent\n Viral Ratio",
+    fill = "Host Phylum"
+  ) +
+  # Rotate plot by 90 degrees
+  coord_flip()
 
 # Create Lifestyle stacked barplot
 plt_Lifestyle <- df_Lifestyle_mapped_summary %>% mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels)) %>%
@@ -359,6 +555,7 @@ plt_Lifestyle <- df_Lifestyle_mapped_summary %>% mutate(DescriptionLong = factor
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
   labs(x = "Sample", y = "vOTU\nRelative Abundance (%)", fill = "Lifestyle") +
+  # Make facet background white
   theme(strip.background = element_rect(fill = "white")) +
   scale_fill_manual(values = Stacked_palette) +
   guides(fill = guide_legend(title = "Lifestyle", nrow = 2)) +
@@ -366,6 +563,8 @@ plt_Lifestyle <- df_Lifestyle_mapped_summary %>% mutate(DescriptionLong = factor
   theme(axis.text.x = element_blank(),
         axis.ticks.x = element_blank(),
         legend.position = "bottom")
+
+plt_Lifestyle
 
 # Subset lifestyle data for just proviruses that are predicted to be temperate
 df_Provirus_mapped_summary <- df_Bacphlip %>%
@@ -386,11 +585,13 @@ df_Provirus_mapped_summary <- df_Bacphlip %>%
   mutate(DescriptionLong = DescriptionModifiers[Description])
 
 # Create provirus plot
-plt_Proviruses <- df_Provirus_mapped_summary %>%
+plt_list_Proviruses <- df_Provirus_mapped_summary %>%
   filter(Provirus == "Provirus",
          Variable == "vOTU Mapped Relative Abundance (%)") %>%
   mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels)) %>%
-  plot_means_with_cld("Value", "DescriptionLong", Description_palette) +
+  plot_means_with_cld(., "Value", "DescriptionLong", Description_palette)
+
+plt_Proviruses <- plt_list_Proviruses$plot +
   scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
   theme_bw(base_size = 10) +
   labs(y = "Provirus\nProportion (%)") +
@@ -440,7 +641,7 @@ df_host_stacked_summary <- df_host_stacked %>%
             SD_Count = sd(Count))
 
 # Load the SingleM data and filter for metagenomes
-df_Microbiome <- df_Microbiome <- tar_read(SingleMData) %>%
+df_Microbiome <- tar_read(SingleMData) %>%
   mutate(rep = substr(ShortSamples, nchar(ShortSamples), nchar(ShortSamples))) %>%
   mutate(DescriptionLong = DescriptionModifiers[Description]) %>%
   filter(DescriptionLong == "Meta\ngenome") %>%
@@ -484,7 +685,143 @@ plt_microbiome <- df_Microbiome2 %>%
        y = "vOTU\nRelative Abundance (%)", 
        fill = "Predicted\nHost Phylum") +
   scale_fill_manual(values = Phyla_palette) +
-  facet_nested(~ Data + DescriptionLong, drop = TRUE)
+  facet_nested(~ Data + DescriptionLong, drop = TRUE) +
+  theme(
+    legend.position = "right",
+    legend.justification = c("center", "top"),
+    legend.box.margin = margin(t = -62, r = 0, b = 0, l = 0)
+  )
+
+plt_microbiome
+
+plt_vOTU_presence_host <- df_Microbiome2 %>%
+  group_by(DescriptionLong, Data, rep) %>%
+  mutate(RelCount = Count/sum(Count)*100) %>%
+  ggplot(aes(x = rep, y = RelCount, fill = HostPhylum)) +
+  geom_bar(stat = "identity") +
+  theme_bw(base_size = 10) +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank(),
+    strip.background = element_rect(fill = "white")) +
+  labs(x = "Sample", 
+       y = "Proportion of vOTUs present (%)", 
+       fill = "Predicted\nHost Phylum") +
+  scale_fill_manual(values = Phyla_palette) +
+  facet_nested(~ DescriptionLong, drop = TRUE)
+
+plt_vOTU_presence_host
+
+df_provirus_host <- df_Lifestyle_mapped_host %>%
+  filter(HostPhylum %in% c("Bacteroidota", "Bacillota"),
+         RelAbund > 0) %>%
+  group_by(DescriptionLong, ShortSamples, HostPhylum, Provirus) %>%
+  summarise(Count = n(),
+            RelAbund = sum(RelAbund)) %>%
+  group_by(DescriptionLong, HostPhylum, Provirus) %>%
+  summarise(Mean_Count = mean(Count),
+            Mean_RelAbund = mean(RelAbund),
+            SD_Count = sd(Count),
+            SD_RelAbund = sd(RelAbund)) %>% ungroup() %>%
+  mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels))
+
+plt_provirus_host_count <- df_provirus_host %>%
+  ggplot(aes(x = DescriptionLong, y = Mean_Count, fill = HostPhylum)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.9)) +
+  geom_errorbar(aes(ymin = Mean_Count - SD_Count, ymax = Mean_Count + SD_Count),
+                position = position_dodge(width = 0.9), width = 0.2) +
+  theme_bw(base_size = 10) +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "bottom") +
+  # Make facet background white
+  theme(strip.background = element_rect(fill = "white")) +
+  labs(
+    x = "Processing Method",
+    y = "Mean Provirus\nCount",
+    fill = "Host Phylum"
+  ) +
+  scale_fill_manual(values = c(
+    "Bacillota" = "#56B4E9",
+    "Bacteroidota" = "#009E73"
+  )) +
+  facet_wrap(~Provirus, nrow = 1) + coord_flip()
+
+plt_provirus_host_RelAbund <- df_provirus_host %>%
+  ggplot(aes(x = DescriptionLong, y = Mean_RelAbund, fill = HostPhylum)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.9)) +
+  geom_errorbar(aes(ymin = Mean_RelAbund - SD_RelAbund, ymax = Mean_RelAbund + SD_RelAbund),
+                position = position_dodge(width = 0.9), width = 0.2) +
+  theme_bw(base_size = 10) +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "bottom") +
+  # Make facet background white
+  theme(strip.background = element_rect(fill = "white")) +
+  labs(
+    x = "Processing Method",
+    y = "Mean Provirus\nRelative Abundance (%)",
+    fill = "Host Phylum"
+  ) +
+  scale_fill_manual(values = c(
+    "Bacillota" = "#56B4E9",
+    "Bacteroidota" = "#009E73"
+  )) +
+  facet_wrap(~Provirus, nrow = 1)
+
+temp <- plt_provirus_host_RelAbund$data
+
+plt_provirus_host_RelAbund
+
+plt_temperate_ratio
+plt_provirus_host_count
+plt_provirus_host_RelAbund
+
+
+df_provirus_host_count <- plt_provirus_host_count$data
+df_provirus_host_RelAbund <- plt_provirus_host_RelAbund$data
+
+# Merge the dfs
+df_BacillotaBacteroidota <- df_provirus_host_count %>%
+  full_join(df_provirus_host_RelAbund)
+
+FigSX_top <- ggarrange(plt_vOTU_presence_host, labels = c("a"))
+
+FigSX_bottom_right <- ggarrange(
+                      plt_provirus_host_count, plt_provirus_host_RelAbund +
+                        # Remove the y axis
+                        theme(axis.title.y = element_blank(),
+                              axis.ticks.y = element_blank(),
+                              axis.text.y = element_blank(),
+                              plot.margin = margin(t = 5, r = 5, b = 5, l = -2.5)),
+                      ncol = 2, nrow = 1,
+                      labels = c("c", ""),
+                      heights = c(1,1), legend = "none",
+                      widths = c(1.6,1))
+                      
+                      
+
+FigSX_bottom_right
+FigSX_bottom <- ggarrange(plt_temperate_ratio, FigSX_bottom_right,
+                           ncol = 2, nrow = 1,
+                           labels = c("b", ""),
+                           heights = c(1,1), common.legend = TRUE, legend = "bottom",
+                           widths = c(1,1.5))
+FigSX_bottom
+
+FigSX <- ggarrange(FigSX_top, FigSX_bottom, ncol = 1, nrow = 2)
+
+FigSX
+
+# Save FigSX as a PDF
+ggsave("figures/FigS5.pdf", plot = FigSX,
+       width = 170, height = 150, units = "mm", device = "pdf")
 
 # Import read depth data
 df_read_depth_100 <- read_and_merge_tsvs("data/Subsampling/", "G.tsv") %>%
@@ -503,16 +840,44 @@ df_read_depth_100 <- read_and_merge_tsvs("data/Subsampling/", "G.tsv") %>%
   mutate(Description = replace_na(Description, "MtG"),
          DescriptionLong = DescriptionModifiers[Description])
 
-# Create Fig3_bottom as a plot of the read depth data
-Fig3_bottom <- df_read_depth_100 %>%
+# Assemble Fig 3
+Fig3 <- ggarrange(Fig3_top, plt_microbiome, ncol = 1, nrow = 2,
+                      labels = c("", "c"), legend = "right",heights = c(1,1))
+
+# Save Fig3 as a PDF
+ggsave("figures/Fig3.pdf", plot = Fig3,
+       width = 170, height = 150, units = "mm", device = "pdf")
+
+# Save Fig3 as a SVG
+ggsave("figures/Fig3.svg", plot = Fig3,
+       width = 170, height = 150, units = "mm", device = "svg")
+
+# Fig 4 - Technical Recovery Differences ----
+plt_confidence_filtered <- df_Genomad_filtered %>%
+  ggplot(aes(x = virus_score, color = DescriptionLong, group = Sample)) +  # use group = Sample to show 3 lines per condition
+  stat_ecdf(geom = "step", alpha = 0.7, linewidth = 0.5) +
+  theme_bw(base_size = 10) +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    legend.position = "right") +
+  labs(
+    x = "Genomad Prediction Confidence",
+    y = "Cumulative\nFrequency",
+    color = "Processing Method"
+  ) +
+  scale_color_manual(values = Description_palette)
+
+# Create Fig4 as a plot of the read depth data
+Fig4b <- df_read_depth_100 %>%
   ggplot(aes(x = Depth, y = Percentage, colour = DescriptionLong, fill = DescriptionLong)) +
   geom_point(size = 1, alpha = 0.5) +
   geom_smooth() +
   geom_vline(xintercept = c(3.2, 10), linetype = "dashed", colour = "gray50") +
   labs(x = "Sequencing Depth (Gbp)", 
        y = "vOTUs With\n>= 100x Coverage (%)",
-       fill = "Sample Type",
-       colour = "Sample Type") +
+       fill = "Processing Method",
+       colour = "Processing Method") +
   scale_color_manual(values = Description_palette) +
   scale_fill_manual(values = Description_palette) +
   theme_bw(base_size = 10) +
@@ -521,17 +886,16 @@ Fig3_bottom <- df_read_depth_100 %>%
         legend.position = "bottom") +
   guides(fill = guide_legend(nrow = 2), colour = guide_legend(nrow = 2))
 
-# Assemble Fig 3
-Fig3 <- ggarrange(Fig3_top, plt_microbiome, Fig3_bottom, ncol = 1, nrow = 3,
-                      labels = c("", "c","d"), legend = "right",heights = c(1.5,1.5,1))
+Fig4 <- ggarrange(plt_confidence_filtered, Fig4b, labels = c("a","b"),
+                  common.legend = TRUE, legend = "bottom", ncol = 2, nrow = 1)
 
-# Save Fig3 as a PDF
-ggsave("figures/Fig3_new.pdf", plot = Fig3,
-       width = 170, height = 190, units = "mm", device = "pdf")
+# Save Fig4 as a PDF
+ggsave("figures/Fig4.pdf", plot = Fig4,
+       width = 170, height = 60, units = "mm", device = "pdf")
 
-# Save Fig3 as a SVG
-ggsave("figures/Fig3_new.svg", plot = Fig3,
-       width = 170, height = 190, units = "mm", device = "svg")
+# Save Fig4 as a SVG
+ggsave("figures/Fig4.svg", plot = Fig4,
+       width = 170, height = 60, units = "mm", device = "svg")
 
 # 4 - Supplementary Figure Generation ----
 ## Figure S1 - Experimental design ----
@@ -539,8 +903,11 @@ ggsave("figures/Fig3_new.svg", plot = Fig3,
 ### This section is here as a placeholder ###
 
 ## Figure S2 - Contig data ----
+# Create a plot list for contigs
+plt_list_contigs <- plot_means_with_cld(df_quast %>% filter(Metric == "# contigs"), "Value", "DescriptionLong", Description_palette)
+
 # Create plot of contigs
-plt_contigs <- plot_means_with_cld(df_quast %>% filter(Metric == "# contigs"), "Value", "DescriptionLong", Description_palette) +
+plt_contigs <- plt_list_contigs$plot +
   labs(y = "Contigs", title = "Number of contigs") +
   theme_bw() +
   scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
@@ -549,8 +916,11 @@ plt_contigs <- plot_means_with_cld(df_quast %>% filter(Metric == "# contigs"), "
         panel.grid.minor = element_blank()) +
   theme(legend.position = "bottom")
 
+# Create a plot list for viral contigs
+plt_list_viral_contigs <- plot_means_with_cld(df_quast %>% filter(Metric == "FilteredViralContigs"), "Value", "DescriptionLong", Description_palette)
+
 # Create plot of filtered viral contigs
-plt_viral_contigs <- plot_means_with_cld(df_quast %>% filter(Metric == "FilteredViralContigs"), "Value", "DescriptionLong", Description_palette) +
+plt_viral_contigs <- plt_list_viral_contigs$plot +
   labs(y = "Viral contigs", title = "Number of viral contigs") +
   theme_bw() +
   scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
@@ -559,8 +929,12 @@ plt_viral_contigs <- plot_means_with_cld(df_quast %>% filter(Metric == "Filtered
         panel.grid.minor = element_blank()) +
   theme(legend.position = "bottom")
 
+# Create a plot list for largest contig
+plt_list_largest_contig <- plot_means_with_cld(df_quast %>% filter(Metric == "Largest contig"), "Value", "DescriptionLong", Description_palette)
+
+
 # Create plot of largest contig
-plt_Largest_contig <- plot_means_with_cld(df_quast %>% filter(Metric == "Largest contig"), "Value", "DescriptionLong", Description_palette) +
+plt_Largest_contig <- plt_list_largest_contig$plot +
   labs(y = "Largest contig (bp)", title = "Largest contig") +
   theme_bw() +
   scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
@@ -569,8 +943,11 @@ plt_Largest_contig <- plot_means_with_cld(df_quast %>% filter(Metric == "Largest
         panel.grid.minor = element_blank()) +
   theme(legend.position = "bottom")
 
+# Create a plot list for auN
+plt_list_auN <- plot_means_with_cld(df_quast %>% filter(Metric == "auN"), "Value", "DescriptionLong", Description_palette)
+
 # Create plot of auN
-plt_auN <- plot_means_with_cld(df_quast %>% filter(Metric == "auN"), "Value", "DescriptionLong", Description_palette) +
+plt_auN <- plt_list_auN$plot +
   labs(y = "auN", title = "auN") +
   theme_bw() +
   scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
@@ -579,8 +956,11 @@ plt_auN <- plot_means_with_cld(df_quast %>% filter(Metric == "auN"), "Value", "D
         panel.grid.minor = element_blank()) +
   theme(legend.position = "bottom")
 
+# Create a plot list for N50
+plt_list_N50 <- plot_means_with_cld(df_quast %>% filter(Metric == "N50"), "Value", "DescriptionLong", Description_palette)
+
 # Create plot of N50
-plt_N50 <- plot_means_with_cld(df_quast %>% filter(Metric == "N50"), "Value", "DescriptionLong", Description_palette) +
+plt_N50 <- plt_list_N50$plot +
   labs(y = "N50", title = "N50") +
   theme_bw() +
   scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
@@ -589,8 +969,11 @@ plt_N50 <- plot_means_with_cld(df_quast %>% filter(Metric == "N50"), "Value", "D
         panel.grid.minor = element_blank()) +
   theme(legend.position = "bottom")
 
+# Create a plot list for L50
+plt_list_L50 <- plot_means_with_cld(df_quast %>% filter(Metric == "L50"), "Value", "DescriptionLong", Description_palette)
+
 # Create plot of L50
-plt_L50 <- plot_means_with_cld(df_quast %>% filter(Metric == "L50"), "Value", "DescriptionLong", Description_palette) +
+plt_L50 <- plt_list_L50$plot +
   labs(y = "L50", title = "L50") +
   theme_bw() +
   scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
@@ -599,8 +982,11 @@ plt_L50 <- plot_means_with_cld(df_quast %>% filter(Metric == "L50"), "Value", "D
         panel.grid.minor = element_blank()) +
   theme(legend.position = "bottom")
 
+# Create a plot list for Total length
+plt_list_Total_Length <- plot_means_with_cld(df_quast %>% filter(Metric == "Total length"), "Value", "DescriptionLong", Description_palette)
+
 # Create plot of Total length
-plt_Total_Length <- plot_means_with_cld(df_quast %>% filter(Metric == "Total length"), "Value", "DescriptionLong", Description_palette) +
+plt_Total_Length <- plt_list_Total_Length$plot +
   labs(y = "Total length (bp)", title = "Total length") +
   theme_bw() +
   scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
@@ -632,8 +1018,11 @@ df_all_viral<- df_mapped_viruses %>%
   rename(AssembledViruses = FilteredViralContigs, MappedViruses = Count) %>%
   mutate(Ratio = MappedViruses / AssembledViruses)
 
+# Create a plot_list for the ratio of mapped to assembled vOTUs
+plt_list_ratio <- plot_means_with_cld(df_all_viral, "Ratio", "Description", Description_palette)
+
 # Plot the ratio of mapped to assembled vOTUs
-plt_ratio <- plot_means_with_cld(df_all_viral, "Ratio", "Description", Description_palette) +
+plt_ratio <- plt_list_ratio$plot +
   labs(y = "Mapped / Assembled Viruses", title = "Mapped vOTUs/ Assembled viral contigs") +
   scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
   theme_bw() +
@@ -642,8 +1031,8 @@ plt_ratio <- plot_means_with_cld(df_all_viral, "Ratio", "Description", Descripti
         panel.grid.minor = element_blank())
 
 # Assemble Figure S3
-FigS3 <- ggarrange(plt_ratio, plt_mapped_only,
-                   ncol = 1, labels = c("a", "b"))
+FigS3 <- ggarrange(plt_mapped_only,
+                   ncol = 1)
 
 # Save plot as pdf
 ggsave("figures/FigS3.pdf", plot = FigS3,
@@ -655,9 +1044,12 @@ ggsave("figures/FigS3.svg", plot = FigS3,
 
 ## Figure S4 - Read-based data ----
 
+# Create a plot_list for the read data
+plt_list_raw_reads <- plot_means_with_cld(df_reads %>% select(DescriptionLong, total_sequences) %>% unique(),"total_sequences", "DescriptionLong", Description_palette)
+
 # Plot raw reads data
-plt_raw_reads <- plot_means_with_cld(df_reads %>% select(DescriptionLong, total_sequences) %>% unique(),"total_sequences", "DescriptionLong", Description_palette) +
-  labs(y = "Total reads (millions)", title = "Total reads", fill = "Sample Type") +
+plt_raw_reads <- plt_list_raw_reads$plot +
+  labs(y = "Total reads (millions)", title = "Total reads", fill = "Processing Method") +
   theme_bw() +
   scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
   # Remove major and minor grid lines
@@ -665,18 +1057,24 @@ plt_raw_reads <- plot_means_with_cld(df_reads %>% select(DescriptionLong, total_
         panel.grid.minor = element_blank()) +
   theme(legend.position = "none")
 
+# Create a plot list for human reads
+plt_list_human_reads <- plot_means_with_cld(df_reads %>% filter(Type == "Human"),"ReadPercentage", "DescriptionLong", Description_palette)
+temp <- plt_list_human_reads$plot$data
 # Plot human reads data
-plt_human_reads <- plot_means_with_cld(df_reads %>% filter(Type == "Human"),"ReadPercentage", "DescriptionLong", Description_palette) +
-  labs(y = "Percentage (%)", title = "Human reads", fill = "Sample Type") +
+plt_human_reads <- plt_list_human_reads$plot +
+  labs(y = "Percentage (%)", title = "Human reads", fill = "Processing Method") +
   theme_bw() +
   scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
   # Remove major and minor grid lines
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 
+# Create a plot list for rRNA reads
+plt_list_rRNA_reads <- plot_means_with_cld(df_reads %>% filter(Type == "rRNA"),"ReadPercentage", "DescriptionLong", Description_palette)
+
 # Plot rRNA reads data
-plt_rRNA_reads <- plot_means_with_cld(df_reads %>% filter(Type == "rRNA"),"ReadPercentage", "DescriptionLong", Description_palette) +
-  labs(y = "Percentage (%)", title = "rRNA gene reads", fill = "Sample Type") +
+plt_rRNA_reads <- plt_list_rRNA_reads$plot +
+  labs(y = "Percentage (%)", title = "rRNA gene reads", fill = "Processing Method") +
   theme_bw() +
   scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
   # Remove major and minor grid lines
@@ -690,9 +1088,12 @@ df_unique_kmers <- tar_read(processed_kmers) %>%
   mutate(DescriptionLong = DescriptionModifiers[Description]) %>%
   mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels))
 
+# Create a plot list for unique k-mers
+plt_list_unique_kmers <- plot_means_with_cld(df_unique_kmers, "count", "DescriptionLong", Description_palette)
+
 # Plot unique k-mer data
-plt_unique_kmers <- plot_means_with_cld(df_unique_kmers, "count", "DescriptionLong", Description_palette) +
-  labs(y = "Unique kmers", title = "Unique kmers", fill = "Sample Type") +
+plt_unique_kmers <- plt_list_unique_kmers$plot +
+  labs(y = "Unique kmers", title = "Unique kmers", fill = "Processing Method") +
   theme_bw() +
   scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
   # Remove major and minor grid lines
@@ -721,7 +1122,7 @@ df_bray_long <- as.matrix(df_bray) %>%
   melt(varnames = c("Sample1", "Sample2"), value.name = "BrayCurtis") %>%
   filter(Sample1 != Sample2)  # Remove diagonal
 
-# Add sample type metadata
+# Add Processing Method metadata
 df_bray_long <- df_bray_long %>%
   left_join(metadata %>% select(Sample1 = Sample, SampleType1 = Description), by = "Sample1") %>%
   left_join(metadata %>% select(Sample2 = Sample, SampleType2 = Description), by = "Sample2") %>%
@@ -787,25 +1188,85 @@ ggsave("figures/FigS5.svg", plot = plt_bray_comparisons,
        width = 160, height = 100, units = "mm", device = "svg")
 ## Figure S6 - Annotation ----
 
-# Load Genomad data output
-df_Genomad <- tar_read(GenomadData)
+df_Genomad_unfiltered <- df_Genomad %>%
+  #filter(seq_name %in% all_filtered_contigs) %>%
+  rename(Contig = seq_name, Sample = sample) %>%
+  left_join(metadata, by = "Sample") %>%
+  mutate(DescriptionLong = DescriptionModifiers[Description]) %>%
+  filter(is.na(DescriptionLong) == FALSE) %>%
+  mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels))
 
-# Import Clustering data
-df_clustering <- tar_read(ClusteringData)
+df_Genomad_removed <- df_Genomad_unfiltered %>%
+  filter(!Contig %in% df_Genomad_filtered$Contig)
 
-# Get a list of all viral sequences (not just vOTU representative sequences)
-all_filtered_contigs <- df_clustering %>%
-  # Concatenate all Cluster rows with a comma separator
-  summarise(all_clusters = paste(Cluster, collapse = ",")) %>%
-  # Split the concatenated string into a vector
-  pull(all_clusters) %>%
-  strsplit(split = ",") %>%
-  unlist()
+temp <- df_Genomad_filtered %>%
+  filter(virus_score >0.95)
 
-# Filter Genomad data for only contigs in all_filtered_contigs
-df_Genomad_filtered <- df_Genomad %>%
-  filter(seq_name %in% all_filtered_contigs) %>%
-  rename(Contig = seq_name, Sample = sample) 
+plt_confidence_unfiltered <- df_Genomad_unfiltered %>%
+  ggplot(aes(x = virus_score, color = DescriptionLong, group = Sample)) +  # use group = Sample to show 3 lines per condition
+  stat_ecdf(geom = "step", alpha = 0.7, linewidth = 0.5) +
+  theme_bw(base_size = 10) +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    legend.position = "right") +
+  labs(
+    x = "Genomad Prediction\nConfidence",
+    y = "Cumulative Frequency",
+    color = "Processing Method"
+  ) +
+  scale_color_manual(values = Description_palette) +
+  ggtitle("All viral\ncontigs")
+
+plt_confidence_removed <- df_Genomad_removed %>%
+  ggplot(aes(x = virus_score, color = DescriptionLong, group = Sample)) +  # use group = Sample to show 3 lines per condition
+  stat_ecdf(geom = "step", alpha = 0.7, linewidth = 0.5) +
+  theme_bw(base_size = 10) +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    legend.position = "right") +
+  labs(
+    x = "Genomad Prediction\nConfidence",
+    y = "Cumulative Frequency",
+    color = "Processing Method"
+  ) +
+  scale_color_manual(values = Description_palette) +
+  ggtitle("Contigs removed\nby filtering")
+
+plt_confidence_vOTU <- df_Genomad_filtered %>% filter(Contig %in% df_clustering$vOTU) %>%
+  ggplot(aes(x = virus_score, color = DescriptionLong, group = Sample)) +  # use group = Sample to show 3 lines per condition
+  stat_ecdf(geom = "step", alpha = 0.7, linewidth = 0.5) +
+  theme_bw(base_size = 10) +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    legend.position = "right") +
+  labs(
+    x = "Genomad Prediction\nConfidence",
+    y = "Cumulative Frequency",
+    color = "Processing Method"
+  ) +
+  scale_color_manual(values = Description_palette) +
+  ggtitle("vOTU representative\ncontigs")
+
+plt_confidence_combined <- ggarrange(plt_confidence_unfiltered + theme(legend.position = "none"),
+                                      plt_confidence_removed + theme(legend.position = "none"),
+                                      ncol = 2, nrow = 1,
+                                      labels = c("a", "b"),
+                                      common.legend = TRUE, legend = "bottom")
+
+library(lme4)
+library(lmerTest)  # for p-values
+
+df_summary <- df_Genomad_filtered %>%
+  group_by(DescriptionLong, Sample) %>%
+  summarise(mean_confidence = mean(virus_score, na.rm = TRUE), .groups = "drop")
+
+aov_model <- aov(mean_confidence ~ DescriptionLong, data = df_summary)
+summary(aov_model)
+
+TukeyHSD(aov_model)
 
 # Create a tsv of AMR data
 df_AMR <- read.csv("data/ViralContigs/merged_amr_filtered.tsv", sep = "\t") %>%
@@ -832,16 +1293,19 @@ df_Genomad_meta <- df_Genomad %>%
   filter (is.na(SampleType) == FALSE)
 
 # Import DefenseFinder data
-df_Defense <- tar_read(DefenseFinderData)
+df_Defense <- tar_read(DefenseFinderData) %>%
+  rename(Sample = sample)
 
 # Merge with df_Genomad_filtered, keeping all rows in df_Defense
 df_Defense_merged <- df_Defense %>%
-  left_join(df_Genomad_filtered, by = c("vOTU" = "Contig")) %>%
   # Merge with metadata by Sample
   left_join(metadata, by = "Sample") %>%
-  select(Sample, Description, type, subtype, activity) %>%
-  mutate(DescriptionLong = DescriptionModifiers[Description]) %>%
-  mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels))
+  select(Sample, Description, type, subtype, activity, ViralSequence) %>%
+  mutate(
+    DescriptionLong = DescriptionModifiers[Description],
+    Prophage = grepl("provirus", ViralSequence, ignore.case = TRUE),
+    DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels)
+  )
 
 # Create a df that contains the counts and percentages of sequences carrying defense genes
 df_defense_activity <- df_Defense_merged %>%
@@ -851,20 +1315,24 @@ df_defense_activity <- df_Defense_merged %>%
     Percentage = (Count / nrow(df_Defense_merged)) * 100
   )
 
+# Create a plt_list for defense systems
+plt_list_defense <- plot_means_with_cld(df_defense_activity %>% filter(activity == "Defense"), "Percentage", "DescriptionLong", Description_palette)
+
 # Create a plot of defense systems
-plt_defense <- df_defense_activity %>% filter(activity == "Defense") %>%
-  plot_means_with_cld("Percentage", "DescriptionLong", Description_palette) +
+plt_defense <- plt_list_defense$plot +
   labs(y = "Viral contigs carrying\n bacteriophage defense systems (%)",
-       fill = "Sample Type") +
+       fill = "Processing Method") +
   # Remove major and minor grid lines
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   scale_x_discrete(guide = guide_axis(n.dodge = 2))  # Alternate labels into two rows
 
+# Create a plt_list for antidefense systems
+plt_list_antidefense <- plot_means_with_cld(df_defense_activity %>% filter(activity == "Antidefense"), "Percentage", "DescriptionLong", Description_palette)
+
 # Create a plot of antidefense systems
-plt_antidefense <- df_defense_activity %>% filter(activity == "Antidefense") %>%
-  plot_means_with_cld("Percentage", "DescriptionLong", Description_palette) +
+plt_antidefense <- plt_list_antidefense$plot +
   labs(y = "Viral contigs carrying\nantidefense systems (%)",
-       fill = "Sample Type") +
+       fill = "Processing Method") +
   # Remove major and minor grid lines
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   scale_x_discrete(guide = guide_axis(n.dodge = 2))  # Alternate labels into two rows
@@ -901,27 +1369,27 @@ df_Pharokka_moron_summary <- df_Pharokka_moron %>% ungroup() %>%
     SD = sd(Percentage, na.rm = TRUE)
   )
 
+plt_list_morons <- plot_means_with_cld(df_Pharokka_moron, "Percentage", "DescriptionLong", Description_palette)
+
 # Create a plot of moron, auxiliary metabolic gene and host takeover genes
-plt_morons <- df_Pharokka_moron %>% 
-  plot_means_with_cld("Percentage", "DescriptionLong", Description_palette) +
+plt_morons <- plt_list_morons$plot +
   labs(y = "Viral contigs carrying a\nmoron, auxiliary metabolic gene\nand host takeover gene (%)",
-       fill = "Sample Type") +
+       fill = "Processing Method") +
   scale_fill_manual(values = Description_palette) +
   # Remove major and minor grid lines
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   scale_x_discrete(guide = guide_axis(n.dodge = 2))  # Alternate labels into two rows
 
 # Arrange plots into FigS6
-FigS6 <- ggarrange(plt_morons, plt_defense, plt_antidefense, nrow = 1, heights = c(1, 1),
-                   labels = c("a", "b", "c"), common.legend = TRUE, legend = "bottom")
-
+FigS6 <- plt_morons
+FigS6
 # Save plot as pdf
 ggsave("figures/FigS6.pdf", plot = FigS6,
-       width = 160, height = 110, units = "mm", device = "pdf")
+       width = 170, height = 100, units = "mm", device = "pdf")
 
 # Save svg version
 ggsave("figures/FigS6.svg", plot = FigS6,
-       width = 160, height = 110, units = "mm", device = "svg")
+       width = 170, height = 100, units = "mm", device = "svg")
 
 ## Figure S7 - Unified Human Gut Virome Catalog comparison ----
 
@@ -989,22 +1457,29 @@ UHGV_contigs <- df_UHGV %>%
 df_UHGVs <- df_Genomad_filtered %>%
   mutate(UHGV = Contig %in% UHGV_filtered_contigs) %>%
   left_join(metadata, by = "Sample") %>%
-  mutate(DescriptionLong = DescriptionModifiers[Description]) %>%
-  mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels)) %>%
-  select(Sample, DescriptionLong, ShortSamples, UHGV) %>%
+  #mutate(DescriptionLong = DescriptionModifiers[Description]) %>%
+  #mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels)) %>%
+  select(Sample, DescriptionLong, UHGV) %>%
   group_by(Sample, DescriptionLong) %>%
   summarise(UHGV = sum(UHGV, na.rm = TRUE),
             Total = n(),
             Percentage = (UHGV/ Total)*100)
 
-# Summarise the percentage GPD data
+# Summarise the percentage UHGV data
 df_UHGVs_summary <- df_UHGVs %>% ungroup() %>%
   summarise(Mean = mean(Percentage, na.rm = TRUE),
             SD = sd(Percentage, na.rm = TRUE))
 
-# Plot Percentage GPD data
-plt_UHGVs <- df_UHGVs %>% plot_means_with_cld("Percentage", "DescriptionLong", Description_palette) +
-  labs(x = "Sample Type", y = "Percentage of\nviral contigs (%)", fill = "Sample Type") +
+# Create a plt_list for Percentage UHGV data
+plt_list_UHGVs <- plot_means_with_cld(df_UHGVs, "Percentage", "DescriptionLong", Description_palette)
+
+plt_list_UHGVs$tukey
+
+anova_result <- aov(Percentage ~ DescriptionLong, data = df_UHGVs)
+summary(anova_result)
+# Plot Percentage UHGV data
+plt_UHGVs <- plt_list_UHGVs$plot +
+  labs(x = "Processing Method", y = "Percentage of\nviral contigs (%)", fill = "Processing Method") +
   # Expand y-axis limits
   scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
   # Remove grid lines
@@ -1096,9 +1571,12 @@ df_UHGV_mapping_only_summary <- df_UHGV_mapping_only %>%
   mutate(DescriptionLong = DescriptionModifiers[Description]) %>%
   mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels))
 
+# Create a plt_list for UHGV mapping summary
+plt_list_UHGV_mapping <- plot_means_with_cld(df_UHGV_mapping_summary, "Count", "DescriptionLong", Description_palette)
+
 # Create a plot of the UHGV mapping summary
-plt_UHGV_mapping <- plot_means_with_cld(df_UHGV_mapping_summary, "Count", "DescriptionLong", Description_palette) +
-  labs(x = "Sample Type", y = "Count", fill = "Sample Type") +
+plt_UHGV_mapping <- plt_list_UHGV_mapping$plot +
+  labs(x = "Processing Method", y = "Count", fill = "Processing Method") +
   scale_y_continuous(
     limits = c(0, 265),
     expand = expansion(mult = c(0, 0.1))
@@ -1107,8 +1585,11 @@ plt_UHGV_mapping <- plot_means_with_cld(df_UHGV_mapping_summary, "Count", "Descr
   theme(legend.position = "bottom") +
   scale_fill_manual(values = Description_palette)
 
-plt_UHGV_mapping_only <- plot_means_with_cld(df_UHGV_mapping_only_summary, "Count", "DescriptionLong", Description_palette) +
-  labs(x = "Sample Type", y = "Count", fill = "Sample Type") +
+# Create a plt_list for UHGV mapping only summary
+plt_list_UHGV_mapping_only <- plot_means_with_cld(df_UHGV_mapping_only_summary, "Count", "DescriptionLong", Description_palette)
+
+plt_UHGV_mapping_only <- plt_list_UHGV_mapping_only$plot +
+  labs(x = "Processing Method", y = "Count", fill = "Processing Method") +
   # Expand y-axis limits
   scale_y_continuous(
     limits = c(0, 265),
@@ -1233,3 +1714,241 @@ df_UHGV_mapping_summary_table <- df_UHGV_mapping_summary %>%
             SD_Count = sd(Count, na.rm = TRUE),
             Count = n()) %>%
   arrange(desc(Mean_Count))
+
+# Stats tables for SI ----
+# -----------------------------------------
+# 1) Stats helper: ANOVA + Tukey extractor
+# -----------------------------------------
+one_way_stats <- function(df, value_col, group_col, panel_label, measure_label = NULL) {
+  stopifnot(value_col %in% names(df), group_col %in% names(df))
+  d <- df %>%
+    dplyr::select(all_of(c(value_col, group_col))) %>%
+    dplyr::rename(value = !!value_col, group = !!group_col) %>%
+    dplyr::mutate(
+      value = as.numeric(value),
+      group = factor(group)
+    ) %>%
+    dplyr::filter(stats::complete.cases(value, group))
+  
+  # If fewer than 2 groups have data, skip
+  if (dplyr::n_distinct(d$group) < 2) {
+    return(list(
+      anova = tibble::tibble(
+        panel = panel_label,
+        measure = measure_label %||% value_col,
+        k_groups = dplyr::n_distinct(d$group),
+        df1 = NA_integer_, df2 = NA_integer_,
+        F = NA_real_, p_value = NA_real_
+      ),
+      tukey = tibble::tibble(
+        panel = panel_label,
+        measure = measure_label %||% value_col,
+        contrast = character(),
+        diff = numeric(), lwr = numeric(), upr = numeric(), p_adj = numeric()
+      )
+    ))
+  }
+  
+  fit <- stats::aov(value ~ group, data = d)
+  sm  <- summary(fit)[[1]]
+  
+  df1 <- sm[["Df"]][1]
+  df2 <- sm[["Df"]][2]
+  Fv  <- sm[["F value"]][1]
+  pv  <- sm[["Pr(>F)"]][1]
+  
+  anova_line <- tibble::tibble(
+    panel = panel_label,
+    measure = measure_label %||% value_col,
+    k_groups = dplyr::n_distinct(d$group),
+    df1 = df1, df2 = df2,
+    F = as.numeric(Fv),
+    p_value = as.numeric(pv)
+  )
+  
+  tk  <- TukeyHSD(fit)[["group"]] %>%
+    as.data.frame() %>%
+    tibble::rownames_to_column("contrast") %>%
+    dplyr::as_tibble() %>%
+    dplyr::transmute(
+      panel = panel_label,
+      measure = measure_label %||% value_col,
+      contrast,
+      diff = `diff`, lwr = `lwr`, upr = `upr`, p_adj = `p adj`
+    )
+  
+  list(anova = anova_line, tukey = tk)
+}
+
+# -----------------------------------------
+# 2) Define the panels you want in the TSVs
+#    (add/remove entries as needed)
+# -----------------------------------------
+panels <- list(
+  # Fig 1c: Assembled vOTUs
+  list(df = df_assembled_viruses, value = "FilteredViralContigs", group = "Description",
+       panel = "Fig1c_Assembled_vOTUs", measure = "Assembled vOTUs"),
+  
+  # Fig 1d: Mapped vOTUs
+  list(df = df_mapped_viruses, value = "Count", group = "Description",
+       panel = "Fig1d_Mapped_vOTUs", measure = "Mapped vOTUs"),
+  
+  # Fig 1e: Viral read % (note: uses DescriptionLong)
+  list(df = dplyr::filter(df_reads, Type == "Viral"), value = "ReadPercentage", group = "DescriptionLong",
+       panel = "Fig1e_Viral_Reads", measure = "Viral reads (%)"),
+  # Fig 3b: Provirus proportions
+  list(df = df_Provirus_mapped_summary %>% filter(Provirus == "Provirus", Variable == "vOTU Mapped Relative Abundance (%)") %>%
+    mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels)),
+  value = "Value", group = "DescriptionLong", panel = "Fig3b_Provirus_Proportion", measure = "Provirus Proportion (%)"),
+  # Fig S2 panels (examples; keep any you show)
+  list(df = dplyr::filter(df_quast, Metric == "# contigs"),
+       value = "Value", group = "DescriptionLong", panel = "FigS2a_NumContigs", measure = "# contigs"),
+  list(df = dplyr::filter(df_quast, Metric == "FilteredViralContigs"),
+       value = "Value", group = "DescriptionLong", panel = "FigS2b_ViralContigs", measure = "Viral contigs"),
+  list(df = dplyr::filter(df_quast, Metric == "Largest contig"),
+       value = "Value", group = "DescriptionLong", panel = "FigS2c_LargestContig", measure = "Largest contig (bp)"),
+  list(df = dplyr::filter(df_quast, Metric == "auN"),
+       value = "Value", group = "DescriptionLong", panel = "FigS2d_auN", measure = "auN"),
+  list(df = dplyr::filter(df_quast, Metric == "N50"),
+       value = "Value", group = "DescriptionLong", panel = "FigS2e_N50", measure = "N50"),
+  list(df = dplyr::filter(df_quast, Metric == "L50"),
+       value = "Value", group = "DescriptionLong", panel = "FigS2f_L50", measure = "L50"),
+  list(df = dplyr::filter(df_quast, Metric == "Total length"),
+       value = "Value", group = "DescriptionLong", panel = "FigS2g_TotalLength", measure = "Total length (bp)"),
+  
+  # Fig S3a: Ratio mapped/assembled
+  list(df = df_all_viral, value = "Ratio", group = "Description",
+       panel = "FigS3b_Mapped_to_Assembled_Ratio", measure = "Mapped/Assembled"),
+  
+  # Fig S4a: Total reads (millions)
+  list(df = df_reads %>% dplyr::select(DescriptionLong, total_sequences) %>% dplyr::distinct(),
+       value = "total_sequences", group = "DescriptionLong",
+       panel = "FigS4a_Total_Reads", measure = "Total reads (millions)"),
+  
+  # Fig S4b: rRNA %
+  list(df = dplyr::filter(df_reads, Type == "rRNA"), value = "ReadPercentage", group = "DescriptionLong",
+       panel = "FigS4b_rRNA_Reads", measure = "rRNA reads (%)"),
+  
+  # Fig S4c: Human %
+  list(df = dplyr::filter(df_reads, Type == "Human"), value = "ReadPercentage", group = "DescriptionLong",
+       panel = "FigS4c_Human_Reads", measure = "Human reads (%)"),
+  
+  # Fig S4d: Unique kmers
+  list(df = df_unique_kmers, value = "count", group = "DescriptionLong",
+       panel = "FigS4d_UniqueKmers", measure = "Unique kmers"),
+  
+  # Fig S6a: Moron/AMG/host-takeover gene %
+  list(df = df_Pharokka_moron, value = "Percentage", group = "DescriptionLong",
+       panel = "FigS6a_Moron_AMG_HostTakeover", measure = "Moron/AMG/host takeover (%)"),
+  
+  # Fig S6b: Defense %
+  list(df = dplyr::filter(df_defense_activity, activity == "Defense"),
+       value = "Percentage", group = "DescriptionLong",
+       panel = "FigS6b_Defense", measure = "Defense systems (%)"),
+  
+  # Fig S6c: Antidefense %
+  list(df = dplyr::filter(df_defense_activity, activity == "Antidefense"),
+       value = "Percentage", group = "DescriptionLong",
+       panel = "FigS6c_Antidefense", measure = "Antidefense systems (%)"),
+  
+  # Fig S7b: % of contigs clustering with UHGV
+  list(df = df_UHGVs, value = "Percentage", group = "DescriptionLong",
+       panel = "FigS7b_UHGV_Percentage", measure = "% contigs in UHGV clusters"),
+  
+  # Fig S7c: UHGV mapping counts
+  list(df = df_UHGV_mapping_summary, value = "Count", group = "DescriptionLong",
+       panel = "FigS7c_UHGV_Mapping_Counts", measure = "UHGV mapping count"),
+  
+  # Fig S7d: UHGV mapping-only counts
+  list(df = df_UHGV_mapping_only_summary, value = "Count", group = "DescriptionLong",
+       panel = "FigS7d_UHGV_MappingOnly_Counts", measure = "UHGV mapping-only count")
+)
+
+# -----------------------------------------
+# 3) Run stats for all panels & write TSVs
+# -----------------------------------------
+stats_list <- lapply(panels, function(p) {
+  one_way_stats(p$df, p$value, p$group, p$panel, p$measure)
+})
+
+anova_tbl  <- dplyr::bind_rows(lapply(stats_list, `[[`, "anova")) %>%
+  dplyr::mutate(
+    F_formatted = ifelse(is.na(F), NA_character_,
+                         sprintf("F[%d,%d] = %.3f", df1, df2, F)),
+    p_formatted = dplyr::case_when(
+      is.na(p_value) ~ NA_character_,
+      p_value < 1e-5 ~ "p < 0.00001",
+      TRUE ~ paste0("p = ", signif(p_value, 3))
+    )
+  ) %>%
+  dplyr::select(panel, measure, k_groups, df1, df2, F, p_value, F_formatted, p_formatted)
+
+tukey_tbl <- dplyr::bind_rows(lapply(stats_list, `[[`, "tukey")) %>%
+  dplyr::mutate(
+    p_formatted = dplyr::case_when(
+      is.na(p_adj) ~ NA_character_,
+      p_adj < 1e-5 ~ "p < 0.00001",
+      TRUE ~ paste0("p = ", signif(p_adj, 3))
+    )
+  ) %>%
+  dplyr::arrange(panel, measure, contrast)
+
+# Ensure output folder exists
+if (!dir.exists("stats")) dir.create("stats", recursive = TRUE)
+
+clean_contrast <- function(x) {
+  x %>%
+    stringr::str_replace_all("[\r\n]+", " ") %>%  # remove line breaks
+    stringr::str_squish()
+}
+
+tukey_tbl <- tukey_tbl %>%
+  dplyr::mutate(
+    contrast = clean_contrast(contrast)
+  ) %>%
+  tidyr::separate(
+    contrast,
+    into = c("group1", "group2"),
+    sep = " - ",
+    remove = FALSE,
+    extra = "merge", # just in case there are multiple dashes
+    fill = "right"
+  )
+
+
+
+readr::write_tsv(anova_tbl, "stats/anova_summary.tsv")
+
+message("Wrote: stats/anova_summary.tsv and stats/tukey_pairs.tsv")
+
+# GraphicalAbstract
+plt_stacked_GA <- plt_stacked +
+  theme_bw(base_size = 15) +
+  labs(fill = "Viral\ntaxonomy") +  # Restore the label
+  guides(fill = guide_legend(title = "Viral\ntaxonomy", ncol = 1)) +  # Redundant but fine
+  theme(legend.position = "right",legend.title = element_text(),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        strip.background = element_rect(fill = "white"),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_blank())
+
+plt_microbiome_GA <- plt_microbiome +
+  theme_bw(base_size = 15) +
+  labs(y = "Relative\nAbundance (%)") +
+  theme(legend.position = "right", legend.title = element_text(),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        strip.background = element_rect(fill = "white"),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_blank(),
+        legend.justification = c("center", "top"),
+        legend.box.margin = margin(t = -80, r = 0, b = 0, l = 0))
+  # Move legend up
+  
+
+GraphicalAbstract <- ggarrange(plt_stacked_GA, plt_microbiome_GA,
+                                 ncol = 1, nrow = 2)
+
+GraphicalAbstract
+# Save plot as pdf
+ggsave("figures/GraphicalAbstractFigure.pdf", plot = GraphicalAbstract,
+       width = 200, height = 150, units = "mm", device = "pdf")

@@ -11,6 +11,8 @@ tar_option_set(
   format = "qs"
 )
 
+packageVersion("targets")
+
 # Define the pipeline (targets)
 list(
   # 1 - Data Import ----
@@ -58,16 +60,20 @@ list(
     import_bacphlip("data/Lifestyle")
   ),
   tar_target(
+    BacPhlipData_vOTU,
+    import_bacphlip_vOTU("data/Lifestyle/combined_Genomad_vOTUs.fna.bacphlip")
+  ),  
+  tar_target(
     DefenseFinderData,
-    import_defensefinder("data/DefenseFinder/combined_vOTUs_proteins_defense_finder_systems.tsv")
+    import_defensefinder("data/DefenseFinder")
   ),
   tar_target(
     iPhopData,
     import_iphop_data("data/HostPrediction/Host_prediction_to_genus_m90.csv")
   ),
   tar_target(
-    PharokkaData,
-    import_pharokka(filepath)
+    PharokkaData_vOTU,
+    import_pharokka_vOTU("data/Pharokka/pharokka_vOTU_proteins_full_merged_output.tsv")
   ),
   # 2 - Data Processing----
   tar_target(
@@ -100,16 +106,7 @@ list(
     plot_venn_diagrams(PA_table)
   ),
   tar_target(
-    plt_pcoas,
-    produce_pcoas(vOTU_tpm, plt_stacked, GenomadData, metadata, Description_palette = Description_palette)
-  ),
-  tar_target(
     plt_stacked,
     plot_vOTU_stacked_barplot(vOTU_tpm, metadata, GenomadData)
-  ),
-  tar_target(
-    plt_SingleM,
-    plot_singlem(SingleMData)
   )
 )
-

@@ -1,0 +1,133 @@
+panel	measure	contrast	group1	group2	diff	lwr	upr	p_adj	p_formatted
+Fig1c_Assembled_vOTUs	Assembled vOTUs	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	-2.666666666666657	-25.771487819896198	20.438154486562883	0.9815499896911042	p = 0.982
+Fig1c_Assembled_vOTUs	Assembled vOTUs	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-107.00000000000003	-130.10482115322958	-83.89517884677049	2.0331110873739178e-6	p < 0.00001
+Fig1c_Assembled_vOTUs	Assembled vOTUs	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-109.66666666666669	-132.77148781989624	-86.56184551343715	1.6830774537401894e-6	p < 0.00001
+Fig1c_Assembled_vOTUs	Assembled vOTUs	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	-25	-48.10482115322954	-1.8951788467704596	0.03461611213456384	p = 0.0346
+Fig1c_Assembled_vOTUs	Assembled vOTUs	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	82.00000000000003	58.89517884677049	105.10482115322957	1.5181785650297819e-5	p = 1.52e-05
+Fig1c_Assembled_vOTUs	Assembled vOTUs	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	-27.666666666666657	-50.771487819896194	-4.561845513437117	0.020818367407097416	p = 0.0208
+Fig1d_Mapped_vOTUs	Mapped vOTUs	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	-2.666666666666572	-18.925590852163417	13.592257518830273	0.9505654799870287	p = 0.951
+Fig1d_Mapped_vOTUs	Mapped vOTUs	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-183.66666666666674	-199.9255908521636	-167.4077424811699	3.5488508798309226e-9	p < 0.00001
+Fig1d_Mapped_vOTUs	Mapped vOTUs	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-186.33333333333331	-202.59225751883017	-170.07440914783646	3.194715048060459e-9	p < 0.00001
+Fig1d_Mapped_vOTUs	Mapped vOTUs	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	-31.000000000000114	-47.25892418549696	-14.741075814503269	0.0012959522739666163	p = 0.0013
+Fig1d_Mapped_vOTUs	Mapped vOTUs	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	152.66666666666663	136.40774248116978	168.92559085216348	1.073975319787479e-8	p < 0.00001
+Fig1d_Mapped_vOTUs	Mapped vOTUs	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	-33.666666666666686	-49.92559085216353	-17.40774248116984	7.449460343030845e-4	p = 0.000745
+Fig1e_Viral_Reads	Viral reads (%)	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	0.37743826457209195	-1.5582802354626513	2.313156764606835	0.9213562315461807	p = 0.921
+Fig1e_Viral_Reads	Viral reads (%)	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	16.207201453131603	14.271482953096859	18.142919953166345	1.8639383481122707e-8	p < 0.00001
+Fig1e_Viral_Reads	Viral reads (%)	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	16.584639717703695	14.648921217668951	18.520358217738437	1.6685711146102733e-8	p < 0.00001
+Fig1e_Viral_Reads	Viral reads (%)	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	-70.13009589893736	-72.0658143989721	-68.19437739890262	5.162537064506978e-14	p < 0.00001
+Fig1e_Viral_Reads	Viral reads (%)	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	-86.33729735206896	-88.2730158521037	-84.40157885203422	5.162537064506978e-14	p < 0.00001
+Fig1e_Viral_Reads	Viral reads (%)	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	-69.75265763436526	-71.6883761344	-67.816939134330525	5.162537064506978e-14	p < 0.00001
+Fig3b_Provirus_Proportion	Provirus Proportion (%)	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-13.275882742085855	-16.461775390495223	-10.089990093676487	4.522547617402672e-6	p < 0.00001
+Fig3b_Provirus_Proportion	Provirus Proportion (%)	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-12.691344576476535	-15.877237224885903	-9.505451928067167	6.352122682851125e-6	p < 0.00001
+Fig3b_Provirus_Proportion	Provirus Proportion (%)	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	14.039648668999092	10.853756020589724	17.22554131740846	2.964505870894918e-6	p < 0.00001
+Fig3b_Provirus_Proportion	Provirus Proportion (%)	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	27.315531411084947	24.12963876267558	30.501424059494315	1.662827864290506e-8	p < 0.00001
+Fig3b_Provirus_Proportion	Provirus Proportion (%)	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	14.624186834608413	11.438294186199045	17.81007948301778	2.1750879440896043e-6	p < 0.00001
+Fig3b_Provirus_Proportion	Provirus Proportion (%)	Untreated Virome-DNase Treated Virome	Untreated Virome-DNase Treated Virome	NA	-0.5845381656093203	-3.7704308140186877	2.601354482800047	0.9330682804388044	p = 0.933
+FigS2a_NumContigs	# contigs	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	-810.3333333333321	-3268.8408167630896	1648.1741500964254	0.7239067264353538	p = 0.724
+FigS2a_NumContigs	# contigs	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-9595.000000000004	-12053.507483429761	-7136.492516570246	7.414971206931575e-6	p < 0.00001
+FigS2a_NumContigs	# contigs	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-10405.333333333336	-12863.840816763093	-7946.825849903578	4.0220008724611844e-6	p < 0.00001
+FigS2a_NumContigs	# contigs	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	29680.33333333334	27221.82584990358	32138.8408167631	2.1271661099220296e-9	p < 0.00001
+FigS2a_NumContigs	# contigs	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	39275.33333333334	36816.82584990359	41733.8408167631	9.484646401602959e-11	p < 0.00001
+FigS2a_NumContigs	# contigs	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	28870.000000000007	26411.49251657025	31328.507483429763	2.6553935716933097e-9	p < 0.00001
+FigS2b_ViralContigs	Viral contigs	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	-2.666666666666657	-25.771487819896198	20.438154486562883	0.9815499896911042	p = 0.982
+FigS2b_ViralContigs	Viral contigs	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-107.00000000000003	-130.10482115322958	-83.89517884677049	2.0331110873739178e-6	p < 0.00001
+FigS2b_ViralContigs	Viral contigs	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-109.66666666666669	-132.77148781989624	-86.56184551343715	1.6830774537401894e-6	p < 0.00001
+FigS2b_ViralContigs	Viral contigs	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	-25	-48.10482115322954	-1.8951788467704596	0.03461611213456384	p = 0.0346
+FigS2b_ViralContigs	Viral contigs	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	82.00000000000003	58.89517884677049	105.10482115322957	1.5181785650297819e-5	p = 1.52e-05
+FigS2b_ViralContigs	Viral contigs	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	-27.666666666666657	-50.771487819896194	-4.561845513437117	0.020818367407097416	p = 0.0208
+FigS2c_LargestContig	Largest contig (bp)	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	223596.66666666663	15956.399011430127	431236.93432190316	0.035424536793200345	p = 0.0354
+FigS2c_LargestContig	Largest contig (bp)	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-470900.66666666674	-678540.9343219033	-263260.3990114302	3.981147536149532e-4	p = 0.000398
+FigS2c_LargestContig	Largest contig (bp)	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-247304.00000000012	-454944.26765523665	-39663.732344763615	0.021408428152747128	p = 0.0214
+FigS2c_LargestContig	Largest contig (bp)	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	-41541.33333333337	-249181.60098856987	166098.93432190313	0.9158728103006939	p = 0.916
+FigS2c_LargestContig	Largest contig (bp)	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	429359.3333333334	221719.06567809687	636999.6009885699	7.519617819994329e-4	p = 0.000752
+FigS2c_LargestContig	Largest contig (bp)	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	182055.33333333326	-25584.934321903245	389695.6009885698	0.08726709602137728	p = 0.0873
+FigS2d_auN	auN	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	-1334.166666666657	-8103.877774124564	5435.54444079125	0.9191195773436263	p = 0.919
+FigS2d_auN	auN	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-51304.8	-58074.51110745791	-44535.088892542095	3.231500456113423e-8	p < 0.00001
+FigS2d_auN	auN	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-52638.96666666666	-59408.67777412457	-45869.25555920875	2.758734607422042e-8	p < 0.00001
+FigS2d_auN	auN	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	-681.4333333333489	-7451.144440791256	6088.277774124558	0.9875580835936646	p = 0.988
+FigS2d_auN	auN	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	50623.366666666654	43853.655559208746	57393.07777412456	3.5296842892940106e-8	p < 0.00001
+FigS2d_auN	auN	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	-2015.6000000000058	-8785.311107457914	4754.111107457901	0.7782728582450824	p = 0.778
+FigS2e_N50	N50	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	-2402	-5680.625768979571	876.6257689795711	0.1662715591661642	p = 0.166
+FigS2e_N50	N50	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-30534.000000000007	-33812.625768979575	-27255.374231020436	1.118801440380679e-8	p < 0.00001
+FigS2e_N50	N50	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-32936.00000000001	-36214.625768979575	-29657.374231020436	7.502313326135379e-9	p < 0.00001
+FigS2e_N50	N50	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	-11514.666666666672	-14793.292435646243	-8236.0408976871	1.6427718017575366e-5	p = 1.64e-05
+FigS2e_N50	N50	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	19019.333333333336	15740.707564353765	22297.959102312907	3.1941634015542064e-7	p < 0.00001
+FigS2e_N50	N50	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	-13916.666666666672	-17195.292435646243	-10638.0408976871	3.934981417041961e-6	p < 0.00001
+FigS2f_L50	L50	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	48.6666666666672	-178.5348858459951	275.86821917932946	0.8996159221541266	p = 0.9
+FigS2f_L50	L50	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-62.33333333333371	-289.534885845996	164.86821917932858	0.8159215263088921	p = 0.816
+FigS2f_L50	L50	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-13.666666666666515	-240.8682191793288	213.53488584599577	0.9972533260604457	p = 0.997
+FigS2f_L50	L50	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	1142.666666666666	915.4651141540038	1369.8682191793284	1.0698500242378728e-6	p < 0.00001
+FigS2f_L50	L50	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	1205	977.7984474873377	1432.2015525126624	6.944859519686375e-7	p < 0.00001
+FigS2f_L50	L50	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	1191.3333333333335	964.1317808206712	1418.5348858459959	7.63240890599981e-7	p < 0.00001
+FigS2g_TotalLength	Total length (bp)	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	331568.66666667163	-10370413.310676279	11033550.644009622	0.9996194130997723	p = 1
+FigS2g_TotalLength	Total length (bp)	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-87184230.33333333	-97886212.31067628	-76482248.35599038	2.1370055836023027e-8	p < 0.00001
+FigS2g_TotalLength	Total length (bp)	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-86852661.66666666	-97554643.6440096	-76150679.68932371	2.1794162807786677e-8	p < 0.00001
+FigS2g_TotalLength	Total length (bp)	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	152271789.00000006	141569807.0226571	162973770.97734302	4.253785101937524e-10	p < 0.00001
+FigS2g_TotalLength	Total length (bp)	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	239456019.33333337	228754037.3559904	250158001.31067634	1.439959262938828e-13	p < 0.00001
+FigS2g_TotalLength	Total length (bp)	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	152603357.66666675	141901375.68932378	163305339.6440097	4.148320575936282e-10	p < 0.00001
+FigS3a_Mapped_to_Assembled_Ratio	Mapped/Assembled	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	0.00927476380624448	-0.1586963013666116	0.17724582897910054	0.9978691345848985	p = 0.998
+FigS3a_Mapped_to_Assembled_Ratio	Mapped/Assembled	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	0.10629523013016207	-0.061675835042694	0.27426629530301816	0.2551288828441405	p = 0.255
+FigS3a_Mapped_to_Assembled_Ratio	Mapped/Assembled	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	0.11556999393640655	-0.05240107123644952	0.28354105910926264	0.20187473441685289	p = 0.202
+FigS3a_Mapped_to_Assembled_Ratio	Mapped/Assembled	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	0.07341094304717188	-0.09456012212568418	0.24138200822002795	0.5331230666045865	p = 0.533
+FigS3a_Mapped_to_Assembled_Ratio	Mapped/Assembled	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	-0.03288428708299018	-0.20085535225584625	0.13508677808986588	0.9205185020299087	p = 0.921
+FigS3a_Mapped_to_Assembled_Ratio	Mapped/Assembled	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	0.08268570685341636	-0.0852853583194397	0.25065677202627246	0.44148827106807864	p = 0.441
+FigS4a_Total_Reads	Total reads (millions)	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	2.08015300000001	-11.752253269676553	15.912559269676573	0.9610687036233315	p = 0.961
+FigS4a_Total_Reads	Total reads (millions)	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-15.313027333333345	-29.145433603009906	-1.4806210636567823	0.03097273253920696	p = 0.031
+FigS4a_Total_Reads	Total reads (millions)	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-13.232874333333335	-27.065280603009896	0.5995319363432277	0.06080447977778225	p = 0.0608
+FigS4a_Total_Reads	Total reads (millions)	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	-5.9734940000000165	-19.805900269676577	7.858912269676546	0.5421360293870944	p = 0.542
+FigS4a_Total_Reads	Total reads (millions)	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	9.339533333333328	-4.492872936343234	23.17193960300989	0.21331714383008937	p = 0.213
+FigS4a_Total_Reads	Total reads (millions)	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	-3.8933410000000066	-17.725747269676567	9.939065269676556	0.8047164713502934	p = 0.805
+FigS4b_rRNA_Reads	rRNA reads (%)	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	0.006666666666666876	-0.04879969710408626	0.062133030437420016	0.9792827966692135	p = 0.979
+FigS4b_rRNA_Reads	rRNA reads (%)	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-0.24	-0.29546636377075314	-0.18453363622924684	3.4040559401260495e-6	p < 0.00001
+FigS4b_rRNA_Reads	rRNA reads (%)	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-0.23333333333333311	-0.28879969710408626	-0.17786696956257997	4.210570803686586e-6	p < 0.00001
+FigS4b_rRNA_Reads	rRNA reads (%)	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	0.6566666666666667	0.6012003028959136	0.7121330304374198	2.490771255914126e-9	p < 0.00001
+FigS4b_rRNA_Reads	rRNA reads (%)	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	0.8966666666666667	0.8412003028959136	0.9521330304374198	7.968548043635337e-11	p < 0.00001
+FigS4b_rRNA_Reads	rRNA reads (%)	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	0.6633333333333336	0.6078669695625805	0.7187996971040866	2.2973859481467684e-9	p < 0.00001
+FigS4c_Human_Reads	Human reads (%)	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	0.03282034116120841	-0.049179313091771856	0.11481999541418868	0.5978933603216559	p = 0.598
+FigS4c_Human_Reads	Human reads (%)	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-0.11208047340181995	-0.1940801276548002	-0.030080819148839685	0.010126125891044335	p = 0.0101
+FigS4c_Human_Reads	Human reads (%)	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-0.07926013224061154	-0.1612597864935918	0.0027395220123687253	0.058135216216769314	p = 0.0581
+FigS4c_Human_Reads	Human reads (%)	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	-0.13652349419972298	-0.21852314845270326	-0.054523839946742717	0.003107956424820424	p = 0.00311
+FigS4c_Human_Reads	Human reads (%)	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	-0.024443020797903045	-0.10644267505088331	0.05755663345507722	0.7776946393464498	p = 0.778
+FigS4c_Human_Reads	Human reads (%)	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	-0.10370315303851459	-0.18570280729149485	-0.02170349878553432	0.015576949460718525	p = 0.0156
+FigS4d_UniqueKmers	Unique kmers	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	35975401.99999994	-56981557.06747021	128932361.06747009	0.6215829629281797	p = 0.622
+FigS4d_UniqueKmers	Unique kmers	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-234573714.66666654	-327530673.7341367	-141616755.59919637	1.8722888845978947e-4	p = 0.000187
+FigS4d_UniqueKmers	Unique kmers	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-198598312.6666666	-291555271.73413676	-105641353.59919645	6.016495104554931e-4	p = 0.000602
+FigS4d_UniqueKmers	Unique kmers	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	113110080.33333349	20153121.265863344	206067039.40080363	0.019140709772799358	p = 0.0191
+FigS4d_UniqueKmers	Unique kmers	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	347683795	254726835.93252987	440640754.06747013	1.0221502768748003e-5	p = 1.02e-05
+FigS4d_UniqueKmers	Unique kmers	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	149085482.33333343	56128523.265863284	242042441.40080357	0.0039227162209263255	p = 0.00392
+FigS6a_Moron_AMG_HostTakeover	Moron/AMG/host takeover (%)	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	0.031720725533168515	-0.10809831924270188	0.1715397703090389	0.8838526182563368	p = 0.884
+FigS6a_Moron_AMG_HostTakeover	Moron/AMG/host takeover (%)	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	0.012794643655185789	-0.1270244011206846	0.1526136884310562	0.9905666302428067	p = 0.991
+FigS6a_Moron_AMG_HostTakeover	Moron/AMG/host takeover (%)	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	0.3326617899995651	0.19284274522369468	0.47248083477543545	2.8442001879447343e-4	p = 0.000284
+FigS6a_Moron_AMG_HostTakeover	Moron/AMG/host takeover (%)	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	0.30094106446639657	0.16112201969052617	0.44076010924226694	5.717662579357574e-4	p = 0.000572
+FigS6a_Moron_AMG_HostTakeover	Moron/AMG/host takeover (%)	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	0.31373570812158236	0.17391666334571196	0.45355475289745273	4.287262296748251e-4	p = 0.000429
+FigS6a_Moron_AMG_HostTakeover	Moron/AMG/host takeover (%)	Untreated Virome-DNase Treated Virome	Untreated Virome-DNase Treated Virome	NA	0.018926081877982726	-0.12089296289788767	0.15874512665385312	0.9709864835415818	p = 0.971
+FigS6b_Defense	Defense systems (%)	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-3.2006245120999224	-4.101970675843847	-2.2992783483559975	1.5120885873076695e-5	p = 1.51e-05
+FigS6b_Defense	Defense systems (%)	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-4.059328649492583	-4.9606748132365075	-3.1579824857486583	2.5144433887236417e-6	p < 0.00001
+FigS6b_Defense	Defense systems (%)	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	2.1077283372365336	1.2063821734926088	3.0090745009804585	3.2126868572290856e-4	p = 0.000321
+FigS6b_Defense	Defense systems (%)	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	5.3083528493364565	4.407006685592532	6.209699013080381	2.7854372153246487e-7	p < 0.00001
+FigS6b_Defense	Defense systems (%)	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	1.2490241998438734	0.34767803609994863	2.150370363587798	0.009364086645610281	p = 0.00936
+FigS6b_Defense	Defense systems (%)	Untreated Virome-DNase Treated Virome	Untreated Virome-DNase Treated Virome	NA	0.8587041373926603	-0.04264202635126446	1.7600503011365851	0.061904716580760355	p = 0.0619
+FigS6c_Antidefense	Antidefense systems (%)	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-1.0148321623731453	-1.5451377405384075	-0.4845265842078833	0.001264752629506316	p = 0.00126
+FigS6c_Antidefense	Antidefense systems (%)	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-1.3270882123341132	-1.8573937904993754	-0.7967826341688512	1.9872932652509334e-4	p = 0.000199
+FigS6c_Antidefense	Antidefense systems (%)	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	0.5464480874316942	0.016142509266432126	1.0767536655969563	0.04360170639795746	p = 0.0436
+FigS6c_Antidefense	Antidefense systems (%)	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	1.5612802498048395	1.0309746716395773	2.0915858279701016	6.113709070210138e-5	p = 6.11e-05
+FigS6c_Antidefense	Antidefense systems (%)	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	0.23419203747072626	-0.29611354069453577	0.7644976156359883	0.525240697763447	p = 0.525
+FigS6c_Antidefense	Antidefense systems (%)	Untreated Virome-DNase Treated Virome	Untreated Virome-DNase Treated Virome	NA	0.3122560499609679	-0.21804952820429413	0.8425616281262299	0.3054962569794396	p = 0.305
+FigS7b_UHGV_Percentage	% contigs in UHGV clusters	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	4.894198279044801	2.708973195416559	7.079423362673043	4.343369369593786e-4	p = 0.000434
+FigS7b_UHGV_Percentage	% contigs in UHGV clusters	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	3.646378979651452	1.4611538960232098	5.831604063279694	0.0030646545293868677	p = 0.00306
+FigS7b_UHGV_Percentage	% contigs in UHGV clusters	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	0.4496558253850722	-1.7355692582431699	2.6348809090133143	0.9094833679987637	p = 0.909
+FigS7b_UHGV_Percentage	% contigs in UHGV clusters	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	-4.444542453659729	-6.629767537287971	-2.2593173700314866	8.411049564309714e-4	p = 0.000841
+FigS7b_UHGV_Percentage	% contigs in UHGV clusters	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	-0.7981634740082768	-2.983388557636519	1.3870616096199653	0.6606286973791535	p = 0.661
+FigS7b_UHGV_Percentage	% contigs in UHGV clusters	Untreated Virome-DNase Treated Virome	Untreated Virome-DNase Treated Virome	NA	1.247819299393349	-0.9374057842348931	3.433044383021591	0.3279532718387408	p = 0.328
+FigS7c_UHGV_Mapping_Counts	UHGV mapping count	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	-6.666666666666657	-27.379060902932956	14.045727569599642	0.7373579102862567	p = 0.737
+FigS7c_UHGV_Mapping_Counts	UHGV mapping count	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-116.66666666666667	-137.37906090293296	-95.95427243040038	4.15098757700072e-7	p < 0.00001
+FigS7c_UHGV_Mapping_Counts	UHGV mapping count	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-123.33333333333333	-144.04572756959962	-102.62093909706704	2.5187571039975154e-7	p < 0.00001
+FigS7c_UHGV_Mapping_Counts	UHGV mapping count	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	-41	-61.7123942362663	-20.2876057637337	0.001009556541255452	p = 0.00101
+FigS7c_UHGV_Mapping_Counts	UHGV mapping count	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	75.66666666666667	54.95427243040037	96.37906090293296	1.2208609251440627e-5	p = 1.22e-05
+FigS7c_UHGV_Mapping_Counts	UHGV mapping count	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	-47.66666666666666	-68.37906090293296	-26.95427243040036	3.593595148683182e-4	p = 0.000359
+FigS7d_UHGV_MappingOnly_Counts	UHGV mapping-only count	DNase Treated Virome-Untreated Virome	DNase Treated Virome-Untreated Virome	NA	-3.999999999999986	-18.655596208672705	10.655596208672732	0.8181294210197398	p = 0.818
+FigS7d_UHGV_MappingOnly_Counts	UHGV mapping-only count	MDA Virome-DNase Treated Virome	MDA Virome-DNase Treated Virome	NA	-70.33333333333336	-84.98892954200608	-55.67773712466064	1.5456422216564292e-6	p < 0.00001
+FigS7d_UHGV_MappingOnly_Counts	UHGV mapping-only count	MDA Virome-Untreated Virome	MDA Virome-Untreated Virome	NA	-74.33333333333334	-88.98892954200606	-59.677737124660624	9.999418845163532e-7	p < 0.00001
+FigS7d_UHGV_MappingOnly_Counts	UHGV mapping-only count	Meta genome-DNase Treated Virome	Meta genome-DNase Treated Virome	NA	-16.333333333333357	-30.988929542006076	-1.6777371246606396	0.029968278646175905	p = 0.03
+FigS7d_UHGV_MappingOnly_Counts	UHGV mapping-only count	Meta genome-MDA Virome	Meta genome-MDA Virome	NA	54	39.34440379132728	68.65559620867272	1.1445729675707561e-5	p = 1.14e-05
+FigS7d_UHGV_MappingOnly_Counts	UHGV mapping-only count	Meta genome-Untreated Virome	Meta genome-Untreated Virome	NA	-20.333333333333343	-34.98892954200606	-5.677737124660625	0.009299405129662097	p = 0.0093

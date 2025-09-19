@@ -128,6 +128,17 @@ import_bacphlip <- function(filepath){
   return(df)
 }
 
+import_bacphlip_vOTU <- function(filepath){
+  df <- read.csv(filepath, sep = "\t", header = TRUE) %>%
+    rename(vOTU = X) %>%
+    # Create column status with Temperate, Virulent or Unknown
+    # Temperate = Temperate < 0.05, Virulent. = Virulent < 0.05, Unknown = other
+    mutate(status = ifelse(Temperate >= 0.95, "Temperate", ifelse(Virulent >= 0.95, "Virulent", "Unclassified"))) %>%
+    # Create column Provirus if Provirus is in the vOTU name
+    mutate(Provirus = ifelse(grepl("provirus", vOTU), "Provirus", "Virus"))
+  return(df)
+  }
+
 # Import Pharokka data
 import_pharokka <- function(filepath){
   df <- read_and_merge_tsvs(filepath, "_pharokka_proteins_full_merged_output.tsv") %>%
@@ -135,10 +146,17 @@ import_pharokka <- function(filepath){
   return(df)
 }
 
+import_pharokka_vOTU <- function(filepath){
+  df <- read.csv(filepath, sep = "\t") %>%
+    mutate(Contig = gsub("_[0-9]*$", "", ID))
+  return(df)
+}
+
 # Import Defense genes data
-import_defensefinder <- function(filepath){df <- read.csv(filepath, sep = "\t") %>%
-    #Create vOTU from "sys_beg" and remove the last underscore and the text after
-    mutate(vOTU = gsub("_[0-9]*$", "", sys_beg))
+import_defensefinder <- function(filepath){
+  df <- read_and_merge_tsvs(filepath, "_FilteredProteins_defense_finder_systems.tsv") %>%
+    #Create ViralSequence from "sys_beg" and remove the last underscore and the text after
+    mutate(ViralSequence = gsub("_[0-9]*$", "", sys_beg))
   return(df)
 }
 
@@ -405,10 +423,14 @@ plot_means_with_cld <- function(df, value_col, group_col, PALETTE) {
     geom_text(aes(label = cld, y = text_y_position), vjust = 0, size = 3) + # Position labels
     labs(x = group_col, y = "Mean ± SD") +
     theme_bw() +
-    labs(x = "Sample Type") +
+    labs(x = "Processing Method") +
     scale_fill_manual(values = PALETTE)
   
-  return(plt)
+  return(list(
+    plot = plt,
+    tukey = tukey_result,
+    cld = cld
+  ))
 }
 
 # Plot vOTU Venn diagrams
@@ -541,7 +563,7 @@ plot_pcoa <- function(df, metadata, Description_palette = Description_palette) {
     geom_point(size = 4, alpha = 0.5) +
     labs(x = paste0("PC1 (", round(variance_explained[1], 1), "%)"),
          y = paste0("PC2 (", round(variance_explained[2], 1), "%)"),
-         fill = "Sample Type") +
+         fill = "Processing Method") +
     scale_shape_manual(values = c(16, 17, 15, 18)) +
     theme_bw() +
     theme(
@@ -646,7 +668,7 @@ plot_vOTU_stacked_barplot <- function(df_mapping, metadata, df_Genomad){
   plt_DNA_stacked <- df_DNA_stacked %>%
     ggplot(aes(x = rep, y = RelAbund, fill = DNA)) +
     geom_bar(stat = "identity") +
-    labs(x = "Sample Type",
+    labs(x = "Processing Method",
          y = "Relative Abundance (%)") +
     theme_bw(base_size = 10) +
     theme(legend.position = "bottom",
@@ -682,7 +704,7 @@ plot_vOTU_stacked_barplot <- function(df_mapping, metadata, df_Genomad){
   
   plt_stacked <- df_stacked %>% ggplot(aes(x = rep, y = RelAbund, fill = Family)) +
     geom_bar(stat = "identity") +
-    labs(x = "Sample Type",
+    labs(x = "Processing Method",
          y = "Relative\nAbundance (%)") +
     theme_bw(base_size = 10) +
     theme(legend.position = "right",
@@ -710,3 +732,6 @@ plot_vOTU_stacked_barplot <- function(df_mapping, metadata, df_Genomad){
   
   return(ls_stacked)
 }
+
+
+
