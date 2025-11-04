@@ -3,7 +3,7 @@
 # Author: Luke Hillary
 # Institution: University of California, Davis – Emerson Lab
 # Repository: https://github.com/LSHillary/FecalViromeOptimisation
-# License: [MIT / GPL-3 / CC-BY-4.0]
+# License: MIT
 # Version: v1.0 (Version of Record for Zenodo DOI)
 # Date: 2025-11-04
 ###############################################################################

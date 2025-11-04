@@ -48,7 +48,7 @@
 # Recommended citation:
 #   <INSERT CITATION DETAILS HERE>
 #
-# License: CC-BY-4.0
+# License: MIT
 ###############################################################################
 
 # 0 - Setup ----
