@@ -1,0 +1,629 @@
+Virus,AAI to closest RaFAH reference,Host genus,Confidence score,List of methods
+F3_S19_contig_10031|provirus_73247_93598,80.52,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.10,CRISPR;98.60 iPHoP-RF;97.10 blast;96.70
+F3_S19_contig_10047,89.38,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,100.00,RaFAH;97.10 CRISPR;96.80 blast;96.20 iPHoP-RF;74.80
+F3_S19_contig_10047,89.38,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia,99.90,CRISPR;97.30 RaFAH;97.10 blast;86.40 iPHoP-RF;70.00
+F3_S19_contig_10047,89.38,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ventrisoma,92.90,CRISPR;94.90 blast;76.10
+F3_S19_contig_10312,100.00,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Clostridiales;f__Clostridiaceae;g__Clostridium,99.30,RaFAH;99.40
+F3_S19_contig_10312,100.00,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Clostridiales;f__Clostridiaceae;g__Clostridium_F,99.30,RaFAH;99.40
+F3_S19_contig_10312,100.00,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Clostridiales;f__Clostridiaceae;g__Sarcina,99.30,RaFAH;99.40
+F3_S19_contig_10312,100.00,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Vescimonas,98.80,CRISPR;99.10
+F3_S19_contig_10324,39.62,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Pseudoscilispira,91.60,blast;93.90
+F3_S19_contig_10629,4.57,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,95.40,blast;96.80 iPHoP-RF;94.40
+F3_S19_contig_10629,4.57,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,93.10,iPHoP-RF;95.10
+F3_S19_contig_10666,9.05,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,95.30,iPHoP-RF;96.70 CRISPR;67.90
+F3_S19_contig_10666,9.05,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,95.00,blast;96.50 iPHoP-RF;90.80 CRISPR;83.10
+F3_S19_contig_10949,9.87,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Faecousia,93.20,blast;95.20
+F3_S19_contig_11035,12.03,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Phocea,90.00,blast;92.50 iPHoP-RF;75.20 CRISPR;67.30
+F3_S19_contig_11409|provirus_68890_79729,56.01,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Faecalibacterium,97.60,blast;96.90 iPHoP-RF;92.80 RaFAH;71.80
+F3_S19_contig_11686,6.61,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella,98.10,CRISPR;98.60 blast;97.40 iPHoP-RF;93.10
+F3_S19_contig_11960|provirus_128_14807,6.07,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Eubacteriales;f__Eubacteriaceae;g__Eubacterium,93.40,blast;95.30 iPHoP-RF;61.70
+F3_S19_contig_12072,26.58,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,90.80,blast;93.20 iPHoP-RF;88.90 CRISPR;78.50
+F3_S19_contig_12082,14.47,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__CAG-177,90.00,blast;92.50
+F3_S19_contig_12167,12.75,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,95.60,blast;96.90 iPHoP-RF;77.30
+F3_S19_contig_12287,31.42,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Dysosmobacter,90.90,blast;93.30 iPHoP-RF;56.50
+F3_S19_contig_12363,83.13,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Lactococcus,100.00,RaFAH;94.70 blast;92.80 iPHoP-RF;91.10
+F3_S19_contig_12482,12.01,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Hungatella,95.90,iPHoP-RF;97.10 blast;92.00 CRISPR;78.30
+F3_S19_contig_12482,12.01,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Clostridium_Q,95.40,CRISPR;96.80 iPHoP-RF;81.90
+F3_S19_contig_12482,12.01,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Lacrimispora,91.00,iPHoP-RF;93.40
+F3_S19_contig_13004,42.84,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,99.00,blast;96.90 RaFAH;87.00 iPHoP-RF;86.00
+F3_S19_contig_13004,42.84,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia,97.80,CRISPR;94.00 blast;89.50 RaFAH;87.00 iPHoP-RF;77.50
+F3_S19_contig_13178|provirus_30152_137958,100.00,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,CRISPR;99.00 RaFAH;98.30 blast;93.10 iPHoP-RF;88.90
+F3_S19_contig_13178|provirus_30152_137958,100.00,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.70,CRISPR;99.00 blast;93.10 iPHoP-RF;92.40
+F3_S19_contig_13715,31.93,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Eubacteriales;f__Eubacteriaceae;g__Eubacterium,94.90,blast;96.40 iPHoP-RF;94.10 CRISPR;73.00
+F3_S19_contig_14077,98.35,d__Bacteria;p__Bacillota_C;c__Negativicutes;o__Veillonellales;f__Veillonellaceae;g__Veillonella,100.00,RaFAH;99.80 CRISPR;99.00 blast;96.90 iPHoP-RF;87.30
+F3_S19_contig_14077,98.35,d__Bacteria;p__Bacillota_C;c__Negativicutes;o__Veillonellales;f__Veillonellaceae;g__Veillonella_A,99.90,RaFAH;99.80
+F3_S19_contig_14180|provirus_9740_24317,14.67,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,92.70,blast;94.80 iPHoP-RF;62.50
+F3_S19_contig_14180|provirus_9740_24317,14.67,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Tannerellaceae;g__Parabacteroides,91.10,blast;93.50 iPHoP-RF;53.80 CRISPR;51.30
+F3_S19_contig_1426,96.70,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Lawsonibacter,91.60,blast;93.90
+F3_S19_contig_14370,27.93,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Anaeromassilibacillus,97.50,blast;98.20 CRISPR;77.90 iPHoP-RF;70.40
+F3_S19_contig_14407,91.62,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Sellimonas,93.00,blast;95.00 CRISPR;88.30 iPHoP-RF;78.70
+F3_S19_contig_14430,31.94,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Peptostreptococcales;f__Peptostreptococcaceae;g__GCA-900066495,90.70,blast;93.10 iPHoP-RF;78.30
+F3_S19_contig_14430,31.94,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Peptostreptococcales;f__Peptostreptococcaceae;g__Terrisporobacter,90.20,blast;92.70 iPHoP-RF;68.90
+F3_S19_contig_14447,9.40,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Clostridiales;f__Clostridiaceae;g__Clostridium,95.20,blast;96.60 iPHoP-RF;85.40
+F3_S19_contig_14469,35.23,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,93.40,blast;95.30
+F3_S19_contig_14486,98.59,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,100.00,CRISPR;99.70 RaFAH;99.50
+F3_S19_contig_14518,38.38,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia,93.80,blast;94.80 iPHoP-RF;76.40 RaFAH;57.90 CRISPR;57.40
+F3_S19_contig_14585,7.08,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Clostridium_A,92.20,blast;94.40 iPHoP-RF;80.00
+F3_S19_contig_14623,43.23,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Mediterraneibacter,97.80,blast;98.40 CRISPR;58.80 iPHoP-RF;56.20
+F3_S19_contig_14623,43.23,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B,93.60,CRISPR;95.50 blast;90.30 iPHoP-RF;74.30
+F3_S19_contig_14709,10.76,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__CAJFUH01,93.00,blast;95.00 iPHoP-RF;69.10
+F3_S19_contig_1707,8.25,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Eubacteriales;f__Eubacteriaceae;g__Eubacterium,91.60,blast;93.90 iPHoP-RF;72.60
+F3_S19_contig_1906|provirus_2_16885,26.23,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,RaFAH;99.70 blast;95.30 iPHoP-RF;75.00
+F3_S19_contig_1906|provirus_2_16885,26.23,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,95.40,blast;96.80 iPHoP-RF;90.50
+F3_S19_contig_1939|provirus_105707_121283,16.47,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Anaerotruncus,94.90,blast;96.40 iPHoP-RF;71.10
+F3_S19_contig_2046,37.39,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Vescimonas,98.40,CRISPR;98.80
+F3_S19_contig_2046,37.39,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Harryflintia,91.50,blast;93.80
+F3_S19_contig_2071,7.36,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,93.60,blast;95.50 iPHoP-RF;70.90
+F3_S19_contig_2159,19.79,d__Bacteria;p__Actinomycetota;c__Coriobacteriia;o__Coriobacteriales;f__Eggerthellaceae;g__Eggerthella,97.30,blast;98.10 CRISPR;95.20 iPHoP-RF;87.90
+F3_S19_contig_2159,19.79,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,90.40,CRISPR;92.90
+F3_S19_contig_237|provirus_36829_60606,90.05,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.90,CRISPR;97.60 RaFAH;95.40 blast;93.80 iPHoP-RF;93.70
+F3_S19_contig_237|provirus_36829_60606,90.05,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.40,CRISPR;98.80 blast;96.90 iPHoP-RF;89.80
+F3_S19_contig_2617|provirus_52207_63756,10.71,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,94.50,iPHoP-RF;96.10 blast;92.60
+F3_S19_contig_2899,36.82,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Pseudoflavonifractor_A,98.20,CRISPR;98.70 blast;90.70 iPHoP-RF;75.70
+F3_S19_contig_2899,36.82,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Flavonifractor,97.90,CRISPR;98.50 blast;91.90 iPHoP-RF;84.50
+F3_S19_contig_2899,36.82,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Pseudoflavonifractor,97.80,CRISPR;98.40 iPHoP-RF;77.80
+F3_S19_contig_3387|provirus_2_39110,98.95,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.80,iPHoP-RF;94.10 RaFAH;92.70 blast;92.40 CRISPR;77.00
+F3_S19_contig_3387|provirus_2_39110,98.95,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.50,CRISPR;98.90 iPHoP-RF;97.10 blast;92.10
+F3_S19_contig_3387|provirus_2_39110,98.95,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola_A,98.50,CRISPR;98.90 iPHoP-RF;63.30
+F3_S19_contig_3850,91.76,d__Bacteria;p__Actinomycetota;c__Actinomycetia;o__Actinomycetales;f__Actinomycetaceae;g__Pauljensenia,99.90,CRISPR;99.40 blast;89.40 RaFAH;85.60 iPHoP-RF;81.10
+F3_S19_contig_3988,26.13,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Massiliimalia,93.20,blast;95.20 iPHoP-RF;57.10
+F3_S19_contig_4068,14.08,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.80,CRISPR;99.10 iPHoP-RF;91.10 blast;89.60
+F3_S19_contig_4068,14.08,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.70,CRISPR;99.00 blast;96.90 iPHoP-RF;93.70
+F3_S19_contig_4091|provirus_17236_70027,96.32,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,RaFAH;99.10 CRISPR;99.00 blast;98.60 iPHoP-RF;97.10
+F3_S19_contig_4091|provirus_17236_70027,96.32,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.50,CRISPR;98.90 blast;96.80 iPHoP-RF;96.70
+F3_S19_contig_4091|provirus_17236_70027,96.32,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides_I,90.30,iPHoP-RF;92.80
+F3_S19_contig_4256,23.35,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__CAG-56,90.10,blast;92.60 iPHoP-RF;79.80
+F3_S19_contig_4263,15.27,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Acetatifactor,90.20,blast;92.70
+F3_S19_contig_4405,94.40,d__Bacteria;p__Actinomycetota;c__Actinomycetia;o__Actinomycetales;f__Actinomycetaceae;g__Actinomyces,99.70,CRISPR;96.30 RaFAH;96.20 iPHoP-RF;67.70
+F3_S19_contig_4405,94.40,d__Bacteria;p__Actinomycetota;c__Actinomycetia;o__Actinomycetales;f__Actinomycetaceae;g__Pauljensenia,94.60,RaFAH;96.20
+F3_S19_contig_501,11.66,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,95.30,blast;96.70 iPHoP-RF;83.90
+F3_S19_contig_5162|provirus_175_14171,50.31,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Anaerotruncus,91.50,blast;93.80 iPHoP-RF;86.70
+F3_S19_contig_5192,14.72,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Erysipelotrichaceae;g__NSJ-61,98.40,CRISPR;98.80 iPHoP-RF;72.40
+F3_S19_contig_5192,14.72,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Erysipelotrichaceae;g__Longicatena,98.10,blast;98.60 CRISPR;96.30
+F3_S19_contig_5204,20.87,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Lawsonibacter,95.30,blast;96.70 iPHoP-RF;87.60 CRISPR;80.40
+F3_S19_contig_5256,12.88,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Peptostreptococcales;f__Anaerovoracaceae;g__Emergencia,90.70,blast;93.10 iPHoP-RF;71.10
+F3_S19_contig_5541,41.74,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ventrimonas,97.20,CRISPR;98.00 blast;95.80 iPHoP-RF;94.10
+F3_S19_contig_5541,41.74,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Hungatella,93.10,iPHoP-RF;95.10 CRISPR;93.50
+F3_S19_contig_5541,41.74,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,90.40,blast;92.90 iPHoP-RF;74.30 CRISPR;71.00
+F3_S19_contig_5582,23.62,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia,97.30,CRISPR;98.10 blast;93.90 iPHoP-RF;80.60
+F3_S19_contig_5648,22.78,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__JAGZMM01,91.20,blast;93.60 iPHoP-RF;56.50
+F3_S19_contig_5855|provirus_3_13705,16.44,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,90.80,blast;93.20 iPHoP-RF;81.10
+F3_S19_contig_5916|provirus_45654_76704,99.96,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,RaFAH;99.20 blast;92.00
+F3_S19_contig_5952,12.72,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.10,iPHoP-RF;97.10 blast;96.70 RaFAH;87.50
+F3_S19_contig_6055|provirus_201_22580,20.71,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Clostridiales;f__Clostridiaceae;g__Clostridium,94.70,blast;96.20 iPHoP-RF;88.20 CRISPR;78.10 RaFAH;51.40
+F3_S19_contig_6212,5.82,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Dysosmobacter,91.60,blast;93.90
+F3_S19_contig_6343|provirus_57350_87884,18.63,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Anaerotignaceae;g__Metalachnospira,92.50,blast;94.60 iPHoP-RF;61.90
+F3_S19_contig_6654,32.95,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Pseudoflavonifractor,97.20,CRISPR;98.00
+F3_S19_contig_6654,32.95,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Lawsonibacter,93.20,blast;95.20 iPHoP-RF;60.10
+F3_S19_contig_7376,32.56,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Dysosmobacter,94.90,blast;96.40 iPHoP-RF;70.20
+F3_S19_contig_7600|provirus_11884_26046,56.71,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.90,iPHoP-RF;97.10 RaFAH;95.70 blast;93.80 CRISPR;83.50
+F3_S19_contig_7600|provirus_11884_26046,56.71,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,94.60,CRISPR;96.20 iPHoP-RF;90.50 blast;70.30
+F3_S19_contig_7771,37.16,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella,98.50,CRISPR;98.90 blast;92.10 iPHoP-RF;78.70
+F3_S19_contig_7909,39.14,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Hungatella,95.20,blast;96.60 CRISPR;96.10 iPHoP-RF;96.10
+F3_S19_contig_7909,39.14,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,91.70,CRISPR;94.00 iPHoP-RF;73.00
+F3_S19_contig_7909,39.14,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__UMGS1370,91.60,CRISPR;93.90 iPHoP-RF;68.20
+F3_S19_contig_8563,11.03,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Ruthenibacterium,96.90,CRISPR;97.80 iPHoP-RF;54.10
+F3_S19_contig_8874,42.95,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,98.10,blast;96.50 RaFAH;79.30 iPHoP-RF;70.00
+F3_S19_contig_9108|provirus_35608_52988,5.53,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.70,iPHoP-RF;97.10 RaFAH;95.10 blast;93.80
+F3_S19_contig_9108|provirus_35608_52988,5.53,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,93.90,iPHoP-RF;95.70 blast;86.80
+F3_S19_contig_9183,18.12,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella,94.50,blast;96.10 CRISPR;94.30 iPHoP-RF;84.80
+F3_S19_contig_9408,14.54,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__CAJFUH01,93.90,blast;95.70 iPHoP-RF;59.20
+F3_S19_contig_9559,99.65,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes,99.00,CRISPR;99.20 iPHoP-RF;96.70 blast;96.00
+F3_S19_contig_9559,99.65,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,95.20,RaFAH;96.60
+F3_S19_contig_9654,8.30,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Gemmiger,95.00,blast;96.50
+F3_S19_contig_9737,5.81,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B,93.50,blast;95.40 iPHoP-RF;89.20
+F3_S19_contig_9822|provirus_3_16544,8.66,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.90,iPHoP-RF;97.10 RaFAH;97.00 blast;96.70
+F4_S20_contig_1014,14.53,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.70,iPHoP-RF;95.10 RaFAH;89.60 blast;69.10
+F4_S20_contig_1014,14.53,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,91.70,blast;94.00 iPHoP-RF;87.90
+F4_S20_contig_1120,16.94,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.50,CRISPR;98.50 RaFAH;64.10
+F4_S20_contig_1120,16.94,d__Bacteria;p__Bacillota;c__Bacilli;o__RF39;f__UBA660;g__CAG-302,91.10,blast;93.50
+F4_S20_contig_11646,45.13,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella,95.30,CRISPR;96.70 blast;95.70 iPHoP-RF;87.60
+F4_S20_contig_11896,21.09,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,98.80,CRISPR;99.10 blast;96.50 iPHoP-RF;93.40
+F4_S20_contig_11896,21.09,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Hungatella,98.50,CRISPR;98.90 iPHoP-RF;93.40
+F4_S20_contig_11896,21.09,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Lachnoclostridium_A,96.40,CRISPR;97.50 iPHoP-RF;83.60
+F4_S20_contig_12483|provirus_68244_86609,8.19,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,RaFAH;97.40 blast;91.70 iPHoP-RF;90.80
+F4_S20_contig_12736,99.60,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Acutalibacter,94.20,blast;95.90 iPHoP-RF;77.10
+F4_S20_contig_1288,97.81,d__Bacteria;p__Actinomycetota;c__Coriobacteriia;o__Coriobacteriales;f__Eggerthellaceae;g__CAJFUR01,98.40,CRISPR;98.80
+F4_S20_contig_1288,97.81,d__Bacteria;p__Actinomycetota;c__Coriobacteriia;o__Coriobacteriales;f__Eggerthellaceae;g__Eggerthella,98.20,CRISPR;98.60 RaFAH;52.40
+F4_S20_contig_1288,97.81,d__Bacteria;p__Actinomycetota;c__Coriobacteriia;o__Coriobacteriales;f__Eggerthellaceae;g__Rubneribacter,96.30,CRISPR;97.40
+F4_S20_contig_1318,4.81,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Ruthenibacterium,95.20,blast;96.60 iPHoP-RF;71.50
+F4_S20_contig_13458,11.03,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,94.70,blast;96.30 iPHoP-RF;92.10
+F4_S20_contig_14407,70.78,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Ruthenibacterium,99.30,CRISPR;98.90 blast;96.90 iPHoP-RF;89.80 RaFAH;72.50
+F4_S20_contig_14503,11.65,d__Bacteria;p__Desulfobacterota;c__Desulfovibrionia;o__Desulfovibrionales;f__Desulfovibrionaceae;g__Bilophila,94.70,blast;96.30 iPHoP-RF;88.50
+F4_S20_contig_14522,8.32,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.60,CRISPR;99.60
+F4_S20_contig_14522,8.32,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,99.60,CRISPR;99.60
+F4_S20_contig_1462,7.87,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.90,RaFAH;94.70 blast;90.70 iPHoP-RF;88.50
+F4_S20_contig_1462,7.87,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,95.60,blast;96.90 iPHoP-RF;94.40
+F4_S20_contig_1481|provirus_31718_51823,94.67,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella,90.90,blast;93.30
+F4_S20_contig_1595|provirus_107_51252,64.70,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Dysosmobacter,93.10,blast;95.10 iPHoP-RF;56.80
+F4_S20_contig_1909,99.67,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes,100.00,CRISPR;98.70 RaFAH;98.30 iPHoP-RF;97.10 blast;96.90
+F4_S20_contig_1918,74.08,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Lactococcus,97.30,blast;91.70 RaFAH;88.80 iPHoP-RF;88.50
+F4_S20_contig_1983,36.43,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Anaerotignaceae;g__Metalachnospira,93.50,blast;95.40 iPHoP-RF;80.30 CRISPR;77.20
+F4_S20_contig_1986,7.64,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,95.90,iPHoP-RF;97.10 blast;96.00
+F4_S20_contig_2135,56.25,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Flavonifractor,93.60,blast;95.50 iPHoP-RF;89.50 CRISPR;78.10
+F4_S20_contig_2277,5.39,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.70,CRISPR;99.70 iPHoP-RF;59.50
+F4_S20_contig_2277,5.39,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,99.70,CRISPR;99.70 iPHoP-RF;58.40
+F4_S20_contig_249,89.28,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.40,CRISPR;99.00 RaFAH;74.90
+F4_S20_contig_249,89.28,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Coprobacillaceae;g__Faecalibacillus,94.90,blast;96.40
+F4_S20_contig_249,89.28,d__Bacteria;p__Bacillota_C;c__Negativicutes;o__Selenomonadales;f__Selenomonadaceae;g__Megamonas,94.20,blast;95.90
+F4_S20_contig_249,89.28,d__Bacteria;p__Bacillota_A;c__Clostridia;o__TANB77;f__CAG-508;g__CAG-245,91.50,blast;93.80
+F4_S20_contig_284,7.79,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Dysosmobacter_A,91.60,blast;93.90
+F4_S20_contig_3155,21.47,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.70,CRISPR;99.00 iPHoP-RF;71.90
+F4_S20_contig_3155,21.47,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,97.80,CRISPR;98.40 iPHoP-RF;61.70
+F4_S20_contig_3725,6.35,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Anaerotruncus,96.60,blast;97.60 iPHoP-RF;70.60
+F4_S20_contig_4216|provirus_88_26925,25.75,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Gemmiger,95.60,blast;96.90 iPHoP-RF;86.70
+F4_S20_contig_4541,42.70,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Hungatella,95.20,blast;96.60 CRISPR;93.70 iPHoP-RF;85.70
+F4_S20_contig_645,75.27,d__Bacteria;p__Verrucomicrobiota;c__Verrucomicrobiae;o__Verrucomicrobiales;f__Akkermansiaceae;g__Akkermansia,100.00,CRISPR;99.60 RaFAH;99.30 blast;97.20 iPHoP-RF;78.70
+F4_S20_contig_6550,4.31,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Erysipelotrichaceae;g__Longicatena,98.10,blast;98.60 iPHoP-RF;68.00
+F4_S20_contig_767,97.62,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,97.90,CRISPR;98.50 iPHoP-RF;53.60
+F4_S20_contig_767,97.62,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,93.20,CRISPR;95.20 iPHoP-RF;69.50
+F4_S20_contig_812,38.68,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella,98.40,CRISPR;98.80 blast;96.80 iPHoP-RF;92.10
+F4_S20_contig_8315,36.83,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Acutalibacter,92.90,blast;94.90
+F4_S20_contig_8479|provirus_13187_34423,8.60,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.40,blast;96.70 iPHoP-RF;92.80 RaFAH;91.70
+F4_S20_contig_8479|provirus_13187_34423,8.60,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,95.20,blast;96.60 iPHoP-RF;86.70
+F4_S20_contig_8984,12.51,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Mediterraneibacter,95.40,blast;96.80 CRISPR;94.60 iPHoP-RF;78.70
+F4_S20_contig_9464,18.23,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Dysosmobacter,96.70,blast;97.70 iPHoP-RF;76.40
+F5_S21_contig_117,5.21,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Anaerotruncus,95.30,blast;96.70 iPHoP-RF;79.80
+F5_S21_contig_12540,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.60,CRISPR;99.60 iPHoP-RF;86.70
+F5_S21_contig_12540,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,99.60,CRISPR;99.60 iPHoP-RF;80.60
+F5_S21_contig_13219,55.83,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,95.20,blast;96.60 iPHoP-RF;94.10 CRISPR;88.10
+F5_S21_contig_13256,9.94,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Roseburia,98.40,CRISPR;98.80
+F5_S21_contig_13256,9.94,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Agathobacter,97.80,CRISPR;98.40
+F5_S21_contig_13256,9.94,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,95.40,blast;96.80 iPHoP-RF;66.30
+F5_S21_contig_14602,99.65,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Flavonifractor,90.30,blast;92.30 iPHoP-RF;88.90 RaFAH;53.40
+F5_S21_contig_1827,78.93,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.60,CRISPR;98.50 RaFAH;86.70 iPHoP-RF;80.30
+F5_S21_contig_1827,78.93,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.50,CRISPR;98.90 iPHoP-RF;87.60
+F5_S21_contig_1936,22.17,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,95.20,blast;96.60 iPHoP-RF;66.50 CRISPR;53.20
+F5_S21_contig_2127,12.95,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Anaeromassilibacillus,91.00,blast;93.40 iPHoP-RF;83.30
+F5_S21_contig_2980,79.56,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Tannerellaceae;g__Parabacteroides,100.00,blast;97.70 RaFAH;96.90 iPHoP-RF;93.40 CRISPR;82.40
+F5_S21_contig_3128,59.04,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Acutalibacter,92.30,blast;94.50 iPHoP-RF;81.90
+F5_S21_contig_3217|provirus_361_73598,100.00,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,RaFAH;99.10 blast;93.70 iPHoP-RF;69.10
+F5_S21_contig_3217|provirus_361_73598,100.00,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Coprobacteraceae;g__Coprobacter,93.90,CRISPR;95.70
+F5_S21_contig_3258,11.48,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,91.60,blast;93.90 iPHoP-RF;86.70 CRISPR;73.10
+F5_S21_contig_5346,14.04,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Ruthenibacterium,95.00,blast;96.50 iPHoP-RF;94.40 CRISPR;75.70
+F5_S21_contig_5571,89.14,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,100.00,RaFAH;99.80 CRISPR;99.70 iPHoP-RF;97.10 blast;96.80
+F5_S21_contig_6057,20.87,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Lawsonibacter,95.00,blast;96.50 iPHoP-RF;83.30
+F5_S21_contig_6370,9.33,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.40,CRISPR;98.80 iPHoP-RF;94.70
+F5_S21_contig_6850,77.90,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,99.60,CRISPR;99.60 iPHoP-RF;71.30
+F5_S21_contig_6850,77.90,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.10,CRISPR;99.30 iPHoP-RF;74.10
+F5_S21_contig_6850,77.90,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Marinifilaceae;g__Odoribacter,92.50,RaFAH;94.60
+F5_S21_contig_6938,45.32,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__CAG-56,90.60,blast;93.00 iPHoP-RF;67.50
+F5_S21_contig_7729,27.31,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Lawsonibacter,94.60,blast;96.20 iPHoP-RF;82.50 CRISPR;51.40
+F5_S21_contig_9106,12.27,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Catenibacillus,90.00,blast;92.50 iPHoP-RF;73.70
+F5_S21_contig_9453,96.31,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Tannerellaceae;g__Parabacteroides,98.70,blast;93.20 RaFAH;92.30 CRISPR;74.90 iPHoP-RF;68.20
+F5_S21_contig_9453,96.31,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,97.90,CRISPR;98.50 iPHoP-RF;87.90 blast;86.90
+F5_S21_contig_9453,96.31,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,97.50,CRISPR;98.20 blast;90.50 iPHoP-RF;73.70
+F5_S21_contig_9652,49.17,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.70,CRISPR;99.00 blast;93.80 iPHoP-RF;93.70
+F5_S21_contig_9652,49.17,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.40,CRISPR;98.80 iPHoP-RF;92.10 blast;86.90
+F5_S21_contig_9652,49.17,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Mediterranea,91.80,iPHoP-RF;94.10 blast;90.70
+F6_S22_contig_10060,100.00,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Clostridium_Q,92.00,blast;94.20 iPHoP-RF;62.70
+F6_S22_contig_10060,100.00,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Hungatella,91.20,RaFAH;89.40 blast;69.60
+F6_S22_contig_10076,99.74,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Tannerellaceae;g__Parabacteroides,100.00,CRISPR;98.00 RaFAH;97.90 blast;96.80 iPHoP-RF;83.60
+F6_S22_contig_10076,99.74,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,95.20,CRISPR;96.60 iPHoP-RF;78.30
+F6_S22_contig_10347,81.21,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,99.40,CRISPR;99.50 blast;96.80 iPHoP-RF;82.50
+F6_S22_contig_10347,81.21,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__UMGS1370,99.40,CRISPR;99.50 iPHoP-RF;58.20
+F6_S22_contig_10732,94.37,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,CRISPR;98.50 iPHoP-RF;97.10 blast;96.60 RaFAH;96.50
+F6_S22_contig_10732,94.37,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.40,CRISPR;98.80 iPHoP-RF;97.10 blast;96.90
+F6_S22_contig_11477,9.05,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,95.30,blast;96.70 iPHoP-RF;88.50 CRISPR;76.20
+F6_S22_contig_12722,14.10,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Faecousia,90.30,blast;92.80 iPHoP-RF;70.00
+F6_S22_contig_1286,64.47,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,99.00,CRISPR;99.20 blast;96.10 iPHoP-RF;89.50
+F6_S22_contig_1286,64.47,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Clostridium_Q,95.30,blast;96.70 iPHoP-RF;67.30
+F6_S22_contig_13439|provirus_25496_60412,99.97,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Tannerellaceae;g__Parabacteroides,100.00,CRISPR;98.90 RaFAH;98.00 blast;96.90 iPHoP-RF;92.80
+F6_S22_contig_13532,95.22,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Dysosmobacter,91.00,blast;93.40 iPHoP-RF;52.20
+F6_S22_contig_14705,8.84,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Eubacteriales;f__Eubacteriaceae;g__Eubacterium,94.20,blast;95.90 iPHoP-RF;70.00
+F6_S22_contig_1835,34.92,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Dysosmobacter,97.60,blast;92.60 RaFAH;88.50
+F6_S22_contig_1835,34.92,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Vescimonas,95.70,RaFAH;88.50 blast;87.10
+F6_S22_contig_2010,98.33,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes,91.60,blast;93.90
+F6_S22_contig_2010,98.33,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Coprobacteraceae;g__Coprobacter,90.40,CRISPR;92.90
+F6_S22_contig_2018,12.84,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,95.60,blast;96.90 iPHoP-RF;77.30
+F6_S22_contig_2018,12.84,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,94.70,blast;93.80 iPHoP-RF;90.50 RaFAH;70.30
+F6_S22_contig_4361,11.44,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,98.50,CRISPR;98.90 blast;97.30 iPHoP-RF;89.20
+F6_S22_contig_4685,9.97,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,97.90,CRISPR;98.50 iPHoP-RF;96.70
+F6_S22_contig_5100,29.10,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,91.40,RaFAH;90.60 CRISPR;66.70
+F6_S22_contig_5228,98.43,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,100.00,RaFAH;99.80 CRISPR;98.60 iPHoP-RF;67.70
+F6_S22_contig_5341,6.04,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Christensenellales;f__UMGS416;g__Parachristensenella,91.60,blast;93.90
+F6_S22_contig_5786|provirus_57689_107408,100.00,d__Bacteria;p__Verrucomicrobiota;c__Verrucomicrobiae;o__Verrucomicrobiales;f__Akkermansiaceae;g__Akkermansia,100.00,blast;98.30 CRISPR;97.60 RaFAH;97.60 iPHoP-RF;80.80
+F6_S22_contig_5920,90.42,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Ruthenibacterium,96.70,blast;97.70
+F6_S22_contig_6039,99.83,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,CRISPR;99.60 RaFAH;98.90 iPHoP-RF;97.10 blast;96.60
+F6_S22_contig_6039,99.83,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,99.60,CRISPR;99.60 blast;96.90 iPHoP-RF;96.70
+F6_S22_contig_6039,99.83,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola_A,99.60,CRISPR;99.60
+F6_S22_contig_619,37.23,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,95.40,blast;96.80 iPHoP-RF;59.80
+F6_S22_contig_6219,22.17,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,95.30,blast;96.70 CRISPR;93.00 iPHoP-RF;75.00
+F6_S22_contig_8388,20.94,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Schaedlerella,96.70,blast;97.70 iPHoP-RF;92.10
+F6_S22_contig_8465,99.55,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Vescimonas,96.90,CRISPR;97.80 iPHoP-RF;52.80
+F6_S22_contig_8465,99.55,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Clostridiales;f__Clostridiaceae;g__Clostridium,95.40,RaFAH;96.80
+F6_S22_contig_8465,99.55,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Clostridiales;f__Clostridiaceae;g__Clostridium_F,95.40,RaFAH;96.80
+F6_S22_contig_8465,99.55,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Clostridiales;f__Clostridiaceae;g__Sarcina,95.40,RaFAH;96.80
+F6_S22_contig_9420,97.18,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__ER4,91.60,blast;93.90 iPHoP-RF;87.00
+F6_S22_contig_9658|provirus_10822_29046,6.71,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,RaFAH;98.50 iPHoP-RF;97.10 blast;96.90
+F7_S23_contig_10709,27.24,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes,95.90,iPHoP-RF;97.10 blast;96.40 CRISPR;91.90
+F7_S23_contig_10913,29.66,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,94.70,blast;96.30 iPHoP-RF;68.40
+F7_S23_contig_1155,30.62,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes,99.60,CRISPR;98.50 iPHoP-RF;97.10 blast;96.80 RaFAH;85.10
+F7_S23_contig_11722,16.18,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__UMGS1623,91.80,blast;94.10
+F7_S23_contig_11960,11.08,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,94.90,CRISPR;96.40 blast;96.30 iPHoP-RF;88.90
+F7_S23_contig_11960,11.08,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__UMGS1370,90.10,CRISPR;92.60 iPHoP-RF;88.50
+F7_S23_contig_12434,21.09,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,93.20,CRISPR;95.20
+F7_S23_contig_13082,14.87,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Gemmiger,95.00,blast;96.50 iPHoP-RF;51.20
+F7_S23_contig_13307,87.00,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Lactococcus,100.00,RaFAH;99.40 iPHoP-RF;95.70
+F7_S23_contig_13307,87.00,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Lactovum,91.40,iPHoP-RF;93.70
+F7_S23_contig_13340,54.59,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Pseudoflavonifractor,98.40,CRISPR;98.80 iPHoP-RF;73.00
+F7_S23_contig_13340,54.59,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Flavonifractor,90.00,blast;92.50 iPHoP-RF;79.30 CRISPR;68.00
+F7_S23_contig_13583,10.76,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__CAJFUH01,93.60,blast;95.50 iPHoP-RF;65.80
+F7_S23_contig_14066,12.78,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B,97.30,blast;98.10 iPHoP-RF;74.10
+F7_S23_contig_15195,14.72,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B,95.20,blast;96.60 iPHoP-RF;66.80
+F7_S23_contig_15420,88.72,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,CRISPR;99.00 RaFAH;98.50 iPHoP-RF;97.10 blast;94.90
+F7_S23_contig_15420,88.72,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.70,CRISPR;99.00 iPHoP-RF;96.40 blast;95.10
+F7_S23_contig_15429,14.87,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Erysipelotrichaceae;g__Holdemania,93.00,CRISPR;95.00 blast;94.50 iPHoP-RF;74.10
+F7_S23_contig_15533,10.26,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Roseburia,98.50,CRISPR;98.90
+F7_S23_contig_15533,10.26,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Agathobacter,98.10,CRISPR;98.60
+F7_S23_contig_15533,10.26,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,95.60,blast;96.90 iPHoP-RF;51.20
+F7_S23_contig_15766,99.89,d__Bacteria;p__Pseudomonadota;c__Gammaproteobacteria;o__Enterobacterales;f__Enterobacteriaceae;g__Escherichia,100.00,RaFAH;99.70 blast;96.90 iPHoP-RF;93.70
+F7_S23_contig_1773,38.26,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Schaedlerella,96.90,blast;97.80 iPHoP-RF;89.50
+F7_S23_contig_1957,15.50,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Anaerotruncus,95.00,blast;96.50 iPHoP-RF;73.90
+F7_S23_contig_3015,98.33,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes,98.20,CRISPR;98.70 iPHoP-RF;97.10 blast;96.80
+F7_S23_contig_3261,16.40,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Hungatella,95.90,iPHoP-RF;97.10 blast;97.00 CRISPR;94.20
+F7_S23_contig_3261,16.40,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ventrimonas,92.00,CRISPR;94.20 iPHoP-RF;70.40
+F7_S23_contig_3261,16.40,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Clostridium_Q,91.40,CRISPR;93.70 iPHoP-RF;78.50
+F7_S23_contig_3274,63.21,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,97.20,CRISPR;98.00 blast;95.60 iPHoP-RF;92.40
+F7_S23_contig_3274,63.21,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Fusicatenibacter,92.60,blast;94.70
+F7_S23_contig_3274,63.21,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Copromonas,92.20,blast;94.40
+F7_S23_contig_3411|provirus_46011_60576,100.00,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.70,RaFAH;98.20 blast;71.70
+F7_S23_contig_3411|provirus_46011_60576,100.00,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Coprobacteraceae;g__Coprobacter,90.70,blast;93.10
+F7_S23_contig_3537,45.43,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B,98.40,blast;98.80 iPHoP-RF;79.50
+F7_S23_contig_3537,45.43,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Faecalimonas,90.00,blast;92.50 iPHoP-RF;61.40
+F7_S23_contig_3580,99.95,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Acutalibacter,97.90,blast;98.50 iPHoP-RF;81.10
+F7_S23_contig_3723,19.98,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Intestinimonas,92.70,blast;94.80
+F7_S23_contig_385|provirus_92538_121215,11.09,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,94.90,blast;96.40 iPHoP-RF;80.60
+F7_S23_contig_385|provirus_92538_121215,11.09,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,92.70,blast;94.80 iPHoP-RF;94.40
+F7_S23_contig_385|provirus_92538_121215,11.09,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Tannerellaceae;g__Parabacteroides,90.60,blast;93.00
+F7_S23_contig_387,27.99,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Christensenellales;f__UMGS416;g__Parachristensenella,91.00,blast;93.40 iPHoP-RF;64.30
+F7_S23_contig_428,41.93,d__Bacteria;p__Bacillota_C;c__Negativicutes;o__Acidaminococcales;f__Acidaminococcaceae;g__Phascolarctobacterium,92.50,blast;94.60
+F7_S23_contig_4736,44.09,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__CAG-56,91.60,blast;93.90 iPHoP-RF;77.30
+F7_S23_contig_5002,99.31,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Ruminiclostridium_E,91.20,RaFAH;93.60
+F7_S23_contig_504,36.59,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,94.30,CRISPR;96.00 blast;92.60 iPHoP-RF;72.40
+F7_S23_contig_5679,34.08,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B,95.40,blast;96.80 iPHoP-RF;76.40
+F7_S23_contig_5784,13.91,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Ruthenibacterium,96.00,CRISPR;97.20 blast;96.80 iPHoP-RF;83.60
+F7_S23_contig_6085|provirus_49773_61550,,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Flavonifractor,96.70,blast;97.70 iPHoP-RF;75.70
+F7_S23_contig_6423,9.89,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Flavonifractor,90.90,blast;93.30
+F7_S23_contig_7991,47.42,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,98.50,blast;98.40 iPHoP-RF;86.30 RaFAH;64.30
+F7_S23_contig_7991,47.42,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia,95.20,CRISPR;95.20 iPHoP-RF;89.20 RaFAH;64.30
+F7_S23_contig_7991,47.42,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,91.20,CRISPR;93.60
+F7_S23_contig_859,96.99,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B,96.60,blast;97.60 iPHoP-RF;94.70 CRISPR;89.60
+F7_S23_contig_859,96.99,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,96.20,CRISPR;97.30
+F7_S23_contig_8978,98.54,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,100.00,RaFAH;99.20 CRISPR;99.00 iPHoP-RF;75.00
+F7_S23_contig_9901,100.00,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.40,CRISPR;98.80
+F7_S23_contig_9901,100.00,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.20,CRISPR;98.70
+F7_S23_contig_9951,25.39,d__Bacteria;p__Actinomycetota;c__Actinomycetia;o__Actinomycetales;f__Bifidobacteriaceae;g__Bifidobacterium,99.10,CRISPR;99.30 blast;96.50 iPHoP-RF;93.70
+F8_S24_contig_10663,97.03,d__Bacteria;p__Pseudomonadota;c__Gammaproteobacteria;o__Enterobacterales;f__Enterobacteriaceae;g__Escherichia,100.00,RaFAH;99.30 blast;96.90 iPHoP-RF;94.70
+F8_S24_contig_11305,21.97,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Gemmiger,95.60,blast;96.90 iPHoP-RF;89.80
+F8_S24_contig_11371,91.91,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes,99.30,CRISPR;99.30 blast;96.80 iPHoP-RF;94.40 RaFAH;58.10
+F8_S24_contig_13368,83.78,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Flavonifractor,93.60,blast;95.50 iPHoP-RF;95.10 CRISPR;78.70
+F8_S24_contig_13368,83.78,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Dysosmobacter,91.50,blast;93.80
+F8_S24_contig_14507,23.13,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Negativibacillus,97.80,blast;98.40 iPHoP-RF;87.60 CRISPR;72.10
+F8_S24_contig_1463,60.47,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Ruthenibacterium,95.40,blast;96.80
+F8_S24_contig_15400,12.09,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,93.90,blast;95.70 CRISPR;94.50 iPHoP-RF;86.00
+F8_S24_contig_1848,100.00,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes,98.80,CRISPR;99.10 iPHoP-RF;97.10 blast;96.60
+F8_S24_contig_1848,100.00,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,94.90,RaFAH;96.40
+F8_S24_contig_2318,27.31,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Butyricicoccaceae;g__Butyricicoccus,96.00,CRISPR;97.20
+F8_S24_contig_2318,27.31,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Lawsonibacter,94.30,blast;96.00 iPHoP-RF;88.90 CRISPR;50.70
+F8_S24_contig_2835,49.88,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Vescimonas,96.60,CRISPR;97.60
+F8_S24_contig_3103,88.89,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Acutalibacter,92.70,blast;94.80 iPHoP-RF;90.50 CRISPR;54.50
+F8_S24_contig_3460,12.83,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__UMGS1623,91.20,blast;93.60 iPHoP-RF;72.40
+F8_S24_contig_3716,26.86,d__Bacteria;p__Actinomycetota;c__Coriobacteriia;o__Coriobacteriales;f__Eggerthellaceae;g__Arabiibacter,98.50,CRISPR;98.90 iPHoP-RF;51.50
+F8_S24_contig_3716,26.86,d__Bacteria;p__Actinomycetota;c__Coriobacteriia;o__Coriobacteriales;f__Eggerthellaceae;g__Eggerthella,98.50,CRISPR;98.90 blast;96.70 iPHoP-RF;81.40
+F8_S24_contig_3716,26.86,d__Bacteria;p__Actinomycetota;c__Coriobacteriia;o__Coriobacteriales;f__Eggerthellaceae;g__Gordonibacter,98.40,CRISPR;98.80 iPHoP-RF;52.00
+F8_S24_contig_3716,26.86,d__Bacteria;p__Actinomycetota;c__Coriobacteriia;o__Coriobacteriales;f__Eggerthellaceae;g__Rubneribacter,98.40,CRISPR;98.80 blast;82.20
+F8_S24_contig_3716,26.86,d__Bacteria;p__Actinomycetota;c__Coriobacteriia;o__Coriobacteriales;f__Eggerthellaceae;g__Enteroscipio,98.20,CRISPR;98.70
+F8_S24_contig_3716,26.86,d__Bacteria;p__Actinomycetota;c__Coriobacteriia;o__Coriobacteriales;f__Eggerthellaceae;g__Senegalimassilia,94.60,CRISPR;96.20
+F8_S24_contig_3918|provirus_1_76820,97.55,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,CRISPR;99.60 iPHoP-RF;97.10 blast;96.90 RaFAH;96.30
+F8_S24_contig_3918|provirus_1_76820,97.55,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,99.40,CRISPR;99.50 iPHoP-RF;96.10 blast;94.70
+F8_S24_contig_4286,90.92,d__Bacteria;p__Actinomycetota;c__Actinomycetia;o__Actinomycetales;f__Actinomycetaceae;g__Actinomyces,99.40,CRISPR;96.30 RaFAH;93.30
+F8_S24_contig_4286,90.92,d__Bacteria;p__Actinomycetota;c__Actinomycetia;o__Actinomycetales;f__Actinomycetaceae;g__Pauljensenia,90.90,RaFAH;93.30
+F8_S24_contig_5522,14.54,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__CAJFUH01,93.40,blast;95.30 iPHoP-RF;55.40
+F8_S24_contig_5942,25.58,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Peptostreptococcales;f__Anaerovoracaceae;g__Emergencia,91.20,blast;93.60 iPHoP-RF;59.80
+F8_S24_contig_6138|provirus_8_27451,8.03,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__ER4,91.40,blast;93.70 iPHoP-RF;64.00
+F8_S24_contig_6574,32.49,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Acutalibacter,95.90,blast;97.10 CRISPR;90.00 iPHoP-RF;74.60
+F8_S24_contig_6789,41.63,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes,98.80,blast;96.80 iPHoP-RF;96.10 RaFAH;85.80
+F8_S24_contig_7266,99.60,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Clostridium_AP,97.60,blast;98.30
+F8_S24_contig_7475,9.24,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Hydrogeniiclostridium,96.60,blast;97.60 iPHoP-RF;56.00
+F8_S24_contig_7801,53.28,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,94.20,blast;95.90 CRISPR;82.70 iPHoP-RF;80.60
+F8_S24_contig_9400,9.71,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B,94.90,blast;96.40 iPHoP-RF;77.10
+F8_S24_contig_9505,21.24,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Flavonifractor,94.60,blast;96.20 iPHoP-RF;69.10
+F8_S24_contig_9505,21.24,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Dysosmobacter,90.00,blast;92.50 iPHoP-RF;55.70
+F8_S24_contig_9591,67.62,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,99.30,CRISPR;99.40 iPHoP-RF;77.80
+F8_S24_contig_9591,67.62,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.00,CRISPR;99.20 iPHoP-RF;78.30
+GP3_S28_contig_1249,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.70,CRISPR;99.70 iPHoP-RF;72.40
+GP3_S28_contig_1249,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,99.70,CRISPR;99.70 iPHoP-RF;75.00
+GP3_S28_contig_1286,15.97,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,94.30,blast;96.00 iPHoP-RF;87.30 CRISPR;67.90
+GP3_S28_contig_1961|provirus_5979_36618,12.13,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,91.40,iPHoP-RF;93.70 blast;90.30 CRISPR;59.90
+GP3_S28_contig_1961|provirus_5979_36618,12.13,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,90.80,blast;93.20 iPHoP-RF;85.10
+GP3_S28_contig_2268,85.25,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,RaFAH;97.40 iPHoP-RF;97.10 blast;93.80 CRISPR;84.70
+GP3_S28_contig_2268,85.25,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,94.50,CRISPR;96.10 iPHoP-RF;93.10 blast;74.20
+GP3_S28_contig_2639,10.33,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Faecalibacterium,95.60,blast;96.90 iPHoP-RF;76.10
+GP3_S28_contig_2741,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.70,CRISPR;99.70 iPHoP-RF;95.10
+GP3_S28_contig_2741,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,99.70,CRISPR;99.70 iPHoP-RF;96.10
+GP3_S28_contig_3243,6.80,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,95.40,CRISPR;96.80 iPHoP-RF;96.10
+GP3_S28_contig_3270,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.10,CRISPR;98.60
+GP3_S28_contig_3270,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,96.60,CRISPR;97.60
+GP3_S28_contig_3646|provirus_68854_100287,8.60,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.40,iPHoP-RF;97.10 blast;96.90 RaFAH;91.50
+GP3_S28_contig_3646|provirus_68854_100287,8.60,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,94.90,blast;96.40 iPHoP-RF;90.10
+GP3_S28_contig_366,20.23,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.20,CRISPR;98.70 iPHoP-RF;95.40
+GP3_S28_contig_3688,7.91,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella,96.40,blast;97.50 iPHoP-RF;94.10 CRISPR;93.10
+GP3_S28_contig_4398,18.63,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Anaerotignaceae;g__Metalachnospira,96.90,blast;97.80 iPHoP-RF;55.40
+GP3_S28_contig_4510,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.50,CRISPR;98.90 iPHoP-RF;63.00
+GP3_S28_contig_4510,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.20,CRISPR;98.70 iPHoP-RF;52.00
+GP3_S28_contig_5346,16.86,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__ER4,97.60,CRISPR;98.30
+GP3_S28_contig_5346,16.86,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Dysosmobacter,92.90,blast;94.90
+GP3_S28_contig_640,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.20,CRISPR;98.70 iPHoP-RF;78.00
+GP3_S28_contig_640,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.20,CRISPR;98.70 iPHoP-RF;83.60
+GP3_S28_contig_731,,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,97.80,CRISPR;98.40 blast;95.90 iPHoP-RF;94.70
+GP3_S28_contig_731,,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Hungatella,96.20,CRISPR;97.30 iPHoP-RF;93.40
+GP3_S28_contig_869,99.98,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,RaFAH;99.80 CRISPR;99.30 blast;93.90 iPHoP-RF;89.20
+GP3_S28_contig_869,99.98,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,99.40,CRISPR;99.50 blast;96.00 iPHoP-RF;91.10
+GP3_S28_contig_881,,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,90.00,blast;92.50 CRISPR;80.30 iPHoP-RF;79.00
+GP4_S29_contig_1183,14.28,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Limivicinus,94.00,CRISPR;95.80
+GP4_S29_contig_1764,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,99.00,CRISPR;99.20 iPHoP-RF;53.30
+GP4_S29_contig_1764,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.50,CRISPR;98.90 iPHoP-RF;55.40
+GP4_S29_contig_1828,14.33,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Anaerotignaceae;g__Metalachnospira,98.10,blast;98.60 iPHoP-RF;69.80
+GP4_S29_contig_1966,87.25,d__Bacteria;p__Verrucomicrobiota;c__Verrucomicrobiae;o__Verrucomicrobiales;f__Akkermansiaceae;g__Akkermansia,100.00,CRISPR;99.70 RaFAH;99.50 blast;96.90 iPHoP-RF;80.80
+GP4_S29_contig_1974,8.40,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Christensenellales;f__UMGS416;g__Parachristensenella,90.40,blast;92.90 iPHoP-RF;71.10
+GP4_S29_contig_237,64.24,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,CRISPR;98.60 blast;97.80 iPHoP-RF;97.10 RaFAH;96.10
+GP4_S29_contig_237,64.24,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.40,CRISPR;98.80 blast;95.80 iPHoP-RF;95.70
+GP4_S29_contig_2637,33.05,d__Bacteria;p__Bacillota_C;c__Negativicutes;o__Selenomonadales;f__Selenomonadaceae;g__Megamonas,95.60,blast;96.90
+GP4_S29_contig_2637,33.05,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,93.60,CRISPR;95.50
+GP4_S29_contig_2981,100.00,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.40,CRISPR;98.70 iPHoP-RF;82.80 RaFAH;54.30
+GP4_S29_contig_2981,100.00,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.10,CRISPR;98.60 iPHoP-RF;85.10
+GP4_S29_contig_3052,78.85,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Lactococcus,98.40,blast;95.30 iPHoP-RF;93.40 RaFAH;87.70
+GP4_S29_contig_3177,33.74,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,93.90,blast;95.70 iPHoP-RF;83.90 CRISPR;68.00
+GP4_S29_contig_3251,99.92,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.90,CRISPR;98.80 RaFAH;92.50 blast;91.10 iPHoP-RF;75.00
+GP4_S29_contig_3251,99.92,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.50,CRISPR;98.90 iPHoP-RF;95.40 blast;93.40
+GP4_S29_contig_4216|provirus_1_51411,97.44,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.70,RaFAH;95.90 blast;93.40 iPHoP-RF;74.60
+GP4_S29_contig_4216|provirus_1_51411,97.44,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,95.40,blast;96.80 iPHoP-RF;83.10
+GP4_S29_contig_477,37.52,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.40,CRISPR;98.80 blast;96.90 iPHoP-RF;95.40
+GP4_S29_contig_477,37.52,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,93.10,iPHoP-RF;95.10 blast;79.30
+GP4_S29_contig_668,29.38,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,96.90,CRISPR;97.80 blast;95.00 iPHoP-RF;94.70
+GP4_S29_contig_668,29.38,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,95.90,iPHoP-RF;97.10 CRISPR;95.70 blast;93.00
+GP4_S29_contig_803,6.47,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,96.40,CRISPR;97.50 iPHoP-RF;54.90
+GP4_S29_contig_830,93.87,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.60,CRISPR;98.10 iPHoP-RF;97.10 blast;89.70 RaFAH;88.90
+GP4_S29_contig_830,93.87,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.40,CRISPR;98.80 iPHoP-RF;97.10 blast;91.90
+GP4_S29_contig_864|provirus_16296_61692,100.00,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,RaFAH;99.80 CRISPR;99.00 blast;96.20 iPHoP-RF;85.70
+GP4_S29_contig_864|provirus_16296_61692,100.00,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.70,CRISPR;99.00 blast;93.30 iPHoP-RF;79.50
+GP4_S29_contig_902,84.31,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,99.30,CRISPR;99.40 iPHoP-RF;83.60
+GP4_S29_contig_902,84.31,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.00,CRISPR;99.20 iPHoP-RF;83.30
+GP4_S29_contig_902,84.31,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Marinifilaceae;g__Odoribacter,90.90,RaFAH;93.30
+GP5_S30_contig_1133,16.29,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Tannerellaceae;g__Parabacteroides,99.10,CRISPR;99.30
+GP5_S30_contig_1133,16.29,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.50,CRISPR;98.90
+GP5_S30_contig_1133,16.29,d__Bacteria;p__Verrucomicrobiota;c__Verrucomicrobiae;o__Verrucomicrobiales;f__Akkermansiaceae;g__Akkermansia,97.20,blast;98.00
+GP5_S30_contig_1133,16.29,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,95.00,CRISPR;96.50
+GP5_S30_contig_1379,10.96,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,97.30,CRISPR;98.10 blast;96.70 iPHoP-RF;96.70
+GP5_S30_contig_1379,10.96,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,95.90,iPHoP-RF;97.10 CRISPR;96.20 blast;90.50
+GP5_S30_contig_1379,10.96,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Tannerellaceae;g__Parabacteroides,91.60,blast;93.90
+GP5_S30_contig_1792,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,96.00,CRISPR;97.20
+GP5_S30_contig_1792,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,95.20,CRISPR;96.60
+GP5_S30_contig_2061,,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,94.50,CRISPR;96.10 blast;94.50 iPHoP-RF;81.10
+GP5_S30_contig_2604,11.54,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.10,CRISPR;98.60 iPHoP-RF;77.50
+GP5_S30_contig_323,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,95.40,CRISPR;96.80 iPHoP-RF;90.10
+GP5_S30_contig_363,16.86,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Dysosmobacter,90.80,blast;93.20 iPHoP-RF;62.50
+GP5_S30_contig_3903,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.40,CRISPR;98.80 iPHoP-RF;75.00
+GP5_S30_contig_3903,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,96.70,CRISPR;97.70 iPHoP-RF;73.20
+GP5_S30_contig_4052,35.23,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,94.90,blast;96.40 iPHoP-RF;50.90
+GP5_S30_contig_479,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,97.00,CRISPR;97.90
+GP5_S30_contig_479,,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,96.00,CRISPR;97.20
+GP5_S30_contig_5094,4.71,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Christensenellales;f__UMGS416;g__Parachristensenella,91.70,blast;94.00 iPHoP-RF;65.80
+GP5_S30_contig_5318,20.56,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Schaedlerella,96.20,blast;97.30 iPHoP-RF;92.40
+GP5_S30_contig_5330,77.27,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Erysipelotrichaceae;g__Breznakia,90.80,blast;93.20
+M1_S25_contig_10074,77.90,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,RaFAH;99.20 iPHoP-RF;97.10 CRISPR;97.00 blast;96.90
+M1_S25_contig_10074,77.90,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,95.20,CRISPR;96.60 blast;96.20 iPHoP-RF;94.70
+M1_S25_contig_10074,77.90,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Mediterranea,91.40,iPHoP-RF;93.70
+M1_S25_contig_10417,7.82,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Muricomes,91.20,blast;93.60 iPHoP-RF;79.80
+M1_S25_contig_11226|provirus_209363_232950,13.08,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Schaedlerella,98.20,blast;98.70 iPHoP-RF;93.10 CRISPR;87.30
+M1_S25_contig_11347|provirus_911_37529,22.31,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia,92.70,blast;94.80 iPHoP-RF;79.80
+M1_S25_contig_12369,99.71,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Dorea,93.20,blast;95.20
+M1_S25_contig_12369,99.71,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Lachnoclostridium_B,91.10,blast;93.50
+M1_S25_contig_12369,99.71,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__RUG115,90.80,blast;93.20 iPHoP-RF;53.00
+M1_S25_contig_12555,15.51,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Oliverpabstia,92.00,blast;94.20 iPHoP-RF;61.10
+M1_S25_contig_12978,96.40,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,100.00,RaFAH;99.00 CRISPR;97.30 iPHoP-RF;97.10 blast;91.80
+M1_S25_contig_13452,7.01,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,95.40,blast;96.80 iPHoP-RF;73.50
+M1_S25_contig_14021,38.07,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Flavonifractor,98.50,CRISPR;98.90 blast;93.90 iPHoP-RF;78.00
+M1_S25_contig_14497,12.52,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Monoglobales;f__Monoglobaceae;g__Monoglobus,93.10,blast;95.10
+M1_S25_contig_14887|provirus_2_17124,27.86,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ventrimonas,97.80,blast;98.40 CRISPR;96.90 iPHoP-RF;90.50
+M1_S25_contig_15157,36.12,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__CAG-95,91.20,blast;93.60
+M1_S25_contig_1524|provirus_641_45509,7.26,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Peptostreptococcales;f__Anaerovoracaceae;g__Emergencia,91.00,blast;93.40
+M1_S25_contig_15607|provirus_129_96683,49.94,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B,92.20,blast;94.40 iPHoP-RF;83.60
+M1_S25_contig_15807,94.67,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,95.60,blast;96.90
+M1_S25_contig_15807,94.67,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Coprococcus_A,90.80,blast;93.20
+M1_S25_contig_16496|provirus_9696_22059,21.55,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Clostridium_AP,94.60,blast;96.20 iPHoP-RF;82.80
+M1_S25_contig_16750,16.87,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Mediterraneibacter,91.60,blast;93.90 iPHoP-RF;57.60
+M1_S25_contig_17420,21.11,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella,95.60,CRISPR;96.90 iPHoP-RF;88.90
+M1_S25_contig_18379,48.32,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,95.00,CRISPR;96.50 iPHoP-RF;82.80
+M1_S25_contig_18555|provirus_133784_171225,76.77,d__Bacteria;p__Actinomycetota;c__Actinomycetia;o__Actinomycetales;f__Bifidobacteriaceae;g__Bifidobacterium,99.60,CRISPR;99.60 blast;96.90 iPHoP-RF;96.40
+M1_S25_contig_19664|provirus_83145_137182,67.76,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Vescimonas,97.60,blast;98.30 iPHoP-RF;52.20
+M1_S25_contig_19795,11.06,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__CAG-56,93.10,blast;95.10 iPHoP-RF;71.70
+M1_S25_contig_20271|provirus_75698_133928,4.81,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Enterenecus,97.90,blast;98.50
+M1_S25_contig_20271|provirus_75698_133928,4.81,d__Bacteria;p__Actinomycetota;c__Actinomycetia;o__Actinomycetales;f__Bifidobacteriaceae;g__Bifidobacterium,95.30,blast;96.70
+M1_S25_contig_20527|provirus_3613_42685,28.58,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Erysipelotrichaceae;g__Longicatena,95.20,blast;96.60 CRISPR;80.60
+M1_S25_contig_22710,23.52,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Monoglobales;f__Monoglobaceae;g__Monoglobus,96.00,blast;97.20 iPHoP-RF;71.50
+M1_S25_contig_2275|provirus_250_24739,100.00,d__Bacteria;p__Pseudomonadota;c__Gammaproteobacteria;o__Enterobacterales;f__Enterobacteriaceae;g__Escherichia,100.00,RaFAH;98.40 blast;96.90 iPHoP-RF;96.70 CRISPR;57.40
+M1_S25_contig_23050|provirus_9743_49015,6.50,d__Bacteria;p__Bacillota_A;c__Clostridia;o__UBA1381;f__UBA1381;g__CAG-41,97.80,blast;98.40 iPHoP-RF;81.40 CRISPR;66.00
+M1_S25_contig_23170,2.72,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B,93.60,blast;95.50 iPHoP-RF;93.70
+M1_S25_contig_23530,14.53,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia,96.60,CRISPR;97.60 blast;94.50 iPHoP-RF;73.50
+M1_S25_contig_23673,15.85,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,97.30,CRISPR;98.10 blast;96.80 iPHoP-RF;92.10
+M1_S25_contig_24206,38.43,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,90.20,blast;92.70 iPHoP-RF;77.80 CRISPR;68.50
+M1_S25_contig_24825,5.70,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,95.20,blast;96.60 iPHoP-RF;72.40
+M1_S25_contig_24882,10.31,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,99.90,blast;96.70 RaFAH;96.60 iPHoP-RF;95.40
+M1_S25_contig_24882,10.31,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,95.30,blast;96.70 iPHoP-RF;90.10
+M1_S25_contig_24893|provirus_127_35529,44.89,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Peptostreptococcales;f__Anaerovoracaceae;g__Emergencia,90.70,blast;93.10 iPHoP-RF;73.70
+M1_S25_contig_24994,14.89,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Clostridium_A,91.60,blast;93.90 iPHoP-RF;82.20
+M1_S25_contig_26556,21.29,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Schaedlerella,97.80,blast;98.40 iPHoP-RF;77.50
+M1_S25_contig_2702|provirus_66386_101056,100.00,d__Bacteria;p__Pseudomonadota;c__Gammaproteobacteria;o__Enterobacterales;f__Enterobacteriaceae;g__Escherichia,100.00,RaFAH;99.20 blast;97.60 iPHoP-RF;84.80
+M1_S25_contig_27700,30.20,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Oliverpabstia,90.90,blast;93.30
+M1_S25_contig_28270,27.66,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Erysipelotrichaceae;g__Longicatena,95.20,blast;96.60 CRISPR;95.70 iPHoP-RF;84.20
+M1_S25_contig_28564,9.53,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,94.20,blast;95.90 iPHoP-RF;86.70
+M1_S25_contig_29141,33.16,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Pseudoflavonifractor,98.50,CRISPR;98.90 iPHoP-RF;71.10
+M1_S25_contig_29161|provirus_27413_57357,61.83,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella,96.30,CRISPR;97.40 blast;96.40 iPHoP-RF;88.50
+M1_S25_contig_30599,3.70,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,92.30,blast;94.50 iPHoP-RF;63.50
+M1_S25_contig_3065|provirus_52464_83223,7.17,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Mediterraneibacter,95.30,blast;96.70 iPHoP-RF;72.20
+M1_S25_contig_31202,5.63,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Oliverpabstia,94.90,blast;96.40 CRISPR;95.90 iPHoP-RF;92.10
+M1_S25_contig_33048|provirus_3_18317,9.25,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Wujia,90.10,blast;92.60
+M1_S25_contig_33240,3.45,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,94.20,blast;95.90 iPHoP-RF;89.80
+M1_S25_contig_33292|provirus_25729_62019,99.90,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,RaFAH;98.80 iPHoP-RF;94.70 CRISPR;90.60 blast;85.10
+M1_S25_contig_33292|provirus_25729_62019,99.90,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,90.70,iPHoP-RF;93.10 blast;85.10
+M1_S25_contig_33849|provirus_17677_60490,75.61,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B,95.60,blast;96.90 iPHoP-RF;87.90 CRISPR;67.20
+M1_S25_contig_33849|provirus_17677_60490,75.61,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Faecalimonas,94.60,blast;96.20 iPHoP-RF;79.50
+M1_S25_contig_34052,71.82,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Vescimonas,97.90,CRISPR;98.50 iPHoP-RF;50.40
+M1_S25_contig_34052,71.82,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Marseille-P3106,90.90,blast;93.30
+M1_S25_contig_34748,11.92,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Muricomes,94.20,blast;95.90 iPHoP-RF;69.80
+M1_S25_contig_35532,9.57,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Acutalibacter,94.50,CRISPR;96.10 blast;95.80 iPHoP-RF;85.70
+M1_S25_contig_36040,4.37,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Clostridium_AP,91.40,blast;93.70 iPHoP-RF;53.60
+M1_S25_contig_36550,5.45,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella,91.40,blast;93.70 iPHoP-RF;82.20 CRISPR;51.20
+M1_S25_contig_37448|provirus_82121_117752,52.81,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Clostridium_AP,98.70,CRISPR;99.00 iPHoP-RF;95.70 blast;95.00
+M1_S25_contig_38080,3.76,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,95.20,blast;96.60 iPHoP-RF;69.50
+M1_S25_contig_38412,10.31,d__Bacteria;p__Bacillota_A;c__Clostridia;o__UBA1381;f__UBA1381;g__CAG-41,95.60,blast;96.90 iPHoP-RF;88.20 CRISPR;65.50
+M1_S25_contig_38741,3.51,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,95.40,blast;96.80 iPHoP-RF;73.90
+M1_S25_contig_38760,20.14,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Muricomes,94.60,blast;96.20 iPHoP-RF;92.40
+M1_S25_contig_398|provirus_16310_56569,68.01,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Mediterraneibacter,98.50,CRISPR;98.90 iPHoP-RF;64.30 blast;53.50
+M1_S25_contig_40167,66.00,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Clostridium_AP,97.30,blast;98.10 iPHoP-RF;73.00
+M1_S25_contig_40525|provirus_120160_156310,24.10,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Coprobacillaceae;g__Thomasclavelia,97.60,CRISPR;98.30 blast;96.90 iPHoP-RF;90.80
+M1_S25_contig_40525|provirus_120160_156310,24.10,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Coprobacillaceae;g__Faecalibacillus,94.90,CRISPR;96.40 iPHoP-RF;84.50
+M1_S25_contig_40528|provirus_104132_121871,11.13,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Gemmiger,94.90,blast;96.40 iPHoP-RF;94.40 CRISPR;57.40
+M1_S25_contig_40779|provirus_12665_51897,64.38,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Coprobacillaceae;g__Faecalibacillus,96.90,CRISPR;97.80 iPHoP-RF;83.30
+M1_S25_contig_40779|provirus_12665_51897,64.38,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Coprobacillaceae;g__Thomasclavelia,95.60,blast;96.90 iPHoP-RF;87.60 CRISPR;85.60
+M1_S25_contig_4117,17.59,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Wujia,91.40,blast;93.70
+M1_S25_contig_41285|provirus_6164_17411,8.73,d__Bacteria;p__Bacillota_A;c__Clostridia;o__UBA1381;f__UBA1381;g__CAG-41,97.80,blast;98.40 iPHoP-RF;61.70
+M1_S25_contig_43543,29.51,d__Bacteria;p__Bacillota_A;c__Clostridia;o__UBA1381;f__UBA1381;g__CAG-41,95.40,blast;96.80
+M1_S25_contig_43711,9.43,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Coprobacillaceae;g__Thomasclavelia,94.70,blast;96.30
+M1_S25_contig_4417,99.31,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Faecalimonas,92.60,iPHoP-RF;94.70 blast;91.10
+M1_S25_contig_4417,99.31,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B,91.80,iPHoP-RF;94.10 blast;89.70
+M1_S25_contig_4417,99.31,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Schaedlerella,91.00,blast;93.40 iPHoP-RF;52.00
+M1_S25_contig_44323,8.40,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Clostridium_AP,90.10,blast;92.60 iPHoP-RF;72.40
+M1_S25_contig_44684|provirus_50_34921,15.62,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Scatavimonas,95.20,blast;96.60 iPHoP-RF;81.40
+M1_S25_contig_44737,4.36,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Clostridium_A,95.00,blast;96.50 iPHoP-RF;85.40
+M1_S25_contig_4791,1.87,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Lawsonibacter,95.00,blast;96.50
+M1_S25_contig_4791,1.87,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Intestinimonas,90.70,blast;93.10 iPHoP-RF;52.00
+M1_S25_contig_5104|provirus_57339_105492,25.27,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Gemmiger,98.70,CRISPR;99.00 blast;96.90 iPHoP-RF;90.10
+M1_S25_contig_5464|provirus_2_39897,24.96,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Erysipelotrichaceae;g__Clostridium_AQ,95.40,blast;96.80 iPHoP-RF;74.60 CRISPR;67.60
+M1_S25_contig_5870|provirus_24216_63606,98.45,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Lachnospira,96.60,blast;97.60 iPHoP-RF;71.10
+M1_S25_contig_5870|provirus_24216_63606,98.45,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Agathobacter,95.00,blast;96.50
+M1_S25_contig_614|provirus_32184_61415,4.75,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Caccovicinus,91.40,blast;93.70
+M1_S25_contig_6380|provirus_55811_94266,12.99,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B,97.20,CRISPR;98.00 iPHoP-RF;88.20
+M1_S25_contig_6380|provirus_55811_94266,12.99,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Faecalimonas,96.90,CRISPR;97.80 iPHoP-RF;96.40 blast;78.90
+M1_S25_contig_6380|provirus_55811_94266,12.99,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Lachnoclostridium_B,96.20,CRISPR;97.30 iPHoP-RF;88.50
+M1_S25_contig_6380|provirus_55811_94266,12.99,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__CAG-317,95.20,CRISPR;96.60 blast;92.90 iPHoP-RF;82.80
+M1_S25_contig_6380|provirus_55811_94266,12.99,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Mediterraneibacter,91.60,CRISPR;93.90 blast;90.30
+M1_S25_contig_6380|provirus_55811_94266,12.99,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Bariatricus,90.60,CRISPR;93.00 iPHoP-RF;81.10
+M1_S25_contig_6473,10.71,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella,93.00,blast;95.00 iPHoP-RF;65.10
+M1_S25_contig_6495,21.26,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Clostridium_AP,90.80,blast;93.20
+M1_S25_contig_6720|provirus_50_20224,5.08,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Scatavimonas,92.70,blast;94.80 iPHoP-RF;77.10
+M1_S25_contig_8083|provirus_45445_55908,30.55,d__Bacteria;p__Actinomycetota;c__Coriobacteriia;o__Coriobacteriales;f__Atopobiaceae;g__Thermophilibacter,90.00,blast;92.50 CRISPR;68.40
+M1_S25_contig_8375|provirus_124_37923,97.89,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,100.00,CRISPR;99.00 RaFAH;98.00 iPHoP-RF;97.10 blast;93.20
+M1_S25_contig_8375|provirus_124_37923,97.89,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.70,CRISPR;99.00 blast;96.90 iPHoP-RF;96.40
+M1_S25_contig_9233|provirus_2_13023,16.66,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Coprobacillaceae;g__Thomasclavelia,95.30,blast;96.70 iPHoP-RF;53.60
+M1_S25_contig_9306|provirus_3_11988,11.78,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,91.50,blast;93.80
+M1_S25_contig_9670,11.86,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Roseburia,93.00,blast;95.00 iPHoP-RF;75.70
+M1_S25_contig_9670,11.86,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Lachnospira,90.70,blast;93.10 iPHoP-RF;52.80
+M1_S25_contig_969|provirus_2_11838,8.30,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ventrimonas,95.40,blast;96.80 CRISPR;86.40 iPHoP-RF;69.30
+M2_S26_contig_12192|provirus_28991_44848,18.36,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Monoglobales;f__Monoglobaceae;g__Monoglobus,95.00,blast;96.50
+M2_S26_contig_1221,7.06,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,95.30,blast;96.70 iPHoP-RF;88.90
+M2_S26_contig_12853|provirus_10725_32709,44.77,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Peptostreptococcales;f__Anaerovoracaceae;g__Emergencia,91.10,blast;93.50 iPHoP-RF;90.10
+M2_S26_contig_13552|provirus_9081_28675,35.32,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Monoglobales;f__Monoglobaceae;g__Monoglobus,94.60,blast;96.20
+M2_S26_contig_13556,98.60,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Roseburia,98.70,CRISPR;99.00 blast;98.30 iPHoP-RF;93.70
+M2_S26_contig_13556,98.60,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__UBA11774,97.30,CRISPR;98.10 iPHoP-RF;59.80
+M2_S26_contig_13556,98.60,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Agathobacter,96.20,CRISPR;97.30 blast;96.50
+M2_S26_contig_13556,98.60,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__CAG-45,90.30,iPHoP-RF;92.80 blast;90.30
+M2_S26_contig_13759|provirus_3_12335,23.27,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Clostridium_A,93.80,blast;95.60 iPHoP-RF;79.30
+M2_S26_contig_14139,6.48,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,95.40,blast;96.80 iPHoP-RF;89.20
+M2_S26_contig_1442,72.01,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Flavonifractor,91.00,blast;93.40
+M2_S26_contig_16129|provirus_13207_57040,96.10,d__Bacteria;p__Actinomycetota;c__Actinomycetia;o__Actinomycetales;f__Bifidobacteriaceae;g__Bifidobacterium,99.90,CRISPR;99.20 blast;98.20 iPHoP-RF;89.50 RaFAH;85.20
+M2_S26_contig_17582|provirus_2_16429,15.42,d__Bacteria;p__Bacillota_A;c__Clostridia;o__UBA1381;f__UBA1381;g__CAG-41,95.40,blast;96.80 iPHoP-RF;63.00
+M2_S26_contig_18885,7.99,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Fusicatenibacter,90.90,blast;93.30
+M2_S26_contig_19375|provirus_1_17155,10.06,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia,90.30,blast;92.80 iPHoP-RF;87.60 CRISPR;66.60
+M2_S26_contig_20475|provirus_107198_152019,89.12,d__Bacteria;p__Bacillota_C;c__Negativicutes;o__Veillonellales;f__Dialisteraceae;g__Dialister,99.30,CRISPR;98.80 blast;96.90 RaFAH;76.60 iPHoP-RF;64.50
+M2_S26_contig_21429,5.82,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Acutalibacter,92.70,blast;94.80 iPHoP-RF;72.20
+M2_S26_contig_21889,98.32,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,100.00,RaFAH;99.80 CRISPR;98.60 iPHoP-RF;97.10 blast;96.90
+M2_S26_contig_2329,10.27,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,95.60,blast;96.90 iPHoP-RF;90.80
+M2_S26_contig_2449|provirus_73065_122060,12.28,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,95.20,blast;96.60 iPHoP-RF;52.20
+M2_S26_contig_2449|provirus_73065_122060,12.28,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Dorea,91.50,blast;93.80 iPHoP-RF;77.10
+M2_S26_contig_25073,44.34,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,98.50,blast;98.90 iPHoP-RF;86.30 CRISPR;73.30
+M2_S26_contig_25073,44.34,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,95.90,CRISPR;97.10
+M2_S26_contig_26236|provirus_372_15971,8.47,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Massilioclostridium,93.60,blast;95.50 iPHoP-RF;73.50
+M2_S26_contig_28282,89.14,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,100.00,CRISPR;99.60 RaFAH;99.40 iPHoP-RF;97.10 blast;96.70
+M2_S26_contig_28638|provirus_6170_23148,13.88,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,98.20,blast;92.60 RaFAH;91.30 iPHoP-RF;83.60
+M2_S26_contig_28638|provirus_6170_23148,13.88,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,95.40,blast;96.80 iPHoP-RF;90.80
+M2_S26_contig_2961|provirus_2_26141,5.02,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Monoglobales;f__Monoglobaceae;g__Monoglobus,95.20,blast;96.60
+M2_S26_contig_32178,94.24,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,100.00,RaFAH;99.80 CRISPR;98.80 iPHoP-RF;97.10 blast;93.90
+M2_S26_contig_35951,7.77,d__Bacteria;p__Bacillota_A;c__Clostridia;o__UBA1381;f__UBA1381;g__CAG-41,95.60,blast;96.90 iPHoP-RF;57.10
+M2_S26_contig_36314|provirus_69541_80246,8.12,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__UBA1417,94.20,blast;95.90 iPHoP-RF;72.80
+M2_S26_contig_379|provirus_743_71857,97.88,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,95.00,blast;96.50 CRISPR;95.90 iPHoP-RF;64.80
+M2_S26_contig_379|provirus_743_71857,97.88,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Choladousia,92.70,blast;94.80
+M2_S26_contig_38028|provirus_22850_63980,44.68,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Eubacteriales;f__Eubacteriaceae;g__Eubacterium,95.20,blast;96.60 CRISPR;94.50 iPHoP-RF;78.00
+M2_S26_contig_38177,25.49,d__Bacteria;p__Bacillota_A;c__Clostridia;o__UBA1381;f__UBA1381;g__CAG-41,95.20,blast;96.60 iPHoP-RF;79.30
+M2_S26_contig_3955|provirus_85611_117887,17.14,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia,95.90,CRISPR;97.10 blast;93.90 iPHoP-RF;62.50
+M2_S26_contig_41052,5.51,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Butyricicoccaceae;g__Agathobaculum,95.00,blast;96.50 iPHoP-RF;68.00
+M2_S26_contig_5057,11.62,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Butyricicoccaceae;g__Agathobaculum,95.40,blast;96.80
+M2_S26_contig_5057,11.62,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Barnesiellaceae;g__Barnesiella,93.40,RaFAH;95.30
+M2_S26_contig_6069,9.57,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__CAG-56,90.70,blast;93.10 iPHoP-RF;74.10
+M2_S26_contig_7833,100.00,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,94.60,iPHoP-RF;91.80 blast;90.70 RaFAH;77.00
+M2_S26_contig_7833,100.00,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,93.10,iPHoP-RF;95.10 blast;94.60 CRISPR;66.70
+M2_S26_contig_7837|provirus_3_30345,15.90,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Lawsonibacter,90.40,blast;92.90 iPHoP-RF;55.40
+M2_S26_contig_8176,31.02,d__Bacteria;p__Bacillota_A;c__Clostridia;o__UBA1381;f__UBA1381;g__CAG-41,95.30,blast;96.70 iPHoP-RF;54.90
+M2_S26_contig_8232,8.73,d__Bacteria;p__Bacillota_A;c__Clostridia;o__UBA1381;f__UBA1381;g__CAG-41,95.90,blast;97.10 CRISPR;96.30 iPHoP-RF;87.00
+M2_S26_contig_8324,23.56,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Monoglobales;f__Monoglobaceae;g__Monoglobus,93.60,blast;95.50 iPHoP-RF;68.40
+M2_S26_contig_8763,100.00,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Clostridium_A,95.40,blast;96.80 iPHoP-RF;70.20
+M2_S26_contig_8763,100.00,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Ruminiclostridium_E,92.00,RaFAH;94.20
+M3_S27_contig_1006,18.21,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes,95.40,CRISPR;96.80
+M3_S27_contig_1006,18.21,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,91.60,blast;93.90
+M3_S27_contig_12192,22.11,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella,95.00,blast;96.50 iPHoP-RF;78.70
+M3_S27_contig_12525,14.34,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,90.70,blast;93.10 iPHoP-RF;58.70
+M3_S27_contig_14338,19.25,d__Bacteria;p__Bacillota_A;c__Clostridia;o__UBA1381;f__UBA1381;g__CAG-41,97.80,blast;98.40 iPHoP-RF;73.50
+M3_S27_contig_15253,61.88,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,100.00,CRISPR;99.60 iPHoP-RF;97.10 blast;92.10 RaFAH;86.80
+M3_S27_contig_15645,5.46,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Clostridium_A,90.80,blast;93.20 iPHoP-RF;66.80
+M3_S27_contig_1621|provirus_36529_86612,99.35,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Oliverpabstia,91.40,blast;93.70
+M3_S27_contig_16283,73.09,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Flavonifractor,90.70,blast;93.10 iPHoP-RF;71.90
+M3_S27_contig_16352,77.38,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Pseudoflavonifractor,98.70,CRISPR;99.00 iPHoP-RF;59.50
+M3_S27_contig_16352,77.38,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Dysosmobacter,90.90,blast;93.30
+M3_S27_contig_16380,38.67,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella,94.20,blast;95.90 iPHoP-RF;79.30
+M3_S27_contig_1646,56.01,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Oliverpabstia,91.80,blast;94.10 iPHoP-RF;70.00
+M3_S27_contig_17444|provirus_15465_30416,4.88,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella,94.70,blast;96.30 iPHoP-RF;82.50
+M3_S27_contig_17475,61.45,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella,96.40,CRISPR;97.50 blast;95.80 iPHoP-RF;84.50
+M3_S27_contig_1784|provirus_19300_29937,12.14,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Acutalibacter,92.70,blast;94.80 iPHoP-RF;72.20
+M3_S27_contig_17953,6.80,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,95.20,blast;96.60
+M3_S27_contig_17953,6.80,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Roseburia,94.70,blast;96.30 iPHoP-RF;52.50
+M3_S27_contig_17953,6.80,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B,90.30,blast;92.80 iPHoP-RF;71.90
+M3_S27_contig_18679|provirus_98368_148407,65.58,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Acutalibacter,97.50,blast;98.20
+M3_S27_contig_19399,8.82,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Vescimonas,96.70,CRISPR;97.70 iPHoP-RF;53.00
+M3_S27_contig_20361,49.37,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Acutalibacter,94.60,blast;96.20 iPHoP-RF;81.40
+M3_S27_contig_20484,83.52,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola,98.40,CRISPR;98.80 iPHoP-RF;95.70 blast;93.50
+M3_S27_contig_20484,83.52,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola_A,98.10,CRISPR;98.60 iPHoP-RF;65.80
+M3_S27_contig_20484,83.52,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides,96.90,iPHoP-RF;96.40 blast;90.80 RaFAH;70.10
+M3_S27_contig_21009,42.11,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,97.50,CRISPR;98.20 blast;96.60 iPHoP-RF;94.70
+M3_S27_contig_223,34.66,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia,90.20,blast;92.70 iPHoP-RF;68.20
+M3_S27_contig_23315,89.94,d__Bacteria;p__Actinomycetota;c__Actinomycetia;o__Actinomycetales;f__Actinomycetaceae;g__Pauljensenia,100.00,CRISPR;99.60 blast;95.90 iPHoP-RF;92.80 RaFAH;88.50
+M3_S27_contig_25655,12.03,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Oliverpabstia,93.60,blast;95.50 iPHoP-RF;59.00
+M3_S27_contig_26061,13.94,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Acutalibacter,94.20,blast;95.90 iPHoP-RF;80.00
+M3_S27_contig_26920|provirus_33_33948,96.94,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,100.00,RaFAH;99.70 CRISPR;99.00 iPHoP-RF;96.70 blast;93.50
+M3_S27_contig_28191|provirus_1_12459,8.36,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Peptostreptococcales;f__Anaerovoracaceae;g__Emergencia,93.80,blast;95.60 iPHoP-RF;73.50
+M3_S27_contig_28795,6.08,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Coprobacillaceae;g__Thomasclavelia,95.40,blast;96.80 iPHoP-RF;64.30
+M3_S27_contig_32302,41.93,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Faecalibacterium,94.60,RaFAH;94.20 iPHoP-RF;67.50
+M3_S27_contig_32767|provirus_125_24152,11.36,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Roseburia,90.40,blast;92.90 iPHoP-RF;76.10
+M3_S27_contig_32767|provirus_125_24152,11.36,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Lachnospira,90.20,blast;92.70
+M3_S27_contig_34944|provirus_1815_45454,11.92,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Muricomes,95.30,blast;96.70 iPHoP-RF;86.00
+M3_S27_contig_35789,61.52,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,98.80,CRISPR;99.10 blast;96.00 iPHoP-RF;85.40
+M3_S27_contig_35789,61.52,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Clostridium_Q,95.00,blast;96.50 CRISPR;95.40 iPHoP-RF;73.70
+M3_S27_contig_35797,66.11,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,100.00,RaFAH;99.80 CRISPR;99.30 blast;96.90 iPHoP-RF;96.70
+M3_S27_contig_39117,4.81,d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Coprobacillaceae;g__Thomasclavelia,95.40,blast;96.80 iPHoP-RF;73.20
+M3_S27_contig_40358|provirus_237_37281,15.68,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Gemmiger,98.70,CRISPR;99.00 blast;96.90 iPHoP-RF;94.40
+M3_S27_contig_40777,5.52,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,91.40,blast;93.70 iPHoP-RF;50.20
+M3_S27_contig_42763,6.64,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__CAG-56,91.60,blast;93.90 iPHoP-RF;85.40
+M3_S27_contig_44395|provirus_20_11390,7.17,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Oliverpabstia,91.40,blast;93.70 iPHoP-RF;70.90
+M3_S27_contig_4704,10.17,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,95.60,blast;96.90 iPHoP-RF;77.50
+M3_S27_contig_4949,19.48,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A,98.40,blast;98.80 CRISPR;98.50 iPHoP-RF;73.90
+M3_S27_contig_5071|provirus_1_77415,61.66,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Faecousia,96.90,blast;97.80
+M3_S27_contig_6593|provirus_160587_184010,72.61,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B,95.60,blast;96.90 CRISPR;96.50 iPHoP-RF;87.00
+M3_S27_contig_6593|provirus_160587_184010,72.61,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Faecalimonas,94.50,blast;96.10 iPHoP-RF;83.60 CRISPR;67.90
+M3_S27_contig_678,18.86,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster,95.30,blast;96.70 iPHoP-RF;88.90 CRISPR;88.20
+M3_S27_contig_6997,19.13,d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus,93.50,blast;95.40 iPHoP-RF;62.70
+M3_S27_contig_7502|provirus_2_10458,38.07,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Acetatifactor,91.20,blast;93.60
+M3_S27_contig_7511,19.55,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Agathobacter,96.00,blast;96.70 RaFAH;57.20
+M3_S27_contig_7596|provirus_9462_22478,32.96,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Acutalibacter,92.50,blast;94.60 iPHoP-RF;87.90
+M3_S27_contig_8311,21.08,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__1XD8-76,90.00,blast;92.50
+M3_S27_contig_9074|provirus_12655_34354,7.92,d__Bacteria;p__Bacillota_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Clostridium_Q,91.60,blast;93.90

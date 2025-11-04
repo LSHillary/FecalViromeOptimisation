@@ -1,354 +1,434 @@
-# 0 Setting parameters ----
+###############################################################################
+# Fecal Virome Optimization (FVO) Manuscript – Core Functions
+# Author: Luke Hillary
+# Institution: University of California, Davis – Emerson Lab
+# Repository: https://github.com/LSHillary/FecalViromeOptimisation
+# License: [Choose one: MIT / GPL-3 / CC-BY-4.0] 
+# Version: v1.0 (Version of Record for Zenodo DOI)
+# Date: 2025-11-04
+###############################################################################
+# Description:
+# This script defines the core R functions used in the Fecal Virome Optimization
+# (FVO) manuscript pipeline. It supports all targets and figure-generation steps
+# executed by the `_targets.R` and `Run_FVO_manuscript.R` scripts.
+#
+# The functions are grouped into the following sections:
+#   0. Parameter definitions (labels, levels, color palettes)
+#   1. Data import utilities for metadata, coverage, taxonomy, and annotation
+#   2. Data processing functions for read merging, diversity calculations,
+#      and table generation (alpha/beta diversity, presence–absence)
+#   3. Visualization utilities for figure generation (e.g., stacked barplots,
+#      PCoA ordinations, Venn diagrams, K-mer profiles)
+#
+# Key design principles:
+#   • Modular and self-contained – each function is callable independently
+#   • Targets-compatible – all outputs serialize cleanly within {targets}
+#   • Reproducible – parameterized filepaths, consistent factor levels, and
+#     fixed palettes to ensure reproducible figures
+#   • Minimal dependencies – tidyverse core + vegan + ggpubr + ggVennDiagram
+#
+# Usage:
+#   Source this file in `_targets.R`:
+#     tar_source("Functions_FVO.R")
+#
+#   or interactively:
+#     source("Functions_FVO.R")
+#
+# Notes:
+#   - Designed for R ≥ 4.3 and tidyverse ≥ 2.0
+#   - All ggplot objects should be saved with `format = "rds"` in {targets}
+#     to avoid serialization errors.
+###############################################################################
 
-# Changes Short Sample names to be more readable
-DescriptionModifiers <- c("UTV" = "Untreated\nVirome",
-                          "DTV" = "DNase\nTreated\nVirome",
-                          "MDA" = "MDA\nVirome",
-                          "MtG" = "Meta\ngenome")
 
-# Sets the order of the Description levels
-DescriptionLevels <- c("Untreated\nVirome","DNase\nTreated\nVirome", "MDA\nVirome", "Meta\ngenome")
+# 0. Parameter settings ----
+
+# Define consistent labels and factor levels for sample descriptions used 
+# throughout the Fecal Virome Optimization (FVO) analyses and figures.
+# These are used for axis labels, legend text, and ordered facets.
+
+# Mapping of short sample codes (used in filenames/metadata) to human-readable labels
+DescriptionModifiers <- c(
+  "UTV" = "Untreated\nVirome",
+  "DTV" = "DNase\nTreated\nVirome",
+  "MDA" = "MDA\nVirome",
+  "MtG" = "Meta\ngenome"
+)
+
+# Define the display order of descriptions in all plots and summaries
+DescriptionLevels <- c(
+  "Untreated\nVirome",
+  "DNase\nTreated\nVirome",
+  "MDA\nVirome",
+  "Meta\ngenome"
+)
 
 
-# 1 - Importing data ----
-# Import Metadata
-import_metadata <- function(filepath){
-  df <- read.csv(filepath, sep = ",", header = TRUE)
-  return(df)
+
+# 1. Data Import Functions ----
+
+# These functions read and preprocess external data files (metadata, MultiQC,
+# mapping summaries, TPM tables, taxonomy, and host/lifestyle predictions)
+# into tidy data frames for downstream analysis.
+# All assume UTF-8 CSV/TSV files and return tidyverse-style tibbles.
+
+# Read metadata table
+# Arguments:
+#   filepath — path to metadata CSV
+# Returns:
+#   Data frame of sample metadata.
+import_metadata <- function(filepath) {
+  read.csv(filepath, sep = ",", header = TRUE)
 }
 
-# Import Raw MultiQC
-import_multiqc <- function(filepath, metadata){
-  df <- read.csv(filepath, sep = "\t", header = TRUE, stringsAsFactors = TRUE) %>%
-    # Remove "FastQC_mqc.generalstats.fastqc." from column names
-    rename_all(~gsub("FastQC_mqc.generalstats.fastqc.", "", .)) %>%
-    # Remove R2
+# Read MultiQC FastQC summary
+# Cleans column names, removes R2 reads, and merges with metadata.
+# Arguments:
+#   filepath — path to MultiQC general stats TSV
+#   metadata — data frame of sample metadata
+# Returns:
+#   Data frame of cleaned MultiQC stats merged with metadata.
+import_multiqc <- function(filepath, metadata) {
+  read.csv(filepath, sep = "\t", header = TRUE, stringsAsFactors = FALSE) %>%
+    rename_with(~ gsub("FastQC_mqc\\.generalstats\\.fastqc\\.", "", .x)) %>%
     filter(!grepl("R2", Sample)) %>%
-    # Remove "_raw_R1" from sample name %>%
     mutate(Sample = gsub("_raw_R1", "", Sample)) %>%
-    # Select relevant columns
     select(Sample, percent_gc, total_sequences) %>%
     merge(metadata, by = "Sample", all.x = TRUE)
-  return(df)
 }
 
-# Import and merge multiple tsvs
-read_and_merge_tsvs <- function(folder, file_extension){
-  # Get list of files in folder
+# Read and merge multiple TSV file
+# Reads all files matching a pattern within a folder and combines them.
+# Arguments:
+#   folder — directory path
+#   file_extension — regex pattern (e.g. "_tax_profile.tsv$")
+# Returns:
+#   Data frame combining all TSVs with sample identifiers.
+read_and_merge_tsvs <- function(folder, file_extension) {
   files <- list.files(path = folder, pattern = file_extension)
-  # Create empty list to store dataframes
-  df_list <- list()
-  # Loop through files
-  for (i in 1:length(files)){
-    # Read file
-    df <- read_tsv(paste(folder, "/", files[i], sep = ""), show_col_types = FALSE)
-    # Add sample name column
-    df$sample <- gsub(file_extension, "", files[i])
-    # Add dataframe to list
-    df_list[[i]] <- df
-  }
-  # Merge all dataframes in list
-  df_merged <- bind_rows(df_list)
-  # Return merged dataframe
-  return(df_merged)
+  df_list <- lapply(files, function(f) {
+    df <- read_tsv(file.path(folder, f), show_col_types = FALSE)
+    df$sample <- gsub(file_extension, "", f)
+    df
+  })
+  bind_rows(df_list)
 }
 
-# Import human read coverage data
-import_read_counts <- function(filename, TEXT){
-  df <- read.csv(filename, sep = "\t") %>%
-    # Filter columns for those containing "Read.Count"
+# Import read-count summaries
+# Sums mapped read counts across contigs and converts to read pairs.
+# Arguments:
+#   filename — path to read-count table
+#   TEXT — descriptor (e.g. "human" or "viral")
+# Returns:
+#   Data frame of total read pairs per sample.
+import_read_counts <- function(filename, TEXT) {
+  read.csv(filename, sep = "\t") %>%
     select(contains("Read.Count")) %>%
-    # Remove "_human_mapped.Read.Count" from column names
-    rename_all(~gsub(paste0("_", TEXT, "_mapped.Read.Count"), "", .)) %>%
-    # Summarise total counts for each column
-    summarise_all(sum) %>%
-    # Transpose and turn column names into a new column called Sample
+    rename_with(~ gsub(paste0("_", TEXT, "_mapped\\.Read\\.Count"), "", .x)) %>%
+    summarise(across(everything(), sum)) %>%
     t() %>% as.data.frame() %>%
     rownames_to_column("Sample") %>%
-    rename("Reads" = "V1") %>%
-    # Divide HumanReads by 2 to convert to read pairs
+    rename(Reads = V1) %>%
     mutate(Reads = Reads / 2)
-  return(df)
 }
 
-# Import TPM values
-import_tpm <- function(filename, TEXT){
-  df <- read.csv(filename, sep = "\t") %>%
-    # Filter columns that contain "TPM" or "Contig"
+# Import TPM tables
+# Reads TPM values for each contig/sample.
+# Arguments:
+#   filename — path to TPM table
+#   TEXT — descriptor (e.g. "human" or "viral")
+# Returns:
+#   Data frame of TPM values per contig/sample.
+import_tpm <- function(filename, TEXT) {
+  read.csv(filename, sep = "\t") %>%
     select(contains("TPM"), contains("Contig")) %>%
-    # Remove "_human_mapped.Read.Count" from column names
-    rename_all(~gsub(paste0("_", TEXT, "_mapped.TPM"), "", .))
-  return(df)
+    rename_with(~ gsub(paste0("_", TEXT, "_mapped\\.TPM"), "", .x))
 }
 
-# Import vOTU clusters
-import_vOTU_clusters <- function(filename){
-  df <- read.csv(filename, sep = "\t", header = FALSE) %>%
-  rename("vOTU" = "V1", "Cluster" = "V2")
-  return(df)
+# Import vOTU cluster assignments
+# Reads vOTU-to-cluster mapping from clustering output.
+# Arguments:
+#   filename — path to vOTU cluster file
+# Returns:
+#   Data frame of vOTU and corresponding cluster.
+import_vOTU_clusters <- function(filename) {
+  read.csv(filename, sep = "\t", header = FALSE) %>%
+    rename(vOTU = V1, Cluster = V2)
 }
 
-# Import SingleM data
-import_singlem <- function(filename, metadata = metadata){
-  df <- read_and_merge_tsvs(filename, "_tax_profile.tsv") %>%
-    # Split taxonomy
-    separate(taxonomy, into = c("Root","Domain", "Phylum", "Class", "Order", "Family", "Genus", "Species"), sep = ";", fill = "right") %>%
-    # If Phylum = NA, then take value from Domain and fill as paste("Unclassified", Domain)
-    mutate(Phylum = ifelse(is.na(Phylum), paste("Unclassified", Domain), Phylum)) %>%
-    # Remove "d_" and "p_" from Phylum
-    mutate(Phylum = gsub("d__", "", Phylum)) %>%
-    mutate(Phylum = gsub("p__", "", Phylum)) %>%
-    mutate(Phylum = gsub(" ","", Phylum)) %>%
-    mutate(Phylum = ifelse(grepl("Unclassified", Phylum), "Unclassified", Phylum)) %>%
-    # Rename all Phyla containing text "Bacillota" to Bacillota
-    mutate(Phylum = ifelse(grepl("Bacillota", Phylum), "Bacillota", Phylum)) %>%
-    select(c(sample, Phylum, coverage)) %>%
+# Import SingleM outputs
+# Aggregates coverage to phylum level and merges with metadata.
+# Arguments:
+#   folder — directory path containing SingleM TSVs
+#   metadata — data frame of sample metadata
+# Returns:
+#   Data frame of phylum-level relative abundances per sample.
+import_singlem <- function(folder, metadata) {
+  read_and_merge_tsvs(folder, "_tax_profile.tsv") %>%
+    separate(taxonomy, into = c("Root","Domain","Phylum","Class","Order",
+                                "Family","Genus","Species"), sep = ";", fill = "right") %>%
+    mutate(
+      Phylum = ifelse(is.na(Phylum), paste("Unclassified", Domain), Phylum),
+      Phylum = gsub("^d__|^p__|\\s", "", Phylum),
+      Phylum = ifelse(grepl("Unclassified", Phylum), "Unclassified", Phylum),
+      Phylum = ifelse(grepl("Bacillota", Phylum), "Bacillota", Phylum)
+    ) %>%
     group_by(sample, Phylum) %>%
-    summarise(coverage = sum(coverage)) %>%
-    group_by(sample) %>%
-    mutate(RelAbund = coverage/sum(coverage) *100,
-           Phylum = factor(Phylum, levels = c("Actinomycetota","Bacillota", "Bacteroidota",
-                                              "Desulfobacterota", "Pseudomonadota", "Verrucomicrobiota",
-                                              "Unclassified"))) %>%
+    summarise(coverage = sum(coverage), .groups = "drop_last") %>%
+    mutate(RelAbund = coverage / sum(coverage) * 100) %>%
+    ungroup() %>%
     rename(Sample = sample) %>%
-    # Merge with metadata
     merge(metadata, by = "Sample")
-  return(df)}
-
-# Import Lifestyle data
-import_bacphlip <- function(filepath){
-  df <- read_and_merge_tsvs(filepath, "_FilteredContigs.fna.bacphlip") %>%
-    rename(vOTU = `...1`) %>%
-    # Create column status with Temperate, Virulent or Unknown
-    # Temperate = Temperate < 0.05, Virulent. = Virulent < 0.05, Unknown = other
-    mutate(status = ifelse(Temperate >= 0.95, "Temperate", ifelse(Virulent >= 0.95, "Virulent", "Unclassified"))) %>%
-    # Create column Provirus if Provirus is in the vOTU name
-    mutate(Provirus = ifelse(grepl("provirus", vOTU), "Provirus", "Virus")) %>%
-    rename(Sample = sample)
-  return(df)
 }
 
-import_bacphlip_vOTU <- function(filepath){
-  df <- read.csv(filepath, sep = "\t", header = TRUE) %>%
+# Import BACPHLIP lifestyle predictions
+# Adds Temperate/Virulent/Unclassified status and marks proviruses.
+# Arguments:
+#   filepath — path to BACPHLIP output file
+# Returns:
+#   Data frame of vOTU lifestyle predictions
+import_bacphlip_vOTU <- function(filepath) {
+  read.csv(filepath, sep = "\t", header = TRUE) %>%
     rename(vOTU = X) %>%
-    # Create column status with Temperate, Virulent or Unknown
-    # Temperate = Temperate < 0.05, Virulent. = Virulent < 0.05, Unknown = other
-    mutate(status = ifelse(Temperate >= 0.95, "Temperate", ifelse(Virulent >= 0.95, "Virulent", "Unclassified"))) %>%
-    # Create column Provirus if Provirus is in the vOTU name
-    mutate(Provirus = ifelse(grepl("provirus", vOTU), "Provirus", "Virus"))
-  return(df)
-  }
+    mutate(
+      status = case_when(
+        Temperate >= 0.95 ~ "Temperate",
+        Virulent >= 0.95  ~ "Virulent",
+        TRUE              ~ "Unclassified"
+      ),
+      Provirus = ifelse(grepl("provirus", vOTU, ignore.case = TRUE), "Provirus", "Virus")
+    )
+}
 
-# Import Pharokka data
-import_pharokka <- function(filepath){
-  df <- read_and_merge_tsvs(filepath, "_pharokka_proteins_full_merged_output.tsv") %>%
+# Import Pharokka annotation tables
+# Reads and merges Pharokka protein annotations.
+# Arguments:
+#   folder — directory path containing Pharokka TSVs
+# Returns:
+#   Data frame of Pharokka protein annotations with contig IDs.
+import_pharokka <- function(folder) {
+  read_and_merge_tsvs(folder, "_pharokka_proteins_full_merged_output.tsv") %>%
     mutate(Contig = gsub("_[0-9]*$", "", ID))
-  return(df)
 }
 
-import_pharokka_vOTU <- function(filepath){
-  df <- read.csv(filepath, sep = "\t") %>%
-    mutate(Contig = gsub("_[0-9]*$", "", ID))
-  return(df)
-}
-
-# Import Defense genes data
-import_defensefinder <- function(filepath){
-  df <- read_and_merge_tsvs(filepath, "_FilteredProteins_defense_finder_systems.tsv") %>%
-    #Create ViralSequence from "sys_beg" and remove the last underscore and the text after
-    mutate(ViralSequence = gsub("_[0-9]*$", "", sys_beg))
-  return(df)
-}
-
-# Import Host Data
-import_iphop_data <- function(filename){
-  df <- read.csv("data/HostPrediction/Host_prediction_to_genus_m90.csv") %>%
+# Import iPHoP host predictions
+# Cleans and resolves taxonomy, keeping top-confidence hits only.
+# Arguments:
+#   filename — path to iPHoP host prediction CSV
+# Returns:
+#   Data frame of vOTU host predictions with cleaned taxonomy.
+import_iphop_data <- function(filename) {
+  read.csv(filename) %>%
     rename(vOTU = Virus) %>%
-    
-    # Step 1: Group by vOTU and filter by the highest Confidence.score
     group_by(vOTU) %>%
     filter(Confidence.score == max(Confidence.score)) %>%
-    
-    # Step 2: Split taxonomy information into individual levels
-    separate(Host.genus, into = c("HostDomain", "HostPhylum", "HostClass", "HostOrder",
-                                  "HostFamily", "HostGenus"), sep = ";", fill = "right") %>%
-    
-    # Step 3: Clean up taxonomy by removing prefixes like "d__", "p__", etc.
-    mutate(across(starts_with("Host"), ~ gsub("^[a-z]__", "", .))) %>%
-    
-    # Step 4: Collapse certain host taxa for consistency
-    mutate(HostPhylum = ifelse(grepl("Bacillota", HostPhylum), "Bacillota", HostPhylum),
-           HostGenus = ifelse(grepl("Clostridium", HostGenus), "Clostridium", HostGenus)) %>%
-    
-    # Step 5: Handle multiple hits with the same Confidence.score
-    # For vOTUs with multiple hits and same Confidence.score, keep the first hit
-    # and remove the lowest taxonomic levels that don't match
+    separate(Host.genus,
+             into = c("HostDomain","HostPhylum","HostClass","HostOrder",
+                      "HostFamily","HostGenus"),
+             sep = ";", fill = "right") %>%
+    mutate(across(starts_with("Host"), ~ gsub("^[a-z]__", "", .x))) %>%
+    mutate(
+      HostPhylum = ifelse(grepl("Bacillota", HostPhylum), "Bacillota", HostPhylum),
+      HostGenus  = ifelse(grepl("Clostridium", HostGenus), "Clostridium", HostGenus)
+    ) %>%
     group_by(vOTU, Confidence.score) %>%
-    arrange(vOTU, Confidence.score) %>%
-    
-    # Identify duplicates and remove mismatching lower taxonomic levels
-    mutate(HostGenus = ifelse(n_distinct(HostGenus) > 1, NA, HostGenus),
-           HostFamily = ifelse(n_distinct(HostFamily) > 1, NA, HostFamily),
-           HostOrder  = ifelse(n_distinct(HostOrder) > 1, NA, HostOrder),
-           HostClass  = ifelse(n_distinct(HostClass) > 1, NA, HostClass),
-           HostPhylum = ifelse(n_distinct(HostPhylum) > 1, NA, HostPhylum)) %>%
-    
-    # Step 6: Ungroup after processing
-    ungroup() %>% select(-List.of.methods) %>% unique()
-  return(df)
+    mutate(across(starts_with("Host"),
+                  ~ ifelse(n_distinct(.x) > 1, NA, .x))) %>%
+    ungroup() %>%
+    select(-List.of.methods) %>%
+    distinct()
 }
 
-# 2 - Data Processing ----
-## Process Kmer data
-process_kmers <- function(df_Kmers, df_metadata){
-  df <- df_Kmers %>%
-    separate(col = colnames(df_Kmers)[1], into = strsplit(colnames(df_Kmers)[1], ",")[[1]], sep = ",") %>%
-    mutate(abundance = as.numeric(abundance),
-           count = as.numeric(count)) %>%
-    merge(df_metadata, by = "sample", by.y = "Sample", all.x = TRUE) %>%
+
+# 2. Data Processing Functions ----
+
+# These functions perform internal data transformations used in the FVO
+# analysis pipeline, including read-merging, normalization, and calculation of
+# diversity and presence–absence metrics.
+
+# Process K-mer data
+# Cleans and merges K-mer abundance data with metadata.
+# Arguments:
+#   df_Kmers     — data frame of K-mer abundance and counts
+#   df_metadata  — data frame of sample metadata
+# Returns:
+#   Data frame of merged K-mer abundances with metadata annotations.
+process_kmers <- function(df_Kmers, df_metadata) {
+  df_Kmers %>%
+    separate(
+      col = colnames(df_Kmers)[1],
+      into = strsplit(colnames(df_Kmers)[1], ",")[[1]],
+      sep = ","
+    ) %>%
+    mutate(
+      abundance = as.numeric(abundance),
+      count = as.numeric(count)
+    ) %>%
+    merge(df_metadata, by.x = "sample", by.y = "Sample", all.x = TRUE) %>%
     filter(Description != "Soil Virome") %>%
-    rename("Sample" = "sample")
-  return(df)
+    rename(Sample = sample)
 }
 
-# Merge read count data
-merge_read_counts <- function(viral_read_counts, human_read_counts, raw_multiqc){
-  viral_read_counts <- viral_read_counts %>%
-    rename("ViralReads" = "Reads")
-  human_read_counts <- human_read_counts %>%
-    rename("HumanReads" = "Reads")
-  df_all <- merge(raw_multiqc, human_read_counts, by = "Sample", all.x = TRUE) %>%
-    merge(viral_read_counts, by = "Sample", all.x = TRUE) %>%
-    #Calculate Human %
-    mutate(HumanPercent = HumanReads / total_sequences * 100) %>%
-    # Calculate Viral %
-    mutate(ViralPercent = ViralReads / total_sequences * 100) %>%
-    # Pivot longer for HumanPercent, rRNApercentage
-    pivot_longer(cols = c("HumanPercent", "rRNApercentage", "ViralPercent"),
-                 names_to = "Type", values_to = "ReadPercentage") %>%
-    # Change HumanPercent to "Human", rRNApercentage to "rRNA" and ViralPercent to "Viral"
-    mutate(Type = case_when(
-      Type == "HumanPercent" ~ "Human",
-      Type == "rRNApercentage" ~ "rRNA",
-      Type == "ViralPercent" ~ "Viral"
-    )) %>%
-    filter(Description != "Soil Virome")
-  return(df_all)
-}
-
-# Merge ViralContig data
-merge_viral_contig_data <- function(GenomadData, ClusteringData, metadata){
-  # Identify viral contigs
-  viral_contigs <- ClusteringData$Cluster %>%
-    # Merge all contigs into a single vector, split individual entries by ","
-    strsplit(",") %>%
-    # Unlist the vector
-    unlist()
+# Merge read-count summaries
+# Combines viral, human, and raw MultiQC data; computes read percentages.
+# Arguments:
+#   viral_read_counts — data frame of viral read counts
+#   human_read_counts — data frame of human read counts
+#   raw_multiqc       — data frame of MultiQC read statistics
+# Returns:
+#   Long-format data frame of read-type percentages per sample.
+merge_read_counts <- function(viral_read_counts, human_read_counts, raw_multiqc) {
+  viral_read_counts <- viral_read_counts %>% rename(ViralReads = Reads)
+  human_read_counts <- human_read_counts %>% rename(HumanReads = Reads)
   
-  # Filter GenomadData for viral contigs
-  df <- GenomadData %>%
-    rename(Contig = seq_name,
-           Sample = sample) %>%
+  raw_multiqc %>%
+    merge(human_read_counts, by = "Sample", all.x = TRUE) %>%
+    merge(viral_read_counts, by = "Sample", all.x = TRUE) %>%
+    mutate(
+      HumanPercent = HumanReads / total_sequences * 100,
+      ViralPercent = ViralReads / total_sequences * 100
+    ) %>%
+    pivot_longer(
+      cols = c("HumanPercent", "rRNApercentage", "ViralPercent"),
+      names_to = "Type", values_to = "ReadPercentage"
+    ) %>%
+    mutate(
+      Type = case_when(
+        Type == "HumanPercent" ~ "Human",
+        Type == "rRNApercentage" ~ "rRNA",
+        Type == "ViralPercent" ~ "Viral"
+      )
+    ) %>%
+    filter(Description != "Soil Virome")
+}
+
+# Merge viral-contig data
+# Filters GeNomad annotations for viral contigs and merges metadata.
+# Arguments:
+#   GenomadData   — data frame of annotated contigs
+#   ClusteringData— vOTU cluster mapping
+#   metadata       — data frame of sample metadata
+# Returns:
+#   Annotated data frame of viral contigs with metadata and taxonomy.
+merge_viral_contig_data <- function(GenomadData, ClusteringData, metadata) {
+  
+  # Extract all viral contig IDs
+  viral_contigs <- ClusteringData$Cluster %>%
+    strsplit(",") %>% unlist()
+  
+  GenomadData %>%
+    rename(Contig = seq_name, Sample = sample) %>%
     filter(Contig %in% viral_contigs) %>%
     merge(metadata, by = "Sample", all.x = TRUE) %>%
-    mutate(DescriptionLong = DescriptionModifiers[Description]) %>%
-    mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels)) %>%
-    # Split taxonomy into individual columns
-    separate(col = "taxonomy", into = c("Viruses", "Realm", "Kingdom", "Phylum", "Class", "Order", "Family"), sep = ";", fill = "right") %>%
+    mutate(
+      DescriptionLong = DescriptionModifiers[Description],
+      DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels)
+    ) %>%
+    separate(
+      taxonomy,
+      into = c("Viruses","Realm","Kingdom","Phylum","Class","Order","Family"),
+      sep = ";", fill = "right"
+    ) %>%
     filter(Contig %in% viral_contigs)
-  return(df)
 }
 
-# Merge vOTU data
-merge_vOTU_data <- function(df_mapping, df_Genomad, df_BacPhlip,
-                            df_DefenseFinder, metadata){
-  df <- df_mapping %>%
-    merge(df_Genomad, by = "Contig", all.x = TRUE) %>%
-    merge(metadata, by = "Sample", all.x = TRUE) %>%
-    mutate(Description = factor(Description, levels = DescriptionLevels)) %>%
-    rename(vOTU = Contig) %>%
-    merge(df_BacPhlip, by = "vOTU", all.x = TRUE) %>%
-    merge(df_DefenseFinder, by = "vOTU", all.x = TRUE)
-  return(df)
-}
-
-# Process Alpha Diversity
-calculate_alpha_diversity <- function(df_mapping, metadata){
-  df_alpha_diversity <- df_mapping %>%
-    # Pivot columns longer except for Contig and convert names to Sample and values to TPM
-    pivot_longer(cols = -c(Contig), names_to = "Sample", values_to = "TPM") %>%
-    # Summarise number of vOTUs with TPM > 0
+# Calculate alpha diversity
+# Computes viral richness (vOTU count per sample).
+# Arguments:
+#   df_mapping — TPM matrix (rows = contigs, columns = samples)
+#   metadata   — data frame of sample metadata
+# Returns:
+#   Data frame of richness values merged with metadata.
+calculate_alpha_diversity <- function(df_mapping, metadata) {
+  df_mapping %>%
+    pivot_longer(-Contig, names_to = "Sample", values_to = "TPM") %>%
     filter(TPM > 0) %>%
     group_by(Sample) %>%
-    summarise(Richness = n_distinct(Contig)) %>% merge(metadata, by = "Sample", all.x = TRUE)
-  return(df_alpha_diversity)
+    summarise(Richness = n_distinct(Contig), .groups = "drop") %>%
+    merge(metadata, by = "Sample", all.x = TRUE)
 }
 
-# Create Presence/ Absence table
-create_PA_table <- function(df, metadata, df_Clustering){
-  df_PA <- df %>%
-    # Pivot columns longer except for Contig and convert names to Sample and values to TPM
-    pivot_longer(cols = -c(Contig), names_to = "Sample", values_to = "TPM") %>%
-    # Create a binary presence/absence table
-    mutate(PA = ifelse(TPM > 0, 1, 0)) %>% 
+# Create presence–absence table
+# Generates binary (0/1) presence–absence calls per vOTU and sample.
+# Adds an assembled-presence flag based on vOTU cluster membership.
+# Arguments:
+#   df           — TPM matrix (rows = contigs, columns = samples)
+#   metadata     — data frame of sample metadata
+#   df_Clustering— vOTU cluster mapping
+# Returns:
+#   Data frame with vOTU, sample, PA, and assembled-presence indicators.
+create_PA_table <- function(df, metadata, df_Clustering) {
+  df %>%
+    pivot_longer(-Contig, names_to = "Sample", values_to = "TPM") %>%
+    mutate(PA = ifelse(TPM > 0, 1, 0)) %>%
     select(-TPM) %>%
     merge(metadata, by = "Sample", all.x = TRUE) %>%
     rename(vOTU = Contig) %>%
     merge(df_Clustering, by = "vOTU", all.x = TRUE) %>%
-    # Apply grepl row-wise using mapply
-    mutate(AssembledPresence = mapply(function(sample, cluster) grepl(sample, cluster), Sample, Cluster)) %>%
-    # Convert logical to 1/0
-    mutate(AssembledPresence = ifelse(AssembledPresence, 1, 0))
-  return(df_PA)
+    mutate(
+      AssembledPresence = mapply(function(sample, cluster)
+        grepl(sample, cluster, fixed = TRUE), Sample, Cluster),
+      AssembledPresence = as.integer(AssembledPresence)
+    )
 }
 
-# Create Beta Diversity table
-calculate_beta_diversity <- function(df){
+# Calculate beta diversity
+# Removes singleton contigs (present in only one sample) and renormalizes TPM.
+# Arguments:
+#   df — TPM matrix (rows = contigs, columns = samples)
+# Returns:
+#   Normalized TPM matrix excluding singleton contigs.
+calculate_beta_diversity <- function(df) {
   
-  # Step 1: Remove contigs (singletons) present in only one sample
+  # Remove contigs present in only one sample
   df_filtered <- df %>%
     rowwise() %>%
-    filter(sum(c_across(-Contig) > 0) > 1) %>%  # Keep contigs present in more than one sample
+    filter(sum(c_across(-Contig) > 0) > 1) %>%
     ungroup()
   
-  # Step 2: Renormalize TPM values so that they sum to 1 million in each sample
-  df_renormalized <- df_filtered %>%
-    mutate(across(-Contig, ~ . / sum(.) * 1e6))  # Renormalize TPM values to sum to 1 million per sample
-  
-  return(df_renormalized)
+  # Renormalize TPM values to sum to 1 × 10⁶ per sample
+  df_filtered %>%
+    mutate(across(-Contig, ~ .x / sum(.x) * 1e6))
 }
 
-# 3 - Data Visualisation ----
+# 3. Data Visualisation Functions ----
 
-# Palettes
+# These functions generate all publication-quality figures for the FVO manuscript,
+# including K-mer profiles, barplots with compact-letter displays, PCoA ordinations,
+# Venn diagrams, and stacked taxonomic barplots.
+# All outputs are ggplot objects that can be serialized in {targets}.
+
+# 3.1  Color Palettes                                                          #
+
+# Replicate-level palette (used in K-mer plots)
 Replicates_palette <- c(
   "-DV1" = "#56B4E9", "-DV2" = "#56B4E9", "-DV3" = "#56B4E9",
   "+DV1" = "#0072B2", "+DV2" = "#0072B2", "+DV3" = "#0072B2",
   "MDA1" = "#009E73", "MDA2" = "#009E73", "MDA3" = "#009E73",
-  "MtG1" = "#FF7F0E", "MtG2" = "#FF7F0E", "MtG3" = "#FF7F0E")
+  "MtG1" = "#FF7F0E", "MtG2" = "#FF7F0E", "MtG3" = "#FF7F0E"
+)
 
-Description_palette <- c("UTV" = "#56B4E9",
-                         "DTV" = "#0072B2",
-                         "MDA" = "#009E73",
-                         "MtG" = "#FF7F0E")
+# Sample-type palette (used across most figures)
+Description_palette <- c(
+  "UTV" = "#56B4E9",
+  "DTV" = "#0072B2",
+  "MDA" = "#009E73",
+  "MtG" = "#FF7F0E"
+)
 
-Stacked_palette <- c("dsDNA" = "#0072B2", "ssDNA" = "#56B4E9",
-                     "Unassigned" = "#808080",
-                     "Other Caudoviricetes" = "#56B4E9",
-                     "Crassvirales" = "#0072B2",
-                     "Microviridae" = "#D55E00",
-                     "Other Monodnaviria" = "#E69F00",
-                     "Herpesviridae" = "#009E73",
-                     "Temperate" = "#56B4E9",
-                     "Virulent" = "#0072B2",
-                     "Provirus" = "#56B4E9",
-                     "Virus" = "#0072B2",
-                     "Unclassified" = "#808080")
+# Baltimore-class / lifestyle palette (stacked barplots)
+Stacked_palette <- c(
+  "dsDNA" = "#0072B2", "ssDNA" = "#56B4E9", "Unassigned" = "#808080",
+  "Other Caudoviricetes" = "#56B4E9", "Crassvirales" = "#0072B2",
+  "Microviridae" = "#D55E00", "Other Monodnaviria" = "#E69F00",
+  "Herpesviridae" = "#009E73",
+  "Temperate" = "#56B4E9", "Virulent" = "#0072B2",
+  "Provirus" = "#56B4E9", "Virus" = "#0072B2"
+)
 
-
-
+# Bacterial phyla palette (SingleM outputs)
 Phyla_palette <- c(
-  "Actinomycetota"    = "#E69F00", 
+  "Actinomycetota"    = "#E69F00",
   "Bacillota"         = "#56B4E9",
   "Bacteroidota"      = "#009E73",
   "Desulfobacterota"  = "#F0E442",
@@ -357,19 +437,23 @@ Phyla_palette <- c(
   "Unclassified"      = "#808080"
 )
 
-# Theme for the manuscript
+# 3.2  Plot Functions                                                          #
 
-## Plot Kmer data
-plot_Kmers <- function(df){
-  plt <- df %>%
-    filter(abundance > 0 & count > 0) %>%
-    mutate(ShortSamples = factor(ShortSamples, levels = c("+DV1", "+DV2", "+DV3",
-                                                          "-DV1", "-DV2", "-DV3",
-                                                          "MDA1", "MDA2", "MDA3",
-                                                          "MtG1", "MtG2", "MtG3"))) %>%
-    ggplot(aes(x = abundance, y = count)) +
-    geom_line(aes(colour = ShortSamples), alpha = 0.5, linewidth = 0.3) +
-    labs(x = "Kmer Abundance", y = "Kmers") +
+# Plot K-mer abundance profiles
+# Arguments:
+#   df — K-mer abundance data frame (abundance, count, ShortSamples)
+# Returns:
+#   ggplot object showing log–log K-mer abundance curves by replicate.
+plot_Kmers <- function(df) {
+  df %>%
+    filter(abundance > 0, count > 0) %>%
+    mutate(ShortSamples = factor(
+      ShortSamples,
+      levels = c("+DV1","+DV2","+DV3","-DV1","-DV2","-DV3",
+                 "MDA1","MDA2","MDA3","MtG1","MtG2","MtG3")
+    )) %>%
+    ggplot(aes(x = abundance, y = count, colour = ShortSamples)) +
+    geom_line(alpha = 0.5, linewidth = 0.3) +
     scale_x_log10(
       breaks = trans_breaks("log10", function(x) 10^x),
       labels = trans_format("log10", math_format(10^.x))
@@ -379,6 +463,7 @@ plot_Kmers <- function(df){
       labels = trans_format("log10", math_format(10^.x))
     ) +
     scale_colour_manual(values = Replicates_palette) +
+    labs(x = "K-mer abundance", y = "K-mers") +
     theme_bw() +
     theme(
       axis.text.x = element_text(hjust = 0.5),
@@ -386,352 +471,362 @@ plot_Kmers <- function(df){
       panel.grid.minor = element_blank(),
       legend.position = "none"
     )
-  
-  return(plt)
 }
 
-# Plots barplots with CLD letter grouping
+# Plot group means with Compact Letter Display
+# Performs ANOVA + Tukey HSD, then plots grouped barplots with CLD letters.
+# Arguments:
+#   df         — data frame containing values and groups
+#   value_col  — name of column with numeric values (string)
+#   group_col  — name of column with grouping factor (string)
+#   PALETTE    — named vector of colors for groups
+# Returns
+#   a list: $plot, $tukey, $cld.
 plot_means_with_cld <- function(df, value_col, group_col, PALETTE) {
-  # Perform ANOVA
   aov_model <- aov(as.formula(paste(value_col, group_col, sep = " ~ ")), data = df)
-  
-  # Perform Tukey HSD post hoc test
   tukey_result <- TukeyHSD(aov_model)
-  
-  # Generate Compact Letter Display
   cld <- multcompLetters(tukey_result[[group_col]][, "p adj"])$Letters
   
-  # Summarize data to calculate mean and standard deviation
   df_summary <- df %>%
     group_by(.data[[group_col]]) %>%
-    summarise(
-      mean = mean(.data[[value_col]]),
-      sd = sd(.data[[value_col]])
-    )
+    summarise(mean = mean(.data[[value_col]]),
+              sd = sd(.data[[value_col]]), .groups = "drop") %>%
+    mutate(cld = cld[as.character(.data[[group_col]])])
   
-  # Add the CLD to the summary dataframe
-  df_summary$cld <- cld[as.character(df_summary[[group_col]])]
+  y_pos <- max(df_summary$mean + df_summary$sd) * 1.1
   
-  # Calculate dynamic y-limit for text placement
-  y_min <- max(df_summary$mean + df_summary$sd) # Minimum y-value
-  text_y_position <- y_min + 0.1 * abs(y_min)   # 10% above y-limit
-  
-  # Generate barplot
   plt <- ggplot(df_summary, aes(x = .data[[group_col]], y = mean, fill = .data[[group_col]])) +
-    geom_bar(stat = "identity", show.legend = TRUE) +
+    geom_bar(stat = "identity") +
     geom_errorbar(aes(ymin = mean - sd, ymax = mean + sd), width = 0.2) +
-    geom_text(aes(label = cld, y = text_y_position), vjust = 0, size = 3) + # Position labels
-    labs(x = group_col, y = "Mean ± SD") +
-    theme_bw() +
-    labs(x = "Processing Method") +
-    scale_fill_manual(values = PALETTE)
+    geom_text(aes(label = cld, y = y_pos), vjust = 0, size = 3) +
+    scale_fill_manual(values = PALETTE) +
+    labs(x = "Processing method", y = "Mean ± SD") +
+    theme_bw()
   
-  return(list(
-    plot = plt,
-    tukey = tukey_result,
-    cld = cld
-  ))
+  list(plot = plt, tukey = tukey_result, cld = cld)
 }
+
 
 # Plot vOTU Venn diagrams
+# Produces three Venn diagrams: Assembled, Mapped, and Mapped-only vOTUs.
+# Arguments:
+#   df — presence–absence data frame with vOTU, Description, PA, AssembledPresence
+# Returns:
+#   a list of ggplot objects and underlying vOTU sets.
 plot_venn_diagrams <- function(df) {
-  library(dplyr)
-  library(tidyr)
-  library(ggVennDiagram)
-  library(ggpubr)
+  library(ggVennDiagram); library(ggpubr)
   
-  DescriptionLevelOrder <- c("UTV", "DTV", "MDA", "MtG")
+  order_vec <- c("UTV","DTV","MDA","MtG")
   
-  # Mapped vOTUs
-  df_MappedVenn <- df %>%
-    filter(PA == 1) %>%
-    select(vOTU, Description) %>%
-    split(.$Description)
-  
-  Mapped_sets <- lapply(df_MappedVenn, function(x) unique(x$vOTU)) %>%
-    .[DescriptionLevelOrder] %>%
-    setNames(c("DNase\nTreated\nVirome", "Untreated\nVirome", "MDA\nVirome", "Meta\ngenome"))
-  
-  # Assembled vOTUs
-  df_AssembledVenn <- df %>%
-    filter(AssembledPresence == 1) %>%
-    select(vOTU, Description) %>%
-    split(.$Description)
-  
-  Assembled_sets <- lapply(df_AssembledVenn, function(x) unique(x$vOTU)) %>%
-    .[DescriptionLevelOrder] %>%
-    setNames(c("DNase\nTreated\nVirome", "Untreated\nVirome", "MDA\nVirome", "Meta\ngenome"))
-  
-  # Correct Mapped-only logic
-  get_mapped_only_votus <- function(df, description_label) {
-    df_group <- df %>% filter(Description == description_label)
-    mapped_any <- df_group %>%
-      filter(PA == 1) %>%
-      pull(vOTU) %>%
-      unique()
-    assembled_any <- df_group %>%
-      filter(AssembledPresence == 1) %>%
-      pull(vOTU) %>%
-      unique()
-    setdiff(mapped_any, assembled_any)
+  make_sets <- function(d, flag, label_map) {
+    d %>% filter(.data[[flag]] == 1) %>%
+      select(vOTU, Description) %>%
+      split(.$Description) %>%
+      lapply(\(x) unique(x$vOTU)) %>%
+      .[order_vec] %>%
+      setNames(label_map)
   }
   
-  MappedOnly_sets <- setNames(lapply(DescriptionLevelOrder, function(desc) {
-    get_mapped_only_votus(df, desc)
-  }), c("DNase\nTreated\nVirome", "Untreated\nVirome", "MDA\nVirome", "Meta\ngenome"))
+  label_map <- c("DNase\nTreated\nVirome","Untreated\nVirome",
+                 "MDA\nVirome","Meta\ngenome")
   
-  # Venn Diagrams ------------------------------------------------------------
+  mapped_sets    <- make_sets(df, "PA", label_map)
+  assembled_sets <- make_sets(df, "AssembledPresence", label_map)
   
-  Venn_Mapped <- ggVennDiagram(Mapped_sets, label = "count", edge_size = 0, set_size = 0) +
-    theme(legend.position = "bottom") +
-    annotate("text", x = 0.14, y = 0.81, label = "DNase\nTreated\nVirome", size = 2.5) +
-    annotate("text", x = 0.32, y = 0.84, label = "Untreated\nVirome", size = 2.5) +
-    annotate("text", x = 0.65, y = 0.84, label = "MDA\nVirome", size = 2.5) +
-    annotate("text", x = 0.85, y = 0.81, label = "Meta\ngenome", size = 2.5) +
-    scale_fill_distiller(limits = c(0, 200), palette = "Blues", direction = 1) +
-    theme(plot.margin = margin(0.5, 0, 0, 0, "cm")) +
-    labs(title = "Mapped vOTUs", fill = "Count") +
-    theme(plot.title = element_text(hjust = 0.5, margin = margin(0, 0, 0.4, 0, "cm")))
+  mapped_only <- setNames(lapply(order_vec, function(desc) {
+    d <- df %>% filter(Description == desc)
+    setdiff(
+      d$vOTU[d$PA == 1],
+      d$vOTU[d$AssembledPresence == 1]
+    )
+  }), label_map)
   
-  Venn_Assembled <- ggVennDiagram(Assembled_sets, label = "count", edge_size = 0, set_size = 0) +
-    scale_fill_distiller(palette = "Blues", direction = 1) + 
-    annotate("text", x = 0.14, y = 0.81, label = "DNase\nTreated\nVirome", size = 2.5) +
-    annotate("text", x = 0.32, y = 0.85, label = "Untreated\nVirome", size = 2.5) +
-    annotate("text", x = 0.65, y = 0.85, label = "MDA\nVirome", size = 2.5) +
-    annotate("text", x = 0.85, y = 0.81, label = "Meta\ngenome", size = 2.5) +
-    theme(legend.position = "bottom") +
-    scale_fill_distiller(limits = c(0, 200), palette = "Blues", direction = 1) +
-    theme(plot.margin = margin(0.5, 0, 0, 0, "cm")) +
-    labs(title = "Assembled vOTUs", fill = "Count") +
-    theme(plot.title = element_text(hjust = 0.5, margin = margin(0, 0, 0.4, 0, "cm")))
+  venn_plot <- function(sets, title) {
+    ggVennDiagram(sets, label = "count", edge_size = 0, set_size = 0) +
+      scale_fill_distiller(limits = c(0, 200), palette = "Blues", direction = 1) +
+      labs(title = title, fill = "Count") +
+      theme_bw(base_size = 9) +
+      theme(legend.position = "bottom",
+            plot.title = element_text(hjust = 0.5))
+  }
   
-  Venn_MappedOnly <- ggVennDiagram(MappedOnly_sets, label = "count", edge_size = 0, set_size = 0) +
-    scale_fill_distiller(palette = "Blues", direction = 1) +
-    annotate("text", x = 0.14, y = 0.81, label = "DNase\nTreated\nVirome", size = 2.5) +
-    annotate("text", x = 0.32, y = 0.85, label = "Untreated\nVirome", size = 2.5) +
-    annotate("text", x = 0.65, y = 0.85, label = "MDA\nVirome", size = 2.5) +
-    annotate("text", x = 0.85, y = 0.81, label = "Meta\ngenome", size = 2.5) +
-    theme(legend.position = "bottom") +
-    scale_fill_distiller(limits = c(0, 200), palette = "Blues", direction = 1) +
-    theme(plot.margin = margin(0.5, 0, 0, 0, "cm")) +
-    labs(title = "Mapped-only vOTUs (failed assembly filters)", fill = "Count") +
-    theme(plot.title = element_text(hjust = 0.5, margin = margin(0, 0, 0.4, 0, "cm")))
-  
-  # Combine main two into one panel
-  plt_Venn <- ggarrange(Venn_Assembled, Venn_Mapped, ncol = 2, labels = c("a", "b"),
-                        common.legend = TRUE, legend = "bottom")
-  
-  return(list(
-    Venn_Assembled   = Assembled_sets,
-    Venn_Mapped      = Mapped_sets,
-    Venn_MappedOnly  = MappedOnly_sets,
-    plt_Venn         = plt_Venn,
-    plt_MappedOnly   = Venn_MappedOnly
-  ))
+  list(
+    plt_Assembled   = venn_plot(assembled_sets, "Assembled vOTUs"),
+    plt_Mapped      = venn_plot(mapped_sets,    "Mapped vOTUs"),
+    plt_MappedOnly  = venn_plot(mapped_only,    "Mapped-only vOTUs"),
+    sets_Assembled  = assembled_sets,
+    sets_Mapped     = mapped_sets,
+    sets_MappedOnly = mapped_only
+  )
 }
 
-# Plot PCoA
+# Plot PCoA ordination and PERMANOVA results
+# Performs Bray–Curtis PCoA and PERMANOVA.
+# Arguments:
+#   df       — TPM matrix (rows = contigs, columns = samples)
+#   metadata — data frame of sample metadata
+#   Description_palette — named vector of colors for sample descriptions
+# Returns:
+#   a list of: $pcoa_plot, $permanova, $pairwise_permanova.
 plot_pcoa <- function(df, metadata, Description_palette = Description_palette) {
-  metadata <- metadata %>% 
-    mutate(DescriptionLong = DescriptionModifiers[Description]) %>%
-    mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels))
-  # Step 1: Calculate Bray-Curtis Dissimilarity
-  df_beta_diversity <- df %>%
-    column_to_rownames(var = "Contig") %>%   # Convert contigs to row names
-    t() %>%                                  # Transpose the data so rows are samples, columns are contigs
-    vegdist(method = "bray")                 # Calculate Bray-Curtis dissimilarity on samples
+  metadata <- metadata %>%
+    mutate(DescriptionLong = factor(
+      DescriptionModifiers[Description],
+      levels = DescriptionLevels
+    ))
   
-  # Step 2: Perform PCoA on Bray-Curtis dissimilarity matrix
-  pcoa_result <- cmdscale(df_beta_diversity, eig = TRUE, k = 2)
+  dist_mat <- df %>%
+    column_to_rownames("Contig") %>%
+    t() %>%
+    vegdist(method = "bray")
   
-  # Step 3: Extract PCoA axes
-  pcoa_axes <- as.data.frame(pcoa_result$points)
-  colnames(pcoa_axes) <- c("PCoA1", "PCoA2")
+  pcoa_res <- cmdscale(dist_mat, eig = TRUE, k = 2)
+  axes <- as.data.frame(pcoa_res$points)
+  colnames(axes) <- c("PCoA1","PCoA2")
+  axes$Sample <- rownames(axes)
   
-  # Add Sample names as a column for plotting
-  pcoa_axes$Sample <- rownames(pcoa_axes)
-  
-  # Step 4: Merge with metadata to add 'Description' column
-  pcoa_axes <- merge(pcoa_axes, metadata, by = "Sample") %>%
+  axes <- merge(axes, metadata, by = "Sample") %>%
     mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels))
   
-  # Step 5: Calculate the percentage of variance explained by each axis
-  variance_explained <- 100 * pcoa_result$eig[1:2] / sum(pcoa_result$eig)
+  var_exp <- 100 * pcoa_res$eig[1:2] / sum(pcoa_res$eig)
   
-  # Step 6: Plot the PCoA results, colored by 'Description'
-  pcoa_plot <- ggplot(pcoa_axes, aes(x = PCoA1, y = PCoA2, color = DescriptionLong, shape = DescriptionLong)) +
-    geom_point(size = 4, alpha = 0.5) +
-    labs(x = paste0("PC1 (", round(variance_explained[1], 1), "%)"),
-         y = paste0("PC2 (", round(variance_explained[2], 1), "%)"),
-         fill = "Processing Method") +
-    scale_shape_manual(values = c(16, 17, 15, 18)) +
-    theme_bw() +
-    theme(
-      panel.grid.major = element_blank(),
-      panel.grid.minor = element_blank(),
-      legend.position = "right"
-    ) +
+  p <- ggplot(axes, aes(PCoA1, PCoA2, color = DescriptionLong, shape = DescriptionLong)) +
+    geom_point(size = 4, alpha = 0.6) +
     scale_colour_manual(values = Description_palette) +
-    guides(fill = guide_legend(title = "Sample\nType", nrow = 2))  +
-    scale_x_continuous(expand = expansion(mult = 0.05)) +  # Expand x-axis by 5%
-    scale_y_continuous(expand = expansion(mult = 0.05)) +    # Expand y-axis by 5%
-    coord_fixed()
-  # Calculate PERMANOVA
-  pcoa_permanova <- adonis2(df_beta_diversity ~ Description, data = pcoa_axes, permutations = 999)
-  pcoa_permanova
-
-  # Pairwise PERMANOVA
-  pairwise_permanova <- pairwise.adonis2(df_beta_diversity ~ Description, data = pcoa_axes, p.adjust.method = "BH", permutations = 999)
-  pairwise_permanova
+    scale_shape_manual(values = c(16,17,15,18)) +
+    coord_fixed() +
+    theme_bw() +
+    labs(
+      x = sprintf("PC1 (%.1f%%)", var_exp[1]),
+      y = sprintf("PC2 (%.1f%%)", var_exp[2]),
+      color = "Processing method"
+    ) +
+    theme(panel.grid = element_blank())
   
-  # Create a list of results
-  results_list <- list(
-    pcoa_plot = pcoa_plot,
-    permanova = pcoa_permanova,
-    pairwise_permanova = pairwise_permanova
-  )
-  # Return the plot
-  return(results_list)
+  perm <- adonis2(dist_mat ~ Description, data = axes, permutations = 999)
+  pair <- pairwise.adonis2(dist_mat ~ Description, data = axes,
+                           p.adjust.method = "BH", permutations = 999)
+  
+  list(pcoa_plot = p, permanova = perm, pairwise_permanova = pair)
 }
 
-# Produces all PCoA plots and permanova results
-produce_pcoas <-  function(df_mapping, stacked, GenomadData, metadata,
-                           Description_palette = Description_palette){
-  df_beta <- calculate_beta_diversity(df_mapping)
-  plt_pcoa <- plot_pcoa(df_beta, metadata, Description_palette)
-  monodnaviria <- GenomadData %>%
-    filter(grepl("Monodnaviria", taxonomy))
-  df_beta_no_mondna <- df_mapping %>% filter(!Contig %in% monodnaviria$seq_name) %>%
-    calculate_beta_diversity()
+# Generate multiple PCoAs (all, no ssDNA, no Monodnaviria)
+# Wrapper to produce standard and filtered ordinations.
+# Arguments:
+#   df_mapping     — TPM matrix (rows = contigs, columns = samples)
+#   stacked        — list containing $df_Baltimore with DNA types
+#   GenomadData    — data frame of annotated contigs
+#   metadata       — data frame of sample metadata
+# Returns:
+#   a list of PCoA plots and PERMANOVA results.
+produce_pcoas <- function(df_mapping, stacked, GenomadData, metadata,
+                          Description_palette = Description_palette) {
+  df_all  <- calculate_beta_diversity(df_mapping)
+  res_all <- plot_pcoa(df_all, metadata, Description_palette)
   
-  ssDNA <- stacked$df_Baltimore %>%
-    filter(DNA == "ssDNA") %>% pull(Contig)
-  df_beta_no_ssDNA <- df_mapping %>% filter(!Contig %in% ssDNA) %>%
-    calculate_beta_diversity()
-    
-  plt_pcoa_no_ssDNA <- plot_pcoa(df_beta_no_ssDNA, metadata, Description_palette)
+  monodna <- GenomadData %>% filter(grepl("Monodnaviria", taxonomy)) %>% pull(seq_name)
+  ssDNA   <- stacked$df_Baltimore %>% filter(DNA == "ssDNA") %>% pull(Contig)
   
-  plt_pcoas <- list(
-    pcoa_all = plt_pcoa$pcoa_plot,
-    pcoa_no_ssDNA = plt_pcoa_no_ssDNA$pcoa_plot,
-    permanova_all = plt_pcoa$permanova,
-    permanova_no_ssDNA = plt_pcoa_no_ssDNA$permanova,
-    pairwise_permanova_all = plt_pcoa$pairwise_permanova,
-    pairwise_permanova_no_ssDNA = plt_pcoa_no_ssDNA$pairwise_permanova
+  df_no_mono <- df_mapping %>% filter(!Contig %in% monodna) %>% calculate_beta_diversity()
+  df_no_ss   <- df_mapping %>% filter(!Contig %in% ssDNA)   %>% calculate_beta_diversity()
+  
+  res_no_ss <- plot_pcoa(df_no_ss, metadata, Description_palette)
+  res_no_m  <- plot_pcoa(df_no_mono, metadata, Description_palette)
+  
+  list(
+    pcoa_all          = res_all$pcoa_plot,
+    pcoa_no_ssDNA     = res_no_ss$pcoa_plot,
+    pcoa_no_monodna   = res_no_m$pcoa_plot,
+    permanova_all     = res_all$permanova,
+    permanova_no_ssDNA= res_no_ss$permanova,
+    permanova_no_mono = res_no_m$permanova,
+    pairwise_all      = res_all$pairwise_permanova
   )
-  return(plt_pcoas)
 }
 
-# Plot stacked barplot for vOTU data
-plot_vOTU_stacked_barplot <- function(df_mapping, metadata, df_Genomad){
+# Plot stacked barplots of viral composition
+# Generates Baltimore-class and family-level stacked barplots.
+# Arguments:
+#   df_mapping  — TPM matrix (rows = contigs, columns = samples)
+#   metadata    — data frame of sample metadata
+#   df_Genomad  — data frame of annotated contigs
+# Returns:
+#   A list of: $plt_stacked, $plt_DNA_stacked, $df_Baltimore, $dsDNA_Monodnaviria, $ssDNA_extra.
+plot_vOTU_stacked_barplot <- function(df_mapping, metadata, df_Genomad) {
+  
   df_tax <- df_Genomad %>%
     rename(Contig = seq_name) %>%
-    # Split taxonomy
-    separate(col = "taxonomy", into = c("Viruses", "Realm", "Kingdom", "Phylum", "Class", "Order", "Family"), sep = ";", fill = "right") %>%
-    select(Contig, Viruses, Realm, Kingdom, Phylum, Class, Order, Family)
+    separate(taxonomy,
+             into = c("Viruses","Realm","Kingdom","Phylum",
+                      "Class","Order","Family"), sep = ";", fill = "right")
   
-  dsDNA_Monodnaviria <- df_tax %>%
-    filter(Class == "Papovaviricetes") %>%
-    pull(Contig)
-  
+  dsDNA_Monodnaviria <- df_tax %>% filter(Class == "Papovaviricetes") %>% pull(Contig)
   ssDNA_extra <- df_tax %>%
-    filter(Family %in% c("Alphasatellitidae","Spiraviridae","Anelloviridae","Tolecusatellitidae")) %>%
-    pull(Contig)
+    filter(Family %in% c("Alphasatellitidae","Spiraviridae",
+                         "Anelloviridae","Tolecusatellitidae")) %>% pull(Contig)
   
   df_tax <- df_tax %>%
-    mutate(DNA =
-             # If realm == monodnaviria and class != Papovaviricetes, DNA = ssDNA, otherwise dsDNA
-             ifelse(Realm == "Monodnaviria" & !(Contig %in% dsDNA_Monodnaviria), "ssDNA",
-                    ifelse(Realm == "Monodnaviria" & (Contig %in% dsDNA_Monodnaviria), "dsDNA",
-                           ifelse(Realm == "Unassigned","Unassigned",
-                                  ifelse(Realm %in% c("Duplodnaviria", "Adnaviria", "Varidnaviria"), "dsDNA", "Unassigned")))))
+    mutate(DNA = case_when(
+      Realm == "Monodnaviria" & Contig %in% dsDNA_Monodnaviria ~ "dsDNA",
+      Realm == "Monodnaviria"                                  ~ "ssDNA",
+      Realm %in% c("Duplodnaviria","Adnaviria","Varidnaviria") ~ "dsDNA",
+      Realm == "Unassigned" | is.na(Realm)                     ~ "Unassigned",
+      TRUE                                                     ~ "Unassigned"
+    ))
   
-  # Stacked barplots
   df_Baltimore <- df_mapping %>%
-    pivot_longer(cols = -c(Contig), names_to = "Sample", values_to = "TPM") %>%
+    pivot_longer(-Contig, names_to = "Sample", values_to = "TPM") %>%
     filter(TPM > 0) %>%
-    merge(metadata, by = "Sample", all.x = TRUE) %>%
-    mutate(DescriptionLong = DescriptionModifiers[Description],
-           rep = substr(ShortSamples, nchar(ShortSamples), nchar(ShortSamples))) %>%
-    mutate(DescriptionLong = factor(DescriptionLong, levels = DescriptionLevels)) %>%
-    # Merge with df_Genomad
+    merge(metadata, by = "Sample") %>%
+    mutate(
+      DescriptionLong = factor(DescriptionModifiers[Description],
+                               levels = DescriptionLevels),
+      rep = substr(ShortSamples, nchar(ShortSamples), nchar(ShortSamples))
+    ) %>%
     merge(df_tax, by = "Contig", all.x = TRUE) %>%
-    # Modify NA in Realm to "Unassigned"
-    mutate(DNA = ifelse(is.na(DNA), "Unassigned", DNA))
+    mutate(DNA = replace_na(DNA, "Unassigned"))
   
+  # Baltimore-class barplot
   df_DNA_stacked <- df_Baltimore %>%
-    # Summarise TPM values in each sample to Realm level
     group_by(DNA, rep, DescriptionLong) %>%
-    summarise(TPM = sum(TPM)) %>%
+    summarise(TPM = sum(TPM), .groups = "drop") %>%
     mutate(RelAbund = TPM / 10000)
   
-  plt_DNA_stacked <- df_DNA_stacked %>%
-    ggplot(aes(x = rep, y = RelAbund, fill = DNA)) +
+  plt_DNA_stacked <- ggplot(df_DNA_stacked, aes(rep, RelAbund, fill = DNA)) +
     geom_bar(stat = "identity") +
-    labs(x = "Processing Method",
-         y = "Relative Abundance (%)") +
-    theme_bw(base_size = 10) +
-    theme(legend.position = "bottom",
-          # remove Grid lines
-          panel.grid.major = element_blank(),
-          panel.grid.minor = element_blank()) +
-    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+    facet_wrap(~DescriptionLong, nrow = 1) +
     scale_fill_manual(values = Stacked_palette) +
-    facet_wrap(~DescriptionLong, nrow = 1)
-
+    labs(x = "Processing method", y = "Relative abundance (%)") +
+    theme_bw(base_size = 10) +
+    theme(panel.grid = element_blank(), legend.position = "bottom",
+          axis.text.x = element_text(angle = 90, hjust = 1))
+  
+  # Family-level barplot
   df_stacked <- df_Baltimore %>%
     mutate(
       Family = coalesce(Family, Order, Class, Phylum, Kingdom, Realm, Viruses),
-      Order = coalesce(Order, Class, Phylum, Kingdom, Realm, Viruses)) %>%
-    # Change Family where Class = "Caudoviricetes" and Family != "Crassvirales" to "Other Caudoviricetes"
-    mutate(Family = ifelse(Class == "Caudoviricetes" & Family != "Crassvirales", "Other Caudoviricetes", Family)) %>%
-    # Change Family where Realm = "Monodnaviria" and Family != "Microviridae" to "Other Monodnaviria"
-    mutate(Family = ifelse(Realm == "Monodnaviria" & Family != "Microviridae", "Other Monodnaviria", Family)) %>%
-    # Change Family = NA to Unassigned
-    mutate(Family = ifelse(is.na(Family), "Unassigned", Family)) %>%
+      Order  = coalesce(Order,  Class, Phylum, Kingdom, Realm, Viruses),
+      Family = case_when(
+        Class == "Caudoviricetes" & Family != "Crassvirales" ~ "Other Caudoviricetes",
+        Realm == "Monodnaviria" & Family != "Microviridae"   ~ "Other Monodnaviria",
+        is.na(Family)                                        ~ "Unassigned",
+        TRUE                                                 ~ Family
+      )
+    ) %>%
     group_by(Family, ShortSamples, rep, DescriptionLong) %>%
-    summarise(TPM = sum(TPM)) %>%
-    mutate(RelAbund = TPM / 10000) %>%
-    mutate(Family = factor(Family, levels = c("dsDNA", "ssDNA","Crassvirales",
-                                              "Other Caudoviricetes",
-                                              "Herpesviridae",
-                                              "Microviridae", "Other Monodnaviria","Unassigned")))
+    summarise(TPM = sum(TPM), .groups = "drop") %>%
+    mutate(RelAbund = TPM / 10000)
   
-  df_stacked_summary <- df_stacked %>%
-    group_by(DescriptionLong, Family) %>%
-    summarise(mean_RelAbund = mean(RelAbund),
-              SD_RelAbund = sd(RelAbund))
-  
-  plt_stacked <- df_stacked %>% ggplot(aes(x = rep, y = RelAbund, fill = Family)) +
+  plt_stacked <- ggplot(df_stacked, aes(rep, RelAbund, fill = Family)) +
     geom_bar(stat = "identity") +
-    labs(x = "Processing Method",
-         y = "Relative\nAbundance (%)") +
-    theme_bw(base_size = 10) +
-    theme(legend.position = "right",
-          # remove Grid lines
-          panel.grid.major = element_blank(),
-          panel.grid.minor = element_blank()) +
-    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-    scale_fill_manual(values = Stacked_palette) +
     facet_wrap(~DescriptionLong, nrow = 1) +
-    # Remove x axis ticks, axis label and tick labels
-    theme(axis.text.x = element_blank(),
+    scale_fill_manual(values = Stacked_palette) +
+    labs(y = "Relative abundance (%)") +
+    theme_bw(base_size = 10) +
+    theme(panel.grid = element_blank(),
+          strip.background = element_rect(fill = "white"),
+          strip.text = element_text(colour = "black"),
+          axis.text.x = element_blank(),
           axis.ticks.x = element_blank(),
-          axis.title.x = element_blank()) +
-    # Make facet label backgrounds white
-    theme(strip.background = element_rect(fill = "white"),
-          strip.text = element_text(colour = "black")) +
-    guides(fill = guide_legend(title = "Lifestyle", nrow = 3)) +  # Ensure colors are in one row
-    theme(legend.position = "bottom")
+          legend.position = "bottom") +
+    guides(fill = guide_legend(title = "Lifestyle", nrow = 3))
   
-  ls_stacked <- list(plt_stacked = plt_stacked,
-                      plt_DNA_stacked = plt_DNA_stacked,
-                      df_Baltimore = df_Baltimore,
-                      dsDNA_Monodnaviria = dsDNA_Monodnaviria,
-                      ssDNA_extra = ssDNA_extra)
-  
-  return(ls_stacked)
+  list(
+    plt_stacked        = plt_stacked,
+    plt_DNA_stacked    = plt_DNA_stacked,
+    df_Baltimore       = df_Baltimore,
+    dsDNA_Monodnaviria = dsDNA_Monodnaviria,
+    ssDNA_extra        = ssDNA_extra
+  )
 }
 
+# Helper function to streamline repetitive calls for QUAST metric plots
+# Arguments:
+#   df       — data frame with Metric, Value, DescriptionLong columns
+#   metric   — specific metric to plot (string)
+#   y_label  — y-axis label (string)
+#   title    — plot title (string)
+# Returns:
+#   ggplot object of the specified QUAST metric plot
+make_quast_plot <- function(df, metric, y_label, title) {
+  plot_means_with_cld(df %>% filter(Metric == metric), "Value", "DescriptionLong", Description_palette)$plot +
+    labs(y = y_label, title = title) +
+    theme_bw(base_size = 10) +
+    scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
+    theme(
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      legend.position = "bottom"
+    )
+}
 
-
+# Helper: one-way ANOVA + Tukey extractor
+# Arguments:
+#   df            — data frame with value and group columns
+#   value_col     — name of column with numeric values (string)
+#   group_col     — name of column with grouping factor (string)
+#   panel_label   — label for the panel/analysis (string)
+#   measure_label — optional label for the measure (string)
+# Returns:
+#  a list: $anova (data frame of ANOVA results), $tukey (data frame of Tukey results)
+one_way_stats <- function(df, value_col, group_col, panel_label, measure_label = NULL) {
+  stopifnot(value_col %in% names(df), group_col %in% names(df))
+  
+  d <- df %>%
+    dplyr::select(all_of(c(value_col, group_col))) %>%
+    dplyr::rename(value = !!value_col, group = !!group_col) %>%
+    dplyr::mutate(
+      value = as.numeric(value),
+      group = factor(group)
+    ) %>%
+    dplyr::filter(stats::complete.cases(value, group))
+  
+  # Skip if fewer than two groups have data
+  if (dplyr::n_distinct(d$group) < 2) {
+    return(list(
+      anova = tibble::tibble(
+        panel = panel_label,
+        measure = measure_label %||% value_col,
+        k_groups = dplyr::n_distinct(d$group),
+        df1 = NA_integer_, df2 = NA_integer_,
+        F = NA_real_, p_value = NA_real_
+      ),
+      tukey = tibble::tibble(
+        panel = panel_label,
+        measure = measure_label %||% value_col,
+        contrast = character(),
+        diff = numeric(), lwr = numeric(), upr = numeric(), p_adj = numeric()
+      )
+    ))
+  }
+  
+  fit <- stats::aov(value ~ group, data = d)
+  sm  <- summary(fit)[[1]]
+  
+  df1 <- sm[["Df"]][1]
+  df2 <- sm[["Df"]][2]
+  Fv  <- sm[["F value"]][1]
+  pv  <- sm[["Pr(>F)"]][1]
+  
+  anova_line <- tibble::tibble(
+    panel   = panel_label,
+    measure = measure_label %||% value_col,
+    k_groups = dplyr::n_distinct(d$group),
+    df1 = df1, df2 = df2,
+    F = as.numeric(Fv),
+    p_value = as.numeric(pv)
+  )
+  
+  tk <- TukeyHSD(fit)[["group"]] %>%
+    as.data.frame() %>%
+    tibble::rownames_to_column("contrast") %>%
+    dplyr::as_tibble() %>%
+    dplyr::transmute(
+      panel   = panel_label,
+      measure = measure_label %||% value_col,
+      contrast,
+      diff = diff, lwr = lwr, upr = upr, p_adj = `p adj`
+    )
+  
+  list(anova = anova_line, tukey = tk)
+}

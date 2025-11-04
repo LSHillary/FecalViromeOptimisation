@@ -1,0 +1,810 @@
+seq_name	length	topology	coordinates	n_genes	genetic_code	virus_score	fdr	n_hallmarks	marker_enrichment	taxonomy
+F4_S20_contig_14522	6510	DTR	NA	9	11	0.9991	0.0009	1	14.5095	Viruses;Monodnaviria;Sangervirae;Phixviricota;Malgrandaviricetes;Petitvirales;Microviridae
+F4_S20_contig_11408	12637	No terminal repeats	NA	16	11	0.9991	0.0009	8	25.6241	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2956	20154	No terminal repeats	NA	18	11	0.9991	0.0009	5	27.0495	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2783	7039	No terminal repeats	NA	8	11	0.9991	0.0009	2	10.7485	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7026	6808	No terminal repeats	NA	8	11	0.9991	0.0009	3	13.1180	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9562	21951	No terminal repeats	NA	23	11	0.9991	0.0009	12	35.4304	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_605	3848	No terminal repeats	NA	5	11	0.9991	0.0009	0	7.7270	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12530	4518	No terminal repeats	NA	5	11	0.9991	0.0009	5	8.0248	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_240	16122	No terminal repeats	NA	20	11	0.9991	0.0009	8	31.2908	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9276|provirus_36830_60607	23778	Provirus	36830-60607	32	11	0.9991	0.0009	11	34.9635	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2277	7280	No terminal repeats	NA	6	11	0.9991	0.0009	2	8.4636	Viruses;Monodnaviria;Sangervirae;Phixviricota;Malgrandaviricetes;Petitvirales;Microviridae
+F4_S20_contig_4493	10419	No terminal repeats	NA	17	11	0.9991	0.0009	3	26.6486	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5449	11957	No terminal repeats	NA	14	11	0.9991	0.0009	9	20.5921	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7087	12019	No terminal repeats	NA	13	11	0.9991	0.0009	9	18.9286	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5941	8208	No terminal repeats	NA	11	11	0.9991	0.0009	5	16.5028	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1120	98156	No terminal repeats	NA	98	11	0.9991	0.0009	8	120.5204	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes;Crassvirales
+F4_S20_contig_2124	5485	No terminal repeats	NA	9	11	0.9991	0.0009	7	14.3628	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8452	8321	No terminal repeats	NA	11	11	0.9991	0.0009	3	13.3998	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8235	27293	No terminal repeats	NA	32	11	0.9991	0.0009	5	32.4530	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13854	10540	No terminal repeats	NA	13	11	0.9991	0.0009	9	19.2476	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7003	13914	No terminal repeats	NA	16	11	0.9991	0.0009	6	23.7712	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3201	6908	No terminal repeats	NA	14	11	0.9990	0.0009	0	13.5584	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1198	6057	No terminal repeats	NA	6	11	0.9990	0.0009	1	9.4925	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9192	5942	No terminal repeats	NA	13	11	0.9990	0.0009	0	11.6575	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3881	5539	No terminal repeats	NA	7	11	0.9990	0.0009	3	11.6477	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_231	6623	No terminal repeats	NA	5	11	0.9990	0.0009	1	7.7903	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7198	11194	No terminal repeats	NA	10	11	0.9990	0.0009	2	13.1279	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2022	6936	No terminal repeats	NA	10	11	0.9990	0.0009	3	14.5594	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_945	4809	No terminal repeats	NA	9	11	0.9990	0.0009	0	11.2815	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_249	95571	DTR	NA	85	11	0.9990	0.0009	3	86.7519	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes;Crassvirales
+F4_S20_contig_8173	43521	DTR	NA	64	11	0.9990	0.0009	15	70.9952	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12938	5219	No terminal repeats	NA	11	11	0.9990	0.0009	3	14.5208	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_420	4460	No terminal repeats	NA	10	11	0.9990	0.0009	7	14.1410	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_385	4780	No terminal repeats	NA	9	11	0.9990	0.0009	7	14.3628	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2831	28529	No terminal repeats	NA	36	11	0.9990	0.0009	18	53.4202	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13216	15613	No terminal repeats	NA	21	11	0.9990	0.0009	11	28.9930	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6028	94237	DTR	NA	99	15	0.9990	0.0009	8	99.7473	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes;Crassvirales
+F4_S20_contig_767	23572	No terminal repeats	NA	29	11	0.9990	0.0009	1	41.1926	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6658	3770	No terminal repeats	NA	7	11	0.9990	0.0009	3	11.2219	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10092	13456	No terminal repeats	NA	19	11	0.9990	0.0009	10	22.0899	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1288	17950	No terminal repeats	NA	25	11	0.9990	0.0009	4	25.0455	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2391	5554	No terminal repeats	NA	6	11	0.9990	0.0009	0	8.9010	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5780	3647	No terminal repeats	NA	4	11	0.9990	0.0009	0	6.0087	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4272	41745	DTR	NA	69	11	0.9990	0.0009	10	89.2782	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4541	10109	No terminal repeats	NA	9	11	0.9990	0.0009	2	12.7932	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1292	22336	No terminal repeats	NA	32	11	0.9990	0.0009	7	44.9007	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2543	7690	No terminal repeats	NA	11	11	0.9990	0.0009	2	16.2527	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5909	4329	No terminal repeats	NA	9	11	0.9990	0.0009	5	12.1588	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6512	4009	No terminal repeats	NA	3	11	0.9990	0.0010	2	4.5252	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11011	3646	No terminal repeats	NA	10	11	0.9990	0.0010	4	16.6073	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6206	6337	DTR	NA	6	11	0.9990	0.0010	1	6.3079	Viruses;Monodnaviria;Sangervirae;Phixviricota;Malgrandaviricetes;Petitvirales;Microviridae
+F4_S20_contig_7804|provirus_15111_32200	17090	Provirus	15111-32200	27	11	0.9990	0.0010	2	29.4865	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10348	3931	No terminal repeats	NA	7	11	0.9990	0.0010	2	9.3465	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5165	35386	No terminal repeats	NA	39	11	0.9990	0.0010	11	61.1322	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8392	20542	No terminal repeats	NA	37	11	0.9990	0.0010	7	45.8830	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14200	5338	No terminal repeats	NA	9	11	0.9990	0.0010	1	13.3404	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12493	12117	No terminal repeats	NA	15	11	0.9990	0.0010	3	22.9503	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13595	37683	DTR	NA	52	11	0.9990	0.0010	10	69.0786	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9424	3193	No terminal repeats	NA	3	11	0.9990	0.0010	3	4.9719	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13019	5785	No terminal repeats	NA	8	11	0.9990	0.0010	2	9.3603	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1918	22854	No terminal repeats	NA	41	11	0.9990	0.0010	5	62.0993	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8900	21282	No terminal repeats	NA	37	11	0.9990	0.0010	4	59.4338	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8484	12523	No terminal repeats	NA	12	11	0.9990	0.0010	4	18.8703	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_125	6839	No terminal repeats	NA	11	11	0.9990	0.0010	4	17.8275	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12813	10595	No terminal repeats	NA	12	11	0.9990	0.0010	1	18.7230	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7643	3460	No terminal repeats	NA	4	11	0.9990	0.0010	1	5.1548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2135	11405	No terminal repeats	NA	16	11	0.9990	0.0010	2	18.0214	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14245	1566	No terminal repeats	NA	4	11	0.9990	0.0010	1	6.4317	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3214	20634	No terminal repeats	NA	31	11	0.9990	0.0010	4	27.0153	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9577	2866	No terminal repeats	NA	6	11	0.9990	0.0010	4	9.7336	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_779	60184	DTR	NA	91	11	0.9990	0.0010	8	140.8106	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_933	35610	No terminal repeats	NA	62	11	0.9990	0.0010	7	69.2503	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14129	4972	No terminal repeats	NA	10	11	0.9990	0.0010	1	12.7654	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11354	7087	No terminal repeats	NA	13	11	0.9990	0.0010	0	12.8410	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14421	57160	DTR	NA	78	11	0.9990	0.0010	13	71.7766	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6334	3484	No terminal repeats	NA	7	11	0.9990	0.0010	3	11.0847	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2348	20004	No terminal repeats	NA	27	11	0.9990	0.0010	8	39.2747	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5489	3741	No terminal repeats	NA	7	11	0.9990	0.0010	2	9.2255	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9401	3456	No terminal repeats	NA	4	11	0.9990	0.0010	2	5.8835	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6905	63870	No terminal repeats	NA	92	11	0.9990	0.0010	12	105.9117	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11938	38504	No terminal repeats	NA	60	11	0.9990	0.0010	13	79.5632	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6866	5249	No terminal repeats	NA	7	11	0.9990	0.0010	4	7.6664	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2865	38883	DTR	NA	52	11	0.9990	0.0010	8	53.4328	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8582	2076	No terminal repeats	NA	3	11	0.9990	0.0010	1	4.8571	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12270|provirus_31745_81660	49916	Provirus	31745-81660	73	11	0.9990	0.0010	10	79.9082	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12166	3496	No terminal repeats	NA	9	11	0.9990	0.0010	0	12.7614	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8693	11065	No terminal repeats	NA	14	11	0.9990	0.0010	0	21.0787	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1766	6542	No terminal repeats	NA	11	11	0.9990	0.0010	1	9.5734	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3496	11563	No terminal repeats	NA	26	11	0.9990	0.0010	1	19.0666	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2953	5016	No terminal repeats	NA	7	11	0.9990	0.0010	1	11.2505	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1093	40705	No terminal repeats	NA	60	11	0.9990	0.0010	15	59.1617	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7123	5314	No terminal repeats	NA	5	11	0.9990	0.0010	3	7.9586	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2919	4290	No terminal repeats	NA	7	11	0.9990	0.0010	0	9.9164	Viruses;Monodnaviria;Sangervirae;Phixviricota;Malgrandaviricetes;Petitvirales;Microviridae
+F4_S20_contig_11658	38845	No terminal repeats	NA	54	11	0.9990	0.0010	11	67.4570	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14499	1331	No terminal repeats	NA	3	11	0.9990	0.0010	2	5.1548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6315	3750	No terminal repeats	NA	4	11	0.9990	0.0010	2	5.7494	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3600|provirus_47329_90805	43477	Provirus	47329-90805	63	11	0.9990	0.0010	14	79.2577	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2987	3352	No terminal repeats	NA	2	11	0.9990	0.0010	0	3.1542	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4664	22643	No terminal repeats	NA	31	11	0.9990	0.0010	9	36.0651	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9399	6837	No terminal repeats	NA	8	11	0.9990	0.0010	2	13.4513	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6141	36862	No terminal repeats	NA	52	11	0.9990	0.0010	11	62.5748	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11452	14084	No terminal repeats	NA	21	11	0.9990	0.0010	4	21.2004	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5236	3088	No terminal repeats	NA	4	11	0.9990	0.0010	3	6.3520	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10333	25433	No terminal repeats	NA	32	11	0.9990	0.0010	12	49.8178	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4701	6622	No terminal repeats	NA	8	11	0.9990	0.0010	0	10.9097	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2766|provirus_20760_27311	6552	Provirus	20760-27311	7	11	0.9990	0.0010	2	9.1914	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4682	3556	No terminal repeats	NA	2	11	0.9990	0.0010	1	2.7678	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2360	45076	DTR	NA	69	11	0.9989	0.0010	9	78.5924	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9858	3852	No terminal repeats	NA	6	11	0.9989	0.0010	0	8.1991	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11279	43075	No terminal repeats	NA	46	11	0.9989	0.0010	6	51.7570	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6056	4355	No terminal repeats	NA	5	11	0.9989	0.0010	0	7.2274	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6489	5366	No terminal repeats	NA	8	11	0.9989	0.0010	3	9.7699	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10631	27328	No terminal repeats	NA	35	11	0.9989	0.0010	11	46.0002	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1979	4733	No terminal repeats	NA	6	11	0.9989	0.0010	2	6.6249	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_531	62558	DTR	NA	92	11	0.9989	0.0010	9	134.7598	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7725	4235	No terminal repeats	NA	5	11	0.9989	0.0010	2	6.9934	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_368	12139	No terminal repeats	NA	18	11	0.9989	0.0010	3	18.4656	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4135	30336	No terminal repeats	NA	42	11	0.9989	0.0010	13	59.0364	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3847|provirus_2_20423	20422	Provirus	2-20423	33	11	0.9989	0.0010	11	50.3682	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12736	24796	No terminal repeats	NA	35	11	0.9989	0.0010	11	33.7632	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_536	3220	No terminal repeats	NA	3	11	0.9989	0.0010	1	4.6272	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14511	40953	DTR	NA	67	11	0.9989	0.0010	9	74.1390	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12747	7077	No terminal repeats	NA	13	11	0.9989	0.0010	2	10.1176	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8355	6525	No terminal repeats	NA	12	11	0.9989	0.0010	5	17.7222	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10347	22662	No terminal repeats	NA	23	11	0.9989	0.0010	7	27.0421	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11873	10700	No terminal repeats	NA	19	11	0.9989	0.0010	2	18.7654	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_615	5984	No terminal repeats	NA	5	11	0.9989	0.0010	1	6.8618	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7877	3425	No terminal repeats	NA	6	11	0.9989	0.0010	2	9.9195	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7896	2361	No terminal repeats	NA	3	11	0.9989	0.0010	2	4.2597	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3318	4141	No terminal repeats	NA	7	11	0.9989	0.0010	1	7.6450	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14369	54337	DTR	NA	91	11	0.9989	0.0010	8	78.9184	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8274	39686	No terminal repeats	NA	51	11	0.9989	0.0010	11	62.2922	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14237	48362	No terminal repeats	NA	71	11	0.9989	0.0010	15	71.1757	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3233	3878	No terminal repeats	NA	10	11	0.9989	0.0010	0	9.0962	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10085	5044	No terminal repeats	NA	7	11	0.9989	0.0010	2	8.5914	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12149	4887	No terminal repeats	NA	6	11	0.9989	0.0010	1	6.2092	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4446	1572	No terminal repeats	NA	3	11	0.9989	0.0010	3	5.1548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9015	1820	No terminal repeats	NA	5	11	0.9989	0.0010	4	8.5891	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4283	8309	No terminal repeats	NA	12	11	0.9989	0.0010	7	14.5229	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7543	17963	No terminal repeats	NA	22	11	0.9989	0.0010	4	27.7569	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5100	3362	No terminal repeats	NA	4	11	0.9989	0.0010	1	5.1548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11058	7202	No terminal repeats	NA	16	11	0.9989	0.0010	0	4.8280	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4498	14185	No terminal repeats	NA	20	11	0.9989	0.0010	7	28.9485	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9749	7874	No terminal repeats	NA	9	11	0.9989	0.0010	1	13.4013	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1118|provirus_90972_117267	26296	Provirus	90972-117267	39	11	0.9989	0.0010	12	53.5112	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5008	12152	No terminal repeats	NA	15	11	0.9989	0.0010	3	14.4237	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1236	26807	No terminal repeats	NA	34	11	0.9989	0.0010	11	33.9426	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3095	5917	No terminal repeats	NA	9	11	0.9989	0.0010	1	12.3727	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6187	8817	No terminal repeats	NA	11	11	0.9989	0.0010	3	15.9330	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_491	9285	No terminal repeats	NA	7	11	0.9989	0.0010	0	11.8096	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10452	54840	DTR	NA	94	11	0.9989	0.0010	10	94.6944	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3843	3268	No terminal repeats	NA	4	11	0.9989	0.0010	0	6.3793	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1643	41193	No terminal repeats	NA	64	11	0.9989	0.0010	8	56.9675	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6625	3858	No terminal repeats	NA	8	11	0.9989	0.0010	0	9.6403	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13243	32509	No terminal repeats	NA	49	11	0.9989	0.0010	12	64.0438	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8984	11449	No terminal repeats	NA	18	11	0.9989	0.0010	0	16.8825	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14491	43290	DTR	NA	57	11	0.9989	0.0010	12	72.7336	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4560	36894	No terminal repeats	NA	55	11	0.9989	0.0010	20	62.9416	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10712	23042	No terminal repeats	NA	33	11	0.9988	0.0010	9	42.3035	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1777	34334	DTR	NA	45	11	0.9988	0.0010	10	50.7460	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6914	1319	No terminal repeats	NA	4	11	0.9988	0.0010	4	6.8731	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4165	3444	No terminal repeats	NA	9	11	0.9988	0.0010	0	7.8411	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7874	45111	DTR	NA	79	11	0.9988	0.0010	7	68.5592	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12188	3069	No terminal repeats	NA	6	11	0.9988	0.0010	1	8.0655	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8681	125472	DTR	NA	157	11	0.9988	0.0010	9	118.9717	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12034	2754	No terminal repeats	NA	5	11	0.9988	0.0010	2	8.5649	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6600	3576	No terminal repeats	NA	6	11	0.9988	0.0010	3	6.1086	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7621	3248	No terminal repeats	NA	5	11	0.9988	0.0010	2	6.5202	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6617	4516	No terminal repeats	NA	4	11	0.9988	0.0010	3	5.3425	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3762	2919	No terminal repeats	NA	5	11	0.9988	0.0010	1	6.8661	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1909	40088	No terminal repeats	NA	52	11	0.9988	0.0010	11	55.3173	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2522	40697	DTR	NA	63	11	0.9988	0.0010	14	67.1391	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9124	3530	No terminal repeats	NA	5	11	0.9988	0.0010	2	6.5984	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5727	4057	No terminal repeats	NA	7	11	0.9988	0.0010	1	10.0282	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11077	3850	No terminal repeats	NA	7	11	0.9988	0.0010	4	9.2367	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11896	33809	No terminal repeats	NA	57	11	0.9988	0.0010	10	53.3433	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1368	10661	No terminal repeats	NA	12	11	0.9988	0.0010	0	8.7682	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_475	49373	DTR	NA	61	11	0.9988	0.0010	4	78.9217	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9000	9908	No terminal repeats	NA	14	11	0.9988	0.0010	5	16.0808	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14394	38560	DTR	NA	53	11	0.9988	0.0010	9	48.7595	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14391	31030	No terminal repeats	NA	43	11	0.9988	0.0010	9	43.0776	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7482	4234	No terminal repeats	NA	8	11	0.9988	0.0010	1	7.1942	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10066	4212	No terminal repeats	NA	3	11	0.9988	0.0010	1	5.1030	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4400	2593	No terminal repeats	NA	4	11	0.9988	0.0010	3	5.5724	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12048	4171	No terminal repeats	NA	9	11	0.9988	0.0010	0	6.6839	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4898	4822	No terminal repeats	NA	8	11	0.9988	0.0010	1	11.4600	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1253	3874	No terminal repeats	NA	3	11	0.9988	0.0010	0	5.1504	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8271	1248	No terminal repeats	NA	4	11	0.9988	0.0010	2	5.1137	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3560	3692	No terminal repeats	NA	3	11	0.9988	0.0010	2	4.9205	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8549	41054	No terminal repeats	NA	66	11	0.9988	0.0010	10	62.6205	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7773	3837	No terminal repeats	NA	3	11	0.9988	0.0011	2	3.9829	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10031	2021	No terminal repeats	NA	1	11	0.9988	0.0011	1	1.5498	Viruses;Monodnaviria;Sangervirae;Phixviricota;Malgrandaviricetes;Petitvirales;Microviridae
+F4_S20_contig_2995	8475	No terminal repeats	NA	19	11	0.9988	0.0011	3	18.7954	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11646	13083	No terminal repeats	NA	23	11	0.9988	0.0011	4	25.7709	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7351	40928	No terminal repeats	NA	60	11	0.9988	0.0011	6	41.8568	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7012	2953	No terminal repeats	NA	6	11	0.9988	0.0011	0	7.0608	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7121	8012	No terminal repeats	NA	9	11	0.9988	0.0011	2	6.9940	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14258	2849	No terminal repeats	NA	3	11	0.9988	0.0011	2	4.2990	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2389|provirus_77589_82560	4972	Provirus	77589-82560	6	11	0.9988	0.0011	0	9.1787	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2328	58263	No terminal repeats	NA	74	11	0.9987	0.0011	9	73.5815	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1357	3819	No terminal repeats	NA	5	11	0.9987	0.0011	1	6.3696	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3907	16605	No terminal repeats	NA	20	11	0.9987	0.0011	3	23.5399	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14407	37863	DTR	NA	54	11	0.9987	0.0011	4	41.3158	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5518	45035	DTR	NA	50	11	0.9987	0.0011	2	52.8371	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4293	5834	No terminal repeats	NA	11	11	0.9987	0.0011	1	7.7451	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2704	36261	No terminal repeats	NA	53	11	0.9987	0.0011	7	54.3554	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14472	65523	DTR	NA	89	11	0.9987	0.0011	17	94.4808	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14389	42320	DTR	NA	53	11	0.9987	0.0011	6	48.4576	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7399	1577	No terminal repeats	NA	3	11	0.9987	0.0011	1	4.6236	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10741	2841	No terminal repeats	NA	7	11	0.9987	0.0011	0	6.4463	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7590	13321	No terminal repeats	NA	17	11	0.9987	0.0011	3	17.1688	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3725	11321	No terminal repeats	NA	10	11	0.9987	0.0011	1	6.3889	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11798	28544	No terminal repeats	NA	26	11	0.9987	0.0011	10	35.3068	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12801	2657	No terminal repeats	NA	2	11	0.9987	0.0011	0	3.1322	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10613	35636	No terminal repeats	NA	54	11	0.9987	0.0011	6	62.5565	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11345	12236	No terminal repeats	NA	26	11	0.9987	0.0011	0	19.5435	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1062	6469	No terminal repeats	NA	15	11	0.9987	0.0011	0	7.8422	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3828	2632	No terminal repeats	NA	7	11	0.9987	0.0011	0	5.1548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4866	5383	No terminal repeats	NA	7	11	0.9987	0.0011	0	4.5466	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_25	2745	No terminal repeats	NA	5	4	0.9987	0.0011	0	4.6227	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_87|provirus_23828_39805	15978	Provirus	23828-39805	24	11	0.9987	0.0011	3	36.6950	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5278	2724	No terminal repeats	NA	4	11	0.9987	0.0011	0	6.7886	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3441|provirus_16778_24586	7809	Provirus	16778-24586	11	11	0.9987	0.0011	4	10.5972	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8501	11112	No terminal repeats	NA	12	11	0.9987	0.0011	1	11.5688	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3537|provirus_195_41320	41126	Provirus	195-41320	72	11	0.9987	0.0011	6	68.6507	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12739	3205	No terminal repeats	NA	6	11	0.9987	0.0011	3	7.2456	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10579	4388	No terminal repeats	NA	6	11	0.9987	0.0011	2	5.1548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10509	3559	No terminal repeats	NA	5	11	0.9987	0.0011	2	6.4720	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12273|provirus_11884_26046	14163	Provirus	11884-26046	24	11	0.9987	0.0011	4	24.4151	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7085	2688	No terminal repeats	NA	5	11	0.9987	0.0011	0	6.1080	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes;Herelleviridae
+F4_S20_contig_13777	43985	No terminal repeats	NA	56	11	0.9987	0.0011	13	59.3581	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11839	1988	No terminal repeats	NA	1	11	0.9987	0.0011	1	1.5498	Viruses;Monodnaviria;Sangervirae;Phixviricota;Malgrandaviricetes;Petitvirales;Microviridae
+F4_S20_contig_3003|provirus_17236_70027	52792	Provirus	17236-70027	55	11	0.9987	0.0011	7	66.7538	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1494	42821	DTR	NA	47	11	0.9987	0.0011	6	45.7935	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11967	1760	No terminal repeats	NA	3	11	0.9987	0.0011	1	4.0160	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6291	63968	No terminal repeats	NA	93	11	0.9986	0.0011	8	93.5564	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2620	5063	No terminal repeats	NA	9	11	0.9986	0.0011	3	9.9794	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_845	21855	No terminal repeats	NA	36	11	0.9986	0.0011	4	25.2018	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11609	27528	No terminal repeats	NA	35	11	0.9986	0.0011	1	17.2703	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5422|provirus_32767_105442	72676	Provirus	32767-105442	106	11	0.9986	0.0011	7	110.9743	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1579	2856	No terminal repeats	NA	6	11	0.9986	0.0011	2	7.4885	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13300	2272	No terminal repeats	NA	2	11	0.9986	0.0011	2	2.9220	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2917	4209	No terminal repeats	NA	6	11	0.9986	0.0011	4	9.6967	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2985	52933	No terminal repeats	NA	74	11	0.9986	0.0011	21	90.5686	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11315	45362	No terminal repeats	NA	62	11	0.9986	0.0011	4	48.1713	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5344	5939	No terminal repeats	NA	6	11	0.9986	0.0011	3	7.5785	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_611	3797	No terminal repeats	NA	8	11	0.9986	0.0011	0	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6646	1490	No terminal repeats	NA	2	11	0.9986	0.0011	1	3.1891	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1639	43134	DTR	NA	68	11	0.9986	0.0011	9	68.5647	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7349|provirus_8210_16605	8396	Provirus	8210-16605	9	11	0.9986	0.0011	2	8.3578	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11322	5141	No terminal repeats	NA	12	11	0.9986	0.0011	0	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5480	2249	No terminal repeats	NA	2	11	0.9986	0.0011	1	2.7494	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13450	1912	No terminal repeats	NA	5	11	0.9986	0.0011	4	7.2668	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8782	4462	No terminal repeats	NA	8	11	0.9986	0.0011	0	11.1751	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3193	3522	No terminal repeats	NA	4	11	0.9986	0.0011	0	4.4586	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2374	3760	No terminal repeats	NA	3	11	0.9986	0.0011	0	4.5608	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4141	1874	No terminal repeats	NA	5	11	0.9986	0.0011	1	7.4309	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6373	4026	No terminal repeats	NA	8	11	0.9986	0.0011	0	10.0547	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9321	3636	No terminal repeats	NA	4	11	0.9986	0.0011	1	4.7863	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5013	2224	No terminal repeats	NA	3	11	0.9986	0.0011	1	4.7108	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_217	32249	DTR	NA	41	11	0.9986	0.0011	7	39.2958	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1812	23216	No terminal repeats	NA	32	11	0.9986	0.0011	8	29.6924	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4347	1872	No terminal repeats	NA	3	11	0.9986	0.0011	1	4.8948	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8499	2934	No terminal repeats	NA	6	11	0.9986	0.0011	1	4.9687	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3163|provirus_160257_185399	25143	Provirus	160257-185399	39	11	0.9986	0.0011	10	29.4070	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7257	3505	No terminal repeats	NA	9	11	0.9986	0.0011	1	6.1266	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10030	1768	No terminal repeats	NA	2	11	0.9986	0.0011	1	3.2303	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7811	7577	No terminal repeats	NA	5	11	0.9986	0.0011	0	6.8731	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6968	2788	No terminal repeats	NA	4	11	0.9986	0.0011	2	5.5765	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9118	14658	No terminal repeats	NA	22	11	0.9986	0.0011	5	19.7504	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8437	1668	No terminal repeats	NA	2	11	0.9985	0.0011	1	3.1414	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13119	5825	No terminal repeats	NA	10	11	0.9985	0.0011	0	9.0389	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2874	3129	No terminal repeats	NA	3	11	0.9985	0.0011	2	5.1548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13101	1383	No terminal repeats	NA	2	11	0.9985	0.0011	1	2.6977	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_248|provirus_4386_18382	13997	Provirus	4386-18382	19	11	0.9985	0.0011	6	23.3642	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10805	8211	No terminal repeats	NA	11	11	0.9985	0.0011	0	9.8733	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_538	8569	No terminal repeats	NA	16	11	0.9985	0.0011	3	16.2488	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1293	3879	No terminal repeats	NA	6	11	0.9985	0.0011	0	7.5775	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7461	4224	No terminal repeats	NA	4	11	0.9985	0.0011	3	5.9792	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1083	56826	DTR	NA	88	11	0.9985	0.0011	8	68.6659	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13163	23205	No terminal repeats	NA	40	11	0.9985	0.0011	3	17.4376	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11682	1725	No terminal repeats	NA	2	11	0.9985	0.0011	1	3.1214	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1104	1824	No terminal repeats	NA	5	11	0.9985	0.0012	1	7.8055	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4977	1903	No terminal repeats	NA	3	11	0.9985	0.0012	2	4.7071	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2193	3435	No terminal repeats	NA	6	11	0.9985	0.0012	2	6.5706	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13379	15545	No terminal repeats	NA	25	11	0.9985	0.0012	3	14.4430	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13076	17995	No terminal repeats	NA	32	11	0.9985	0.0012	2	24.8288	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8087|provirus_30152_137958	107807	Provirus	30152-137958	142	11	0.9985	0.0012	11	143.2379	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7735	5358	No terminal repeats	NA	7	11	0.9985	0.0012	2	9.9914	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14329	3588	No terminal repeats	NA	2	11	0.9985	0.0012	0	3.0464	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12603	4685	No terminal repeats	NA	11	11	0.9985	0.0012	0	16.6122	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5643	2962	No terminal repeats	NA	2	11	0.9985	0.0012	0	2.9142	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6979	5999	No terminal repeats	NA	10	11	0.9985	0.0012	1	5.1548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6882	1996	No terminal repeats	NA	5	11	0.9985	0.0012	1	7.6636	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7315|provirus_68890_79729	10840	Provirus	68890-79729	11	11	0.9985	0.0012	2	14.9468	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2258|provirus_293_15459	15167	Provirus	293-15459	14	11	0.9985	0.0012	1	14.7033	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14401	34030	DTR	NA	47	11	0.9985	0.0012	7	45.6106	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2005	11274	No terminal repeats	NA	20	11	0.9985	0.0012	1	15.3600	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_541	3204	No terminal repeats	NA	2	11	0.9985	0.0012	0	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2943	4905	No terminal repeats	NA	6	11	0.9985	0.0012	1	9.5322	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5678	2099	No terminal repeats	NA	3	11	0.9984	0.0012	1	5.1349	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8396	2310	No terminal repeats	NA	4	11	0.9984	0.0012	1	5.4647	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13669	2596	No terminal repeats	NA	3	11	0.9984	0.0012	3	4.9453	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_812	49423	No terminal repeats	NA	84	11	0.9984	0.0012	9	65.4044	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2880	1104	No terminal repeats	NA	1	11	0.9984	0.0012	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14013	40590	ITR	NA	65	11	0.9984	0.0012	17	63.7380	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11224|provirus_201_22580	22380	Provirus	201-22580	28	11	0.9984	0.0012	11	39.7789	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4976	2849	No terminal repeats	NA	5	11	0.9984	0.0012	0	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7159	42987	DTR	NA	57	11	0.9984	0.0012	11	49.6590	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8536	9671	No terminal repeats	NA	13	11	0.9984	0.0012	0	8.3357	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2363	3934	No terminal repeats	NA	7	11	0.9984	0.0012	1	10.3047	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1932	2915	No terminal repeats	NA	3	11	0.9984	0.0012	3	4.6729	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12338	2443	No terminal repeats	NA	6	11	0.9983	0.0012	1	8.2078	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_974	2496	No terminal repeats	NA	3	11	0.9983	0.0012	3	4.4853	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_469	3289	No terminal repeats	NA	3	11	0.9983	0.0012	1	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5247	49199	No terminal repeats	NA	53	11	0.9983	0.0012	1	41.9519	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5526	1862	No terminal repeats	NA	4	11	0.9983	0.0012	1	3.2722	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4618	2370	No terminal repeats	NA	4	11	0.9983	0.0012	1	6.6706	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8836	1042	No terminal repeats	NA	3	11	0.9983	0.0012	1	4.9729	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4329	1560	No terminal repeats	NA	3	11	0.9983	0.0012	1	2.9187	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1939	17189	No terminal repeats	NA	15	11	0.9983	0.0012	2	24.9241	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10214	3055	No terminal repeats	NA	4	11	0.9983	0.0012	1	5.1242	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12975	21036	No terminal repeats	NA	51	11	0.9983	0.0012	0	23.7882	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6885	3995	No terminal repeats	NA	5	11	0.9983	0.0012	3	4.7718	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12219	5343	No terminal repeats	NA	8	11	0.9983	0.0012	1	4.8696	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9254	8220	No terminal repeats	NA	20	11	0.9983	0.0012	0	10.4180	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5440	5399	No terminal repeats	NA	6	11	0.9983	0.0012	0	8.1651	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1540	3292	No terminal repeats	NA	6	11	0.9983	0.0012	3	6.8018	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3389	22688	No terminal repeats	NA	31	11	0.9983	0.0012	3	27.9995	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_901	2975	No terminal repeats	NA	5	11	0.9983	0.0012	0	4.7414	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4971	3964	No terminal repeats	NA	9	11	0.9983	0.0012	0	5.1491	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6034	9156	No terminal repeats	NA	17	11	0.9983	0.0012	1	11.3740	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5849|provirus_19579_27062	7484	Provirus	19579-27062	8	11	0.9983	0.0012	1	7.2726	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_485	31042	No terminal repeats	NA	36	11	0.9982	0.0012	10	43.5488	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5265|provirus_170101_190108	20008	Provirus	170101-190108	23	11	0.9982	0.0012	3	27.9086	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5572	9060	No terminal repeats	NA	7	11	0.9982	0.0012	1	11.8027	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10326	2314	No terminal repeats	NA	2	11	0.9982	0.0012	1	3.1716	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11516	10694	No terminal repeats	NA	12	11	0.9982	0.0012	4	11.5200	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3150	39785	No terminal repeats	NA	65	11	0.9982	0.0012	1	74.6691	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9380	23462	No terminal repeats	NA	33	11	0.9982	0.0012	1	29.0202	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9899	2526	No terminal repeats	NA	6	11	0.9982	0.0012	2	9.1373	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2923	1290	No terminal repeats	NA	2	11	0.9982	0.0012	1	2.9786	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9181	1525	No terminal repeats	NA	5	11	0.9982	0.0012	2	6.7845	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14524	9441	DTR	NA	14	11	0.9982	0.0012	2	11.0807	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_144|provirus_2_20757	20756	Provirus	2-20757	32	11	0.9982	0.0012	5	45.5052	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13427	6812	No terminal repeats	NA	5	11	0.9982	0.0012	1	6.1098	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9374	3644	No terminal repeats	NA	3	11	0.9982	0.0012	1	2.8007	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12525	2016	No terminal repeats	NA	3	11	0.9982	0.0012	2	4.5767	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9967	1925	No terminal repeats	NA	3	11	0.9982	0.0012	1	4.4949	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2083	4101	No terminal repeats	NA	7	11	0.9982	0.0012	0	5.9798	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12732	4671	No terminal repeats	NA	12	11	0.9982	0.0012	0	6.0427	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_539	2713	No terminal repeats	NA	4	11	0.9982	0.0013	0	5.1548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7336	3007	No terminal repeats	NA	6	11	0.9982	0.0013	2	9.9314	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5551	1290	No terminal repeats	NA	4	11	0.9982	0.0013	2	6.1024	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5365	9099	No terminal repeats	NA	7	11	0.9982	0.0013	1	7.6637	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11821	7754	No terminal repeats	NA	10	11	0.9982	0.0013	1	9.4729	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8876	3682	No terminal repeats	NA	10	11	0.9982	0.0013	0	3.2251	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5055	7276	No terminal repeats	NA	3	11	0.9981	0.0013	0	4.9741	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13087	1219	No terminal repeats	NA	2	11	0.9981	0.0013	1	2.9397	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1337	1066	No terminal repeats	NA	3	11	0.9981	0.0013	1	4.5156	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8075|provirus_316_42912	42597	Provirus	316-42912	51	11	0.9981	0.0013	4	44.7673	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8932	38762	No terminal repeats	NA	54	11	0.9981	0.0013	11	36.2337	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2673	5367	No terminal repeats	NA	6	11	0.9981	0.0013	2	4.7622	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes;Crassvirales
+F4_S20_contig_184	4433	No terminal repeats	NA	6	11	0.9981	0.0013	2	4.6022	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7401	3822	No terminal repeats	NA	5	11	0.9981	0.0013	0	4.0979	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8255	1484	No terminal repeats	NA	2	11	0.9981	0.0013	2	3.2355	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14128	3598	No terminal repeats	NA	5	11	0.9981	0.0013	1	5.1347	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_645	15182	No terminal repeats	NA	21	11	0.9981	0.0013	1	8.8933	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10188	2500	No terminal repeats	NA	4	11	0.9981	0.0013	1	5.1487	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_167	1247	No terminal repeats	NA	1	11	0.9981	0.0013	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6788	6657	No terminal repeats	NA	12	11	0.9981	0.0013	0	6.1580	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4784	6224	No terminal repeats	NA	13	11	0.9981	0.0013	0	6.4713	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9464	39901	No terminal repeats	NA	62	11	0.9980	0.0013	16	51.0296	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11570	2980	No terminal repeats	NA	4	11	0.9980	0.0013	2	4.4226	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8945	6132	No terminal repeats	NA	8	11	0.9980	0.0013	2	6.4430	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13437	4571	No terminal repeats	NA	4	11	0.9980	0.0013	0	5.0617	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13843	4313	No terminal repeats	NA	4	11	0.9980	0.0013	1	2.7766	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6550	11704	ITR	NA	14	11	0.9980	0.0013	2	11.6223	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11849	1334	No terminal repeats	NA	2	11	0.9980	0.0013	1	2.7842	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12837	1467	No terminal repeats	NA	3	11	0.9980	0.0013	1	3.8527	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14482	37936	DTR	NA	52	11	0.9980	0.0013	5	38.8982	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8614|provirus_10392_43217	32826	Provirus	10392-43217	43	11	0.9979	0.0013	5	14.0993	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12081	4010	No terminal repeats	NA	5	11	0.9979	0.0013	1	5.1282	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_396	2750	No terminal repeats	NA	3	11	0.9979	0.0013	0	2.9519	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12755	1349	No terminal repeats	NA	2	11	0.9979	0.0013	1	2.9204	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4118	1888	No terminal repeats	NA	5	11	0.9979	0.0013	1	6.4855	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13477	2266	No terminal repeats	NA	5	11	0.9979	0.0013	1	6.8731	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8247	2693	No terminal repeats	NA	2	11	0.9978	0.0013	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6053	34653	No terminal repeats	NA	55	11	0.9978	0.0013	7	38.1631	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14412	42845	DTR	NA	45	11	0.9978	0.0013	5	36.1202	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8924	1231	No terminal repeats	NA	5	11	0.9978	0.0013	1	5.1548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9977	3297	No terminal repeats	NA	1	11	0.9978	0.0013	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13166	2547	No terminal repeats	NA	3	11	0.9978	0.0013	2	4.2506	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1612	3420	No terminal repeats	NA	4	11	0.9977	0.0013	1	4.9071	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7789	10413	No terminal repeats	NA	20	11	0.9977	0.0013	0	11.6437	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6301	2795	No terminal repeats	NA	7	11	0.9977	0.0013	1	5.7119	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4000	1051	No terminal repeats	NA	3	11	0.9977	0.0013	1	5.1548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7117	3316	No terminal repeats	NA	4	11	0.9977	0.0013	1	4.4984	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8315	12127	No terminal repeats	NA	19	11	0.9977	0.0013	4	17.5778	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10426	3878	No terminal repeats	NA	5	11	0.9977	0.0013	0	6.3884	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9851	1104	No terminal repeats	NA	3	11	0.9977	0.0013	1	2.8622	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2559	13719	No terminal repeats	NA	20	11	0.9976	0.0013	2	8.2356	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_956	1426	No terminal repeats	NA	2	11	0.9976	0.0014	1	2.7223	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5829	6135	No terminal repeats	NA	14	11	0.9976	0.0014	0	8.2436	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10867	27232	No terminal repeats	NA	35	11	0.9976	0.0014	4	28.5586	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11512	2289	No terminal repeats	NA	2	11	0.9976	0.0014	1	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14525	9720	DTR	NA	20	11	0.9976	0.0014	1	11.3740	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8598	4026	No terminal repeats	NA	4	11	0.9976	0.0014	0	3.8491	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8986	4791	No terminal repeats	NA	9	11	0.9975	0.0014	0	5.2571	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3960|provirus_2_7824	7823	Provirus	2-7824	14	11	0.9975	0.0014	1	11.0986	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13444	1604	No terminal repeats	NA	4	11	0.9975	0.0014	3	6.5076	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7153	2238	No terminal repeats	NA	6	11	0.9975	0.0014	1	4.8009	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4154|provirus_57123_87657	30535	Provirus	57123-87657	46	11	0.9975	0.0014	4	47.4796	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9264	4817	No terminal repeats	NA	9	11	0.9974	0.0014	0	4.7109	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10430	9673	No terminal repeats	NA	12	11	0.9974	0.0014	3	8.0686	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13658	2573	No terminal repeats	NA	2	11	0.9974	0.0014	0	3.3520	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8842	1167	No terminal repeats	NA	3	11	0.9974	0.0014	1	3.2152	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2818	1086	No terminal repeats	NA	2	11	0.9974	0.0014	1	3.3985	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3652	1153	No terminal repeats	NA	3	11	0.9974	0.0014	1	5.1548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2502	3215	No terminal repeats	NA	7	11	0.9974	0.0014	1	6.5136	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11838	1566	No terminal repeats	NA	5	11	0.9973	0.0014	1	4.4041	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10480	12189	No terminal repeats	NA	13	11	0.9973	0.0014	2	9.0303	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2189	3062	No terminal repeats	NA	10	11	0.9973	0.0014	0	4.2123	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13392	3188	No terminal repeats	NA	4	11	0.9973	0.0014	2	2.9126	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10722	2140	No terminal repeats	NA	4	11	0.9973	0.0014	1	3.1123	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_737	8836	No terminal repeats	NA	15	11	0.9973	0.0014	4	16.2351	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7171	4371	No terminal repeats	NA	6	11	0.9973	0.0014	1	4.0560	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6847	2034	No terminal repeats	NA	4	11	0.9973	0.0014	2	4.5576	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8707	5541	No terminal repeats	NA	8	11	0.9973	0.0014	0	6.3924	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7306	4357	No terminal repeats	NA	5	11	0.9973	0.0014	0	5.1548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1145	1226	No terminal repeats	NA	1	11	0.9972	0.0014	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2027	2967	No terminal repeats	NA	6	11	0.9972	0.0014	1	8.1021	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14521	40632	DTR	NA	60	11	0.9972	0.0014	6	37.4661	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6783	7121	No terminal repeats	NA	12	11	0.9972	0.0014	2	11.1913	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2791	11895	No terminal repeats	NA	18	11	0.9972	0.0014	2	10.0655	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8170|provirus_107230_158246	51017	Provirus	107230-158246	59	11	0.9971	0.0014	13	53.9301	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5293	1549	No terminal repeats	NA	1	11	0.9971	0.0015	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11296	1205	No terminal repeats	NA	1	11	0.9971	0.0015	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9420	3173	No terminal repeats	NA	5	11	0.9970	0.0015	1	4.6467	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14082	2961	No terminal repeats	NA	3	11	0.9970	0.0015	0	3.0891	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1864	33377	No terminal repeats	NA	34	11	0.9970	0.0015	8	38.0968	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9528	1154	No terminal repeats	NA	3	11	0.9970	0.0015	2	3.0252	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11482	7051	No terminal repeats	NA	12	11	0.9970	0.0015	0	4.5225	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_490	1567	No terminal repeats	NA	2	11	0.9970	0.0015	2	2.2879	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12483|provirus_68244_86609	18366	Provirus	68244-86609	17	11	0.9970	0.0015	1	10.8401	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7916	3154	No terminal repeats	NA	4	11	0.9968	0.0015	2	4.1232	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8524	5528	No terminal repeats	NA	8	11	0.9968	0.0015	0	6.8716	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7408	3079	No terminal repeats	NA	7	11	0.9968	0.0015	1	4.4453	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6485|provirus_53554_82947	29394	Provirus	53554-82947	40	11	0.9968	0.0015	8	40.3836	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14437	35336	DTR	NA	50	11	0.9968	0.0015	12	54.1578	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7715	2327	No terminal repeats	NA	5	11	0.9968	0.0015	1	4.7423	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5031	2954	No terminal repeats	NA	3	11	0.9968	0.0015	0	3.4270	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10907	1238	No terminal repeats	NA	4	11	0.9967	0.0015	2	5.1548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_435	5339	No terminal repeats	NA	9	11	0.9967	0.0015	0	6.5559	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9512	14697	No terminal repeats	NA	19	11	0.9967	0.0015	1	11.1423	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12386	2649	No terminal repeats	NA	7	11	0.9967	0.0015	0	2.3973	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8854	3875	No terminal repeats	NA	8	11	0.9966	0.0015	1	3.1960	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2265	8773	DTR	NA	15	11	0.9966	0.0015	2	11.3322	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_602	2042	No terminal repeats	NA	7	11	0.9966	0.0015	1	8.5713	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11533	1228	No terminal repeats	NA	3	11	0.9966	0.0015	1	3.2443	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13348	3009	No terminal repeats	NA	3	11	0.9965	0.0015	1	3.6101	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1983	29741	DTR	NA	48	11	0.9965	0.0015	15	46.1602	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6694	1516	No terminal repeats	NA	3	11	0.9965	0.0016	1	3.2940	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14413	34555	No terminal repeats	NA	51	11	0.9965	0.0016	10	43.6126	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_744	9560	No terminal repeats	NA	2	11	0.9965	0.0016	1	3.4296	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2575	7369	No terminal repeats	NA	8	11	0.9965	0.0016	2	7.8057	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_671	1221	No terminal repeats	NA	2	11	0.9963	0.0016	2	2.7038	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3688|provirus_2_12145	12144	Provirus	2-12145	12	11	0.9963	0.0016	0	15.1924	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11017	2661	No terminal repeats	NA	7	11	0.9963	0.0016	0	2.7073	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7070	3841	No terminal repeats	NA	6	11	0.9963	0.0016	0	3.8351	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11473	9215	No terminal repeats	NA	12	11	0.9962	0.0016	1	8.0571	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11220	1139	No terminal repeats	NA	2	11	0.9962	0.0016	1	3.4350	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9359	1242	No terminal repeats	NA	1	11	0.9961	0.0016	1	1.1703	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11422	6759	No terminal repeats	NA	6	11	0.9961	0.0016	2	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1298	46286	No terminal repeats	NA	52	11	0.9961	0.0016	14	59.5395	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12353	3840	No terminal repeats	NA	8	11	0.9960	0.0016	0	5.6806	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2719	1811	No terminal repeats	NA	1	11	0.9960	0.0016	1	1.1940	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11921	3222	No terminal repeats	NA	3	11	0.9960	0.0016	0	3.3333	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1052	2307	No terminal repeats	NA	6	11	0.9960	0.0016	1	6.6109	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3055	5397	No terminal repeats	NA	6	11	0.9960	0.0016	3	6.5671	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2750|provirus_72944_93295	20352	Provirus	72944-93295	26	11	0.9960	0.0016	3	22.2241	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_563	43261	DTR	NA	57	11	0.9960	0.0016	13	50.4230	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1809	1590	No terminal repeats	NA	3	11	0.9959	0.0016	1	3.4344	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9132	1006	No terminal repeats	NA	3	11	0.9959	0.0017	1	4.5164	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5553	3689	No terminal repeats	NA	6	11	0.9959	0.0017	1	4.5644	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12547	1822	No terminal repeats	NA	6	11	0.9958	0.0017	1	6.5305	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5961	2696	No terminal repeats	NA	2	11	0.9958	0.0017	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10111	1683	No terminal repeats	NA	2	11	0.9958	0.0017	1	3.2203	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14158	3228	No terminal repeats	NA	4	11	0.9957	0.0017	0	3.2282	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7957	1212	No terminal repeats	NA	2	11	0.9957	0.0017	1	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6289	2825	No terminal repeats	NA	3	11	0.9957	0.0017	0	3.2261	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5753	1823	No terminal repeats	NA	1	11	0.9956	0.0017	1	1.3258	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2062	1145	No terminal repeats	NA	2	11	0.9956	0.0017	2	3.1179	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12429	2203	No terminal repeats	NA	7	11	0.9955	0.0017	1	6.3841	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3252	3789	No terminal repeats	NA	6	11	0.9955	0.0017	0	4.7122	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12703	2128	No terminal repeats	NA	2	11	0.9955	0.0017	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3435	3307	No terminal repeats	NA	3	11	0.9955	0.0017	1	5.1296	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10091|provirus_52207_63756	11550	Provirus	52207-63756	24	11	0.9955	0.0017	0	8.7819	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5447	3780	No terminal repeats	NA	6	11	0.9954	0.0017	1	5.7384	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7748	13823	No terminal repeats	NA	12	11	0.9954	0.0017	1	9.7947	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5907	2481	No terminal repeats	NA	8	11	0.9953	0.0017	2	5.6850	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13786	1565	No terminal repeats	NA	3	11	0.9953	0.0018	1	3.1230	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10758	1275	No terminal repeats	NA	3	11	0.9952	0.0018	1	3.0433	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8769	52808	No terminal repeats	NA	56	11	0.9951	0.0018	3	28.8840	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1481|provirus_31718_51823	20106	Provirus	31718-51823	33	11	0.9951	0.0018	0	13.4258	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2024	2805	No terminal repeats	NA	3	11	0.9950	0.0018	0	2.0799	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_769	4667	No terminal repeats	NA	10	11	0.9950	0.0018	2	8.5914	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1450	1657	No terminal repeats	NA	4	11	0.9949	0.0018	1	2.5443	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9616	1095	No terminal repeats	NA	3	11	0.9948	0.0018	1	4.8786	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3831	1996	No terminal repeats	NA	5	11	0.9947	0.0018	2	6.8124	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11378	5848	No terminal repeats	NA	10	11	0.9946	0.0018	0	8.6883	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14526	12148	DTR	NA	21	11	0.9946	0.0018	0	12.8783	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7876	1805	No terminal repeats	NA	2	11	0.9946	0.0018	2	2.7705	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3308	1025	No terminal repeats	NA	3	11	0.9945	0.0018	1	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9281	4184	No terminal repeats	NA	5	11	0.9945	0.0018	1	3.3453	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_888	2636	No terminal repeats	NA	6	11	0.9945	0.0018	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1682	5087	No terminal repeats	NA	9	11	0.9944	0.0019	0	5.8863	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10040	4282	No terminal repeats	NA	4	11	0.9944	0.0019	1	3.3575	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13711	1386	No terminal repeats	NA	3	11	0.9943	0.0019	1	3.2077	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11034	2952	No terminal repeats	NA	6	11	0.9943	0.0019	2	6.0369	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14497	8429	DTR	NA	18	11	0.9943	0.0019	1	5.3403	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4773	2257	No terminal repeats	NA	2	11	0.9942	0.0019	1	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7902	13195	No terminal repeats	NA	21	11	0.9942	0.0019	2	8.7283	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11701	3888	No terminal repeats	NA	3	11	0.9942	0.0019	0	3.1865	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5296	5835	No terminal repeats	NA	11	11	0.9942	0.0019	0	4.9349	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8801	3756	No terminal repeats	NA	5	11	0.9941	0.0019	1	7.5101	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_598	3972	No terminal repeats	NA	3	11	0.9939	0.0019	0	2.8524	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4330|provirus_3_8296	8294	Provirus	3-8296	16	11	0.9939	0.0019	2	10.4220	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9138	2715	No terminal repeats	NA	4	11	0.9938	0.0019	1	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12399	1319	No terminal repeats	NA	2	11	0.9937	0.0020	1	3.3333	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1701	6312	No terminal repeats	NA	13	11	0.9935	0.0020	1	3.8630	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_182	1768	No terminal repeats	NA	2	11	0.9934	0.0020	2	3.0307	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_524	1024	No terminal repeats	NA	1	11	0.9933	0.0020	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12400	3101	No terminal repeats	NA	4	11	0.9931	0.0020	0	3.4283	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4771	5137	No terminal repeats	NA	7	11	0.9931	0.0020	2	6.3080	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11672	2561	No terminal repeats	NA	4	11	0.9927	0.0020	0	4.0086	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_856	3139	No terminal repeats	NA	6	11	0.9927	0.0020	0	3.4196	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_282	1398	No terminal repeats	NA	2	11	0.9926	0.0020	2	3.3072	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_225|provirus_3_13705	13703	Provirus	3-13705	17	11	0.9925	0.0020	1	9.1326	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14093|provirus_393_24958	24566	Provirus	393-24958	22	11	0.9924	0.0020	1	12.0852	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1035|provirus_10415_25033	14619	Provirus	10415-25033	22	11	0.9922	0.0021	0	11.9201	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12192	5888	No terminal repeats	NA	10	11	0.9921	0.0021	1	4.4206	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4076	1102	No terminal repeats	NA	2	11	0.9919	0.0021	1	3.0077	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4544	1202	No terminal repeats	NA	1	11	0.9919	0.0021	1	1.0831	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1511	1053	No terminal repeats	NA	3	11	0.9918	0.0021	1	5.1305	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1263	7934	No terminal repeats	NA	6	11	0.9917	0.0021	0	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_988	1103	No terminal repeats	NA	1	11	0.9916	0.0021	1	1.2306	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5624	1560	No terminal repeats	NA	2	11	0.9915	0.0021	1	3.2214	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2849	2005	No terminal repeats	NA	7	11	0.9915	0.0021	1	4.0659	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3931	1996	No terminal repeats	NA	2	11	0.9914	0.0022	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2013	4343	No terminal repeats	NA	11	11	0.9912	0.0022	0	4.6850	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2981	1180	No terminal repeats	NA	3	11	0.9910	0.0022	1	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3801	8897	No terminal repeats	NA	15	11	0.9908	0.0022	3	19.9911	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12871	1170	No terminal repeats	NA	3	11	0.9907	0.0022	1	4.9407	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_872	2155	No terminal repeats	NA	6	11	0.9907	0.0022	1	4.7650	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14125	1058	No terminal repeats	NA	1	11	0.9907	0.0022	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1571	2954	No terminal repeats	NA	7	11	0.9906	0.0022	0	2.7511	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14022	6137	No terminal repeats	NA	8	11	0.9906	0.0023	0	8.0670	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12359	2703	No terminal repeats	NA	1	11	0.9905	0.0023	0	1.5097	Unclassified
+F4_S20_contig_8923	1591	No terminal repeats	NA	1	11	0.9901	0.0023	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4216|provirus_88_26925	26838	Provirus	88-26925	25	11	0.9901	0.0023	0	8.0375	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6259	2431	No terminal repeats	NA	2	11	0.9897	0.0023	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10664	2381	No terminal repeats	NA	3	11	0.9893	0.0023	1	3.2497	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2646|provirus_5248_27037	21790	Provirus	5248-27037	30	11	0.9893	0.0023	3	11.2723	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4577	1865	No terminal repeats	NA	3	11	0.9893	0.0024	1	4.8571	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_830|provirus_56531_104474	47944	Provirus	56531-104474	56	11	0.9892	0.0024	0	14.3141	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7252	7707	No terminal repeats	NA	9	11	0.9891	0.0024	2	6.5864	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3698	2983	No terminal repeats	NA	1	11	0.9889	0.0024	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2766|provirus_2_11492	11491	Provirus	2-11492	11	11	0.9882	0.0024	0	7.6481	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5024	2227	No terminal repeats	NA	3	11	0.9873	0.0024	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4759	6542	No terminal repeats	NA	7	11	0.9871	0.0025	0	5.1490	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12791	1026	No terminal repeats	NA	4	11	0.9871	0.0025	1	3.2390	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_796	2212	No terminal repeats	NA	4	11	0.9870	0.0025	1	3.4018	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9934	5432	No terminal repeats	NA	10	11	0.9869	0.0025	0	3.2545	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12545	3653	No terminal repeats	NA	6	11	0.9868	0.0025	0	3.0133	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7324	9977	No terminal repeats	NA	13	11	0.9862	0.0025	0	4.6240	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11576	1196	No terminal repeats	NA	2	11	0.9857	0.0026	1	1.5137	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14425	10829	DTR	NA	21	11	0.9855	0.0026	1	3.8919	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_860	1430	No terminal repeats	NA	2	11	0.9855	0.0026	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9302	1564	No terminal repeats	NA	4	11	0.9853	0.0026	1	6.8731	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_284	10181	No terminal repeats	NA	9	11	0.9853	0.0027	0	2.6083	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10342	2892	No terminal repeats	NA	2	11	0.9852	0.0027	0	2.5043	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11719	32414	No terminal repeats	NA	37	11	0.9852	0.0027	1	21.1984	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5819	1105	No terminal repeats	NA	2	11	0.9848	0.0027	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2661	3489	No terminal repeats	NA	3	11	0.9845	0.0027	2	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2000	1076	No terminal repeats	NA	3	11	0.9841	0.0028	3	5.0635	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14330	1097	No terminal repeats	NA	1	11	0.9838	0.0028	1	1.2306	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5481	4218	No terminal repeats	NA	14	11	0.9837	0.0028	0	2.9728	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3490	1465	No terminal repeats	NA	2	11	0.9833	0.0028	1	3.0043	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13252	1078	No terminal repeats	NA	2	11	0.9832	0.0029	1	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_419	5194	No terminal repeats	NA	6	11	0.9831	0.0029	0	3.0558	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_560	2503	No terminal repeats	NA	4	11	0.9827	0.0029	1	3.4188	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12682	3631	No terminal repeats	NA	4	11	0.9827	0.0029	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4895	1696	No terminal repeats	NA	4	11	0.9826	0.0030	1	3.4065	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1736	3083	No terminal repeats	NA	7	11	0.9818	0.0030	0	4.8456	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8479|provirus_13187_34423	21237	Provirus	13187-34423	25	11	0.9818	0.0030	1	10.8648	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5237|provirus_35720_53100	17381	Provirus	35720-53100	19	11	0.9814	0.0030	1	7.8529	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1514	21154	No terminal repeats	NA	24	11	0.9809	0.0031	1	9.0051	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3568	4874	No terminal repeats	NA	7	11	0.9808	0.0031	0	2.2112	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8179	1048	No terminal repeats	NA	1	11	0.9805	0.0031	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8509	6360	No terminal repeats	NA	13	11	0.9803	0.0031	0	1.9866	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1257	11074	No terminal repeats	NA	13	11	0.9799	0.0032	1	6.7251	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1250|provirus_46_5802	5757	Provirus	46-5802	8	11	0.9796	0.0032	1	9.1218	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13541	2884	No terminal repeats	NA	4	11	0.9794	0.0032	0	6.8527	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4011	2097	No terminal repeats	NA	2	11	0.9789	0.0033	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1014	17105	No terminal repeats	NA	18	11	0.9786	0.0033	2	6.8701	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6730	1209	No terminal repeats	NA	2	11	0.9777	0.0033	1	2.6106	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5391	1037	No terminal repeats	NA	2	11	0.9777	0.0033	1	3.3454	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13458	12548	No terminal repeats	NA	18	11	0.9777	0.0034	0	10.2686	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9474	2916	No terminal repeats	NA	1	11	0.9775	0.0034	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes;Kyanoviridae
+F4_S20_contig_5912	5358	No terminal repeats	NA	7	11	0.9774	0.0034	4	11.4095	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_597	18074	No terminal repeats	NA	16	11	0.9772	0.0035	1	5.0909	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3688|provirus_24216_56960	32745	Provirus	24216-56960	32	11	0.9770	0.0035	3	40.8893	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13674	2310	No terminal repeats	NA	2	11	0.9768	0.0035	1	2.7755	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7023	1020	No terminal repeats	NA	3	11	0.9763	0.0036	1	5.0403	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3990|provirus_74417_84180	9764	Provirus	74417-84180	15	11	0.9763	0.0036	7	17.6894	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8569	1457	No terminal repeats	NA	3	11	0.9760	0.0036	2	4.6485	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7818	1022	No terminal repeats	NA	1	11	0.9755	0.0037	1	1.7126	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13167	7287	No terminal repeats	NA	10	11	0.9748	0.0037	0	3.8505	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14503	10146	DTR	NA	14	11	0.9745	0.0037	0	6.8520	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6557	1152	No terminal repeats	NA	3	11	0.9743	0.0038	1	1.4894	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5474	3921	No terminal repeats	NA	6	11	0.9735	0.0038	1	6.8589	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14455	34951	DTR	NA	42	11	0.9732	0.0038	5	35.0465	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11150	3572	No terminal repeats	NA	9	11	0.9731	0.0039	0	2.9411	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2447	6004	No terminal repeats	NA	4	11	0.9722	0.0039	0	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13513	1309	No terminal repeats	NA	4	11	0.9721	0.0040	1	4.7616	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12857	3910	No terminal repeats	NA	3	11	0.9718	0.0040	0	1.7160	Viruses;Varidnaviria;Bamfordvirae;Nucleocytoviricota;Megaviricetes;Algavirales;Phycodnaviridae
+F4_S20_contig_10146	2785	No terminal repeats	NA	7	11	0.9710	0.0040	0	1.7497	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8196	1417	No terminal repeats	NA	6	11	0.9709	0.0041	1	4.8234	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13546	3405	No terminal repeats	NA	7	11	0.9706	0.0041	0	3.7459	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3153	6917	No terminal repeats	NA	6	11	0.9699	0.0042	1	2.3923	Unclassified
+F4_S20_contig_7080	4998	No terminal repeats	NA	11	11	0.9699	0.0042	0	1.3058	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9019	1029	No terminal repeats	NA	4	11	0.9685	0.0042	3	5.1548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9303	7378	No terminal repeats	NA	10	11	0.9684	0.0043	1	3.8416	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14273|provirus_9740_24317	14578	Provirus	9740-24317	19	11	0.9682	0.0043	1	12.0548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1400	6374	No terminal repeats	NA	2	11	0.9679	0.0044	0	1.6677	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13908	1376	No terminal repeats	NA	3	11	0.9672	0.0044	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7851	1599	No terminal repeats	NA	1	11	0.9668	0.0045	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5444	3470	No terminal repeats	NA	1	11	0.9661	0.0045	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8376	23492	No terminal repeats	NA	37	11	0.9658	0.0046	0	4.5012	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5497	3292	No terminal repeats	NA	6	11	0.9655	0.0046	2	4.5386	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6763	1352	No terminal repeats	NA	2	11	0.9654	0.0046	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6689	1554	No terminal repeats	NA	2	11	0.9651	0.0047	1	2.9596	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4567	1659	No terminal repeats	NA	6	11	0.9643	0.0047	1	2.6319	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13804	1144	No terminal repeats	NA	1	11	0.9641	0.0048	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11267	4467	No terminal repeats	NA	8	11	0.9639	0.0048	0	4.0371	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2686	9191	No terminal repeats	NA	12	11	0.9634	0.0049	0	2.5603	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13228	1165	No terminal repeats	NA	1	11	0.9620	0.0049	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7256	1064	No terminal repeats	NA	4	11	0.9618	0.0050	2	4.8811	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11084	1991	No terminal repeats	NA	4	11	0.9616	0.0050	2	2.5026	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14447	1656	No terminal repeats	NA	5	11	0.9608	0.0051	1	3.3815	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2086|provirus_22598_39481	16884	Provirus	22598-39481	18	11	0.9606	0.0051	0	6.0368	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_96	4149	No terminal repeats	NA	2	11	0.9591	0.0052	0	1.6626	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6618	1941	No terminal repeats	NA	1	11	0.9584	0.0053	1	1.0831	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10840	1712	No terminal repeats	NA	3	11	0.9578	0.0053	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8184	6332	No terminal repeats	NA	11	11	0.9548	0.0054	1	2.2314	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10814	3304	No terminal repeats	NA	3	11	0.9541	0.0054	1	3.4114	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6286	1233	No terminal repeats	NA	2	11	0.9525	0.0055	1	1.4877	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2455	1036	No terminal repeats	NA	2	11	0.9517	0.0056	2	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8470	1149	No terminal repeats	NA	1	11	0.9511	0.0056	1	1.7115	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13266	1999	No terminal repeats	NA	3	11	0.9510	0.0057	2	4.3386	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6997	5509	No terminal repeats	NA	5	11	0.9503	0.0058	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3202	3670	No terminal repeats	NA	7	11	0.9502	0.0058	0	3.8831	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13576	1270	No terminal repeats	NA	3	11	0.9488	0.0059	1	3.2280	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10983	1133	No terminal repeats	NA	2	11	0.9485	0.0060	2	3.1175	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3669	1592	No terminal repeats	NA	1	11	0.9475	0.0060	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4592	2918	No terminal repeats	NA	3	11	0.9465	0.0061	0	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10835	3738	No terminal repeats	NA	7	11	0.9464	0.0062	0	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8181	39124	No terminal repeats	NA	26	11	0.9442	0.0063	2	6.8154	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3750	1611	No terminal repeats	NA	2	11	0.9420	0.0063	1	3.1319	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1921	20438	No terminal repeats	NA	25	11	0.9403	0.0064	0	5.9881	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8736	2867	No terminal repeats	NA	4	11	0.9377	0.0065	0	1.4917	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2700	4265	No terminal repeats	NA	5	11	0.9375	0.0066	0	1.4552	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12392	9165	No terminal repeats	NA	13	11	0.9364	0.0067	0	2.8138	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5047	1026	No terminal repeats	NA	3	11	0.9364	0.0067	1	2.5046	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_829	4166	No terminal repeats	NA	8	11	0.9350	0.0068	1	4.6866	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10522	2203	No terminal repeats	NA	1	11	0.9334	0.0069	1	1.7119	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13385	4608	No terminal repeats	NA	7	11	0.9334	0.0070	1	3.2214	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13249	1955	No terminal repeats	NA	3	11	0.9330	0.0071	1	3.4207	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6487	1805	No terminal repeats	NA	4	11	0.9326	0.0072	2	4.9776	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1318	15044	No terminal repeats	NA	11	11	0.9303	0.0073	2	7.5634	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes;Ackermannviridae
+F4_S20_contig_7534	7165	No terminal repeats	NA	5	11	0.9294	0.0074	0	1.8678	Unclassified
+F4_S20_contig_768	3791	No terminal repeats	NA	4	11	0.9285	0.0075	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5771	1733	No terminal repeats	NA	2	11	0.9283	0.0076	1	2.8460	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12316	2125	No terminal repeats	NA	3	11	0.9274	0.0077	2	4.7991	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8366	1037	No terminal repeats	NA	2	11	0.9261	0.0077	1	3.4359	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13922	1112	No terminal repeats	NA	2	11	0.9252	0.0078	1	1.4997	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3155	1213	No terminal repeats	NA	3	11	0.9250	0.0079	1	1.7183	Viruses;Monodnaviria;Sangervirae;Phixviricota;Malgrandaviricetes;Petitvirales;Microviridae
+F4_S20_contig_11368	12283	No terminal repeats	NA	17	11	0.9247	0.0080	1	3.3152	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5897	4550	No terminal repeats	NA	6	11	0.9240	0.0081	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1902	1098	No terminal repeats	NA	2	11	0.9238	0.0082	1	1.1622	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6296	5638	No terminal repeats	NA	8	11	0.9234	0.0083	0	1.6805	Unclassified
+F4_S20_contig_6506	2419	No terminal repeats	NA	4	11	0.9233	0.0084	1	2.4813	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9277	1223	No terminal repeats	NA	2	11	0.9229	0.0085	2	2.9844	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_805	8368	No terminal repeats	NA	5	11	0.9227	0.0086	0	3.9532	Unclassified
+F4_S20_contig_5974	1047	No terminal repeats	NA	4	11	0.9194	0.0087	1	3.3758	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13439	5073	No terminal repeats	NA	5	11	0.9184	0.0088	0	2.1908	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5741	1506	No terminal repeats	NA	2	11	0.9163	0.0089	1	1.5362	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11983	1106	No terminal repeats	NA	1	11	0.9153	0.0091	1	1.2989	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2341|provirus_71541_86886	15346	Provirus	71541-86886	20	11	0.9120	0.0092	1	13.2256	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5007	1566	No terminal repeats	NA	2	11	0.9115	0.0093	1	3.0533	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2664	5364	No terminal repeats	NA	6	11	0.9113	0.0094	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10257	5903	No terminal repeats	NA	7	11	0.9105	0.0095	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6261	1425	No terminal repeats	NA	1	11	0.9099	0.0096	1	1.2306	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2449	1331	No terminal repeats	NA	3	11	0.9087	0.0097	2	2.7966	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1986	12212	No terminal repeats	NA	13	11	0.9067	0.0099	0	4.0848	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1363	3156	No terminal repeats	NA	6	11	0.9045	0.0100	0	3.1240	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12238	1225	No terminal repeats	NA	1	11	0.9033	0.0101	1	1.2306	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13144	1287	No terminal repeats	NA	2	11	0.9023	0.0102	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12072	1656	No terminal repeats	NA	4	11	0.9013	0.0104	1	4.7269	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4515	2883	No terminal repeats	NA	5	11	0.8998	0.0105	0	1.2844	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13276	3391	No terminal repeats	NA	7	11	0.8994	0.0106	1	3.4363	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6229	3559	No terminal repeats	NA	5	11	0.8965	0.0107	0	1.2179	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12027	2099	No terminal repeats	NA	4	11	0.8952	0.0109	3	6.6999	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10548	1187	No terminal repeats	NA	4	11	0.8939	0.0110	1	3.1102	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6197	6223	No terminal repeats	NA	11	11	0.8938	0.0111	0	3.5173	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6432|provirus_17510_32701	15192	Provirus	17510-32701	23	11	0.8890	0.0113	7	20.8630	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12372	4892	No terminal repeats	NA	2	11	0.8885	0.0114	1	2.9449	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9355	2687	No terminal repeats	NA	5	11	0.8882	0.0116	0	1.7554	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1719	1708	No terminal repeats	NA	3	11	0.8857	0.0117	1	2.9077	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2703	2922	No terminal repeats	NA	2	11	0.8854	0.0118	0	1.7183	Unclassified
+F4_S20_contig_3768	1048	No terminal repeats	NA	1	11	0.8843	0.0120	1	1.4344	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11683	1089	No terminal repeats	NA	3	11	0.8841	0.0121	1	3.3813	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8478	1054	No terminal repeats	NA	2	11	0.8833	0.0123	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10564	2925	No terminal repeats	NA	2	11	0.8828	0.0124	0	1.2138	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10706	1107	No terminal repeats	NA	3	11	0.8815	0.0126	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1775	3046	No terminal repeats	NA	3	11	0.8799	0.0127	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11199	5927	No terminal repeats	NA	5	11	0.8797	0.0129	0	3.3414	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10858	1395	No terminal repeats	NA	2	11	0.8792	0.0130	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4928|provirus_2_29681	29680	Provirus	2-29681	33	11	0.8729	0.0132	1	11.7161	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2866	1878	No terminal repeats	NA	4	11	0.8720	0.0133	2	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9547|provirus_105707_121283	15577	Provirus	105707-121283	21	11	0.8719	0.0135	7	15.5250	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3521	4542	No terminal repeats	NA	3	11	0.8693	0.0136	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7477	8951	No terminal repeats	NA	1	11	0.8690	0.0138	1	1.7183	Viruses;Varidnaviria;Bamfordvirae;Nucleocytoviricota;Megaviricetes;Imitervirales;Mimiviridae
+F4_S20_contig_11707	5037	No terminal repeats	NA	6	11	0.8686	0.0140	0	0.0000	Unclassified
+F4_S20_contig_2211	1183	No terminal repeats	NA	2	11	0.8650	0.0141	1	1.2605	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11685	1515	No terminal repeats	NA	3	11	0.8649	0.0143	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6009	1165	No terminal repeats	NA	3	11	0.8639	0.0144	1	1.2306	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3017	1479	No terminal repeats	NA	3	11	0.8634	0.0146	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_14293	1401	No terminal repeats	NA	1	11	0.8617	0.0148	1	1.7104	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12768	3224	No terminal repeats	NA	3	11	0.8569	0.0150	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3044	1870	No terminal repeats	NA	2	11	0.8546	0.0151	1	1.1179	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8408	1044	No terminal repeats	NA	3	11	0.8546	0.0153	1	1.6576	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12477	3685	No terminal repeats	NA	5	11	0.8537	0.0155	0	0.8165	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6036|provirus_26296_50794	24499	Provirus	26296-50794	28	11	0.8528	0.0157	2	2.4095	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11484	3108	No terminal repeats	NA	3	11	0.8503	0.0158	0	1.5474	Unclassified
+F4_S20_contig_12287	4642	No terminal repeats	NA	6	11	0.8488	0.0160	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6325	1029	No terminal repeats	NA	2	11	0.8477	0.0162	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10561	6158	No terminal repeats	NA	10	11	0.8448	0.0164	0	3.0672	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1794	4159	No terminal repeats	NA	5	11	0.8444	0.0166	0	2.1307	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10817	1745	No terminal repeats	NA	2	11	0.8385	0.0168	2	3.0290	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9248	3250	No terminal repeats	NA	5	11	0.8372	0.0170	0	0.0000	Unclassified
+F4_S20_contig_1506	10617	No terminal repeats	NA	9	11	0.8350	0.0172	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2868	1299	No terminal repeats	NA	3	11	0.8337	0.0174	2	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3033	1824	No terminal repeats	NA	4	11	0.8327	0.0176	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1589	2824	No terminal repeats	NA	3	11	0.8282	0.0178	1	4.8331	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1595|provirus_107_51252	51146	Provirus	107-51252	61	11	0.8281	0.0180	3	5.5454	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6098	2549	No terminal repeats	NA	6	11	0.8275	0.0182	0	3.7205	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4277	2798	No terminal repeats	NA	2	11	0.8274	0.0184	0	1.4408	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5565	5883	No terminal repeats	NA	7	11	0.8262	0.0186	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10016	9608	No terminal repeats	NA	2	11	0.8229	0.0188	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes;Kyanoviridae
+F4_S20_contig_858	3666	No terminal repeats	NA	1	11	0.8222	0.0190	0	0.6160	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9957	3068	No terminal repeats	NA	4	11	0.8197	0.0192	1	4.1733	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4355	3126	No terminal repeats	NA	3	11	0.8179	0.0194	1	2.6375	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1622	1812	No terminal repeats	NA	3	11	0.8159	0.0196	1	1.1587	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4306	1795	No terminal repeats	NA	3	11	0.8097	0.0199	1	5.1548	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1462	35643	No terminal repeats	NA	37	11	0.8066	0.0201	1	9.4727	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_967	2116	No terminal repeats	NA	3	11	0.8056	0.0203	1	0.9320	Unclassified
+F4_S20_contig_10850	1404	No terminal repeats	NA	1	11	0.8038	0.0205	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2781	3359	No terminal repeats	NA	5	11	0.8030	0.0208	0	1.4845	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5981	11643	No terminal repeats	NA	15	11	0.8012	0.0210	0	3.0663	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1498	10362	No terminal repeats	NA	10	11	0.8003	0.0212	0	1.9012	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11837	1353	No terminal repeats	NA	2	11	0.7993	0.0215	2	3.0517	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2045|provirus_7138_34158	27021	Provirus	7138-34158	44	11	0.7941	0.0217	13	39.4462	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_6087	18532	No terminal repeats	NA	22	11	0.7921	0.0219	0	1.4830	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1784	1281	No terminal repeats	NA	2	11	0.7902	0.0222	2	2.7558	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1354	6768	No terminal repeats	NA	6	11	0.7859	0.0224	1	2.2414	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1285	5505	No terminal repeats	NA	10	11	0.7785	0.0227	0	1.0417	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10608	2805	No terminal repeats	NA	3	11	0.7753	0.0229	0	0.0000	Unclassified
+F4_S20_contig_4657	8117	No terminal repeats	NA	9	11	0.7732	0.0232	0	2.2446	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2605	2333	No terminal repeats	NA	3	11	0.7691	0.0235	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_876	4664	No terminal repeats	NA	8	11	0.7687	0.0237	0	0.8314	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9971	3405	No terminal repeats	NA	4	11	0.7653	0.0240	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1866	25144	No terminal repeats	NA	21	11	0.7652	0.0243	1	2.1650	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2228	2892	No terminal repeats	NA	5	11	0.7650	0.0245	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2200	3042	No terminal repeats	NA	5	11	0.7637	0.0248	0	2.7398	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_8640	3608	No terminal repeats	NA	4	11	0.7629	0.0251	1	2.9234	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1403	1026	No terminal repeats	NA	2	11	0.7553	0.0254	1	3.4366	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1483	3721	No terminal repeats	NA	4	11	0.7551	0.0256	0	0.0000	Unclassified
+F4_S20_contig_13466	1522	No terminal repeats	NA	4	11	0.7524	0.0259	1	3.0216	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_13737	1261	No terminal repeats	NA	3	11	0.7504	0.0262	1	1.7074	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5755	1279	No terminal repeats	NA	2	11	0.7474	0.0265	1	1.6554	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11437	11608	No terminal repeats	NA	21	11	0.7387	0.0268	1	10.8969	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_2185	2764	No terminal repeats	NA	1	11	0.7371	0.0271	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12664	3121	No terminal repeats	NA	4	11	0.7358	0.0274	1	1.5848	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7769	7170	No terminal repeats	NA	10	11	0.7316	0.0277	0	0.8388	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_311	18446	No terminal repeats	NA	26	11	0.7288	0.0280	1	2.2844	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_5396	2571	No terminal repeats	NA	3	11	0.7271	0.0283	1	1.2306	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_10578	3521	No terminal repeats	NA	3	11	0.7244	0.0286	1	1.5132	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1419	3730	No terminal repeats	NA	5	11	0.7240	0.0289	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12898	4230	No terminal repeats	NA	6	11	0.7229	0.0292	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_4052	3379	No terminal repeats	NA	3	11	0.7203	0.0295	1	1.5132	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9035	6243	No terminal repeats	NA	10	11	0.7199	0.0298	0	1.7397	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_1993	9774	No terminal repeats	NA	8	11	0.7139	0.0302	0	2.2446	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_11509	1000	No terminal repeats	NA	1	11	0.7131	0.0305	1	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_9274|provirus_11858_17214	5357	Provirus	11858-17214	6	11	0.7047	0.0308	2	7.9819	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_3547	2911	No terminal repeats	NA	1	11	0.7010	0.0311	0	1.7183	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_7952	3652	No terminal repeats	NA	6	11	0.7007	0.0315	0	0.5754	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes
+F4_S20_contig_12358	5288	No terminal repeats	NA	6	11	0.7005	0.0318	2	3.4342	Viruses;Duplodnaviria;Heunggongvirae;Uroviricota;Caudoviricetes

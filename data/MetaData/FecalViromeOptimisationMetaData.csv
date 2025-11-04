@@ -1,0 +1,13 @@
+Sample,Source,SampleType,MDA,DnaConc,StorageCondition,Description,rRNApercentage,SimpleSample,FilteredViralContigs,ShortSamples
+F3_S19,Stool,Virome,FALSE,1.1,Frozen,DTV,0.31,DNase Treated Virome 1,244,+DV1
+F4_S20,Stool,Virome,FALSE,1.1,Frozen,DTV,0.33,DNase Treated Virome 2,230,+DV2
+F5_S21,Stool,Virome,FALSE,1.3,Frozen,DTV,0.33,DNase Treated Virome 3,243,+DV3
+F6_S22,Stool,Virome,FALSE,2.39,Frozen,UTV,0.31,Untreated Virome 1,235,-DV1
+F7_S23,Stool,Virome,FALSE,3.01,Frozen,UTV,0.34,Untreated Virome 2,252,-DV2
+F8_S24,Stool,Virome,FALSE,2.23,Frozen,UTV,0.3,Untreated Virome 3,238,-DV3
+M1_S25,Stool,Metagenome,FALSE,100,Frozen,MtG,1.02,Metagenome 1,220,MtG1
+M2_S26,Stool,Metagenome,FALSE,100,Frozen,MtG,0.96,Metagenome 2,200,MtG2
+M3_S27,Stool,Metagenome,FALSE,100,Frozen,MtG,0.96,Metagenome 3,222,MtG3
+GP3_S28,Stool,Virome,TRUE,47.4,Frozen,MDA,0.08,MDA Amplified Virome 1,133,MDA1
+GP4_S29,Stool,Virome,TRUE,54,Frozen,MDA,0.08,MDA Amplified Virome 2,127,MDA2
+GP5_S30,Stool,Virome,TRUE,60,Frozen,MDA,0.09,MDA Amplified Virome 3,136,MDA3

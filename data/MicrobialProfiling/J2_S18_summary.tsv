@@ -1,0 +1,86 @@
+sample	coverage	full_coverage	relative_abundance	level	taxonomy
+J2_S18_raw_R1	0	98.4	100.0	root	Root
+J2_S18_raw_R1	2.06	2.06	2.09	domain	Root; d__Archaea
+J2_S18_raw_R1	6.0	96.34	97.91	domain	Root; d__Bacteria
+J2_S18_raw_R1	1.18	52.75	53.61	phylum	Root; d__Bacteria; p__Patescibacteria
+J2_S18_raw_R1	0.79	6.21	6.31	phylum	Root; d__Bacteria; p__Actinomycetota
+J2_S18_raw_R1	0.11	12.9	13.11	phylum	Root; d__Bacteria; p__Acidobacteriota
+J2_S18_raw_R1	1.08	1.36	1.38	phylum	Root; d__Bacteria; p__Chloroflexota
+J2_S18_raw_R1	0.34	0.97	0.99	phylum	Root; d__Bacteria; p__Planctomycetota
+J2_S18_raw_R1	0	14.91	15.15	phylum	Root; d__Bacteria; p__Pseudomonadota
+J2_S18_raw_R1	0	0.57	0.58	phylum	Root; d__Bacteria; p__Bacillota_A
+J2_S18_raw_R1	0	0.39	0.4	phylum	Root; d__Bacteria; p__Bacteroidota
+J2_S18_raw_R1	0	0.28	0.28	phylum	Root; d__Bacteria; p__Gemmatimonadota
+J2_S18_raw_R1	0.4	49.7	50.51	class	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia
+J2_S18_raw_R1	0.06	0.68	0.69	class	Root; d__Bacteria; p__Patescibacteria; c__Paceibacteria
+J2_S18_raw_R1	1.19	1.19	1.21	class	Root; d__Bacteria; p__Patescibacteria; c__Microgenomatia
+J2_S18_raw_R1	1.58	4.18	4.25	class	Root; d__Bacteria; p__Actinomycetota; c__Actinomycetes
+J2_S18_raw_R1	0.17	1.24	1.26	class	Root; d__Bacteria; p__Actinomycetota; c__Thermoleophilia
+J2_S18_raw_R1	0.4	12.79	13.0	class	Root; d__Bacteria; p__Acidobacteriota; c__Terriglobia
+J2_S18_raw_R1	0.28	0.28	0.28	class	Root; d__Bacteria; p__Chloroflexota; c__Dormibacteria
+J2_S18_raw_R1	0.06	0.63	0.64	class	Root; d__Bacteria; p__Planctomycetota; c__Planctomycetia
+J2_S18_raw_R1	2.63	13.31	13.53	class	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria
+J2_S18_raw_R1	0.57	1.6	1.63	class	Root; d__Bacteria; p__Pseudomonadota; c__Gammaproteobacteria
+J2_S18_raw_R1	0.34	0.57	0.58	class	Root; d__Bacteria; p__Bacillota_A; c__Clostridia
+J2_S18_raw_R1	0.39	0.39	0.4	class	Root; d__Bacteria; p__Bacteroidota; c__Bacteroidia
+J2_S18_raw_R1	0.28	0.28	0.28	class	Root; d__Bacteria; p__Gemmatimonadota; c__Gemmatimonadetes
+J2_S18_raw_R1	5.8	45.69	46.43	order	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales
+J2_S18_raw_R1	0.46	3.61	3.67	order	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__UBA4664
+J2_S18_raw_R1	0.62	0.62	0.63	order	Root; d__Bacteria; p__Patescibacteria; c__Paceibacteria; o__UBA9973
+J2_S18_raw_R1	0.73	1.3	1.32	order	Root; d__Bacteria; p__Actinomycetota; c__Actinomycetes; o__Mycobacteriales
+J2_S18_raw_R1	0.11	0.74	0.75	order	Root; d__Bacteria; p__Actinomycetota; c__Actinomycetes; o__Propionibacteriales
+J2_S18_raw_R1	0.56	0.56	0.57	order	Root; d__Bacteria; p__Actinomycetota; c__Actinomycetes; o__Actinomycetales
+J2_S18_raw_R1	0.06	1.07	1.09	order	Root; d__Bacteria; p__Actinomycetota; c__Thermoleophilia; o__Solirubrobacterales
+J2_S18_raw_R1	1.3	11.54	11.73	order	Root; d__Bacteria; p__Acidobacteriota; c__Terriglobia; o__Terriglobales
+J2_S18_raw_R1	0	0.85	0.86	order	Root; d__Bacteria; p__Acidobacteriota; c__Terriglobia; o__Bryobacterales
+J2_S18_raw_R1	0	0.57	0.58	order	Root; d__Bacteria; p__Planctomycetota; c__Planctomycetia; o__Isosphaerales
+J2_S18_raw_R1	0.49	5.15	5.23	order	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Rhizobiales
+J2_S18_raw_R1	0	3.09	3.14	order	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Sphingomonadales
+J2_S18_raw_R1	0	2.44	2.48	order	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Caulobacterales
+J2_S18_raw_R1	0.06	0.57	0.58	order	Root; d__Bacteria; p__Pseudomonadota; c__Gammaproteobacteria; o__Xanthomonadales
+J2_S18_raw_R1	0.06	0.46	0.47	order	Root; d__Bacteria; p__Pseudomonadota; c__Gammaproteobacteria; o__Burkholderiales
+J2_S18_raw_R1	0.23	0.23	0.23	order	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Lachnospirales
+J2_S18_raw_R1	1.43	4.83	4.91	family	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA10212
+J2_S18_raw_R1	14.23	34.45	35.01	family	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665
+J2_S18_raw_R1	0.61	0.61	0.62	family	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__AWTP1-31
+J2_S18_raw_R1	2.06	3.15	3.2	family	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__UBA4664; f__UBA4664
+J2_S18_raw_R1	0.57	0.57	0.58	family	Root; d__Bacteria; p__Actinomycetota; c__Actinomycetes; o__Mycobacteriales; f__Mycobacteriaceae
+J2_S18_raw_R1	0.06	0.63	0.64	family	Root; d__Bacteria; p__Actinomycetota; c__Actinomycetes; o__Propionibacteriales; f__Propionibacteriaceae
+J2_S18_raw_R1	0.66	1.01	1.03	family	Root; d__Bacteria; p__Actinomycetota; c__Thermoleophilia; o__Solirubrobacterales; f__Solirubrobacteraceae
+J2_S18_raw_R1	3.38	10.24	10.41	family	Root; d__Bacteria; p__Acidobacteriota; c__Terriglobia; o__Terriglobales; f__Acidobacteriaceae
+J2_S18_raw_R1	0.85	0.85	0.86	family	Root; d__Bacteria; p__Acidobacteriota; c__Terriglobia; o__Bryobacterales; f__Bryobacteraceae
+J2_S18_raw_R1	0.57	0.57	0.58	family	Root; d__Bacteria; p__Planctomycetota; c__Planctomycetia; o__Isosphaerales; f__Isosphaeraceae
+J2_S18_raw_R1	0.34	3.62	3.68	family	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Rhizobiales; f__Xanthobacteraceae
+J2_S18_raw_R1	0.06	1.04	1.06	family	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Rhizobiales; f__Rhizobiaceae
+J2_S18_raw_R1	1.52	3.09	3.14	family	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Sphingomonadales; f__Sphingomonadaceae
+J2_S18_raw_R1	0.97	2.44	2.48	family	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Caulobacterales; f__Caulobacteraceae
+J2_S18_raw_R1	0.11	0.51	0.52	family	Root; d__Bacteria; p__Pseudomonadota; c__Gammaproteobacteria; o__Xanthomonadales; f__Xanthomonadaceae
+J2_S18_raw_R1	0.4	0.4	0.41	family	Root; d__Bacteria; p__Pseudomonadota; c__Gammaproteobacteria; o__Burkholderiales; f__Burkholderiaceae
+J2_S18_raw_R1	2.93	2.93	2.98	genus	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA10212; g__JAIFWC01
+J2_S18_raw_R1	0.47	0.47	0.48	genus	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA10212; g__RYN-425
+J2_S18_raw_R1	0.37	0.37	0.38	genus	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__JAQBRT01
+J2_S18_raw_R1	10.21	10.21	10.38	genus	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__UBA4665
+J2_S18_raw_R1	1.06	1.06	1.08	genus	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__UBA5150
+J2_S18_raw_R1	0.59	0.59	0.6	genus	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__RYN-405
+J2_S18_raw_R1	0.36	0.36	0.37	genus	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__JAQGGZ01
+J2_S18_raw_R1	1.75	1.75	1.78	genus	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__JAJZCD01
+J2_S18_raw_R1	0.61	0.61	0.62	genus	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__CAMLQK01
+J2_S18_raw_R1	2.0	2.0	2.03	genus	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__UBA4729
+J2_S18_raw_R1	0.84	0.84	0.85	genus	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__JAJZWH01
+J2_S18_raw_R1	0.6	0.6	0.61	genus	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__JAGQNT01
+J2_S18_raw_R1	1.31	1.31	1.33	genus	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__JACMPA01
+J2_S18_raw_R1	0.52	0.52	0.53	genus	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__JAGQNO01
+J2_S18_raw_R1	0.53	0.53	0.54	genus	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__UBA4664; f__UBA4664; g__JARIHM01
+J2_S18_raw_R1	0.56	0.56	0.57	genus	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__UBA4664; f__UBA4664; g__JACAFG01
+J2_S18_raw_R1	0	0.57	0.58	genus	Root; d__Bacteria; p__Actinomycetota; c__Actinomycetes; o__Propionibacteriales; f__Propionibacteriaceae; g__Cutibacterium
+J2_S18_raw_R1	0.35	0.35	0.36	genus	Root; d__Bacteria; p__Actinomycetota; c__Thermoleophilia; o__Solirubrobacterales; f__Solirubrobacteraceae; g__Baekduia
+J2_S18_raw_R1	6.4	6.4	6.5	genus	Root; d__Bacteria; p__Acidobacteriota; c__Terriglobia; o__Terriglobales; f__Acidobacteriaceae; g__Granulicella
+J2_S18_raw_R1	0.46	0.46	0.47	genus	Root; d__Bacteria; p__Acidobacteriota; c__Terriglobia; o__Terriglobales; f__Acidobacteriaceae; g__Edaphobacter
+J2_S18_raw_R1	2.44	3.28	3.33	genus	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Rhizobiales; f__Xanthobacteraceae; g__Bradyrhizobium
+J2_S18_raw_R1	0.98	0.98	1.0	genus	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Rhizobiales; f__Rhizobiaceae; g__Mesorhizobium
+J2_S18_raw_R1	1.57	1.57	1.6	genus	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Sphingomonadales; f__Sphingomonadaceae; g__Sphingomonas
+J2_S18_raw_R1	1.05	1.05	1.07	genus	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Caulobacterales; f__Caulobacteraceae; g__Phenylobacterium
+J2_S18_raw_R1	0.42	0.42	0.43	genus	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Caulobacterales; f__Caulobacteraceae; g__JAFECT01
+J2_S18_raw_R1	0.4	0.4	0.41	genus	Root; d__Bacteria; p__Pseudomonadota; c__Gammaproteobacteria; o__Xanthomonadales; f__Xanthomonadaceae; g__Stenotrophomonas
+J2_S18_raw_R1	0.57	0.57	0.58	species	Root; d__Bacteria; p__Actinomycetota; c__Actinomycetes; o__Propionibacteriales; f__Propionibacteriaceae; g__Cutibacterium; s__Cutibacterium acnes
+J2_S18_raw_R1	0.84	0.84	0.85	species	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Rhizobiales; f__Xanthobacteraceae; g__Bradyrhizobium; s__Bradyrhizobium sp023422775

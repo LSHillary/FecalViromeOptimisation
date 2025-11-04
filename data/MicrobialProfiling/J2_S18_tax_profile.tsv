@@ -1,0 +1,76 @@
+sample	coverage	taxonomy
+J2_S18_raw_R1	2.06	Root; d__Archaea
+J2_S18_raw_R1	6.0	Root; d__Bacteria
+J2_S18_raw_R1	1.18	Root; d__Bacteria; p__Patescibacteria
+J2_S18_raw_R1	0.79	Root; d__Bacteria; p__Actinomycetota
+J2_S18_raw_R1	0.11	Root; d__Bacteria; p__Acidobacteriota
+J2_S18_raw_R1	1.08	Root; d__Bacteria; p__Chloroflexota
+J2_S18_raw_R1	0.34	Root; d__Bacteria; p__Planctomycetota
+J2_S18_raw_R1	0.4	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia
+J2_S18_raw_R1	0.06	Root; d__Bacteria; p__Patescibacteria; c__Paceibacteria
+J2_S18_raw_R1	1.19	Root; d__Bacteria; p__Patescibacteria; c__Microgenomatia
+J2_S18_raw_R1	1.58	Root; d__Bacteria; p__Actinomycetota; c__Actinomycetes
+J2_S18_raw_R1	0.17	Root; d__Bacteria; p__Actinomycetota; c__Thermoleophilia
+J2_S18_raw_R1	2.63	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria
+J2_S18_raw_R1	0.57	Root; d__Bacteria; p__Pseudomonadota; c__Gammaproteobacteria
+J2_S18_raw_R1	0.4	Root; d__Bacteria; p__Acidobacteriota; c__Terriglobia
+J2_S18_raw_R1	0.28	Root; d__Bacteria; p__Chloroflexota; c__Dormibacteria
+J2_S18_raw_R1	0.34	Root; d__Bacteria; p__Bacillota_A; c__Clostridia
+J2_S18_raw_R1	0.06	Root; d__Bacteria; p__Planctomycetota; c__Planctomycetia
+J2_S18_raw_R1	0.39	Root; d__Bacteria; p__Bacteroidota; c__Bacteroidia
+J2_S18_raw_R1	0.28	Root; d__Bacteria; p__Gemmatimonadota; c__Gemmatimonadetes
+J2_S18_raw_R1	5.8	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales
+J2_S18_raw_R1	0.46	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__UBA4664
+J2_S18_raw_R1	0.62	Root; d__Bacteria; p__Patescibacteria; c__Paceibacteria; o__UBA9973
+J2_S18_raw_R1	0.73	Root; d__Bacteria; p__Actinomycetota; c__Actinomycetes; o__Mycobacteriales
+J2_S18_raw_R1	0.11	Root; d__Bacteria; p__Actinomycetota; c__Actinomycetes; o__Propionibacteriales
+J2_S18_raw_R1	0.56	Root; d__Bacteria; p__Actinomycetota; c__Actinomycetes; o__Actinomycetales
+J2_S18_raw_R1	0.06	Root; d__Bacteria; p__Actinomycetota; c__Thermoleophilia; o__Solirubrobacterales
+J2_S18_raw_R1	0.49	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Rhizobiales
+J2_S18_raw_R1	0.06	Root; d__Bacteria; p__Pseudomonadota; c__Gammaproteobacteria; o__Xanthomonadales
+J2_S18_raw_R1	0.06	Root; d__Bacteria; p__Pseudomonadota; c__Gammaproteobacteria; o__Burkholderiales
+J2_S18_raw_R1	1.3	Root; d__Bacteria; p__Acidobacteriota; c__Terriglobia; o__Terriglobales
+J2_S18_raw_R1	0.23	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Lachnospirales
+J2_S18_raw_R1	1.43	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA10212
+J2_S18_raw_R1	14.23	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665
+J2_S18_raw_R1	0.61	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__AWTP1-31
+J2_S18_raw_R1	2.06	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__UBA4664; f__UBA4664
+J2_S18_raw_R1	0.57	Root; d__Bacteria; p__Actinomycetota; c__Actinomycetes; o__Mycobacteriales; f__Mycobacteriaceae
+J2_S18_raw_R1	0.06	Root; d__Bacteria; p__Actinomycetota; c__Actinomycetes; o__Propionibacteriales; f__Propionibacteriaceae
+J2_S18_raw_R1	0.66	Root; d__Bacteria; p__Actinomycetota; c__Thermoleophilia; o__Solirubrobacterales; f__Solirubrobacteraceae
+J2_S18_raw_R1	0.34	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Rhizobiales; f__Xanthobacteraceae
+J2_S18_raw_R1	0.06	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Rhizobiales; f__Rhizobiaceae
+J2_S18_raw_R1	1.52	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Sphingomonadales; f__Sphingomonadaceae
+J2_S18_raw_R1	0.97	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Caulobacterales; f__Caulobacteraceae
+J2_S18_raw_R1	0.11	Root; d__Bacteria; p__Pseudomonadota; c__Gammaproteobacteria; o__Xanthomonadales; f__Xanthomonadaceae
+J2_S18_raw_R1	0.4	Root; d__Bacteria; p__Pseudomonadota; c__Gammaproteobacteria; o__Burkholderiales; f__Burkholderiaceae
+J2_S18_raw_R1	0.85	Root; d__Bacteria; p__Acidobacteriota; c__Terriglobia; o__Bryobacterales; f__Bryobacteraceae
+J2_S18_raw_R1	3.38	Root; d__Bacteria; p__Acidobacteriota; c__Terriglobia; o__Terriglobales; f__Acidobacteriaceae
+J2_S18_raw_R1	0.57	Root; d__Bacteria; p__Planctomycetota; c__Planctomycetia; o__Isosphaerales; f__Isosphaeraceae
+J2_S18_raw_R1	2.93	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA10212; g__JAIFWC01
+J2_S18_raw_R1	0.47	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA10212; g__RYN-425
+J2_S18_raw_R1	0.37	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__JAQBRT01
+J2_S18_raw_R1	10.21	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__UBA4665
+J2_S18_raw_R1	1.06	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__UBA5150
+J2_S18_raw_R1	0.59	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__RYN-405
+J2_S18_raw_R1	0.36	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__JAQGGZ01
+J2_S18_raw_R1	1.75	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__JAJZCD01
+J2_S18_raw_R1	0.61	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__CAMLQK01
+J2_S18_raw_R1	2.0	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__UBA4729
+J2_S18_raw_R1	0.84	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__JAJZWH01
+J2_S18_raw_R1	0.6	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__JAGQNT01
+J2_S18_raw_R1	1.31	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__JACMPA01
+J2_S18_raw_R1	0.52	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__Saccharimonadales; f__UBA4665; g__JAGQNO01
+J2_S18_raw_R1	0.53	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__UBA4664; f__UBA4664; g__JARIHM01
+J2_S18_raw_R1	0.56	Root; d__Bacteria; p__Patescibacteria; c__Saccharimonadia; o__UBA4664; f__UBA4664; g__JACAFG01
+J2_S18_raw_R1	0.35	Root; d__Bacteria; p__Actinomycetota; c__Thermoleophilia; o__Solirubrobacterales; f__Solirubrobacteraceae; g__Baekduia
+J2_S18_raw_R1	2.44	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Rhizobiales; f__Xanthobacteraceae; g__Bradyrhizobium
+J2_S18_raw_R1	0.98	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Rhizobiales; f__Rhizobiaceae; g__Mesorhizobium
+J2_S18_raw_R1	1.57	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Sphingomonadales; f__Sphingomonadaceae; g__Sphingomonas
+J2_S18_raw_R1	1.05	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Caulobacterales; f__Caulobacteraceae; g__Phenylobacterium
+J2_S18_raw_R1	0.42	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Caulobacterales; f__Caulobacteraceae; g__JAFECT01
+J2_S18_raw_R1	0.4	Root; d__Bacteria; p__Pseudomonadota; c__Gammaproteobacteria; o__Xanthomonadales; f__Xanthomonadaceae; g__Stenotrophomonas
+J2_S18_raw_R1	6.4	Root; d__Bacteria; p__Acidobacteriota; c__Terriglobia; o__Terriglobales; f__Acidobacteriaceae; g__Granulicella
+J2_S18_raw_R1	0.46	Root; d__Bacteria; p__Acidobacteriota; c__Terriglobia; o__Terriglobales; f__Acidobacteriaceae; g__Edaphobacter
+J2_S18_raw_R1	0.57	Root; d__Bacteria; p__Actinomycetota; c__Actinomycetes; o__Propionibacteriales; f__Propionibacteriaceae; g__Cutibacterium; s__Cutibacterium acnes
+J2_S18_raw_R1	0.84	Root; d__Bacteria; p__Pseudomonadota; c__Alphaproteobacteria; o__Rhizobiales; f__Xanthobacteraceae; g__Bradyrhizobium; s__Bradyrhizobium sp023422775

@@ -1,0 +1,46 @@
+sample	coverage	full_coverage	relative_abundance	level	taxonomy
+GP5_S30_raw_R1	0	29.4	100.0	root	Root
+GP5_S30_raw_R1	3.28	29.4	100.0	domain	Root; d__Bacteria
+GP5_S30_raw_R1	0	18.41	62.62	phylum	Root; d__Bacteria; p__Bacillota_A
+GP5_S30_raw_R1	0	7.48	25.44	phylum	Root; d__Bacteria; p__Bacteroidota
+GP5_S30_raw_R1	0	0.23	0.78	phylum	Root; d__Bacteria; p__Bacillota_C
+GP5_S30_raw_R1	1.74	18.41	62.62	class	Root; d__Bacteria; p__Bacillota_A; c__Clostridia
+GP5_S30_raw_R1	0	7.48	25.44	class	Root; d__Bacteria; p__Bacteroidota; c__Bacteroidia
+GP5_S30_raw_R1	0	0.23	0.78	class	Root; d__Bacteria; p__Bacillota_C; c__Negativicutes
+GP5_S30_raw_R1	0.4	3.35	11.39	order	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Lachnospirales
+GP5_S30_raw_R1	0.91	11.06	37.62	order	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Oscillospirales
+GP5_S30_raw_R1	0	0.9	3.06	order	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Monoglobales
+GP5_S30_raw_R1	0	1.36	4.63	order	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Eubacteriales
+GP5_S30_raw_R1	0.34	7.48	25.44	order	Root; d__Bacteria; p__Bacteroidota; c__Bacteroidia; o__Bacteroidales
+GP5_S30_raw_R1	0.23	0.23	0.78	order	Root; d__Bacteria; p__Bacillota_C; c__Negativicutes; o__Veillonellales
+GP5_S30_raw_R1	0.23	2.95	10.03	family	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Lachnospirales; f__Anaerotignaceae
+GP5_S30_raw_R1	0.82	1.47	5.0	family	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Oscillospirales; f__Acutalibacteraceae
+GP5_S30_raw_R1	1.37	6.87	23.37	family	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Oscillospirales; f__Ruminococcaceae
+GP5_S30_raw_R1	0.96	1.81	6.16	family	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Oscillospirales; f__Oscillospiraceae
+GP5_S30_raw_R1	0.11	0.9	3.06	family	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Monoglobales; f__Monoglobaceae
+GP5_S30_raw_R1	0	1.36	4.63	family	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Eubacteriales; f__Eubacteriaceae
+GP5_S30_raw_R1	0.91	7.14	24.29	family	Root; d__Bacteria; p__Bacteroidota; c__Bacteroidia; o__Bacteroidales; f__Bacteroidaceae
+GP5_S30_raw_R1	0.24	2.72	9.25	genus	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Lachnospirales; f__Anaerotignaceae; g__Metalachnospira
+GP5_S30_raw_R1	0.65	0.65	2.21	genus	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Oscillospirales; f__Acutalibacteraceae; g__Anaeromassilibacillus
+GP5_S30_raw_R1	0.63	4.59	15.61	genus	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Oscillospirales; f__Ruminococcaceae; g__Faecalibacterium
+GP5_S30_raw_R1	0.4	0.4	1.36	genus	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Oscillospirales; f__Ruminococcaceae; g__Ruthenibacterium
+GP5_S30_raw_R1	0	0.51	1.73	genus	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Oscillospirales; f__Ruminococcaceae; g__Anaerotruncus
+GP5_S30_raw_R1	0.4	0.4	1.36	genus	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Oscillospirales; f__Oscillospiraceae; g__Faecousia
+GP5_S30_raw_R1	0.45	0.45	1.53	genus	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Oscillospirales; f__Oscillospiraceae; g__Lawsonibacter
+GP5_S30_raw_R1	0.03	0.79	2.69	genus	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Monoglobales; f__Monoglobaceae; g__Monoglobus
+GP5_S30_raw_R1	0	1.36	4.63	genus	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Eubacteriales; f__Eubacteriaceae; g__Eubacterium
+GP5_S30_raw_R1	0.34	2.86	9.73	genus	Root; d__Bacteria; p__Bacteroidota; c__Bacteroidia; o__Bacteroidales; f__Bacteroidaceae; g__Phocaeicola
+GP5_S30_raw_R1	0.77	3.37	11.46	genus	Root; d__Bacteria; p__Bacteroidota; c__Bacteroidia; o__Bacteroidales; f__Bacteroidaceae; g__Bacteroides
+GP5_S30_raw_R1	2.48	2.48	8.44	species	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Lachnospirales; f__Anaerotignaceae; g__Metalachnospira; s__Metalachnospira sp902406135
+GP5_S30_raw_R1	3.04	3.04	10.34	species	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Oscillospirales; f__Ruminococcaceae; g__Faecalibacterium; s__Faecalibacterium longum
+GP5_S30_raw_R1	0.92	0.92	3.13	species	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Oscillospirales; f__Ruminococcaceae; g__Faecalibacterium; s__Faecalibacterium sp934514285
+GP5_S30_raw_R1	0.51	0.51	1.73	species	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Oscillospirales; f__Ruminococcaceae; g__Anaerotruncus; s__Anaerotruncus colihominis
+GP5_S30_raw_R1	0.76	0.76	2.59	species	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Monoglobales; f__Monoglobaceae; g__Monoglobus; s__Monoglobus pectinilyticus
+GP5_S30_raw_R1	1.36	1.36	4.63	species	Root; d__Bacteria; p__Bacillota_A; c__Clostridia; o__Eubacteriales; f__Eubacteriaceae; g__Eubacterium; s__Eubacterium callanderi
+GP5_S30_raw_R1	0.95	0.95	3.23	species	Root; d__Bacteria; p__Bacteroidota; c__Bacteroidia; o__Bacteroidales; f__Bacteroidaceae; g__Phocaeicola; s__Phocaeicola sp900760795
+GP5_S30_raw_R1	0.61	0.61	2.07	species	Root; d__Bacteria; p__Bacteroidota; c__Bacteroidia; o__Bacteroidales; f__Bacteroidaceae; g__Phocaeicola; s__Phocaeicola vulgatus
+GP5_S30_raw_R1	0.96	0.96	3.27	species	Root; d__Bacteria; p__Bacteroidota; c__Bacteroidia; o__Bacteroidales; f__Bacteroidaceae; g__Phocaeicola; s__Phocaeicola massiliensis
+GP5_S30_raw_R1	0.65	0.65	2.21	species	Root; d__Bacteria; p__Bacteroidota; c__Bacteroidia; o__Bacteroidales; f__Bacteroidaceae; g__Bacteroides; s__Bacteroides uniformis
+GP5_S30_raw_R1	0.65	0.65	2.21	species	Root; d__Bacteria; p__Bacteroidota; c__Bacteroidia; o__Bacteroidales; f__Bacteroidaceae; g__Bacteroides; s__Bacteroides stercoris
+GP5_S30_raw_R1	0.7	0.7	2.38	species	Root; d__Bacteria; p__Bacteroidota; c__Bacteroidia; o__Bacteroidales; f__Bacteroidaceae; g__Bacteroides; s__Bacteroides thetaiotaomicron
+GP5_S30_raw_R1	0.6	0.6	2.04	species	Root; d__Bacteria; p__Bacteroidota; c__Bacteroidia; o__Bacteroidales; f__Bacteroidaceae; g__Bacteroides; s__Bacteroides ovatus

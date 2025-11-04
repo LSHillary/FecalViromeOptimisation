@@ -54,7 +54,7 @@ htmlwidgets::saveWidget(
 # Import metadata
 metadata <- tar_read(metadata) # Metadata
 
-# Import read counts
+# Import tpm values
 df_mapping <- tar_read(vOTU_tpm) # vOTU relative abundance data
 
 # Import read counts for viral reads
@@ -376,7 +376,7 @@ ggsave("figures/Fig2.svg", plot = Fig2,
 ## Figure 3 - The metagenomes recover different viral community members ----
 
 # Import BacPhlip data
-df_Bacphlip <- tar_read(BacPhlipData)
+df_Bacphlip <- tar_read(BacPhlipData_vOTU)
 
 # Load Genomad data output
 df_Genomad <- tar_read(GenomadData)
@@ -434,14 +434,12 @@ df_host_provirus_ratio <- df_Bacphlip_host %>%
 
 # First merge df_BacPhlip and df_mapping by both "vOTU" and "Sample" (left join to keep all BacPhlip data)
 df_Lifestyle_mapped <- df_Bacphlip %>% 
-  select(-Sample) %>%
   merge(df_mapping_cleaned, by = c("vOTU"), all.y = TRUE) %>%
   merge(metadata, by = "Sample", all.x = TRUE) %>%
   select(vOTU, ShortSamples, RelAbund, status, Provirus, ShortSamples, Description) %>%
   mutate(RelAbund = ifelse(is.na(RelAbund), 0, RelAbund))
 
 df_Lifestyle_mapped_host <- df_Bacphlip_host %>% 
-  select(-Sample) %>%
   merge(df_mapping_cleaned, by = c("vOTU"), all.y = TRUE) %>%
   merge(metadata, by = "Sample", all.x = TRUE) %>%
   select(vOTU, ShortSamples, RelAbund, status, Provirus, ShortSamples, Description, HostPhylum) %>%
@@ -503,8 +501,6 @@ df_Lifestyle_mapped_host_ratio_summary <- df_Lifestyle_mapped_host %>%
     .groups = "drop"
   )
 
-library(tidyverse)
-
 df_ratio_long <- df_Lifestyle_mapped_host_ratio_summary %>%
   pivot_longer(
     cols = c(
@@ -563,8 +559,6 @@ plt_Lifestyle <- df_Lifestyle_mapped_summary %>% mutate(DescriptionLong = factor
   theme(axis.text.x = element_blank(),
         axis.ticks.x = element_blank(),
         legend.position = "bottom")
-
-plt_Lifestyle
 
 # Subset lifestyle data for just proviruses that are predicted to be temperate
 df_Provirus_mapped_summary <- df_Bacphlip %>%

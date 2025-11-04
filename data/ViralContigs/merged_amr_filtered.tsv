@@ -1,0 +1,11 @@
+gene	start	end	length	strand	gc_content	genetic_code	rbs_motif	marker	evalue	bitscore	uscg	plasmid_hallmark	virus_hallmark	taxid	taxname	annotation_conjscan	annotation_amr	annotation_accessions	annotation_description
+F6_S22_contig_1858_20	18621	19415	795	1	0.449	11	AGGA	GENOMAD.183542.CP	6.668e-09	59	0	0	0	1	NA	NA	NF033068	PF03881	Fructosamine kinase
+F7_S23_contig_6900_20	22132	22626	495	1	0.436	11	AGGAG	GENOMAD.124526.CP	2.38e-05	46	0	0	0	1	NA	NA	NF000402	PF16968	PEP-CTERM-box response regulator transcription factor
+F8_S24_contig_3539_18	22445	22891	447	1	0.438	11	None	GENOMAD.124526.CP	1.656e-05	46	0	0	0	1	NA	NA	NF000402	PF16968	PEP-CTERM-box response regulator transcription factor
+M1_S25_contig_24994_18	10235	10702	468	1	0.509	11	GGAGG	GENOMAD.197112.CP	4.611e-53	184	0	0	0	1	NA	NA	NF000496	PF12681	Glyoxalase-like domain
+M1_S25_contig_11233|provirus_2_26973_2	496	1188	693	-1	0.535	11	AGGA	GENOMAD.124526.CP	8.28e-08	55	0	0	0	1	NA	NA	NF000402	PF16968	PEP-CTERM-box response regulator transcription factor
+F6_S22_contig_1858_20	18621	19415	795	1	0.449	11	AGGA	GENOMAD.183542.CP	6.668e-09	59	0	0	0	1	NA	NA	NF033068	PF03881	Fructosamine kinase
+F7_S23_contig_6900_20	22132	22626	495	1	0.436	11	AGGAG	GENOMAD.124526.CP	2.38e-05	46	0	0	0	1	NA	NA	NF000402	PF16968	PEP-CTERM-box response regulator transcription factor
+F8_S24_contig_3539_18	22445	22891	447	1	0.438	11	None	GENOMAD.124526.CP	1.656e-05	46	0	0	0	1	NA	NA	NF000402	PF16968	PEP-CTERM-box response regulator transcription factor
+M1_S25_contig_24994_18	10235	10702	468	1	0.509	11	GGAGG	GENOMAD.197112.CP	4.611e-53	184	0	0	0	1	NA	NA	NF000496	PF12681	Glyoxalase-like domain
+M1_S25_contig_11233|provirus_2_26973_2	496	1188	693	-1	0.535	11	AGGA	GENOMAD.124526.CP	8.28e-08	55	0	0	0	1	NA	NA	NF000402	PF16968	PEP-CTERM-box response regulator transcription factor
