@@ -12,7 +12,7 @@ For sequencing data, all raw fastq files have been deposited in the NCBI SRA und
 Assembled vOTU sequences will also be uploaded to NCBI GenBank under BioProject PRJNA1331857.
 
 ## data
-- Biogeography - UHGV clustering and mapping analysis (note that the file votus_metadata_extended.csv was too large to upload via GitHub, so has been uploaded to Zenodo separately)
+- Biogeography - UHGV clustering and mapping analysis (note that the file votus_metadata_extended.csv was too large to upload via GitHub, so has been uploaded to Zenodo separately, also available from https://github.com/snayfach/UHGV - accessed June 12th 2025.
 - HostPrediction - iPhop host predictions
 - Kmers - Khmer k-mer count data
 - Lifestyle - BACPHLIP predictions
