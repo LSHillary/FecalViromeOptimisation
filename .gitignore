@@ -2,3 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+_targets/
+_targets.yaml
+local_files/
+data/Biogeography/votus_metadata_extended.tsv
+
