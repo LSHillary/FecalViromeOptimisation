@@ -8,8 +8,8 @@ This repository is split into the following folders:
 - manuscript - manuscript Word files
 - _targets.R - Targets script that defines the R data analysis workflow
 
-For sequencing data, all raw fastq files have been deposited in the NCBI SRA under BioProject PRJNA1331857. Processed data files that are too large to upload to GitHub have been uploaded to Zenodo at (INSERT LINK HERE).
-Assembled vOTU sequences will also be uploaded to NCBI GenBank under BioProject PRJNA1331857.
+For sequencing data, all raw fastq files have been deposited in the NCBI SRA under BioProject PRJNA1331857 (SRR35523994 - SRR35524005).
+Assembled viral contigs and vOTU sequences are hosted here and currently undergoing GenBank deposition under BioProject PRJNA1331857.
 
 ## data
 - Biogeography - UHGV clustering and mapping analysis (note that the file votus_metadata_extended.csv is available from https://portal.nersc.gov/UHGV/metadata/votus_metadata_extended.tsv (accessed June 12th 2025).
